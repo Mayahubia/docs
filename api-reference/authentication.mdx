@@ -1,42 +1,41 @@
 ---
-title: "Authentication"
+title: "Autenticação"
 icon: "key"
-description: "Learn how to authenticate your API requests"
+description: "Saiba como autenticar suas requisições na API"
 ---
 
-The Autocalls API uses API keys to authenticate requests. You need to include your API key in the header of each request you make to the API.
+A API da MayaHub utiliza chaves de API para autenticar as requisições. Você precisa incluir sua chave de API no cabeçalho de cada requisição feita à API.
 
-## Obtaining an API Key
+## Obtendo uma Chave de API
 
-To obtain an API key:
+Para obter uma chave de API:
 
-1. Log in to your Autocalls account at https://app.autocalls.ai
-2. Navigate to the "API Keys" page
-3. Click on the "Create new API Key" button
-4. Copy your new API key and store it securely
+- Faça login na sua conta Autocalls em [**https://app.**](https://app.autocalls.ai)**mayahub.online**
+- Vá até a página “API Keys”
+- Clique em “Create new API Key”
+- Copie sua nova chave de API e armazene com segurança
 
 <Warning>
-  Keep your API key confidential and secure. Do not share it publicly or commit
-  it to version control systems.
+  Mantenha sua chave de API confidencial e segura. Não compartilhe publicamente nem envie para sistemas de controle de versão.
 </Warning>
 
-## Using the API Key
+## Utilizando a Chave de API
 
-Include your API key in the `Authorization` header of each request:
+Inclua sua chave no cabeçalho `Authorization` de cada requisição:
 
 ```
-Authorization: Bearer YOUR_API_KEY
+Authorization: Bearer SUA_CHAVE_DE_API
 ```
 
-Replace `YOUR_API_KEY` with your actual API key.
+Substitua `SUA_CHAVE_DE_API` pela sua chave real.
 
-## Example Request
+## Exemplo de Requisição
 
-Here's an example of how to include the API key in a cURL request:
+Veja um exemplo de como incluir a chave usando cURL:
 
 ```bash
-curl -X GET "https://api.autocalls.ai/api/user/campaigns" \
-     -H "Authorization: Bearer YOUR_API_KEY"
+curl -X GET "https://api.mayahub.online/api/user/campaigns" \
+     -H "Authorization: Bearer SUA_CHAVE_DE_API"
 ```
 
-Replace `YOUR_API_KEY` with your actual API key when making requests.
+Substitua `SUA_CHAVE_DE_API` pela sua chave real ao fazer requisições.
