@@ -1,35 +1,30 @@
 ---
-title: "List campaigns"
+title: "Listar Campanhas"
 api: "GET /user/campaigns"
 icon: "list"
-description: "List all campaigns"
+description: "Liste todas as campanhas"
 ---
 
-This endpoint allows you to list all campaigns.
+Este endpoint permite listar todas as campanhas existentes.
 
-### Response fields
+### Campos de Resposta
 
 <ResponseField name="campaigns" type="array">
   <Expandable title="properties">
     <ResponseField name="id" type="string">
-      The id of the campaign
+      ID da campanha
     </ResponseField>
-
     <ResponseField name="name" type="string">
-      The name of the campaign
+      Nome da campanha
     </ResponseField>
-
     <ResponseField name="created_at" type="string">
-      The created at date of the campaign
+      Data de criação da campanha
     </ResponseField>
-
     <ResponseField name="updated_at" type="string">
-      The updated at date of the campaign
+      Data da última atualização da campanha
     </ResponseField>
-
     <ResponseField name="status" type="string">
-      The status of the campaign
+      Status da campanha
     </ResponseField>
-
   </Expandable>
 </ResponseField>
