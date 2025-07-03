@@ -1,31 +1,39 @@
 ---
 title: "Webhook & API"
 icon: "code"
-description: "Learn how to use webhooks and the REST API for custom integrations and automation"
+description: "Aprenda a usar webhooks e a API REST para integrações e automações personalizadas"
 ---
 
-If you want deeper customization beyond no-code blocks, Autocalls.ai supports **webhooks** and a **REST API**.
+Se você precisa de personalizações mais avançadas além dos blocos no-code, a [MayaHub](http://mayahub.online) oferece suporte a **webhooks** e **API REST**.
 
 ## 1. Webhooks
 
-- **When to Use**: Trigger events in external systems the moment something happens in Autocalls.ai (e.g., "Call Ended,").
-- **Configuration**: Set a webhook URL in your assistant/campaign settings or the automation platform.
-- **Payload**: Typically includes call ID, transcript, call outcome, or any user data collected.
+**Quando usar**:\
+Dispare eventos em sistemas externos no momento em que algo acontece na [MayaHub](http://mayahub.online) (ex: "Call Ended").
 
-## 2. REST API
+**Configuração**:\
+Defina uma URL de webhook nas configurações do assistente, campanha ou plataforma de automação.
 
-- **Key Functions**:
+**Conteúdo enviado (payload)**:\
+Normalmente inclui ID da chamada, transcrição, resultado da chamada ou dados coletados do usuário.
 
-  1. **Create/Update Leads**
-  2. **Manage Campaigns**
+## 1. **Webhooks**
 
-- **Auth & Rate Limits**: Usually uses API tokens. Check [API docs](/api-reference/introduction) for details on endpoints and usage quotas.
+**Quando usar**:\
+Dispare eventos em sistemas externos no momento em que algo acontece no [MayaHub](http://mayahub.online) (ex: "Call Ended").
 
-## 3. Example Use Cases
+**Configuração**:\
+Defina uma URL de webhook nas configurações do assistente, campanha ou plataforma de automação.
 
-- **Real-Time CRM Sync**: For each new call, post data to your CRM's endpoint.
-- **Custom Dashboards**: Pull call data into your own analytics dashboard.
+**Conteúdo enviado (payload)**:\
+Normalmente inclui ID da chamada, transcrição, resultado da chamada ou dados coletados do usuário.
+
+## 3. **Exemplos de uso**
+
+- **Sincronização com CRM em tempo real**: Enviar dados de cada nova chamada diretamente para o endpoint do seu CRM.
+- **Dashboards personalizados**: Puxar dados de chamadas para seu próprio painel analítico.
 
 ---
 
-**Note:** You'll find the official API reference in a dedicated docs section or via your Autocalls.ai dashboard. Always secure your tokens and test endpoints in a dev environment.
+**Nota**: A referência oficial da API está disponível em uma seção dedicada da documentação ou pelo painel do [MayaHub](http://mayahub.online).\
+Sempre mantenha seus tokens seguros e teste os endpoints em um ambiente de desenvolvimento.
