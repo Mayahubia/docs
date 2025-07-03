@@ -1,43 +1,48 @@
 ---
-title: "Creating & Managing Campaigns"
+title: "Criando e Gerenciando Campanhas"
 icon: "bullhorn"
-description: "Step-by-step guide to creating and managing outbound call campaigns, including lead imports and monitoring"
+description: "Guia passo a passo para criar e administrar campanhas de chamadas ativas, incluindo importação de leads e monitoramento"
 ---
 
-An outbound "campaign" determines when, how, and to whom calls are made.
+Uma “campanha ativa” define quando, como e para quem as ligações serão feitas.1. Setup a Campaign
 
-## 1. Setup a Campaign
+1. **1. Configurar uma Campanha**
 
-1. **Go to Outbound / Campaigns** in your dashboard.
-2. Click **Create New Campaign**:
-   - **Name**: e.g. "January Promo," "Payment Reminder," etc.
-   - **Assistant**: which AI assistant will handle these calls?
-   - **Window**: choose the time window for the campaign
+   Acesse **Outbound / Campaigns** no seu painel.
 
-## 2. Importing Leads
+   Clique em **Create New Campaign**:
+   - **Nome**: exemplo "Promoção de Janeiro", "Lembrete de Pagamento"
+   - **Assistente**: escolha qual assistente de IA fará essas chamadas
+   - **Janela de horário**: defina o período em que a campanha poderá realizar ligações
 
-- **CSV File**: Upload phone numbers (plus any extra columns, like name or account number).
-- **Google Sheets**: Connect via the no-code platform or direct integration to pull leads.
-- **CRM**: Some CRMs (HubSpot, GHL, etc.) can send leads directly to Autocalls.ai via API or automation.
+## **2. Importando Leads**
 
-## 3. Call Retries & Scheduling
+- **Arquivo CSV**: envie uma lista com números de telefone (e colunas adicionais como nome ou número da conta)
+- **Google Sheets**: conecte via a plataforma no-code ou integração direta
+- **CRM**: alguns CRMs (como HubSpot, GHL etc.) podem enviar leads diretamente via API ou automação
 
-- **Max Retries**: e.g., attempt each lead up to 2 times if they don't answer.
-- **Retry Interval**: minutes/hours between retries.
-- **Time Window**: e.g., only call between 9 AM and 6 PM local time to avoid inconveniencing leads.
+## **3. Repetições de Chamada e Agendamento**
 
-## 4. Monitoring & Pausing
+- **Máximo de tentativas**: por exemplo, tentar cada lead até 2 vezes se não atender
+- **Intervalo entre tentativas**: defina em minutos ou horas
+- **Janela de horário**: exemplo, ligar apenas entre 9h e 18h para não incomodar os leads fora do expediente
 
-- Once the campaign is live, calls happen automatically during the allowed hours.
-- You can **pause** or **stop** the campaign anytime to revise your script or leads list.
+## **4. Monitoramento e Pausa**
 
-## 5. Analyzing Results
+Depois de ativada, a campanha executa as chamadas automaticamente dentro do horário permitido.
 
-- Visit **Campaign Reports** to see:
-  - How many calls were answered vs. no-answer.
-  - Number of successful vs. failed calls.
-  - Average call duration, etc.
+Você pode pausar ou interromper a qualquer momento para ajustar o script ou a lista de contatos.
+
+## **5. Análise de Resultados**
+
+Acesse **Campaign Reports** para visualizar:
+
+- Quantas ligações foram atendidas x não atendidas
+- Número de chamadas bem-sucedidas x falhas
+- Duração média das chamadas, entre outros dados
 
 ---
 
-**Note:** Large campaigns with thousands of leads can run concurrently, as AI can handle parallel calls. Watch your minute usage to avoid unexpected costs.
+**Observação**: Campanhas grandes com milhares de leads podem rodar em paralelo, já que a IA suporta múltiplas ligações simultâneas.
+
+Fique atento ao consumo de minutos para evitar custos inesperados.
