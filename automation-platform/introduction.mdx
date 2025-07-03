@@ -1,100 +1,96 @@
 ---
-title: "Introduction"
-description: "Learn How to Automate Your AI Call Workflows with Autocalls"
+title: "Introdução"
+description: "Aprenda a Automatizar seus Fluxos de Ligações com IA usando a MayaHub"
 ---
 
-# Automation Platform
+### 🧠 **Plataforma de Automação**
 
-The Autocalls Automation Platform helps you create powerful AI call automation workflows without coding. Build flows that enhance your AI calling system by processing variables before calls, handling post-call actions, and creating seamless integrations with your existing tools.
+A **Plataforma de Automação da MayaHub** permite criar fluxos poderosos de ligações com IA **sem precisar programar**.\
+Com ela, você pode:
+
+- Processar variáveis antes das ligações
+- Executar ações após as ligações
+- Integrar com ferramentas como HubSpot, Google Sheets, CRMs, e muito mais
 
 ![Flow Builder](/resources/visual-builder.gif)
 
-## Key Features
+## 🔧 **Construtor de Fluxos (Flow Builder)**
 
-### AI Call-Based Triggers
+#### **Principais Recursos**
 
-1. **Call Ended Trigger**
+✅ **Gatilhos baseados em chamadas com IA**
 
-   - Activates immediately when an AI call completes
-   - Access full conversation transcript and AI responses
-   - Use call duration, status, and detailed metadata
-   - Perfect for post-call automation like CRM updates
-   - Trigger follow-up actions based on call outcomes
+- **Call Ended**: ativa imediatamente após o término da ligação
+  - Acessa o **transcrito completo** da conversa
+  - Usa **metadados detalhados** como duração e status da ligação
+  - Ideal para automatizar atualizações no CRM ou follow-ups
+- **Inbound Call Variable Injection**: ativa **antes** da IA atender a ligação
+  - Injeta **dados do cliente em tempo real**
+  - Personaliza o comportamento da IA com base nas informações recebidas
+  - Melhora a experiência da conversa com contexto específico
 
-2. **Inbound Call Variable Injection**
-   - Triggers before AI assistant picks up the call
-   - Enriches AI context with real-time customer data
-   - Customizes AI behavior based on caller information
-   - Returns variables that get injected into AI prompts
-   - Enables personalized conversation flows
+### 🔁 **Ações Essenciais**
 
-### Essential Actions
+#### 🧩 **Integração com HubSpot**
 
-1. **Hubspot Integration**
+- Atualiza automaticamente os contatos com resultados das chamadas
+- Cria novos contatos a partir de chamadas recebidas
+- Sincroniza os insights das conversas
+- Automatiza a qualificação de leads
+- Registra o histórico de interação com a IA
 
-   - Update contact records with call outcomes
-   - Create new contacts from inbound calls
-   - Sync conversation insights to CRM
-   - Track AI interaction history
-   - Automate lead qualification
+#### 📞 **Gestão de Campanhas**
 
-2. **Campaign Management**
+- Adiciona leads qualificados nas campanhas de ligação com IA
+- Agenda novas ligações com base nas respostas
+- Organiza chamadas por prioridade
+- Acompanha conversões por campanha
 
-   - Add qualified leads to AI calling campaigns
-   - Schedule AI follow-up calls
-   - Manage call priorities based on outcomes
-   - Track conversion rates per campaign
-   - Automate campaign assignments
+#### 🔗 **Sistemas Externos**
 
-3. **External Systems**
-   - Send post-call summary emails
-   - Update spreadsheets with call data
-   - Trigger webhooks for custom integrations
-   - Connect with your business tools
-   - Automate multi-step workflows
+- Envia **resumos pós-chamada por e-mail**
+- Atualiza **planilhas automaticamente**
+- Dispara **webhooks personalizados**
+- Cria **integrações com ferramentas de negócios**
 
-## How It Works
+## ⚙️ **Como Funciona**
 
-1. **Choose Your Call Trigger**
+1. **Escolha o Gatilho**
+   - `Call Ended` → para automações pós-ligação
+   - `Inbound Call` → para personalizar a IA antes da ligação começar
+2. **Configure Variáveis**
+   - Mapeie dados da conversa
+   - Acesse detalhes do cliente
+   - Defina regras de roteamento
+   - Crie variáveis personalizadas para a IA
+3. **Adicione Ações Inteligentes**
+   - Atualize o CRM automaticamente
+   - Envie alertas por e-mail/Slack
+   - Agende follow-ups com IA
+   - Injete contexto enriquecido para a IA
 
-   - "Call Ended" for post-conversation automation
-   - "Inbound Call" for real-time AI context injection
+### 📌 **Exemplos de Uso**
 
-2. **Configure Call Variables**
-
-   - Map AI conversation data and transcripts
-   - Access caller details and history
-   - Define AI routing logic
-   - Set up custom conversation variables
-
-3. **Add Smart Actions**
-   - Update CRM with call outcomes
-   - Send automated notifications
-   - Schedule follow-up activities
-   - Return enriched context to AI
-
-## Example Use Cases
-
-### Intelligent CRM Update
+### Atualizaçao inteligente de CRM:
 
 ```javascript
-Trigger: AI Call Ended
-↓
-Process Conversation Insights
-↓
-Update Hubspot Contact
-↓
-Schedule Next AI Interaction
+Gatilho: Call Ended  
+↓  
+Processa insights da conversa  
+↓  
+Atualiza contato no HubSpot  
+↓  
+Agenda próxima ligação com IA
 ```
 
 ### Smart Inbound Call Handling
 
 ```javascript
-Trigger: Inbound Call to AI
-↓
-Lookup Customer in Hubspot
-↓
-Return Enriched Context
-↓
-AI Assistant Personalizes Conversation
+Gatilho: Inbound Call  
+↓  
+Consulta cliente no HubSpot  
+↓  
+Retorna contexto enriquecido  
+↓  
+IA personaliza a conversa
 ```
