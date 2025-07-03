@@ -1,33 +1,36 @@
 ---
-title: "Caller ID & Handling"
+title: "Identificação de Chamadas (Caller ID) e Gerenciamento"
 icon: "id-card"
-description: "Learn how to configure and manage caller ID for outbound campaigns"
+description: "Saiba como configurar e gerenciar o número exibido em campanhas ativas"
 ---
 
-When you launch an outbound campaign, you can choose which number appears on recipients' phones.
+Ao lançar uma campanha ativa, você pode escolher qual número aparecerá no telefone dos destinatários.
 
-## 1. Dedicated Number
+## **1. Número Dedicado**
 
-- If you've rented a local or toll-free number, you can select it as the "Phone number" in the assistant settings.
-- Good for brand consistency or if you also accept inbound calls on the same line.
-- **No OTP verification needed** for numbers rented through Autocalls.ai.
+- Se você alugou um número local ou 0800, pode selecioná-lo como o **“Phone number”** nas configurações da assistente.
+  - Ideal para manter a identidade da marca
+  - Pode ser usado também para chamadas receptivas
+  - Não é necessário verificação por OTP para números alugados via **MayaHub** 
 
-## 2. Verified Existing Number (Caller ID Only)
+## 2. Número Existente Verificado (somente Caller ID)
 
-- If you want your personal or company phone line to appear, verify it with an **OTP** or short call.
-- This won't handle inbound calls for the AI, but the lead sees that recognized number on caller ID.
-- **Note**: OTP verification is ONLY required when using your own existing number as Caller ID.
+- Se quiser que apareça seu número pessoal ou da empresa, é necessário verificar com OTP ou chamada rápida.
+  - Esse número **não receberá chamadas da IA**, mas aparecerá no identificador do lead
+  - A verificação por OTP **só é exigida** quando você usa um número próprio como Caller ID
 
-## 3. SIP Integration
+## 3. Integração SIP
 
-- If you use a PBX or VOIP platform, you might pass a custom caller ID from your existing system.
-- Make sure your trunk or provider is set to allow a specific outbound Caller ID.
+- Se você usa PBX ou VOIP, pode enviar um Caller ID personalizado direto do seu sistema.
 
-## 4. Country-Specific Rules
+  Certifique-se de que seu tronco ou operadora permite definir um número de saída específico.
 
-- Some regions prevent using numbers you don't own as Caller ID.
-- Always ensure you have the right to present that number to avoid spam or legal issues.
+## 4. Regras por País
+
+- Algumas regiões **proíbem o uso de números não pertencentes a você como Caller ID**.
+
+  Garanta que você tem o direito de usar o número para evitar problemas legais ou marcação como spam.
 
 ---
 
-**Tip:** Test by calling your own phone or a friendly colleague to confirm the correct caller ID is displayed before launching a big campaign.
+**Dica: **Faça um teste ligando para seu próprio número ou para um colega de confiança e confirme se o número exibido está correto antes de lançar uma campanha em larga escala.
