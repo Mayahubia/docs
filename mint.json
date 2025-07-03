@@ -27,7 +27,7 @@
     "url": "https://app.mayahub.online"
   }, {
     "name": "Support",
-    "url": "https://autocalls.ai/contact"
+    "url": "https://app.mayahub.online"
   }],
   "topbarCtaButton": {
     "name": "Dashboard",
@@ -196,10 +196,10 @@
     }
   ],
   "footerSocials": {
-    "linkedin": "https://www.linkedin.com/company/autocalls-ai"
+    "linkedin": "https://app.mayahub.online"
   },
   "api": {
-    "baseUrl": "https://app.autocalls.ai/api/",
+    "baseUrl": "https://app.mayahub.online",
     "auth": {
       "method": "bearer"
     }
