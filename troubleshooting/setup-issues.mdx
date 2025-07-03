@@ -1,27 +1,28 @@
 ---
-title: "General Setup Issues"
+title: "⚙️ Problemas Gerais de Configuração"
 icon: "wrench"
-description: "Troubleshoot common setup problems including AI response issues, OTP verification, and credential errors"
+description: "Solucione problemas comuns de setup, como falhas na resposta da IA, verificação OTP e erros de credenciais"
 ---
 
-Some common pitfalls when first configuring Autocalls.ai:
+Alguns erros comuns ao configurar o [MayaHub](http://mayahub.online) pela primeira vez:
 
-## 1. AI Not Responding or Call Dropping
+## **1. 🤖 IA Não Responde ou Chamada Cai**
 
-- **Check the System Prompt**: Possibly missing instructions.
-- **Voice Activity Detection**: If set too low or high, it may cause awkward silences or interruptions.
-- **Connection**: If your internet or SIP trunk is unstable, calls might drop.
+- Verifique o **System Prompt** – talvez esteja faltando instruções.
+- Cheque o **Voice Activity Detection** – se estiver muito sensível ou muito alto, pode gerar silêncios ou cortes.
+- **Conexão** – se sua internet ou trunk SIP estiver instável, a ligação pode cair.
 
-## 2. Not Receiving OTP (for Caller ID Verification)
+## **2. 📲 Não Recebeu o OTP (para verificação de Caller ID)**
 
-- **Carrier Blocks**: Some operators filter out short codes or unknown international SMS.
-- **Try Alternate Method**: Ask support if you can verify by a quick voice call or another phone line.
+- **Bloqueio da operadora** – alguns operadores bloqueiam short codes ou SMS internacionais desconhecidos.
+- Tente outro método: peça ao suporte a opção de verificar via chamada rápida ou outro número.
 
-## 3. Credential Errors
+## **3. 🔐 Erros de Credenciais**
 
-- **SIP**: Wrong username/password? Double-check with your PBX provider.
-- **API/Webhooks**: Ensure you copied the correct token or endpoint URL.
+- **SIP** – usuário/senha incorretos? Confirme com seu provedor de PBX.
+- **API / Webhooks** – verifique se colou o token ou URL corretos.
 
 ---
 
-**Tip:** Look at call logs for error codes if a call fails. Usually, it'll show a reason like "Number not found" or "Network unreachable."
+**💡 Dica: **Verifique os **logs das chamadas** para ver o código de erro caso a ligação falhe. Geralmente mostra algo como:\
+_"Número não encontrado"_ ou _"Rede inacessível"_.
