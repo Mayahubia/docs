@@ -79,7 +79,7 @@
       ]
     },
     {
-      "group": "Numeros de Telefone",
+      "group": "Números de Telefone",
       "pages": [
         "phone-numbers/types",
         "phone-numbers/purchasing-and-managing",
@@ -89,7 +89,7 @@
       ]
     },
     {
-      "group": "Inbound Calls",
+      "group": "Ligação Ativa",
       "pages": [
         "inbound-calls/overview",
         "inbound-calls/provisioning",
@@ -98,7 +98,7 @@
       ]
     },
     {
-      "group": "Outbound Calls",
+      "group": "Ligação Receptiva",
       "pages": [
         "outbound-calls/overview",
         "outbound-calls/campaigns",
@@ -109,7 +109,7 @@
       ]
     },
     {
-      "group": "AI Prompting & Conversation Design",
+      "group": "Design de conversação e prompts de IA",
       "pages": [
         "conversation-design/prompt-basics",
         "conversation-design/knowledge-bases",
@@ -118,7 +118,7 @@
       ]
     },
     {
-      "group": "Automation & Integrations",
+      "group": "Automação e Integração",
       "pages": [
         "automation/overview",
         "automation/webhook-api",
@@ -126,7 +126,7 @@
       ]
     },
     {
-      "group": "Costs & Pricing",
+      "group": "Custos e Preços",
       "pages": [
         "pricing/overview",
         "pricing/usage-based",
@@ -134,7 +134,7 @@
       ]
     },
     {
-      "group": "Number Provisioning",
+      "group": "Provisionamento de números",
       "pages": [
         "provisioning/supported-countries",
         "provisioning/managing-numbers"
@@ -149,7 +149,7 @@
       ]
     },
     {
-      "group": "Troubleshooting & FAQs",
+      "group": "Solução de problemas e perguntas frequentes",
       "pages": [
         "troubleshooting/voice-problems",
         "troubleshooting/billing",
@@ -179,7 +179,7 @@
       ]
     },
     {
-      "group": "Calls Related",
+      "group": "Chamadas relacionadas",
       "pages": [
         "automation-platform/calls-related/autocalls-tool",
         "automation-platform/calls-related/common-integrations",
