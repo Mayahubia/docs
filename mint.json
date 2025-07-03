@@ -16,17 +16,17 @@
     }
   },
   "topAnchor": {
-    "name": "Platform Guide",
+    "name": "Guia da Plataforma",
     "icon": "book"
   },
   "sidebar": {
     "items": "card"
   },
   "topbarLinks": [{
-    "name": "Home",
+    "name": "Inicio",
     "url": "https://app.mayahub.online"
   }, {
-    "name": "Support",
+    "name": "Suporte",
     "url": "https://app.mayahub.online"
   }],
   "topbarCtaButton": {
@@ -34,7 +34,7 @@
     "url": "https://app.mayahub.online"
   },
   "anchors": [{
-    "name": "No-Code Automation",
+    "name": "Automação No-Code",
     "icon": "wand-magic-sparkles",
     "color": "#6c63ff",
     "url": "automation-platform"
@@ -44,13 +44,13 @@
     "color": "#ff0142",
     "url": "white-label"
   }, {
-    "name": "API Reference",
+    "name": "API",
     "icon": "code",
     "color": "#1c51fc",
     "url": "api-reference"
   }],
   "navigation": [{
-      "group": "Introduction",
+      "group": "Introdução",
       "pages": [
         "introduction/what-is-mayahub",
         "introduction/how-it-works",
@@ -58,14 +58,14 @@
       ]
     },
     {
-      "group": "Getting Started",
+      "group": "Iniciar",
       "pages": [
         "getting-started/core-concepts",
         "getting-started/understanding-billing"
       ]
     },
     {
-      "group": "AI Assistants Overview",
+      "group": "Visão Geral dos Assistentes",
       "pages": [
         "ai-assistants/what-is-ai-assistant",
         "ai-assistants/system-prompt",
@@ -79,7 +79,7 @@
       ]
     },
     {
-      "group": "Phone Numbers",
+      "group": "Numeros de Telefone",
       "pages": [
         "phone-numbers/types",
         "phone-numbers/purchasing-and-managing",
@@ -141,7 +141,7 @@
       ]
     },
     {
-      "group": "White Label Program",
+      "group": " Programa White Label",
       "pages": [
         "white-label/overview",
         "white-label/onboarding",
@@ -158,7 +158,7 @@
       ]
     },
     {
-      "group": "API Reference",
+      "group": "API",
       "pages": [
         "api-reference/introduction",
         "api-reference/authentication",
@@ -167,7 +167,7 @@
       ]
     },
     {
-      "group": "No-Code Automation platform",
+      "group": "Plataforma de Automação No-Code",
       "pages": [
         "automation-platform/introduction",
         "automation-platform/building-flows",
@@ -187,7 +187,7 @@
       ]
     },
     {
-      "group": "Tutorials",
+      "group": "Tutorial",
       "pages": [
         "automation-platform/tutorials/outbound-form-call",
         "automation-platform/tutorials/inbound-context-injection"
