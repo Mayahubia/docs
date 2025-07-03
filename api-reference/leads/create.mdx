@@ -1,54 +1,54 @@
 ---
-title: "Create lead"
+title: "Criar Lead"
 api: "POST /user/lead"
 icon: "user-plus"
-description: "Create a new lead in the Autocalls system"
+description: "Crie um novo lead no sistema MayaHub"
 ---
 
-This endpoint allows you to create a new lead in the Autocalls system.
+Este endpoint permite criar um novo lead no sistema MayaHub
 
 ### Request body
 
 <ParamField body="phone_number" type="string" required>
-  The phone number of the lead in E.164 format (e.g. +1234567890)
+  Número do telefone no formato E.164 (ex: `+5511999999999`)
 </ParamField>
 
 <ParamField body="campaign_id" type="integer" required>
-  The ID of the campaign to create the lead for
+  ID da campanha onde o lead será inserido
 </ParamField>
 
 <ParamField body="variables" type="array">
-  The variables to pass to the lead
+  ID da campanha onde o lead será inserido
 </ParamField>
 
 <ParamField body="allow_dupplicate" type="boolean">
-  Whether to allow duplicate leads in a campaign.
+  Permitir leads duplicados na mesma campanha (`true` ou `false`)
 </ParamField>
 
-### Response fields
+### Campos da Resposta (Response Fields)
 
 <ResponseField name="message" type="string">
-  The message of the response
+  Mensagem de retorno da API (ex: "Lead created successfully")
 </ResponseField>
 
 <ResponseField name="data" type="object">
-  The data of the response
+  Dados retornados
 </ResponseField>
 
 <ResponseField name="data.id" type="string">
-  The id of the lead
+  ID único do lead criado
 </ResponseField>
 
 <RequestExample>
 
 ```json Request
 {
-  "phone_number": "+1234567890",
+  "phone_number": "+5511999999999",
   "campaign_id": 1,
   "variables": [
     {
-      "customer_name": "John Doe",
-      "email": "john.doe@example.com"
+      "customer_name": "João Silva",
+      "email": "joao.silva@exemplo.com"
     }
   ],
   "allow_dupplicate": false
