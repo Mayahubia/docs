@@ -1,44 +1,40 @@
 ---
-title: "Overview of No-Code Automation"
+title: "Visão Geral da Automação Sem Código"
 icon: "wand-magic-sparkles"
-description: "Learn about Autocalls.ai's built-in automation engine for creating workflows without coding"
+description: "Saiba mais sobre o mecanismo interno de automação do MayaHub para criar fluxos de trabalho sem programar"
 ---
 
-<Card
-  title="Read the full documentation"
-  icon="book-open"
-  href="/automation-platform/introduction">
-  This is a brief overview of our automation capabilities. For in-depth
-  documentation, tutorials, and advanced features, visit our dedicated
-  [Automation Platform Documentation](/automation-platform/introduction).
+<Card title="Leia a documentação completa" icon="book-open" href="/automation-platform/introduction">
+  Esta é uma visão geral dos nossos recursos de automação. Para documentação detalhada, tutoriais e recursos avançados, acesse nossa [Documentação da Plataforma de Automação].
 </Card>
 
-Autocalls.ai includes an internal automation engine (similar to Zapier or Make) that lets you build flows—no coding required. For instance:
+A  [MayaHub](http://mayahub.online) inclui um mecanismo de automação interno (semelhante ao N8N, Zapier ou Make) que permite criar fluxos — sem necessidade de programação. Por exemplo:
 
-1. **Trigger**: A call ends.
-2. **Action**: A Slack notification is sent with call outcome and transcript.
+**Gatilho**: Uma chamada termina.\
+**Ação**: Uma notificação no Slack é enviada com o resultado da chamada e a transcrição.
 
-## Key Concepts
+## Conceitos-Chave
 
-- **Triggers**: Events inside Autocalls.ai (e.g., "call ended," "inbound call context injection").
-- **Actions**: Steps that happen in response (e.g., "send email," "update Google Sheets," "webhook to CRM").
+**Gatilhos (Triggers)**: Eventos dentro do [MayaHub](http://mayahub.online) (ex: "chamada finalizada", "injeção de contexto em chamada receptiva").
 
-## Common Use Cases
+**Ações (Actions)**: Etapas executadas em resposta (ex: "enviar e-mail", "atualizar Google Sheets", "enviar webhook para CRM").
 
-- **Post-Call Data Handling**: Log transcripts in a database or notify your team of new leads.
-- **Lead Import**: Automatically fetch new leads from a Google Sheet or CRM into an outbound campaign.
-- **Appointment Scheduling**: Once a caller confirms a time with the AI, you create or update a calendar event.
+## Casos de Uso Comuns
 
-## Setting Up a Workflow
+- **Pós-Chamada**: Registrar transcrições em um banco de dados ou notificar sua equipe sobre novos leads.
+- **Importação de Leads**: Buscar automaticamente novos leads de uma planilha do Google ou CRM para uma campanha ativa.
+- **Agendamento de Compromissos**: Quando o cliente confirma um horário com a IA, criar ou atualizar um evento no calendário.
 
-1. Go to **Automations** in your dashboard.
-2. Click **Create Workflow**.
-3. Pick a **trigger** (like "Call Ended") and select the **assistant**.
-4. Add **actions** (like "Send Email to Team," "Add Row in Sheets," etc.).
-5. Test and monitor logs to ensure everything runs smoothly.
+## Como Configurar um Fluxo de Trabalho
+
+1. Vá em **Automations** no seu painel.
+2. Clique em **Create Workflow**.
+3. Escolha um gatilho (como "Call Ended") e selecione o assistente.
+4. Adicione ações (como "Enviar e-mail para a equipe", "Adicionar linha no Sheets", etc.).
+5. Teste e monitore os logs para garantir que tudo esteja funcionando corretamente.
 
 ---
 
-**Tip:** Keep your workflows simple at first. Complex logic is possible, but it's best to start with a single trigger → single action until you get comfortable.
+**Dica**: Comece com fluxos simples. Lógica complexa é possível, mas é melhor começar com **um gatilho → uma ação** até se familiarizar.
 
-**Want to learn more?** Check out our [detailed automation documentation](/automation-platform/introduction) for advanced features, tutorials, and best practices.
+Quer aprender mais? Confira a documentação completa da automação para recursos avançados, tutoriais e melhores práticas.
