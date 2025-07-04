@@ -1,135 +1,151 @@
 ---
-title: "Ferramenta MayaHub"
-description: "Saiba como usar os gatilhos e ações da MayaHubnos fluxos de chamadas da sua IA"
+title: "Autocalls Tool"
+description: "Learn how to use Autocalls triggers and actions in your AI calling flows"
 ---
 
-### 🔧 **O que é a Ferramenta MayaHub?**
+# **Autocalls Tool**
 
-É o componente central que conecta seu sistema de chamadas por IA aos fluxos de automação.\
-Ela permite **troca de dados em tempo real** entre os assistentes de IA e os sistemas da sua empresa — possibilitando conversas personalizadas e ações automáticas após as chamadas.
+The Autocalls tool is the core component that connects your AI calling system with automation flows. It enables real-time data exchange between your AI assistants and business systems, allowing for personalized conversations and automated follow-ups.
 
-Você encontra a ferramenta **MayaHub** no topo da barra lateral de busca ao procurar por **gatilhos** ou **ações**.
+You can find the Autocalls tool prominently displayed at the top of the searching sidebar when looking for either triggers or actions.
 
----
+## [**​**](https://docs.autocalls.ai/automation-platform/calls-related/autocalls-tool#triggers)
 
-### ⚡ **Gatilhos (Triggers)**
+**Triggers**
 
-#### 1. **Call Ended – Chamada Encerrada**
+### [**​**](https://docs.autocalls.ai/automation-platform/calls-related/autocalls-tool#call-ended)
 
-Ativado **imediatamente após o término** de uma chamada feita pela IA, ele fornece dados completos da interação:
+**Call Ended**
 
-- Transcrição completa com timestamps
-- Respostas e decisões da IA
-- Duração da chamada e dados técnicos
-- Informações do cliente e telefone
-- Resultado e análise de sentimento
-- Variáveis definidas durante a conversa
+The Call Ended trigger activates immediately after an AI call completes, providing comprehensive data about the interaction:
 
-**Como configurar:**
+- Complete conversation transcript with timestamps
+- AI assistant responses and decisions
+- Call duration and technical metadata
+- Customer information and phone number
+- Call outcome and sentiment analysis
+- Variables set during the conversation
 
-- Selecione "Call Ended" como gatilho
-- Escolha o assistente de IA desejado
-- Configure o mapeamento das variáveis
+#### [**​**](https://docs.autocalls.ai/automation-platform/calls-related/autocalls-tool#configuration)
 
----
+**Configuration**
 
-#### 2. **Inbound Call Variable Injection – Injeção de Variáveis na Chamada Receptiva**
+1. Select “Call Ended” as your trigger
+2. Choose specific AI assistant to monitor
+3. Configure variable mapping
 
-Esse gatilho é ativado **antes da IA atender uma ligação**.
+### [**​**](https://docs.autocalls.ai/automation-platform/calls-related/autocalls-tool#inbound-call-variable-injection)
 
-Permite:
+**Inbound Call Variable Injection**
 
-- Buscar dados do cliente em tempo real
-- Adaptar o comportamento da IA com base no contexto
-- Definir parâmetros da conversa
-- Aplicar lógica de negócios
-- Inserir traços de personalidade na IA
+This powerful trigger activates before your AI assistant picks up an inbound call, allowing you to:
 
-**Como configurar:**
+- Fetch and inject real-time customer data
+- Customize AI behavior based on context
+- Set conversation parameters
+- Define AI personality traits
+- Provide business logic variables
 
-- Selecione "Inbound Call" como gatilho
-- Defina as variáveis necessárias para o contexto da IA
+#### [**​**](https://docs.autocalls.ai/automation-platform/calls-related/autocalls-tool#configuration-2)
 
----
+**Configuration**
 
-### 🧩 **Ações (Actions)**
+1. Select “Inbound Call” as your trigger
+2. Define required variables for AI context
 
-#### 1. **Add Lead to Campaign – Adicionar Lead à Campanha**
+## [**​**](https://docs.autocalls.ai/automation-platform/calls-related/autocalls-tool#actions)
 
-Permite:
+**Actions**
 
-- Criar novos leads a partir de ferramentas externas (ex: Google Sheets, Hubspot, Facebook Leads)
-- Atribuir leads a campanhas específicas de IA
-- Inserir contexto para futuras chamadas
+### [**​**](https://docs.autocalls.ai/automation-platform/calls-related/autocalls-tool#add-lead-to-campaign)
 
-**Como configurar:**
+**Add Lead to Campaign**
 
-- Selecione a campanha da IA
-- Mapeie os dados de contato vindos do gatilho
-- Adicione atributos personalizados
+This action helps manage your AI calling campaigns by:
 
----
+- Creating new leads from extenal tools like Sheets, Hubspot, Facebook leads
+- Assigning leads to specific AI campaigns
+- Adding context for future calls
 
-#### 2. **Return Variables – Retornar Variáveis**
+#### [**​**](https://docs.autocalls.ai/automation-platform/calls-related/autocalls-tool#configuration-3)
 
-Muito usada em chamadas receptivas, essa ação injeta dados diretamente no prompt da IA, como:
+**Configuration**
 
-- Perfil do cliente e preferências
-- Resumo do histórico de interações
-- Regras de negócio e restrições
-- Sinais de comportamento personalizados
-- Modelos de resposta dinâmicos
+1. Select target AI campaign
+2. Map contact details from trigger data
+3. Add custom attributes for AI context
 
-**Como configurar:**
+### [**​**](https://docs.autocalls.ai/automation-platform/calls-related/autocalls-tool#return-variables)
 
-- Estruture o JSON de resposta
-- Mapeie os dados do cliente nas variáveis
-- Configure os parâmetros da conversa da IA
-- Ajuste o tempo limite da resposta
+**Return Variables**
 
----
+This action is crucial for inbound calls, returning context that gets injected into the AI’s prompt:
 
-### ✅ **Exemplos de Uso**
+- Customer profile and preferences
+- Conversation history summary
+- Business rules and constraints
+- Custom AI behavior flags
+- Dynamic response templates
 
-**Pós-Chamada: Gestão de Leads**\
-Gatilho: Call Ended\
-⬇\
-Extrair insights da conversa\
-⬇\
-Atualizar registro no Hubspot\
-⬇\
-Adicionar à campanha de follow-up
+#### [**​**](https://docs.autocalls.ai/automation-platform/calls-related/autocalls-tool#configuration-4)
 
----
+**Configuration**
 
-**Roteamento Inteligente de Chamadas Receptivas**\
-Gatilho: Inbound Call\
-⬇\
-Buscar perfil do cliente no CRM\
-⬇\
-Coletar histórico de interações\
-⬇\
-Retornar contexto enriquecido para a IA
+1. Structure response JSON
+2. Map customer data to variables
+3. Set AI conversation parameters
+4. Configure timeout handling
 
----
+## [**​**](https://docs.autocalls.ai/automation-platform/calls-related/autocalls-tool#example-usage)
 
-### 🧠 **Boas Práticas**
+**Example Usage**
 
-**Performance de Injeção de Variáveis**
+### [**​**](https://docs.autocalls.ai/automation-platform/calls-related/autocalls-tool#post-call-lead-management)
 
-- Mantenha o tempo de resposta abaixo de 2 segundos
-- Defina valores padrão
+**Post-Call Lead Management**
 
-**Estrutura de Dados**
+Copy
 
-- Siga os padrões do prompt da IA
-- Valide todas as variáveis
-- Estruture objetos aninhados corretamente
-- Documente campos personalizados
+```javascript
+Trigger: AI Call Ended
+↓
+Extract conversation insights
+↓
+Update Hubspot record
+↓
+Add to follow-up campaign if qualified
+```
 
-**Tratamento de Erros**
+### [**​**](https://docs.autocalls.ai/automation-platform/calls-related/autocalls-tool#intelligent-inbound-routing)
 
-- Forneça valores de fallback
-- Registre falhas de injeção
-- Monitore os tempos de resposta
-- Trate dados ausentes com elegância
+**Intelligent Inbound Routing**
+
+Copy
+
+```javascript
+Trigger: Inbound Call to AI
+↓
+Fetch customer profile from CRM
+↓
+Get interaction history
+↓
+Return enriched context for AI prompt
+```
+
+## [**​**](https://docs.autocalls.ai/automation-platform/calls-related/autocalls-tool#best-practices)
+
+**Best Practices**
+
+1. **Variable Injection Performance**
+   - Keep processing under 2 seconds
+   - Set sensible defaults
+2. **Data Structure**
+   - Follow AI prompt requirements
+   - Validate all variables
+   - Structure nested objects clearly
+   - Document custom fields
+3. **Error Handling**
+   - Provide fallback values
+   - Log injection failures
+   - Monitor response times
+   - Handle missing data gracefully
