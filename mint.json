@@ -52,7 +52,7 @@
   "navigation": [{
       "group": "Introdução",
       "pages": [
-        "introduction/what-is-Mayahub",
+        "introduction/what-is-mayahub",
         "introduction/how-it-works",
         "introduction/key-terminology"
       ]
