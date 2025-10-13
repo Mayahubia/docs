@@ -1,0 +1,150 @@
+---
+title: "Ferramentas Maya Hub"
+icon: "phone"
+description: "Aprenda como usar **gatilhos** e **ações da Maya Hub** em seus fluxos de chamadas por IA."
+---
+
+# Ferramentas Maya Hub
+
+A ferramenta **Maya Hub **é o componente central que conecta seu sistema de chamadas por IA com fluxos de automação.\
+Ela permite a troca de dados em tempo real entre seus assistentes de IA e os sistemas do seu negócio, possibilitando conversas personalizadas e acompanhamentos automatizados.
+
+<Note>
+  Você pode encontrar a ferramenta **Maya Hub** em destaque na parte superior da barra lateral de pesquisa ao procurar por **gatilhos** ou **ações**.
+</Note>
+
+## Gatilhos
+
+### Chamada Terminada
+
+![Autocalls Call Ended Trigger](/resources/autocalls-trigger.jpg)
+
+**Gatilhos**
+
+---
+
+### **Chamada Encerrada**
+
+O gatilho **Chamada Encerrada** é ativado imediatamente após a conclusão de uma chamada de IA, fornecendo dados completos sobre a interação:
+
+- Transcrição completa da conversa com carimbos de tempo
+- Respostas e decisões do assistente de IA
+- Duração da chamada e metadados técnicos
+- Informações do cliente e número de telefone
+- Resultado da chamada e análise de sentimento
+- Variáveis definidas durante a conversa
+
+**Configuração**
+
+1. Selecione **“Chamada Encerrada”** como seu gatilho
+2. Escolha o assistente de IA específico a ser monitorado
+3. Configure o mapeamento das variáveis
+
+---
+
+### **Injeção de Variáveis em Chamadas Recebidas**
+
+Esse gatilho poderoso é ativado **antes** de o assistente de IA atender uma chamada recebida, permitindo que você:
+
+- Busque e injete dados do cliente em tempo real
+- Personalize o comportamento da IA com base no contexto
+- Defina parâmetros da conversa
+- Configure traços de personalidade da IA
+- Forneça variáveis de lógica de negócios
+
+**Configuração**
+
+1. Selecione **“Chamada Recebida”** como seu gatilho
+2. Defina as variáveis necessárias para o contexto da IA
+
+## Ações
+
+### Add Lead to Campaign
+
+![Autocalls Action](/resources/autocalls-action.jpg)
+
+**Ações**
+
+---
+
+### **Gerenciamento de Campanhas de Chamadas por IA**
+
+Essa ação ajuda a gerenciar suas campanhas de chamadas por IA por meio de:
+
+- Criação de novos leads a partir de ferramentas externas como **Sheets**, **HubSpot** ou **Facebook Leads**
+- Atribuição de leads a campanhas específicas de IA
+- Adição de contexto para chamadas futuras
+
+**Configuração**
+
+1. Selecione a **campanha de IA** de destino
+2. Faça o **mapeamento dos dados de contato** a partir das informações do gatilho
+3. Adicione **atributos personalizados** para o contexto da IA
+
+---
+
+### **Variáveis de Retorno**
+
+Essa ação é essencial para chamadas recebidas, pois retorna o contexto que será injetado no **prompt da IA**, permitindo respostas personalizadas e inteligentes:
+
+- Perfil e preferências do cliente
+- Resumo do histórico de conversas
+- Regras e restrições do negócio
+- Indicadores personalizados de comportamento da IA
+- Modelos dinâmicos de resposta
+
+**Configuração**
+
+1. Estruture o **JSON de resposta**
+2. Faça o **mapeamento dos dados do cliente** para as variáveis
+3. Defina os **parâmetros da conversa da IA**
+4. Configure o **manuseio de tempo limite (timeout)**
+
+## **Exemplo de Uso**
+
+### **Gerenciamento de Leads Pós-Chamada**
+
+**Gatilho:** Chamada de IA Encerrada\
+↓\
+Extrair insights da conversa\
+↓\
+Atualizar registro no **HubSpot**\
+↓\
+Adicionar à **campanha de follow-up** se o lead for qualificado
+
+### **Roteamento Inteligente de Chamadas Recebidas**
+
+**Gatilho:** Chamada Recebida pela IA\
+↓\
+Buscar perfil do cliente no **CRM**\
+↓\
+Obter histórico de interações\
+↓\
+Retornar contexto enriquecido para o **prompt da IA**
+
+## **Boas Práticas**
+
+---
+
+### **Desempenho na Injeção de Variáveis**
+
+- Mantenha o processamento abaixo de **2 segundos**
+- Defina **valores padrão adequados**
+
+---
+
+### **Estrutura de Dados**
+
+- Siga os **requisitos do prompt da IA**
+- Valide todas as **variáveis**
+- Estruture **objetos aninhados** de forma clara
+- Documente todos os **campos personalizados**
+
+---
+
+### **Tratamento de Erros**
+
+- Forneça **valores de fallback**
+- Registre **falhas de injeção**
+- Monitore os **tempos de resposta**
+- Trate **dados ausentes** de forma apropriada
