@@ -1,298 +1,243 @@
 ---
 title: "List assistants"
 api: "GET /user/assistants/get"
-description: "List all assistants for the authenticated user with pagination"
+description: "Listar todos os assistentes do usuário autenticado com paginação List all assistants for the authenticated user with pagination"
 ---
 
-This endpoint allows you to retrieve all AI assistants belonging to the authenticated user.
+Este endpoint permite recuperar todos os assistentes de IA pertencentes ao usuário autenticado.
 
-### Query Parameters
+### Parâmetros de consulta
 
-<ParamField query="per_page" type="integer" optional>
-  Number of assistants per page (1-100, default: 10)
+<ParamField query="per_page" type="integer">
+  Número de assistentes por página (1-100, padrão: 10)
 </ParamField>
 
-<ParamField query="page" type="integer" optional>
-  Page number (default: 1)
+<ParamField query="page" type="integer">
+  Número da página (padrão: 1)
 </ParamField>
 
-### Response fields
+### Campos de resposta
 
 <ResponseField name="data" type="array">
-  <Expandable title="properties">
+  <Expandable title="Propriedades">
     <ResponseField name="id" type="integer">
-      The unique identifier of the assistant
+      O identificador único do assistente
     </ResponseField>
-
     <ResponseField name="user_id" type="integer">
-      The ID of the user who owns this assistant
+      O ID do usuário que possui este assistente
     </ResponseField>
-
     <ResponseField name="phone_number_id" type="integer">
-      The ID of the phone number assigned to the assistant
+      O ID do número de telefone atribuído ao assistente
     </ResponseField>
-
     <ResponseField name="engine_id" type="integer">
-      Engine ID
+      ID do motor (Engine ID)
     </ResponseField>
-
     <ResponseField name="synthesizer_id" type="integer">
-      Synthesizer ID
+      ID do sintetizador (Synthesizer ID)
     </ResponseField>
-
     <ResponseField name="transcriber_id" type="integer">
-      Transcriber ID
+      ID do transcritor (Transcriber ID)
     </ResponseField>
-
     <ResponseField name="voice_id" type="integer">
-      The ID of the voice used by the assistant
+      O ID da voz usada pelo assistente
     </ResponseField>
-
     <ResponseField name="instance_id" type="integer">
-      The instance ID for the assistant
+      O ID da voz usada pelo assistente
     </ResponseField>
-
     <ResponseField name="name" type="string">
-      The name of the assistant
+      O nome do assistente
     </ResponseField>
-
     <ResponseField name="variables" type="object">
-      Custom variables defined for the assistant
+      Variáveis personalizadas definidas para o assistente
     </ResponseField>
-
     <ResponseField name="post_call_evaluation" type="boolean">
-      Whether post-call evaluation is enabled
+      Se a avaliação pós-chamada está habilitada
     </ResponseField>
-
     <ResponseField name="fillers" type="integer">
-      Whether filler audio is enabled (1 = enabled, 0 = disabled)
+      Se o áudio de preenchimento está habilitado (1 = habilitado, 0 = desabilitado)
     </ResponseField>
-
     <ResponseField name="post_call_schema" type="array">
-      Schema definition for post-call data extraction
-      <Expandable title="post_call_schema properties">
+      Definição do esquema para extração de dados pós-chamada
+
+      <Expandable title="Propriedades do `post_call_schema`">
         <ResponseField name="name" type="string">
-          The name of the schema field
+          O nome do campo do esquema
         </ResponseField>
         <ResponseField name="type" type="string">
-          The data type (string, number, bool)
+          O tipo de dado (string, number, bool)
         </ResponseField>
         <ResponseField name="description" type="string">
-          Description of what this field represents
+          Descrição do que este campo representa
         </ResponseField>
       </Expandable>
     </ResponseField>
-
     <ResponseField name="tools" type="array">
-      Array of tools available to the assistant
+      Array de ferramentas disponíveis para o assistente
     </ResponseField>
-
     <ResponseField name="is_webhook_active" type="boolean">
-      Whether webhook notifications are enabled
+      Se as notificações do webhook estão habilitadas
     </ResponseField>
-
     <ResponseField name="webhook_url" type="string">
-      The webhook URL for post-call notifications
+      A URL do webhook para notificações pós-chamada
     </ResponseField>
-
     <ResponseField name="inbound_webhook_url" type="string">
-      The webhook URL for inbound call notifications
+      A URL do webhook para notificações de chamadas recebidas
     </ResponseField>
-
     <ResponseField name="language" type="string">
-      Language
+      Linguagem
     </ResponseField>
-
     <ResponseField name="type" type="string">
-      The type of assistant (inbound or outbound)
+      O tipo de assistente (recebimento ou envio)
     </ResponseField>
-
     <ResponseField name="status" type="string">
-      The current status of the assistant (active or inactive)
+      O status atual do assistente (ativo ou inativo)
     </ResponseField>
-
     <ResponseField name="max_duration" type="integer">
-      Maximum call duration in seconds
+      Duração máxima da chamada em segundos
     </ResponseField>
-
     <ResponseField name="record" type="boolean">
-      Whether to record calls
+      Se as chamadas devem ser gravadas
     </ResponseField>
-
     <ResponseField name="initial_message" type="string">
-      The initial message the assistant will speak
+      A mensagem inicial que o assistente irá falar
     </ResponseField>
-
     <ResponseField name="system_prompt" type="string">
-      The system prompt that defines the assistant's behavior
+      O prompt do sistema que define o comportamento do assistente
     </ResponseField>
-
     <ResponseField name="flows_platform_id" type="integer">
-      ID for flows platform integration
+      ID para integração com a plataforma Flows
     </ResponseField>
-
     <ResponseField name="timezone" type="string">
-      The timezone setting for the assistant
+      A configuração de fuso horário do assistente
     </ResponseField>
-
     <ResponseField name="created_at" type="string">
-      The date and time when the assistant was created
+      A data e hora em que o assistente foi criado
     </ResponseField>
-
     <ResponseField name="updated_at" type="string">
-      The date and time when the assistant was last updated
+      A data e hora da última atualização do assistente
     </ResponseField>
-
     <ResponseField name="max_silence_duration" type="integer">
-      Maximum silence duration in seconds before re-engagement
+      Duração máxima de silêncio em segundos antes do reengajamento
     </ResponseField>
-
     <ResponseField name="reengagement_interval" type="integer">
-      Re-engagement interval in seconds
+      Intervalo de reengajamento em segundos
     </ResponseField>
-
     <ResponseField name="deleted_at" type="string">
-      Soft deletion timestamp (null if not deleted)
+      Data e hora da exclusão suave (null se não excluído)
     </ResponseField>
-
     <ResponseField name="end_call_on_voicemail" type="integer">
-      Whether to end call when voicemail is detected (1 = yes, 0 = no)
+      Se a chamada deve ser encerrada quando um correio de voz for detectado (1 = sim, 0 = não)
     </ResponseField>
-
     <ResponseField name="llm_temperature" type="string">
-      LLM temperature setting as string
+      Configuração de temperatura do LLM como string
     </ResponseField>
-
     <ResponseField name="voice_stability" type="string">
-      Voice stability setting as string
+      Configuração de estabilidade da voz como string
     </ResponseField>
-
     <ResponseField name="voice_similarity" type="string">
-      Voice similarity setting as string
+      Configuração de similaridade da voz como string
     </ResponseField>
-
     <ResponseField name="allow_interruptions" type="boolean">
-      Whether to allow caller interruptions
+      Se deve permitir interrupções do chamador
     </ResponseField>
-
     <ResponseField name="enable_noise_cancellation" type="boolean">
-      Whether noise cancellation is enabled
+      Se a redução de ruído está habilitada
     </ResponseField>
-
     <ResponseField name="endpoint_sensitivity" type="number">
-      Endpoint sensitivity level
+      Nível de sensibilidade do endpoint
     </ResponseField>
-
     <ResponseField name="speech_speed" type="string">
-      Speech speed multiplier as string
+      Multiplicador de velocidade da fala como string
     </ResponseField>
-
     <ResponseField name="endpoint_type" type="string">
-      Voice activity detection type (vad or ai)
+      Tipo de detecção de atividade vocal (VAD ou AI)
     </ResponseField>
-
     <ResponseField name="wait_for_customer" type="boolean">
-      Whether to wait for customer to speak first
+      Se deve esperar o cliente falar primeiro
     </ResponseField>
-
     <ResponseField name="mode" type="string">
-      The engine mode (pipeline or multimodal)
+      O modo do motor (pipeline ou multimodal)
     </ResponseField>
-
     <ResponseField name="language_id" type="integer">
-      The ID of the language used by the assistant
+      O ID do idioma usado pelo assistente
     </ResponseField>
-
     <ResponseField name="transcriber_provider_id" type="integer">
-      ID of the transcriber provider
+      ID do provedor de transcrição
     </ResponseField>
-
     <ResponseField name="synthesizer_provider_id" type="integer">
-      ID of the synthesizer provider
+      ID do provedor de sintetizador
     </ResponseField>
-
     <ResponseField name="llm_model_id" type="integer">
-      ID of the LLM model used
+      ID do modelo LLM utilizado
     </ResponseField>
-
     <ResponseField name="multimodal_model_id" type="integer">
-      ID of the multimodal model used
+      ID do modelo multimodal utilizado
     </ResponseField>
-
     <ResponseField name="ambient_sound" type="string">
-      Ambient sound setting
+      Configuração de som ambiente
     </ResponseField>
-
     <ResponseField name="uuid" type="string">
-      Unique UUID for the assistant
+      UUID único do assistente
     </ResponseField>
-
     <ResponseField name="send_webhook_only_on_completed" type="boolean">
-      Whether to send webhooks only on completed calls
+      Se deve enviar webhooks apenas em chamadas concluídas
     </ResponseField>
-
     <ResponseField name="include_recording_in_webhook" type="boolean">
-      Whether to include recording URL in webhook payload
+      Se deve incluir a URL da gravação no payload do webhook
     </ResponseField>
-
     <ResponseField name="interrupt_sensitivity" type="number">
-      Interrupt sensitivity level
+      Nível de sensibilidade a interrupções
     </ResponseField>
-
     <ResponseField name="filler_config" type="object">
-      Configuration for filler audio responses
-      <Expandable title="filler_config properties">
+      Configuração para respostas de áudio de preenchimento
+
+      <Expandable title="Propriedades do `filler_config`">
         <ResponseField name="neutral" type="array">
-          Array of neutral filler responses
+          Array de respostas de preenchimento neutras
         </ResponseField>
         <ResponseField name="negative" type="array">
-          Array of negative filler responses
+          Array de respostas de preenchimento negativas
         </ResponseField>
         <ResponseField name="positive" type="array">
-          Array of positive filler responses
+          Array de respostas de preenchimento positivas
         </ResponseField>
         <ResponseField name="question" type="array">
-          Array of question filler responses
+          Array de respostas de preenchimento em forma de pergunta
         </ResponseField>
       </Expandable>
     </ResponseField>
-
     <ResponseField name="knowledgebase_id" type="integer">
-      ID of the associated knowledge base
+      ID da base de conhecimento associada
     </ResponseField>
-
     <ResponseField name="knowledgebase_mode" type="string">
-      Knowledge base mode setting
+      Configuração do modo da base de conhecimento
     </ResponseField>
-
     <ResponseField name="min_interrupt_words" type="integer">
-      Minimum number of words before interruption is allowed
+      Número mínimo de palavras antes de permitir interrupção
     </ResponseField>
-
     <ResponseField name="ambient_sound_volume" type="string">
-      Ambient sound volume level as string
+      Nível de volume do som ambiente como string
     </ResponseField>
-
     <ResponseField name="widget_settings" type="object">
-      Settings for web widget integration
+      Configurações para integração com widget web
     </ResponseField>
   </Expandable>
 </ResponseField>
 
 <ResponseField name="current_page" type="integer">
-  The current page number
+  Número da página atual
 </ResponseField>
 
 <ResponseField name="per_page" type="integer">
-  Number of items per page
+  Número de itens por página
 </ResponseField>
 
 <ResponseField name="total" type="integer">
-  Total number of assistants
+  Número total de assistentes
 </ResponseField>
 
 <ResponseField name="last_page" type="integer">
-  The last page number
+  Número da última página
 </ResponseField>
 
 <ResponseExample>
@@ -412,10 +357,10 @@ This endpoint allows you to retrieve all AI assistants belonging to the authenti
       }
     }
   ],
-  "first_page_url": "https://app.autocalls.ai/api/user/assistants/get?page=1",
+  "first_page_url": "https://appmayahub.ai/api/user/assistants/get?page=1",
   "from": 1,
   "last_page": 5,
-  "last_page_url": "https://app.autocalls.ai/api/user/assistants/get?page=5",
+  "last_page_url": "https://app.mayahub.ai/api/user/assistants/get?page=5",
   "links": [
     {
       "url": null,
@@ -423,18 +368,18 @@ This endpoint allows you to retrieve all AI assistants belonging to the authenti
       "active": false
     },
     {
-      "url": "https://app.autocalls.ai/api/user/assistants/get?page=1",
+      "url": "https://app.mayahub.ai/api/user/assistants/get?page=1",
       "label": "1",
       "active": true
     },
     {
-      "url": "https://app.autocalls.ai/api/user/assistants/get?page=2",
+      "url": "https://app.mayahub.ai/api/user/assistants/get?page=2",
       "label": "2",
       "active": false
     }
   ],
-  "next_page_url": "https://app.autocalls.ai/api/user/assistants/get?page=2",
-  "path": "https://app.autocalls.ai/api/user/assistants/get",
+  "next_page_url": "https://app.mayahub.ai/api/user/assistants/get?page=2",
+  "path": "https://app.mayahub.ai/api/user/assistants/get",
   "per_page": 10,
   "prev_page_url": null,
   "to": 10,

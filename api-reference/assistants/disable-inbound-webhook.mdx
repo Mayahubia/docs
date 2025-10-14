@@ -1,44 +1,44 @@
 ---
-title: "Disable assistant inbound webhook"
+title: "Desativar Webhook de Entrada do Assistente"
 api: "POST /user/assistants/disable-inbound-webhook"
-description: "Disable inbound webhook notifications for a specific assistant"
+description: "Desative as notificações de webhook de entrada para um assistente específico"
 ---
 
-This endpoint disables inbound webhook notifications for an assistant, stopping the delivery of real-time updates about inbound call completions and data.
+Este endpoint desativa as notificações de webhook de entrada para um assistente, interrompendo a entrega de atualizações em tempo real sobre a conclusão de chamadas recebidas e seus dados.
 
-### Request Body
+### Corpo da Requisição
 
 <ParamField body="assistant_id" type="integer" required>
-  The ID of the assistant to disable webhook for
+  O ID do assistente para o qual o webhook será desativado
 </ParamField>
 
-### Response
+### Resposta
 
 <ResponseField name="message" type="string">
-  Success message confirming webhook was disabled
+  Mensagem de sucesso confirmando que o webhook foi desativado
 </ResponseField>
 
 <ResponseField name="data" type="array">
-  Empty array (reserved for future use)
+  Array vazio (reservado para uso futuro)
 </ResponseField>
 
-### Error Responses
+### Respostas de Erro
 
 <ResponseField name="404 Not Found">
-  <Expandable title="Error Response">
+  <Expandable title="Respostas de Erro">
     <ResponseField name="message" type="string">
-      Error message when the assistant is not found or doesn't belong to the authenticated user
+      Mensagem de erro quando o assistente não for encontrado ou não pertencer ao usuário autenticado
     </ResponseField>
   </Expandable>
 </ResponseField>
 
 <ResponseField name="422 Validation Error">
-  <Expandable title="Error Response">
+  <Expandable title="Respostas de Erro">
     <ResponseField name="message" type="string">
-      Error message indicating validation failure
+      Mensagem de erro indicando falha na validação
     </ResponseField>
     <ResponseField name="errors" type="object">
-      Detailed validation errors for each field
+      Erros de validação detalhados para cada campo
     </ResponseField>
   </Expandable>
 </ResponseField>
@@ -52,11 +52,13 @@ This endpoint disables inbound webhook notifications for an assistant, stopping 
 }
 ```
 
+
 ```json 404 Not Found
 {
   "message": "Assistant not found"
 }
 ```
+
 
 ```json 422 Validation Error
 {
