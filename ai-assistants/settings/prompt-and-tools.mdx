@@ -1,8 +1,7 @@
 ---
 title: "Prompt & Ferramentas"
 icon: "wrench"
-description: "Configure a base de conhecimento, ferramentas, variáveis e prompt do sistema da sua assistente para definir suas capacidades e comportamento.
-"
+description: "Configure a base de conhecimento, ferramentas, variáveis e prompt do sistema da sua assistente para definir suas capacidades e comportamento. "
 ---
 
 **Configure o objetivo da assistente e as ferramentas que ela pode usar durante as chamadas.**
@@ -66,7 +65,6 @@ Crie e atribua suas próprias ferramentas personalizadas que a IA pode usar dura
     **Escopo:** Apenas suas próprias ferramentas estão disponíveis.
   </Card>
 </CardGroup>
-
 
 <Tip>
   Consulte a documentação de **Ferramentas Personalizadas** para guias detalhados sobre criação e configuração de ferramentas personalizadas.
@@ -187,7 +185,7 @@ Defina variáveis que podem ser passadas antes de realizar a chamada e usadas no
 
     **Exemplos:**
 
-    - `{customer_name}` para personalização ("Olá {customer_name}")
+    - `{customer_name}` para personalização ("Olá customer_name")
     - `{email}` para integrações de calendário
     - `{account_type}` para respostas personalizadas
     - `{company}` para contexto empresarial
@@ -225,128 +223,125 @@ Defina variáveis que podem ser passadas antes de realizar a chamada e usadas no
   **As variáveis de chamada são essenciais para personalizar conversas com a IA.** Elas permitem que a IA use informações específicas do cliente durante as chamadas, tornando as interações mais relevantes e eficazes.
 </Note>
 
-## **Configuração do Fluxo de Chamada**
+## Configuração do Fluxo de Chamada
 
 **Quem Fala Primeiro?**
 
 Controle se sua assistente ou o cliente inicia a conversa.
 
 <CardGroup cols={2}>
-  <Card title="AI Assistant" icon="robot">
-    **Default behavior:** Assistant starts the conversation
+  <Card title="Assistente de IA" icon="robot">
+    **Comportamento padrão: Assistente inicia a conversa**
 
-    The AI will immediately greet the caller and begin the conversation flow as soon as the call connects.
+    O assistente de IA cumprimentará imediatamente o cliente e iniciará o fluxo da conversa assim que a chamada for conectada.
 
-    **Best for:** Most outbound scenarios, sales calls, appointment reminders
+    **Mais indicado para:** A maioria dos cenários de chamadas ativas, chamadas de vendas, lembretes de compromissos
   </Card>
-  <Card title="Customer" icon="user">
-    **Wait for customer:** Assistant listens first
+  <Card title="Cliente" icon="user">
+    **Aguardar o cliente: Assistente escuta primeiro**
 
-    If you choose "Customer", the AI will wait for the customer to speak first before responding.
+    Se você escolher "Cliente", a IA aguardará o cliente falar primeiro antes de responder.
 
-    **Best for:** Inbound support calls, reception scenarios, reactive assistance
+    **Mais indicado para:** Chamadas de suporte receptivas, cenários de recepção, assistência reativa
   </Card>
 </CardGroup>
 
-### Initial Message
+### Mensagem Inicial
 
-Configure the first thing your assistant says when the call begins.
+**Configure a primeira fala do seu assistente**\
+Defina o que seu assistente dirá assim que a chamada começar.
 
 <AccordionGroup>
-  <Accordion title="Initial Message Text" icon="message">
-    Write the opening message your assistant will speak at the start of each call.
+  <Accordion title="Mensagem Inicial em Texto" icon="message">
+    Escreva a mensagem de abertura que seu assistente falará no início de cada chamada.
 
-    **Best practices:**
+    **Melhores práticas:**
 
-    - Keep it concise and friendly
-    - Introduce your company/purpose clearly
-    - Set expectations for the conversation
-    - Use variables for personalization (e.g., `{customer_name}`)
+    - Mantenha-a concisa e amigável
+    - Apresente sua empresa/propósito claramente
+    - Defina as expectativas da conversa
+    - Use variáveis para personalização (ex.: {nome_cliente})
 
-    **Example:** "Hi customer_name, this is Sarah from ABC Company. I'm calling to follow up on your recent inquiry about our services. Do you have a moment to chat?"
+    **Exemplo:** "Olá {nome_cliente}, aqui é a Sarah da Empresa ABC. Estou ligando para acompanhar sua recente solicitação sobre nossos serviços. Você tem um momento para conversarmos?"
   </Accordion>
-  <Accordion title="Initial Audio File" icon="volume">
-    **Optional:** Upload a custom audio file instead of text-to-speech
+  <Accordion title="Mensagem Inicial em Áudio" icon="volume">
+    **Opcional:** Faça upload de um arquivo de áudio personalizado em vez de usar texto para fala
 
-    **Requirements:**
+    **Requisitos:**
 
-    - MP3 or WAV format
-    - Clear, high-quality recording
-    - Professional voice and tone
-    - Matches your assistant's voice if using voice cloning
+    - Formato MP3 ou WAV
+    - Gravação clara e de alta qualidade
+    - Voz e tom profissionais
+    - Compatível com a voz do assistente se estiver usando clonagem de voz
 
-    **Benefits:**
+    **Benefícios:**
 
-    - Perfect pronunciation and delivery
-    - Consistent brand voice
-    - Professional first impression
-    - No text-to-speech latency for opening
+    - Pronúncia e entonação perfeitas
+    - Voz da marca consistente
+    - Primeira impressão profissional
+    - Sem atraso do texto para fala na abertura
 
     <Tip>
-      This works best if the AI voice is cloned using the same voice used in the initial audio.
+      Isso funciona melhor se a voz da IA for clonada usando a mesma voz do áudio inicial.
     </Tip>
   </Accordion>
 </AccordionGroup>
 
 <Note>
-  See our [Initial Message guide](/ai-assistants/initial-message) for detailed best practices and examples.
+  Consulte nosso guia de Mensagem Inicial para melhores práticas detalhadas e exemplos.
 </Note>
 
-## System Prompt
+## Prompt do Sistema
 
-Define the assistant's personality, objectives, and behavior guidelines.
+Defina a personalidade, os objetivos e as diretrizes de comportamento do assistente.
 
-### Prompt Configuration
+### Configuração de Prompt
 
 <CardGroup cols={2}>
-  <Card title="Custom Prompt" icon="pencil">
-    Write your own system prompt from scratch
+  <Card title="Prompt Personalizado" icon="pencil">
+    Escreva seu próprio prompt do sistema do zero
 
-    - Full control over assistant behavior
-    - Tailored to specific use cases
-    - Markdown formatting supported
+    - Controle total sobre o comportamento do assistente
+    - Personalizado para casos de uso específicos
+    - Suporte a formatação em Markdown
   </Card>
-  <Card title="Template Library" icon="folder">
-    Start with pre-built templates
+  <Card title="Biblioteca de Templates" icon="folder">
+    Comece com templates pré-construídos
 
-    - Multiple languages available
-    - Different conversation types
-    - Proven effective prompts
+    - Disponível em múltiplos idiomas
+    - Diferentes tipos de conversas
+    - Prompts testados e eficazes
   </Card>
 </CardGroup>
 
-### Best Practices
+### Boas Práticas
 
 <AccordionGroup>
-  <Accordion title="Be Specific" icon="bullseye">
-    Clearly define the assistant's role, objectives, and constraints.
+  <Accordion title="Seja Específco" icon="bullseye">
+    Defina claramente o papel, os objetivos e as restrições do assistente.
 
-    **Include:**
+    **Inclua:**
 
-    - Who the assistant represents
-    - What they're trying to achieve
-    - What they should/shouldn't do
+    - Quem o assistente representa
+    - O que ele está tentando alcançar
+    - O que ele deve/deve não fazer
   </Accordion>
-  <Accordion title="Set Boundaries" icon="shield">
-    Define what topics and actions are off-limits.
+  <Accordion title="Definir Limites" icon="shield">
+    Defina quais tópicos e ações são proibidos.
 
-    **Consider:**
+    **Considere:**
 
-    - Data privacy requirements
-    - Legal compliance
-    - Brand guidelines
+    - Requisitos de privacidade de dados
+    - Conformidade legal
+    - Diretrizes da marca
   </Accordion>
-  <Accordion title="Use Examples" icon="lightbulb">
-    Provide sample conversations to guide behavior.
+  <Accordion title="Use Examplos" icon="lightbulb">
+    Forneça conversas de exemplo para orientar o comportamento.
 
-    **Examples help with:**
+    **Os exemplos ajudam em:**
 
-    - Tone and style
-    - Response length
-    - Handling objections
+    - Tom e estilo
+    - Comprimento das respostas
+    - Como lidar com objeções
   </Accordion>
 </AccordionGroup>
-
-<Tip>
-  See our [System Prompt guide](/ai-assistants/system-prompt) for detailed best practices and examples.
-</Tip>
