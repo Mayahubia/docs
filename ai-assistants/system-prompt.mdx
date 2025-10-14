@@ -1,156 +1,171 @@
 ---
-title: "System Prompts"
+title: "Prompts do Sistema"
 icon: "brain"
-description: "Learn how to create effective system prompts - the core intelligence of your AI assistant"
+description: "Aprenda como criar system prompts eficazes — a inteligência central do seu assistente de IA"
 ---
 
-The system prompt is the most crucial component of your AI assistant. It defines your assistant's personality, behavior, knowledge, and capabilities. Think of it as the "brain" and "training manual" combined.
+O **system prompt** é o componente mais crucial do seu assistente de IA. Ele define a personalidade, comportamento, conhecimentos e capacidades do assistente. Pense nele como o **“cérebro” e o “manual de treinamento”** combinados.
 
-## Quick Start with Templates
+## Início Rápido com Templates
 
-To get started quickly:
+Para começar rapidamente:
 
-1. Go to your [assistant settings](/ai-assistants/settings/prompt-and-tools#system-prompt)
-2. Find the system prompt field
-3. Click the "Templates" button nearby
-4. Choose a template that matches your use case
-5. Customize it for your needs
-
-## Language Support
-
-Your system prompt can be written in any language, regardless of the spoken language setting:
-
-- Write the prompt in your preferred language
-- Set the spoken language separately in [assistant settings](/ai-assistants/settings/general#language-configuration)
-- The AI will follow the prompt's instructions while speaking in the selected language
-
-For example:
-
-- System prompt in English, spoken language set to Spanish
-- System prompt in German, spoken language set to French
-- System prompt in Chinese, spoken language set to English
-
-## Why They Matter
-
-Your system prompt:
-
-- Shapes how the AI thinks and responds
-- Defines conversation boundaries
-- Provides essential knowledge
-- Controls behavior and tone
-- Determines handling of edge cases
-
-## Key Components
-
-A good system prompt should include:
-
-### 1. Role & Identity
-
-```
-You are a professional sales representative for [Company]. You specialize in [Product/Service] and have extensive knowledge of our offerings.
-```
-
-### 2. Conversation Style
-
-```
-Maintain a friendly, professional tone. Use clear, concise language. Avoid technical jargon unless specifically asked.
-```
-
-### 3. Key Information
-
-```
-Our main products are:
-- Product A ($X/month): [features]
-- Product B ($Y/month): [features]
-Current promotion: 20% off first 3 months
-```
-
-### 4. Behavioral Guidelines
-
-```
-- Always verify customer information before discussing account details
-- Transfer to a human agent if the customer seems frustrated
-- Don't make promises about delivery dates
-```
-
-### 5. Response Framework
-
-```
-When asked about pricing:
-1. First understand their needs
-2. Present relevant package options
-3. Explain the value proposition
-4. Share any applicable discounts
-```
-
-## Best Practices
-
-1. **Be Specific**
-
-   - Clear instructions get better results
-   - Include examples of good responses
-   - Define what NOT to do
-
-2. **Structure Matters**
-
-   - Organize information logically
-   - Use bullet points and sections
-   - Keep related information together
-
-3. **Test and Iterate**
-   - Start with a basic prompt
-   - Test various scenarios
-   - Refine based on call recordings
-   - Add handling for edge cases
-
-## Common Mistakes
-
-- **Too Vague**: "Be helpful and professional" (Not specific enough)
-- **Too Rigid**: Scripting every possible response (Reduces natural flow)
-- **Information Overload**: Including unnecessary details
-- **Missing Guidelines**: Not specifying how to handle common situations
-
-## Example Structure
-
-```
-# Role and Purpose
-[Define who the AI is and its main goals]
-
-# Core Knowledge
-[Essential information about products/services]
-
-# Conversation Guidelines
-[How to interact with customers]
-
-# Response Patterns
-[How to handle specific situations]
-
-# Limitations and Boundaries
-[What the AI should NOT do]
-```
-
-## Testing Your Prompt
-
-1. Make test calls covering:
-
-   - Common scenarios
-   - Edge cases
-   - Difficult situations
-   - Various customer personalities
-
-2. Review and adjust:
-   - Listen to call recordings
-   - Check response accuracy
-   - Verify tone consistency
-   - Test knowledge retention
-
-## Optimization Tips
-
-- Start with Fast Engine for quick iterations
-- Use call recordings to identify gaps
-- Add examples of good/bad responses
-- Include handling for unexpected questions
+- Acesse as **configurações do assistente**
+- Encontre o campo **system prompt**
+- Clique no botão **Templates** próximo
+- Escolha um template que corresponda ao seu caso de uso
+- Personalize conforme suas necessidades
 
 ---
 
-**Pro Tip:** Your system prompt is a living document - regularly update it based on actual call experiences and customer interactions.
+### **Suporte a Idiomas**
+
+O system prompt pode ser escrito em qualquer idioma, independentemente da configuração de idioma falado:
+
+- Escreva o prompt no idioma de sua preferência
+- Defina o idioma falado separadamente nas configurações do assistente
+- A IA seguirá as instruções do prompt enquanto fala no idioma selecionado
+
+### **Exemplos:**
+
+- System prompt em inglês, idioma falado definido para espanhol
+- System prompt em alemão, idioma falado definido para francês
+- System prompt em chinês, idioma falado definido para inglês
+
+---
+
+### **Por Que Eles Importam**
+
+O system prompt:
+
+- Define como a IA pensa e responde
+- Estabelece limites da conversa
+- Fornece conhecimentos essenciais
+- Controla comportamento e tom
+- Determina como lidar com casos excepcionais
+
+---
+
+### **Componentes Principais**
+
+Um bom system prompt deve incluir:
+
+### 1. Função & Identidade
+
+```
+Você é um representante de vendas profissional da [Empresa]. Você é especializado em [Produto/Serviço] e possui amplo conhecimento sobre nossos produtos e serviços.
+```
+
+### 2. Estilo de Conversação
+
+```
+Mantenha um tom amigável e profissional. Use linguagem clara e concisa. Evite jargões técnicos, a menos que sejam solicitados especificamente.
+```
+
+### 3. Informações Principais
+
+```
+Nossos principais produtos são:
+
+* **Produto A ($X/mês):** [recursos]
+* **Produto B ($Y/mês):** [recursos]
+  **Promoção atual:** 20% de desconto nos primeiros 3 meses
+```
+
+### 4. Diretrizes de Comportamento
+
+```
+* Sempre verifique as informações do cliente antes de discutir detalhes da conta
+* Transfira para um agente humano se o cliente parecer frustrado
+* Não faça promessas sobre datas de entrega
+```
+
+### 5. Estrutura de Resposta
+
+```
+Ao ser questionado sobre preços:
+
+1. Primeiro, compreenda as necessidades do cliente
+2. Apresente as opções de pacotes relevantes
+3. Explique a proposta de valor
+4. Informe quaisquer descontos aplicáveis
+```
+
+## Melhores Práticas
+
+### Seja Específico
+
+- Instruções claras geram melhores resultados
+- Inclua exemplos de boas respostas
+- Defina o que **NÃO** deve ser feito
+
+### A Estrutura Importa
+
+- Organize as informações de forma lógica
+- Use listas e seções
+- Mantenha informações relacionadas juntas
+
+### Testar e Iterar
+
+- Comece com um prompt básico
+- Teste diversos cenários
+- Refine com base em gravações de chamadas
+- Adicione instruções para casos excepcionais
+
+### Erros Comuns
+
+- **Muito vago:** "Seja útil e profissional" (não é específico suficiente)
+- **Muito rígido:** Roteirizar todas as respostas possíveis (reduz a naturalidade)
+- **Excesso de informação:** Incluir detalhes desnecessários
+- **Diretrizes ausentes:** Não especificar como lidar com situações comuns
+
+## Exemplo de Estrutura
+
+```
+# Função e Propósito
+
+[Defina quem é a IA e seus principais objetivos]
+
+# Conhecimentos Essenciais
+
+[Informações essenciais sobre produtos/serviços]
+
+# Diretrizes de Conversa
+
+[Como interagir com os clientes]
+
+# Padrões de Resposta
+
+[Como lidar com situações específicas]
+
+# Limitações e Restrições
+
+[O que a IA **não deve** fazer]
+```
+
+## Testando Seu Prompt
+
+Faça chamadas de teste cobrindo:
+
+- Cenários comuns
+- Casos excepcionais
+- Situações difíceis
+- Diferentes perfis de clientes
+
+### Revise e ajuste:
+
+- Ouça as gravações das chamadas
+- Verifique a precisão das respostas
+- Confirme a consistência do tom
+- Teste a retenção de conhecimento
+
+### **Dicas de Otimização**
+
+- Comece com o **Fast Engine** para iterações rápidas
+- Use gravações de chamadas para identificar lacunas
+- Adicione exemplos de respostas boas/ruins
+- Inclua instruções para perguntas inesperadas
+
+---
+
+**Dica Profissional:** Seu system prompt é um documento vivo — atualize-o regularmente com base nas experiências reais de chamadas e nas interações com os clientes.
