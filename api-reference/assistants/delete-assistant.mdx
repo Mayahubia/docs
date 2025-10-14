@@ -1,37 +1,37 @@
 ---
-title: "Delete assistant"
+title: "Deletar Assistente"
 api: "DELETE /user/assistant/{id}"
-description: "Delete a specific AI assistant"
+description: "Deletar um assistente especifíco"
 ---
 
-This endpoint allows you to permanently delete an AI assistant that belongs to the authenticated user.
+Este endpoint permite excluir permanentemente um assistente de IA que pertença ao usuário autenticado.
 
-### Path Parameters
+### **Parâmetros de Caminho**
 
 <ParamField path="id" type="integer" required>
-  The unique identifier of the assistant to delete
+  O identificador único do assistente a ser excluído
 </ParamField>
 
-### Response
+### Resposta
 
 <ResponseField name="message" type="string">
-  Confirmation message indicating the assistant was deleted successfully
+  Mensagem de confirmação indicando que o assistente foi excluído com sucesso
 </ResponseField>
 
-### Error Responses
+### Respostas de Erro
 
 <ResponseField name="404 Not Found">
-  <Expandable title="Error Response">
+  <Expandable title="Respostas de Erro">
     <ResponseField name="message" type="string">
-      Error message when the assistant is not found or doesn't belong to the authenticated user
+      Mensagem de erro quando o assistente não for encontrado ou não pertencer ao usuário autenticado
     </ResponseField>
   </Expandable>
 </ResponseField>
 
 <ResponseField name="500 Internal Server Error">
-  <Expandable title="Error Response">
+  <Expandable title="Respostas de Erro">
     <ResponseField name="message" type="string">
-      Error message indicating assistant deletion failure
+      Mensagem de erro indicando falha na exclusão do assistente
     </ResponseField>
   </Expandable>
 </ResponseField>
@@ -44,11 +44,13 @@ This endpoint allows you to permanently delete an AI assistant that belongs to t
 }
 ```
 
+
 ```json 404 Not Found
 {
   "message": "Assistant not found"
 }
 ```
+
 
 ```json 500 Internal Server Error
 {
@@ -58,9 +60,9 @@ This endpoint allows you to permanently delete an AI assistant that belongs to t
 
 </ResponseExample>
 
-### Notes
+### **Observações**
 
-- Only assistants that belong to the authenticated user can be deleted
-- Once an assistant is deleted, it cannot be recovered
-- This action will permanently remove the assistant and all its configuration
-- If the assistant is currently handling active calls, those calls may be affected
+- Apenas assistentes que pertencem ao usuário autenticado podem ser excluídos.
+- Uma vez excluído, o assistente não pode ser recuperado.
+- Esta ação removerá permanentemente o assistente e toda a sua configuração.
+- Se o assistente estiver lidando com chamadas ativas, essas chamadas podem ser afetadas.
