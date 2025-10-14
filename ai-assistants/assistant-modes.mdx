@@ -1,88 +1,86 @@
 ---
-title: "Assistant Modes"
+title: "Modos de Assistentes"
 icon: "wave-pulse"
-description: "Understand the three voice generation modes available for your AI assistants and when to use each one."
+description: "Entenda os três modos de geração de voz disponíveis para seus assistentes de IA e quando usar cada um."
 ---
 
-AI assistants on Autocalls.ai can speak in **three distinct modes**. Each mode determines how a caller's speech is understood and how the assistant's reply is generated:
+Os assistentes de IA na [MayaHub.ai](http://mayahub.ai) podem falar em três modos distintos. Cada modo determina como a fala do cliente é compreendida e como a resposta do assistente é gerada:
 
-<Callout>
-Choosing the right mode can improve response time, naturalness, and overall call experience.
-</Callout>
+<Info>
+  Escolher o modo certo pode melhorar o tempo de resposta, a naturalidade e a experiência geral da chamada.
+</Info>
 
 ## 1. Pipeline
 
-| | |
-|---|---|
-| **Label in UI** | `Pipeline` |
-| **How it works** | Speech-to-Text → LLM → Text-to-Speech |
-| **Latency** | ~800 – 1500 ms (depends on language & model) |
-| **Best for** | Complex reasoning, dynamic prompts, multi-sentence replies |
+|                         |                                                                        | |
+| ----------------------- | ---------------------------------------------------------------------- | --- |
+| **Rótulo na interface** | `Pipeline`                                                             | |
+| **Como funciona **      | Speech-to-Text → LLM → Text-to-Speech                                  | |
+| **Latência**            | ~800 – 1500 ms (depende do idoma e modelo)                             | |
+| **Mais Indicado para ** | Raciocínio complexo, prompts dinâmicos, respostas com múltiplas frases | |
 
-Pipeline mode first transcribes the caller's words into text, runs that text through the language model, then converts the response back to audio. It's a tried-and-true approach that offers maximum flexibility:
+O modo Pipeline primeiro transcreve as palavras do cliente em texto, processa esse texto no modelo de linguagem e depois converte a resposta de volta em áudio. É uma abordagem consolidada que oferece máxima flexibilidade:
 
-- Supports **all voices** in the library (including custom-cloned voices).
-- Handles **long-form answers** or paragraph-style responses well.
-- Allows the LLM to **inject variables** and reference earlier context cleanly.
+- Suporta todas as vozes da biblioteca (incluindo vozes clonadas personalizadas).
+- Lida bem com respostas longas ou em formato de parágrafo.
+- Permite que o LLM insira variáveis e faça referência ao contexto anterior de forma clara.
 
-### When to choose Pipeline
+**Quando escolher Pipeline**
 
-1. You need rich, multi-sentence answers (e.g.
-   support queries, detailed explanations).
-2. The assistant must reason over **structured data** or complex prompts.
-3. You prefer absolute control of the spoken voice (clone or brand voice).
+- Você precisa de respostas ricas e com múltiplas frases (ex.: consultas de suporte, explicações detalhadas).
+- O assistente precisa raciocinar sobre dados estruturados ou prompts complexos.
+- Você prefere controle absoluto sobre a voz falada (clonada ou da marca).
 
 ## 2. Speech-to-Speech (Multimodal)
 
-| | |
-|---|---|
-| **Label in UI** | `Speech-to-speech` |
-| **How it works** | Direct **speech-to-speech** generation (no intermediate text) |
-| **Latency** | ~300 – 600 ms (ultra low) |
-| **Best for** | Natural back-and-forth, short & reactive replies |
+|                         |                                                            |
+| ----------------------- | ---------------------------------------------------------- |
+| **Rótulo na interface** | `Speech-to-speech`                                         |
+| **Como funciona **      | Geração direta de fala para fala (sem texto intermediário) |
+| **Latência**            | ~300 – 600 ms (ultra baixa)                                |
+| **Mais Indicado para ** | Conversas naturais, respostas curtas e reativas            |
 
-Speech-to-speech mode skips separate transcription and TTS. Instead, it uses a **multimodal model** that listens and speaks directly, producing more conversational flow:
+O modo Speech-to-Speech ignora a transcrição separada e o TTS. Em vez disso, usa um modelo multimodal que ouve e fala diretamente, proporcionando um fluxo mais conversacional:
 
-- **Fast turn-taking** – callers experience near-instant responses.
-- Generates **more expressive prosody** natively (intonation, fillers).
-- Currently supports a **limited voice set**, but more are added regularly.
+- Troca de turnos rápida – os clientes recebem respostas quase instantâneas.
+- Gera prosódia mais expressiva de forma nativa (entonação, pausas, fillers).
+- Atualmente suporta um conjunto limitado de vozes, mas mais estão sendo adicionadas regularmente.
 
-### When to choose Speech-to-Speech
+**Quando escolher Speech-to-Speech**
 
-1. The conversation needs to feel **snappy** (sales, booking confirmations).
-2. Your replies are generally **short sentences** or quick acknowledgements.
-3. You're okay with the system-provided voice options for faster interaction.
+- A conversa precisa ser ágil (vendas, confirmações de reserva).
+- Suas respostas são geralmente frases curtas ou confirmações rápidas.
+- Você aceita as opções de voz fornecidas pelo sistema para interação mais rápida.
 
 <Note>
-Speech-to-speech is evolving rapidly. If you need a custom cloned voice with low latency, try **Dualplex**.
+  O modo Speech-to-Speech está evoluindo rapidamente. Se você precisar de uma voz clonada personalizada com baixa latência, experimente o Dualplex.
 </Note>
 
 ## 3. Dualplex (Beta)
 
-| | |
-|---|---|
-| **Label in UI** | `Dualplex` |
-| **How it works** | Multimodal STT + LLM (speech-to-speech) with ElevenLabs TTS output |
-| **Latency** | Low (varies by voice and model) |
-| **Best for** | Fast, natural replies with high-quality/brand voices (cloned) |
+|                         |                                                                           |
+| ----------------------- | ------------------------------------------------------------------------- |
+| **Rótulo na interface** | `Dualplex`                                                                |
+| **Como funciona **      | Multimodal STT + LLM (speech-to-speech) com saida ElevenLabs TTS          |
+| **Latência**            | Baixa (varia conforme voz e modelo)                                       |
+| **Mais Indicado para ** | Respostas rápidas e naturais com vozes de alta qualidade/marca (clonadas) |
 
-Dualplex blends the responsiveness of speech-to-speech with the premium voices and cloning from ElevenLabs used in Pipeline. The assistant uses the multimodal model to understand the caller and plan the reply, then renders the final speech through ElevenLabs for consistent, high‑fidelity output.
+O Dualplex combina a rapidez do modo Speech-to-Speech com as vozes premium e clonagem da ElevenLabs usadas no Pipeline. O assistente utiliza o modelo multimodal para entender o cliente e planejar a resposta, e depois renderiza a fala final pelo ElevenLabs, garantindo saída consistente e de alta fidelidade.
 
-- **Near-instant turn-taking** similar to speech-to-speech.
-- Access to **ElevenLabs** voice library, including **custom-cloned voices**.
-- Great for **short to medium** replies with expressive prosody.
-- **Recommended default** for most use-cases today; currently in **Beta**.
+- Troca de turnos quase instantânea, semelhante ao Speech-to-Speech.
+- Acesso à biblioteca de vozes ElevenLabs, incluindo vozes clonadas personalizadas.
+- Excelente para respostas curtas a médias com prosódia expressiva.
+- Recomendado como padrão para a maioria dos casos de uso atualmente; atualmente em Beta.
 
-### When to choose Dualplex
+**Quando escolher Dualplex**
 
-1. You want fast back-and-forth but need a branded or cloned voice.
-2. You want more expressive delivery without giving up precise voice choice.
-3. You're comfortable using a new feature that is still in Beta.
+- Você quer respostas rápidas e naturais, mas precisa de uma voz de marca ou clonada.
+- Você deseja uma entrega mais expressiva sem abrir mão da escolha precisa da voz.
+- Você está confortável usando um recurso novo que ainda está em Beta.
 
-## Switching modes
-
-You can pick the mode for each assistant in **Assistant → Settings → Voice Engine**. Test all three modes to see which delivers the best balance of speed and quality for your use-case. `Dualplex` is currently labeled **Beta**.
+**Mudando de modo**\
+Você pode selecionar o modo para cada assistente em **Assistente → Configurações → Motor de Voz**. Teste os três modos para ver qual oferece o melhor equilíbrio entre velocidade e qualidade para seu caso de uso. O Dualplex atualmente está rotulado como Beta.
 
 ---
 
-**Pro Tip:** Record two calls – one in each mode – and compare the caller's perceived latency and engagement level to decide which fits your flow. 
+**Dica profissional:** Grave duas chamadas – uma em cada modo – e compare a latência percebida pelo cliente e o nível de engajamento para decidir qual se adapta melhor ao seu fluxo.
