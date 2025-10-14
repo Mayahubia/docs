@@ -1,455 +1,507 @@
 ---
-title: "General Settings"
+title: "Configuração Geral"
 icon: "gear"
-description: "Basic configuration settings for your AI assistant including call direction, phone numbers, voice, and advanced settings."
+description: "Configurações básicas do seu assistente de IA, incluindo direção da chamada, números de telefone* voz e configurações avançadas."
 ---
 
-Configure the fundamental settings for your AI assistant including call direction, phone numbers, voice selection, and technical parameters.
+Configure as **configurações fundamentais** do seu assistente de IA, incluindo **direção da chamada**, **números de telefone**, **seleção de voz** e **parâmetros técnicos**.
 
-## Quick Start Guide
+## Guia de Início Rápido
 
-Ready to set up your first AI assistant? Here's the essential flow:
+Pronto para configurar seu primeiro assistente de IA?\
+Aqui está o fluxo essencial:
 
-1. **Choose Call Direction:** Inbound (answers calls) or Outbound (makes calls)
-2. **Set Assistant Name:** Internal label like "Support Bot" or "Sales Bot"
-3. **Configure Phone Numbers:** Assign platform numbers, SIP, or Caller ID
-4. **Select Voice & Language:** Choose from built-in voices or clone custom ones
-5. **Adjust Advanced Settings:** Fine-tune models, timing, and audio parameters
+- **Escolha a Direção da Chamada:**\
+  **Recebida (Inbound)** para atender chamadas ou **Efetuada (Outbound)** para realizar chamadas
+- **Defina o Nome do Assistente:**\
+  Um rótulo interno como _“Bot de Suporte”_ ou _“Bot de Vendas”_
+- **Configure os Números de Telefone:**\
+  Atribua números da plataforma, **SIP** ou **Caller ID**
+- **Selecione a Voz e o Idioma:**\
+  Escolha entre vozes integradas ou **clone vozes personalizadas**
+- **Ajuste as Configurações Avançadas:**\
+  Faça o ajuste fino de **modelos, tempos de resposta** e **parâmetros de áudio**
 
 <Tip>
-**Always test your changes** by calling the assistant or running a small campaign to confirm it behaves as expected.
+  Sempre **teste suas alterações** realizando uma chamada com o assistente ou executando uma **pequena campanha** para confirmar que ele está se comportando conforme o esperado.
 </Tip>
 
 <Note>
-Follow this page section by section to configure your assistant. Each setting includes detailed explanations and best practices to help you make the right choices.
+  Siga esta página **seção por seção** para configurar seu assistente.\
+  Cada configuração inclui **explicações detalhadas** e **boas práticas** para ajudá-lo a fazer as escolhas corretas.
 </Note>
 
-## Call Direction & Basic Setup
+### **Tipo de Assistente**
 
-### Assistant Type
-Choose whether your assistant handles **inbound** or **outbound** calls. This fundamental choice affects which other options become available.
+Escolha se o seu assistente irá lidar com **chamadas recebidas (inbound)** ou **chamadas efetuadas (outbound)**.\
+Essa escolha fundamental afeta quais outras opções estarão disponíveis.
 
-**Inbound (Receive calls):** Handles incoming calls from customers. See [Inbound calls overview](/inbound-calls/overview).
+- **Inbound (Receber chamadas):** Lida com chamadas de clientes que entram. Consulte _Visão geral de chamadas recebidas._
+- **Outbound (Efetuar chamadas):** Inicia chamadas para leads ou clientes. Consulte _Visão geral de chamadas efetuadas._
 
-**Outbound (Make calls):** Initiates calls to leads or customers. See [Outbound calls overview](/outbound-calls/overview).
+---
 
-### Assistant Name
-A descriptive name to identify your assistant in the dashboard. Use something memorable that describes the assistant's purpose (e.g. "Sales Qualifier", "Support Bot", "Appointment Scheduler").
+### **Nome do Assistente**
 
-## Phone Number Configuration
+Um nome descritivo para identificar seu assistente no painel.\
+Use algo memorável que descreva o propósito do assistente (ex: **“Qualificador de Vendas”**, **“Bot de Suporte”**, **“Agendador de Consultas”**).
 
-Your assistant needs a phone number to operate. The available options depend on your call direction choice.
+---
 
-### For Outbound Assistants
-You can use:
-- **Platform numbers:** Numbers rented directly from our platform
-- **SIP numbers:** Connect your existing VOIP/PBX system
-- **Caller ID only:** Verify ownership of an existing number to display it on outbound calls
+### **Configuração de Número de Telefone**
 
-### For Inbound Assistants  
-You can use:
-- **Platform numbers:** Numbers rented directly from our platform
-- **SIP numbers:** Connect your existing VOIP/PBX system
+Seu assistente precisa de um número de telefone para operar.\
+As opções disponíveis dependem da direção da chamada escolhida.
 
-**Note:** Caller ID only numbers cannot handle inbound calls - they only display on outbound calls.
+#### **Para Assistentes Outbound**
 
-### Pricing & Costs
-- **Platform numbers:** Monthly rental fees starting from $3.99/month. See [renting a dedicated number](/pricing/number-rentals#1-renting-a-dedicated-number) for detailed pricing.
-- **SIP integration:** No monthly fee, only $0.00045/min for AI bridging. See [SIP integration pricing](/pricing/number-rentals#2-sip-integration-no-monthly-fee).
-- **Caller ID:** No monthly fee, region-based per-minute rates (e.g., $0.01/min in the US). See [Caller ID pricing](/pricing/number-rentals#3-caller-id-no-monthly-fee).
+Você pode usar:
 
-See [Phone number types](/phone-numbers/types) for detailed explanations and [SIP integration guide](/provisioning/sip-trunking/sip-integration) for VOIP setup.
+- **Números da plataforma:** Números alugados diretamente da plataforma
+- **Números SIP:** Conecte seu sistema **VOIP/PBX** existente
+- **Somente Caller ID:** Verifique a propriedade de um número existente para exibi-lo em chamadas efetuadas
 
-## Engine Type (Voice Processing Mode)
+#### **Para Assistentes Inbound**
 
-Choose how your AI processes speech and generates responses. Each mode is optimized for different use cases. See [Assistant modes](/ai-assistants/assistant-modes) for detailed comparisons.
+Você pode usar:
 
-### Pipeline Mode
-Traditional Speech-to-Text → LLM → Text-to-Speech pipeline. Offers maximum control over voice selection and response generation.
+- **Números da plataforma:** Números alugados diretamente da plataforma
+- **Números SIP:** Conecte seu sistema **VOIP/PBX** existente
 
-**Best for:** Complex reasoning, function calling, custom voice requirements
+> **Observação:** Números **Caller ID only** não podem receber chamadas — eles apenas exibem o identificador em chamadas outbound.
 
-### Speech-to-Speech Mode  
-Direct speech-to-speech generation without intermediate text processing. Provides the most natural conversational flow.
+---
 
-**Best for:** Quick conversations, natural back-and-forth dialogue
+### **Preços e Custos**
 
-### Dualplex Mode (Beta)
-Combines fast multimodal processing with premium ElevenLabs voice output.
+- **Números da plataforma:** Taxa mensal a partir de **US\$ 3,99/mês**. Veja _aluguel de número dedicado_ para preços detalhados.
+- **Integração SIP:** Sem taxa mensal, apenas **US\$ 0,00045/minuto** para ponte de IA. Consulte _preços de integração SIP._
+- **Caller ID:** Sem taxa mensal, tarifas por minuto baseadas na região (ex: **US\$ 0,01/min** nos EUA). Veja _preços Caller ID._
 
-**Best for:** Most use cases - recommended default
+Consulte _Tipos de número de telefone_ para explicações detalhadas e o _guia de integração SIP_ para configuração VOIP.
 
-## Language Configuration
+---
 
-### Primary Language
-The main language your assistant will use for speech recognition and synthesis. This affects:
-- Speech recognition accuracy
-- Available voice options  
-- Filler audio phrases
-- Voice model selection
+### **Tipo de Motor (Modo de Processamento de Voz)**
 
-See [Language support](/conversation-design/language-support) for all available languages and accents.
+Escolha como sua IA processará a fala e gerará respostas.\
+Cada modo é otimizado para diferentes casos de uso. Consulte _Modos de Assistente_ para comparações detalhadas.
 
-### Secondary Languages
-Additional languages your assistant can understand and speak. Useful for:
-- Multilingual customer support
-- International businesses
-- Code-switching conversations
+#### **Pipeline Mode**
 
-**Note:** The AI can detect which language the customer is speaking and respond appropriately.
+Fluxo tradicional **Speech-to-Text → LLM → Text-to-Speech**.\
+Oferece máximo controle sobre a seleção de voz e geração de respostas.\
+**Melhor para:** raciocínios complexos, chamadas de função e requisitos de voz personalizados.
 
-## AI Voice Selection
+#### **Speech-to-Speech Mode**
 
-Your assistant can choose from existing voices, clone custom voices, or request voices from the ElevenLabs library.
+Geração direta de fala para fala, sem processamento intermediário de texto.\
+Oferece um fluxo de conversa mais natural.\
+**Melhor para:** conversas rápidas e diálogo fluido.
 
-### Voice Options
-You have three ways to get the perfect voice for your assistant:
+#### **Dualplex Mode (Beta)**
 
-**1. Choose from existing voices:**
-- **Professional voices:** Pre-trained, high-quality options from ElevenLabs
-- **Multiple accents:** Available for most languages
-- **Gender options:** Male and female voices for each language
-- **Tone variety:** From formal business to casual conversational
+Combina processamento multimodal rápido com saída de voz premium da **ElevenLabs**.\
+**Melhor para:** a maioria dos casos de uso – **configuração padrão recomendada.**
 
-**2. Clone a custom voice:**
-Create a custom voice by uploading audio samples:
+---
 
-**Requirements:**
-- Clear, high-quality audio sample (1-5 minutes recommended)
-- MP3 or WAV format
-- Consistent speaking pace and tone
-- Minimal background noise
-- Same voice used throughout
+### **Configuração de Idioma**
 
-**Process:**
-1. Record yourself or a voice actor reading sample text
-2. Upload the audio file in assistant settings
-3. Wait for training to complete (few minutes to hours)
-4. Test the cloned voice before using in production
+#### **Idioma Principal**
 
-**Use cases:**
-- Brand consistency with company spokesperson
-- Personal touch for customer relationships
-- Matching voice to specific business persona
+O idioma principal que seu assistente usará para reconhecimento e síntese de fala. Isso afeta:
 
-**3. Request from ElevenLabs library:**
-You can request specific voices from the ElevenLabs public library - contact support to add them to your account. Browse the [ElevenLabs Voice Library](https://elevenlabs.io/docs/product-guides/voices/voice-library) to discover thousands of professional voices across different languages, accents, and use cases.
+- Precisão do reconhecimento de fala
+- Opções de voz disponíveis
+- Frases de preenchimento (filler audio)
+- Seleção do modelo de voz
 
-See [Voice selection guide](/ai-assistants/voice-selection) for detailed setup instructions.
+Consulte _Suporte de Idiomas_ para ver todos os idiomas e sotaques disponíveis.
 
-## Timezone Configuration
+#### **Idiomas Secundários**
 
-### Timezone
-Set the timezone your assistant operates in. This affects:
-- Time-based variables in conversations
-- Appointment scheduling functions
-- "Current time" references in system prompts
-- Timestamps in call logs and data extraction
+Idiomas adicionais que seu assistente pode compreender e falar. Útil para:
 
-**Important:** Choose the timezone where your business operates or where most customers are located. The assistant will use this for any time-related calculations or scheduling.
+- Suporte ao cliente multilíngue
+- Empresas internacionais
+- Conversas com alternância de idiomas (code-switching)
 
-## Audio Enhancement Settings
+> **Observação:** A IA pode detectar automaticamente o idioma do cliente e responder de forma apropriada.
 
-### Ambient Sound
-Optional background sound mixed under your assistant's voice to mask processing delays and create a more natural audio experience.
+---
 
-**Options:**
-- **None:** No background sound (default)
-- **Office:** Subtle office environment sounds
+### **Seleção de Voz da IA**
 
-**Volume control:** Adjust the level of ambient sound relative to the voice. Lower values are usually better - too much background sound can interfere with speech recognition.
+Seu assistente pode escolher entre vozes existentes, clonar vozes personalizadas ou solicitar vozes da biblioteca **ElevenLabs**.
+
+#### **Opções de Voz**
+
+Você tem três maneiras de obter a voz ideal para o seu assistente:
+
+1. **Escolher entre vozes existentes:**
+   - **Vozes profissionais:** opções pré-treinadas e de alta qualidade da ElevenLabs
+   - **Múltiplos sotaques:** disponíveis para a maioria dos idiomas
+   - **Opções de gênero:** vozes masculinas e femininas
+   - **Variedade de tons:** de formal e corporativo até casual e conversacional
+2. **Clonar uma voz personalizada:**\
+   Crie uma voz exclusiva enviando amostras de áudio.
+
+   **Requisitos:**
+   - Áudio claro e de alta qualidade (1 a 5 minutos recomendados)
+   - Formato **MP3** ou **WAV**
+   - Ritmo e tom consistentes
+   - Mínimo de ruído de fundo
+   - Mesma voz usada em toda a gravação
+
+   **Processo:**
+   - Grave você mesmo ou contrate um dublador lendo um texto de amostra
+   - Envie o arquivo de áudio nas configurações do assistente
+   - Aguarde o treinamento ser concluído (de minutos a algumas horas)
+   - Teste a voz clonada antes de usá-la em produção
+
+   **Casos de uso:**
+   - Consistência de marca com o porta-voz da empresa
+   - Toque pessoal nas interações com clientes
+   - Voz alinhada à persona do negócio
+3. **Solicitar da biblioteca ElevenLabs:**\
+   Você pode solicitar vozes específicas da biblioteca pública da ElevenLabs.\
+   Entre em contato com o suporte para adicioná-las à sua conta.\
+   Explore a **Biblioteca de Vozes ElevenLabs** para descobrir milhares de vozes profissionais em diversos idiomas, sotaques e estilos.
+
+Consulte o _Guia de Seleção de Voz_ para instruções detalhadas de configuração.
+
+---
+
+### **Configuração de Fuso Horário**
+
+#### **Fuso Horário**
+
+Defina o fuso horário em que seu assistente irá operar. Isso afeta:
+
+- Variáveis baseadas em tempo durante conversas
+- Funções de agendamento de compromissos
+- Referências de “hora atual” nos prompts do sistema
+- Carimbos de tempo em registros de chamadas e extração de dados
+
+> **Importante:** Escolha o fuso horário onde sua empresa opera ou onde está a maioria dos clientes.\
+> O assistente usará essa configuração para cálculos e agendamentos relacionados a horário.
+
+---
+
+### **Configurações de Aprimoramento de Áudio**
+
+#### **Som Ambiente**
+
+Som de fundo opcional misturado à voz do assistente, para mascarar eventuais atrasos de processamento e criar uma experiência de áudio mais natural.
+
+**Opções:**
+
+- **Nenhum:** sem som de fundo (padrão)
+- **Escritório:** sons sutis de ambiente de escritório
+
+**Controle de volume:**\
+Ajuste o nível do som ambiente em relação à voz.\
+Valores mais baixos costumam ser melhores — **som excessivo pode interferir no reconhecimento de fala.**
 
 <Tip>
-Turn off or lower volume if the assistant isn't hearing the customer clearly.
+  Desative ou reduza o volume se o assistente **não estiver ouvindo o cliente com clareza**.
 </Tip>
 
-### Filler Audio
-Short conversational phrases like "mhm", "okay", "I understand" that play during AI processing time. See [Filler audio guide](/ai-assistants/filler-audio) for full details.
+### **Áudio de Preenchimento (Filler Audio)**
+
+Frases curtas de conversação como **“mhm”**, **“okay”**, **“entendi”** que são reproduzidas durante o tempo de processamento da IA.\
+Consulte o _Guia de Áudio de Preenchimento_ para mais detalhes.
 
 <Card title="Benefits" icon="star">
-- Eliminates awkward silences during processing
-- Keeps callers engaged  
-- Creates more natural conversation flow
-- Reduces hang-up rates
+  - Elimina **silêncios constrangedores** durante o processamento
+  - Mantém os **chamadores engajados**
+  - Cria um **fluxo de conversa mais natural**
+  - Reduz a **taxa de desligamento**
 </Card>
 
-**Language-aware configuration:** Filler phrases are automatically set for your selected language:
+**Configuração sensível ao idioma:**\
+As frases de preenchimento são configuradas automaticamente para o **idioma selecionado**.
 
 <AccordionGroup>
-  <Accordion title="Positive responses" icon="thumbs-up">
-    "Great!", "Perfect!", "Super!"
+  <Accordion title="Respostas Positivas" icon="thumbs-up">
+    **“Ótimo!”, “Perfeito!”, “Excelente!”**
   </Accordion>
-  
-  <Accordion title="Negative responses" icon="thumbs-down">
-    "Hmm.", "I see.", "Okay."
+  <Accordion title="Respostas Negativas" icon="thumbs-down">
+    "**Hmm.**", **“Entendi.”, “Ok.”**
   </Accordion>
-  
-  <Accordion title="Question responses" icon="circle-question">
-    "Right?", "Really?", "How so?"
+  <Accordion title="Respostas a Perguntas" icon="circle-question">
+    **“Certo?”, “Sério?”, “Como assim?”**
   </Accordion>
-  
-  <Accordion title="Neutral responses" icon="circle">
-    "Okay.", "I understand.", "Got it."
+  <Accordion title="Respostas Neutras" icon="circle">
+    **“Ok.”, “Entendi.”, “Compreendi.”**
   </Accordion>
 </AccordionGroup>
 
-**Customization:** You can edit the default phrases for each category to match your brand voice or regional preferences.
+**Personalização:** Você pode editar as **frases padrão** de cada categoria para **combinar com a voz da sua marca** ou **preferências regionais**.
 
 <Note>
-Enable by default - most conversations benefit from fillers. Test with your target audience and adjust phrases to match your assistant's personality.
+  **Ativar por padrão** – a maioria das conversas se beneficia do uso de fillers.\
+  Teste com seu público-alvo e **ajuste as frases** para combinar com a **personalidade do assistente**.
 </Note>
 
-## Advanced Settings
+## **Configurações Avançadas**
 
-### LLM Model Selection
-Choose the best language model for your assistant's mode. See [LLM model selection guide](/ai-assistants/assistant-configuration#3-select-an-llm-model) for detailed recommendations.
+### **Seleção do Modelo LLM**
 
-**Recommended models by mode:**
+Escolha o **melhor modelo de linguagem** para o modo do seu assistente.\
+Consulte o _Guia de Seleção de Modelos LLM_ para recomendações detalhadas.
 
-| Model | Strengths | Best for |
-| --- | --- | --- |
-| **GPT-5 Mini** | Balanced reasoning with low latency | **Pipeline** mode for complex reasoning |
-| **GPT-5 Realtime** | Ultra-low-latency voice turns | **Speech-to-Speech** and **Dualplex** |
-| **GPT-4o** | Strong reasoning and multimodal understanding | Complex tasks (higher latency) |
-| **Gemini Flash 2.0/2.5** | Ultra-fast for voice turns | **Dualplex/Multimodal** for minimal latency |
+**Modelos recomendados por modo:**
 
-**Quick selection guide:**
-- **Speed is critical:** Use GPT-5 Realtime or Gemini Flash 2.0/2.5
-- **Rich reasoning needed:** Use GPT-4o or GPT-5 Mini with filler audios to offset latency
+| **Modelo**               | **Pontos Fortes**                             | **Melhor Para**                              |
+| :----------------------- | :-------------------------------------------- | :------------------------------------------- |
+| **GPT-5 Mini**           | Raciocínio equilibrado com baixa latência     | Pipeline Mode para raciocínio complexo       |
+| **GPT-5 Realtime**       | Respostas de voz com **ultra baixa latência** | Speech-to-Speech e Dualplex                  |
+| **GPT-4o**               | Raciocínio avançado e compreensão multimodal  | Tarefas complexas (latência maior)           |
+| **Gemini Flash 2.0/2.5** | **Ultra-rápido** para respostas de voz        | Dualplex/Multimodal para **latência mínima** |
 
-### LLM Temperature
+**Guia Rápido de Seleção:**
 
-**Range:** 0.0 - 1.0 | **Default:** 0.1
+- **Velocidade é crítica:** Use **GPT-5 Realtime** ou **Gemini Flash 2.0/2.5**
+- **Raciocínio complexo necessário:** Use **GPT-4o** ou **GPT-5 Mini** com **filler audios** para compensar a latência
 
-Adjust the level of creativity of the AI when generating responses. Lower value yields better function call results.
+---
+
+### **Temperatura do LLM**
+
+- **Intervalo:** 0.0 - 1.0 | **Padrão:** 0.1
+- Ajusta o nível de **criatividade** da IA ao gerar respostas.
+- Valores mais baixos produzem **melhores resultados em chamadas de função**.
 
 <CardGroup cols={2}>
-  <Card title="Lower (0.0-0.3)" icon="snowflake">
-    **More stable:** Predictable responses, better for function calling and business use cases
+  <Card title="Mais Baixo (0.0-0.3)" icon="snowflake">
+    **Mais estável:** Respostas previsíveis, ideal para **chamadas de função** e **casos de uso empresarial**.
   </Card>
-  
-  <Card title="Higher (0.7-1.0)" icon="fire">
-    **More random:** Creative and varied responses, good for casual conversations
+  <Card title="Mais Alto (0.7-1.0)" icon="fire">
+    **Mais aleatório:** Respostas criativas e variadas, ideal para **conversas informais**.
   </Card>
 </CardGroup>
 
 <Note>
-**Special behavior:** For GPT-5 Mini and GPT-5 Nano models in Pipeline mode, temperature is automatically set to 1.0 for optimal performance.
+  Dito pelo ChatGPT:
+
+  **Comportamento especial:** Para os modelos **GPT-5 Mini** e **GPT-5 Nano** no **Pipeline Mode**, a temperatura é ajustada automaticamente para **1.0** para desempenho otimizado.
 </Note>
 
-### Duration Settings
+### **Configurações de Duração**
 
-Control timing and call limits to optimize user experience and costs:
+Controle o **tempo e os limites de chamadas** para otimizar a experiência do usuário e os custos:
 
 <AccordionGroup>
-  <Accordion title="Re-engagement Interval" icon="clock">
-    **Range:** 7 - 600 seconds | **Default:** 30 seconds
-    
-    AI will try to re-engage the user if no reply is detected within this time.
-    
-    **Recommended:** 30-60 seconds for professional calls.
+  <Accordion title="Intervalo de Reengajamento" icon="clock">
+    **Intervalo:** 7 - 600 segundos | **Padrão:** 30 segundos
+
+    A IA tentará **reengajar o usuário** se nenhuma resposta for detectada dentro desse período.
+
+    **Recomendação:** 30-60 segundos para chamadas profissionais.
   </Accordion>
-  
-  <Accordion title="Max Call Duration" icon="timer">
-    **Range:** 20 - 1200 seconds | **Default:** 600 seconds (10 minutes)
-    
-    Call will automatically end if this value is reached.
-    
-    **Recommended:** 5-10 minutes for lead qualification to control costs.
+  <Accordion title="Duração Maxima de Chamada" icon="timer">
+    **Intervalo:** 20 - 1200 segundos | **Padrão:** 600 segundos (10 minutos)
+
+    A chamada será **encerrada automaticamente** se esse valor for atingido.
+
+    **Recomendação:** 5-10 minutos para qualificação de leads, a fim de **controlar custos**.
   </Accordion>
-  
-  <Accordion title="Max Silence Duration" icon="volume-off">
-    **Range:** 1 - 120 seconds | **Default:** 40 seconds
-    
-    Call will end if user doesn't reply within this time.
-    
-    **Recommended:** 30-45 seconds to balance patience with efficiency.
+  <Accordion title="Duração Maxima de Silêncio" icon="volume-off">
+    **Intervalo:** 1 - 120 segundos | **Padrão:** 40 segundos
+
+    A chamada será **encerrada** se o usuário não responder dentro desse período.
+
+    **Recomendação:** 30-45 segundos para equilibrar **paciência e eficiência**.
   </Accordion>
-  
-  <Accordion title="Ringing Time" icon="phone">
-    **Range:** 1 - 60 seconds | **Default:** 30 seconds
-    
-    For how long the call will ring before marking as unanswered. **Good when you want to avoid voicemail by setting a lower value.**
+  <Accordion title="Tempo de Toque" icon="phone">
+    **Intervalo:** 1 - 60 segundos | **Padrão:** 30 segundos
+
+    Determina **por quanto tempo a chamada tocará** antes de ser marcada como não atendida.\
+    Útil para **evitar caixa postal**, definindo um valor menor.
   </Accordion>
 </AccordionGroup>
 
 <Tip>
-**Cost optimization:** Lower duration limits help control per-minute costs, especially important for high-volume campaigns.
+  **Otimização de custos:** Limites de duração menores ajudam a **controlar os custos por minuto**, especialmente importante em **campanhas de alto volume**.
 </Tip>
 
-### Call Protection Settings
+### **Configurações de Proteção de Chamadas**
 
 <AccordionGroup>
-  <Accordion title="Noise Cancellation" icon="shield">
-    **Default:** Enabled
-    
-    Filters caller background noise for clearer speech recognition. Turn OFF if experiencing audio clipping.
+  <Accordion title="Cancelamento de Ruído" icon="shield">
+    **Padrão:** Ativado
+
+    Filtra **ruído de fundo do chamador** para um reconhecimento de fala mais claro.\
+    Desative se houver **recorte de áudio (clipping)**.
   </Accordion>
-  
-  <Accordion title="End Call on Voicemail" icon="voicemail">
-    **Default:** Enabled
-    
-    Immediately ends call if voicemail is detected during outbound calls (saves costs).
+  <Accordion title="Encerrar Chamada na Caixa Postal" icon="voicemail">
+    **Padrão:** Ativado
+
+    Encerra a chamada **imediatamente** se for detectada **caixa postal** em chamadas outbound (economiza custos).
   </Accordion>
-  
-  <Accordion title="Record Calls" icon="record-vinyl">
-    **Default:** Enabled
-    
-    Records call audio for review and analysis. **Ensure compliance with local recording laws.**
+  <Accordion title="Gravação da Chamada" icon="record-vinyl">
+    **Padrão:** Ativado
+
+    Grava o **áudio da chamada** para revisão e análise.\
+    Garanta conformidade com as **leis locais de gravação**.
   </Accordion>
-  
-  <Accordion title="Max Initial Silence" icon="timer">
-    **Range:** 1 - 120 seconds | **Default:** 20 seconds (when enabled)
-    
-    If enabled, end the call if no first user response within this time. Counts only from call start to first user response.
-    
-    **Use case:** Detect if anyone actually answered the phone.
+  <Accordion title="Silêncio Inicial Máximo" icon="timer">
+    **Intervalo:** 1 - 120 segundos | **Padrão:** 20 segundos (quando ativado)
+
+    Se ativado, encerra a chamada se **não houver resposta do usuário** dentro desse período.\
+    Conta apenas do **início da chamada até a primeira resposta do usuário**.
+
+    **Caso de uso:** Detectar se alguém realmente atendeu o telefone.
   </Accordion>
 </AccordionGroup>
 
-## Synthesizer Settings
+## **Configurações do Sintetizador**
 
-Configure text-to-speech voice parameters for natural-sounding conversations.
+Configure os **parâmetros de voz text-to-speech** para conversas com som mais natural.
 
-**Available for:** Pipeline and Dualplex modes only. Speech-to-Speech mode uses native voice generation.
+**Disponível para:** apenas modos **Pipeline** e **Dualplex**.\
+O modo **Speech-to-Speech** utiliza geração de voz nativa.
 
-### Voice Tuning Parameters
+---
 
-Fine-tune your assistant's voice characteristics for optimal performance:
+### **Parâmetros de Ajuste de Voz**
+
+Ajuste finamente as **características da voz** do assistente para desempenho ideal:
 
 <AccordionGroup>
-  <Accordion title="Voice Stability" icon="wave-square">
-    **Range:** 0.0 - 1.0 | **Default:** 0.7
-    
-    Lower settings make the voice more expressive but less predictable, while higher settings make it steadier but less emotional.
-    
+  <Accordion title="Estabilidade da Voz" icon="wave-square">
+    **Intervalo:** 0.0 - 1.0 | **Padrão:** 0.7
+
+    Valores mais baixos tornam a voz **mais expressiva**, mas menos previsível, enquanto valores mais altos tornam a voz **mais estável**, porém menos emocional.
+
     <CardGroup cols={2}>
-      <Card title="More Expressive (0.0-0.3)" icon="sparkles">
-        Dynamic and varied delivery but less predictable
+      <Card title="Mais Expressivo (0.0-0.3)" icon="sparkles">
+        **Entrega dinâmica e variada, porém menos previsível**
       </Card>
-      <Card title="More Stable (0.7-1.0)" icon="shield-check">
-        Consistent and steady but less emotional range
+      <Card title="Menos Estável (0.7-1.0)" icon="shield-check">
+        **Consistente e estável, porém com menor variação emocional**
       </Card>
     </CardGroup>
   </Accordion>
-  
   <Accordion title="Voice Similarity" icon="fingerprint">
-    **Range:** 0.0 - 1.0 | **Default:** 0.5
-    
-    Determines how closely the AI matches the original voice. Higher settings potentially include unwanted noise from the original recording.
-    
+    **Intervalo:** 0.0 - 1.0 | **Padrão:** 0.5
+
+    Determina o quão **fiel a IA será à voz original**.\
+    Valores mais altos podem incluir **ruídos indesejados** da gravação original.
+
     <CardGroup cols={2}>
-      <Card title="More Stable (0.0-0.4)" icon="filter">
-        Cleaner audio but less accurate to original voice
+      <Card title="Mais Estável (0.0-0.4)" icon="filter">
+        **Áudio mais limpo, porém menos fiel à voz original**
       </Card>
-      <Card title="More Similar (0.6-1.0)" icon="copy">
-        Accurate to original but may include background noise
+      <Card title="Mais Similar (0.6-1.0)" icon="copy">
+        **Fiel à voz original, mas pode incluir ruído de fundo**
       </Card>
     </CardGroup>
-    
     <Warning>
-    **For cloned voices:** Start at 0.5 and increase gradually. Higher similarity can introduce unwanted artifacts from the original recording.
+      **Para vozes clonadas:** Comece em **0.5** e aumente gradualmente.\
+      Valores mais altos de similaridade podem **introduzir artefatos indesejados** da gravação original.
     </Warning>
   </Accordion>
-  
-  <Accordion title="Speech Speed" icon="gauge">
+  <Accordion title="Velocidade da Fala" icon="gauge">
     **Range:** 0.7 - 1.2 | **Default:** 1.0
-    
+
     Adjust the speed of the AI's speech for optimal comprehension and user experience.
-    
+
     <CardGroup cols={3}>
-      <Card title="Slower (0.7-0.85)" icon="turtle">
-        Better for complex information or older demographics
+      <Card title="Mais Lento (0.7-0.85)" icon="turtle">
+        **Melhor para informações complexas ou para públicos mais velhos**
       </Card>
       <Card title="Normal (0.9-1.1)" icon="clock">
-        Standard conversational pace for most use cases
+        **Ritmo de conversa padrão para a maioria dos casos de uso**
       </Card>
-      <Card title="Faster (1.15-1.2)" icon="rabbit">
-        Quick conversations or time-sensitive scenarios
+      <Card title="Mais Rápido (1.15-1.2)" icon="rabbit">
+        **Conversas rápidas ou cenários com limite de tempo**
       </Card>
     </CardGroup>
   </Accordion>
 </AccordionGroup>
 
-## Transcriber Settings
+## **Configurações do Transcritor**
 
-Configure speech-to-text recognition for optimal accuracy and speed.
+Configure o reconhecimento de fala para texto para obter precisão e velocidade ideais.
 
-**Available for:** Pipeline mode only. Speech-to-Speech and Dualplex modes use integrated transcription.
+**Disponível para:** apenas no modo Pipeline. Os modos Speech-to-Speech e Dualplex utilizam transcrição integrada.
 
-### Provider Selection
+**Seleção de Provedor**
 
-Choose the best transcriber for your language and use case. The provider that will be used to transcribe the user speech.
+Escolha o transcritor mais adequado para seu idioma e caso de uso. O provedor selecionado será usado para transcrever a fala do usuário.**Latency:** Faster
+
+Solid choice for English and major languages.
 
 <CardGroup cols={3}>
   <Card title="Azure" icon="cloud">
-    **Accuracy:** ⭐⭐⭐⭐
-    **Latency:** Slower
-    
-    Best for highest transcription fidelity when accuracy is critical.
+    **Precisão:** ⭐⭐⭐⭐ **Latência: Mais lenta**
+
+    Melhor para máxima fidelidade na transcrição quando a precisão é crítica.
   </Card>
-  
   <Card title="Gladia" icon="bolt">
-    **Accuracy:** ⭐⭐⭐
-    **Latency:** Faster
-    
-    Good all-rounder for most languages. Supports multilingual configurations.
+    **Precisão:** ⭐⭐⭐ 
+
+    **Latência:** **Mais rápido**
+
+    Bom para uso geral na maioria dos idiomas. Suporta configurações multilíngues.
   </Card>
-  
   <Card title="Deepgram" icon="waveform">
-    **Accuracy:** ⭐⭐⭐
-    **Latency:** Faster
-    
-    Solid choice for English and major languages.
+    **Precisão:** ⭐⭐⭐
+
+    **Latência: Mais rápida**
+
+    Boa opção para inglês e principais idiomas.
   </Card>
 </CardGroup>
 
 <Note>
-Different languages, accents, or background noise can impact each provider differently. Test which performs better for your specific language and audio setup.
+  **Idiomas diferentes, sotaques ou ruído de fundo podem impactar cada provedor de forma diferente. Teste qual funciona melhor para seu idioma e configuração de áudio específicos.**
 </Note>
 
-### Endpoint Configuration
+### **Configuração de Endpoint**
 
 <CardGroup cols={2}>
   <Card title="AI Turn Detection" icon="brain">
-    Uses AI to intelligently detect when the caller has finished speaking
+    **Utiliza IA para detectar de forma inteligente quando o interlocutor terminou de falar**
   </Card>
-  
   <Card title="Voice Activity Detection (VAD)" icon="microphone">
-    **Default:** Traditional voice activity detection
-    
-    Choose how the AI will detect the end of the user phrase
+    **Padrão: Detecção tradicional de atividade vocal**
+
+    Escolha como a IA irá detectar o final da frase do usuário.
   </Card>
 </CardGroup>
 
 ### Voice Activity Detection (VAD)
 
-Control when your assistant starts and stops talking. See [Handling interruptions guide](/conversation-design/interruptions) for detailed VAD configuration.
+**Controle quando sua assistente começa e para de falar. Consulte o guia de Tratamento de Interrupções para configuração detalhada do VAD.**
 
 <Warning>
-Fine-tune these settings if experiencing interruption issues or sluggish responses.
+  **Ajuste essas configurações finamente se estiver enfrentando problemas de interrupção ou respostas lentas.**
 </Warning>
 
 <AccordionGroup>
-  <Accordion title="Endpoint Sensitivity" icon="microphone">
-    **Range:** 0 - 5 seconds | **Default:** 0.5
-    
-    Adjust the time the AI will wait for the user to speak after the last word. Lower values make the AI faster, higher values are better for long user phrases.
-    
-    - **0 (Faster):** Quick responses but may cut off callers
-    - **5 (Slower):** Waits longer, reduces interruptions
+  <Accordion title="Sensitividade Endpoint" icon="microphone">
+    **Intervalo: 0 - 5 segundos | Padrão: 0,5**
+
+    Ajuste o tempo que a IA aguardará o usuário falar após a última palavra. Valores menores tornam a IA mais rápida; valores maiores são melhores para frases longas do usuário.
+
+    **0 (Mais rápido):** Respostas rápidas, mas pode interromper o usuário.
+
+    **5 (Mais lento):** Aguarda mais tempo, reduzindo interrupções.
   </Accordion>
-  
-  <Accordion title="Interrupt Sensitivity" icon="volume-off">
-    How easily the assistant stops when caller talks over it. Controls the sensitivity for detecting when a caller is trying to interrupt.
+  <Accordion title="Sensibilidade à Interrupção" icon="volume-off">
+    **Com que facilidade a assistente para quando o interlocutor fala por cima. Controla a sensibilidade para detectar quando alguém está tentando interromper.**
   </Accordion>
-  
-  <Accordion title="Minimum Interrupt Words" icon="list-ol">
-    Require at least N caller words before interrupting assistant.
-    **Use:** Prevents false triggers from background noise or brief sounds.
+  <Accordion title="Palavras de Interrupção Mínima" icon="list-ol">
+    **Exigir pelo menos N palavras do interlocutor antes de interromper a assistente.**
+
+    **Uso:** Evita disparos falsos causados por ruído de fundo ou sons breves.
   </Accordion>
 </AccordionGroup>
 
 <Tip>
-**Pro tip:** Start with default VAD settings and adjust based on real call testing. Increase endpoint sensitivity if callers get cut off, decrease if responses feel slow.
+  **Dica profissional:** Comece com as configurações padrão do VAD e ajuste com base em testes reais de chamadas. Aumente a sensibilidade do endpoint se os interlocutores forem interrompidos; diminua se as respostas parecerem lentas.
 </Tip>
