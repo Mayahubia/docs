@@ -1,48 +1,48 @@
 ---
-title: "Criando e Gerenciando Campanhas"
+title: "Creating & Managing Campaigns"
 icon: "bullhorn"
-description: "Guia passo a passo para criar e administrar campanhas de chamadas ativas, incluindo importação de leads e monitoramento"
+description: "Step-by-step guide to creating and managing outbound call campaigns, including lead imports and monitoring"
 ---
 
-Uma “campanha ativa” define quando, como e para quem as ligações serão feitas.1. Setup a Campaign
+An outbound "campaign" determines when, how, and to whom calls are made. Campaigns automate calls to multiple leads using your AI assistant with intelligent scheduling and retry logic.
 
-1. **1. Configurar uma Campanha**
+## Quick Setup
 
-   Acesse **Outbound / Campaigns** no seu painel.
+1. **Go to Outbound / Campaigns** in your dashboard
+2. **Click "Create New Campaign"**:
+   - **Name**: e.g. "January Promo," "Payment Reminder," etc.
+   - **Assistant**: which AI assistant will handle these calls?
+   - **Schedule**: choose time windows and allowed days
 
-   Clique em **Create New Campaign**:
-   - **Nome**: exemplo "Promoção de Janeiro", "Lembrete de Pagamento"
-   - **Assistente**: escolha qual assistente de IA fará essas chamadas
-   - **Janela de horário**: defina o período em que a campanha poderá realizar ligações
+## Lead Import Options
 
-## **2. Importando Leads**
+- **CSV File**: Upload phone numbers (plus any extra columns, like name or account number)
+- **Google Sheets**: Connect via the no-code platform or direct integration to pull leads
+- **CRM Integration**: HubSpot, GoHighLevel, etc. can send leads directly via API or automation
 
-- **Arquivo CSV**: envie uma lista com números de telefone (e colunas adicionais como nome ou número da conta)
-- **Google Sheets**: conecte via a plataforma no-code ou integração direta
-- **CRM**: alguns CRMs (como HubSpot, GHL etc.) podem enviar leads diretamente via API ou automação
+## Key Settings
 
-## **3. Repetições de Chamada e Agendamento**
+**Call Retries & Scheduling:**
+- **Max Retries**: e.g., attempt each lead up to 2 times if they don't answer
+- **Retry Interval**: minutes/hours between retries
+- **Time Window**: e.g., only call between 9 AM and 6 PM local time to avoid inconveniencing leads
 
-- **Máximo de tentativas**: por exemplo, tentar cada lead até 2 vezes se não atender
-- **Intervalo entre tentativas**: defina em minutos ou horas
-- **Janela de horário**: exemplo, ligar apenas entre 9h e 18h para não incomodar os leads fora do expediente
+**Monitoring & Control:**
+- Once live, calls happen automatically during allowed hours
+- You can **pause** or **stop** the campaign anytime to revise your script or leads list
+- **Campaign Reports** show call results, answer rates, and duration analytics
 
-## **4. Monitoramento e Pausa**
+## Best Practices
 
-Depois de ativada, a campanha executa as chamadas automaticamente dentro do horário permitido.
+- **Conservative scheduling**: Business hours, respect time zones
+- **Start with 2-3 retries**: Monitor and adjust based on feedback
+- **Clean lead data**: Valid numbers, remove duplicates
+- **Monitor costs**: Large campaigns can run thousands of parallel calls
 
-Você pode pausar ou interromper a qualquer momento para ajustar o script ou a lista de contatos.
-
-## **5. Análise de Resultados**
-
-Acesse **Campaign Reports** para visualizar:
-
-- Quantas ligações foram atendidas x não atendidas
-- Número de chamadas bem-sucedidas x falhas
-- Duração média das chamadas, entre outros dados
+<Note>
+**Large campaigns** with thousands of leads can run concurrently, as AI can handle parallel calls. Watch your minute usage to avoid unexpected costs.
+</Note>
 
 ---
 
-**Observação**: Campanhas grandes com milhares de leads podem rodar em paralelo, já que a IA suporta múltiplas ligações simultâneas.
-
-Fique atento ao consumo de minutos para evitar custos inesperados.
+For comprehensive setup instructions, advanced features, lead management, status tracking, and troubleshooting, see the complete [Campaigns Documentation](/campaigns/index).

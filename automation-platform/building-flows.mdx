@@ -1,22 +1,17 @@
 ---
-title: "Construindo Fluxos"
+title: "Building Flows"
 icon: "hammer"
-description: "Um fluxo é composto por duas partes: gatilho e ações"
+description: "Flow consists of two parts, trigger and actions"
 ---
 
-## Gatilho
+## Trigger
 
-O gatilho é o ponto de partida do fluxo e define com que frequência ele será executado. Existem vários tipos de gatilhos disponíveis, como:
+The flow's starting point determines its frequency of execution. There are various types of triggers available, such as Schedule Trigger, Webhook Trigger, or Event Trigger based on specific service.
 
-- **Gatilho por Agendamento (Schedule Trigger)**
-- **Gatilho por Webhook (Webhook Trigger)**
-- **Gatilho por Evento (Event Trigger)** baseado em um serviço específico
+## Action
 
-## Ação
+Actions come after the flow and control what occurs when the flow is activated, like running code or communicating with other services.
 
-As ações vêm depois do gatilho e determinam o que acontece quando o fluxo é ativado.\
-Exemplos: executar um código, enviar dados para outro serviço, atualizar uma planilha, etc.
-
-Cenário da vida real:
+In real-life scenario:
 
 ![Flow Parts](/resources/flow-parts.png)

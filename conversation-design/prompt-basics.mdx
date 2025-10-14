@@ -1,38 +1,35 @@
 ---
-title: "Noções Básicas de Escrita de Prompt"
+title: "Prompt Writing Basics"
 icon: "pen-nib"
-description: "Aprenda a criar prompts de sistema e mensagens iniciais eficazes para suas assistentes de IA"
+description: "Learn how to write effective system prompts and initial messages for your AI assistants"
 ---
 
-A [MayaHub](http://mayahub.ai) utiliza um **Prompt de Sistema** para orientar como a assistente de IA deve interagir com os chamadores. Um prompt bem escrito é essencial para conversas telefônicas mais fluidas e precisas.
+Autocalls.ai uses a **System Prompt** to guide how your AI assistant interacts with callers. Crafting an effective prompt is key to smoother, more accurate phone conversations.
 
-## **1. Prompt de Sistema vs. Mensagem Inicial**
+## 1. System Prompt vs. Initial Message
 
-- **Prompt de Sistema**: Instruções gerais e contexto. Exemplo:\
-  _"Você é o Bot de Suporte da TechMasters Inc. Cumprimente com educação, peça o nome, realize suporte básico e transfira a ligação se o problema for complexo."_
-- **Mensagem Inicial**: Primeira fala da IA, especialmente em chamadas receptivas. Exemplo:\
-  _"Obrigado por ligar para a TechMasters! Como posso te ajudar hoje?"_
+- **System Prompt**: Overall instructions and context. Example:  
+  _"You are the Support Bot for TechMasters Inc. Greet politely, ask for a name, handle basic troubleshooting, and transfer the call if the issue is complex."_
 
-## **2. Clareza e Estrutura**
+- **Initial Message**: The first thing the AI says, especially for inbound. Example:  
+  _"Thank you for calling TechMasters! How can I assist you today?"_
 
-- **Seja Específico**: Explique claramente o objetivo da IA, o tom da conversa e os passos que ela deve seguir.
-- **Use Exemplos**: Inclua exemplos de diálogo.\
-  _"Se o usuário mencionar uma dúvida sobre cobrança, peça o número da fatura."_
+## 2. Clarity & Structure
 
-### **3. Como Lidar com Assuntos Desconhecidos**\\
+- **Be Specific**: Outline the main purpose, tone, and steps you want the AI to follow.
+- **Use Examples**: Show sample dialogues. _"If the user says they have a billing question, ask them for their invoice number."_
 
-Caso o usuário pergunte algo fora do escopo, defina se a IA deve:
+## 3. Handling "Unknown" Cases
 
-- Responder com uma frase padrão:\
-  _"Não tenho certeza, vou te transferir para alguém que possa ajudar…"_
-- Ou tentar obter mais informações.
+- If a user asks about something off-topic, decide whether the AI should:
+  - Provide a default response: _"I'm not sure, let me transfer you…"_
+  - Gather more details.
 
-## **4. Seja Direto e Objetivo**
+## 4. Keep It Short & Focused
 
-- Prompts curtos costumam funcionar melhor. Instruções longas demais podem deixar a IA mais lenta ou causar respostas incorretas (_alucinação_).
-
-  Se tiver muito conteúdo, use uma base de conhecimento ou divida o texto com subtítulos.
+- A short prompt often works best; too-long instructions can make the AI slower or prone to "hallucination."
+- If you have lengthy content, consider a knowledge-base or chunk your text with headings.
 
 ---
 
-**Dica**: Revise periodicamente as transcrições das chamadas para identificar onde a IA precisa de mais ou menos instruções.
+**Tip:** Periodically review your transcripts to see where the AI might need more or fewer instructions.

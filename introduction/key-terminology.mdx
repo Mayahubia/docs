@@ -1,35 +1,63 @@
 ---
-title: "Termos-Chave"
+title: "Key Terminology"
 icon: "book"
-description: "Termos e conceitos essenciais que você precisa conhecer para usar a MayaHub de forma eficaz"
+description: "Essential terms and concepts you need to know to use Autocalls.ai effectively"
 ---
 
-Compreender esses termos vai te ajudar a navegar pela plataforma com mais facilidade:
+Understanding these terms will help you navigate Autocalls.ai more easily:
 
-## [AI Assistant / Agent](/ai-assistants/voice-selection)
+## [AI Assistant / Agent](/ai-assistants/what-is-ai-assistant)
 
-Bot personalizável que você configura para atender chamadas receptivas ou fazer chamadas ativas. Define o estilo da conversa, a voz e o comportamento por meio de um "prompt de sistema".
+A customizable bot you configure to handle inbound or outbound calls. Defines conversation style, voice, and behavior via a "system prompt."
 
-## [Campaign (Outbound)](/outbound-calls/campaigns)
+## [Campaign (Outbound)](/campaigns/index)
 
-Sequência ou lote de chamadas feitas para uma lista de contatos ou leads. Você pode enviar um CSV, conectar o Google Sheets ou integrar seu CRM para iniciar as chamadas.
+A sequence or batch of calls to a list of contacts or leads. You can upload a CSV, connect Google Sheets, or integrate your CRM to launch these calls.
 
 ## [Inbound Number](/phone-numbers/types)
 
-Número de telefone dedicado que os clientes ligam para falar com sua assistente de IA. Pode ser obtido pela plataforma ou integrado via SIP/PBX.
+A dedicated phone number that customers dial to reach your AI assistant. You can get one from the platform or integrate via SIP/PBX.
 
 ## [Outbound Caller ID](/outbound-calls/caller-id)
 
-Número que aparece na tela do cliente quando sua assistente de IA faz uma ligação. Você pode alugar um número ou verificar um número existente para usar como identificador.
+The number displayed on the customer's phone when your AI calls them. You can rent one or verify an existing number to use as Caller ID.
 
-## [No-Code Automation Platform](/automation-platform/sms-capabilities)
+## [No-Code Automation Platform](/automation-platform/introduction)
 
-Ferramenta de automação integrada da [MayaHub](http://mayahub.ai), semelhante ao N8n, Zapier ou Make. Permite conectar gatilhos (como "ligação encerrada") a ações (como "enviar e-mail" ou "atualizar planilha") sem precisar programar.
+Autocalls.ai's built-in workflow platform, similar to Zapier/Make. It lets you connect triggers (like "call ended") to actions (like "send an email" or "update a Google Sheet") without writing code.
 
-## [Tools / Integrations](/getting-started/core-concepts)
+## [Tools / Integrations](/ai-assistants/settings/prompt-and-tools#default-tools)
 
-Funcionalidades especiais que sua assistente pode usar, como transferir uma ligação, encerrar, agendar um horário ou acionar webhooks para apps externos.
+Refers to the specialized features your AI assistant can use, like transferring a call, ending a call, scheduling an appointment, or webhooks to external apps.
+
+## [Knowledge Base](/conversation-design/knowledge-bases)
+
+A collection of documents (PDFs, websites, text files) that your AI assistant can reference during calls to provide accurate information and answer customer questions.
+
+## [Post-Call Variables](/ai-assistants/settings/post-call-actions#post-call-variables)
+
+Data extracted by AI after each call (like `status`, `summary`, `formatted_transcript`) that can be used in automations and follow-up actions.
+
+## [Call Variables](/ai-assistants/settings/prompt-and-tools#call-variables)
+
+Dynamic data that personalizes each call (like `customer_name`, `email`, `company`) and can be used in system prompts and automations.
+
+## [Lead Status](/leads/index)
+
+The current state of a lead in your system: Created, Scheduled, Processing, Completed, Rescheduled, or Max Retries.
+
+## [Campaign Status](/campaigns/index)
+
+The current state of a campaign: Draft, In Progress, Paused, or Completed.
+
+## [Webhook](/api-reference/webhooks/post-call-webhook)
+
+A URL endpoint that receives data when specific events occur (like call endings), enabling real-time integrations with external systems.
+
+## [SIP Integration](/provisioning/sip-trunking/sip-integration)
+
+A method to connect your existing phone system or VOIP provider with Autocalls.ai without renting new numbers.
 
 ---
 
-**Dica**: Guarde essas definições — elas aparecerão em várias etapas de configuração e explicações de recursos.
+**Tip:** Keep these definitions in mind as you proceed through the docs. They'll pop up in various setup steps or feature explanations.

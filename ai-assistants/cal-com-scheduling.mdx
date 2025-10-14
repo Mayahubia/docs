@@ -1,121 +1,112 @@
 ---
-title: "Agendamento de Compromissos com Cal.com"
+title: "Cal.com Appointment Scheduling"
 icon: "calendar-days"
-description: "Saiba como ativar sua assistente de IA para agendar compromissos usando a integração com o Cal.com "
+description: "Learn how to enable your AI assistant to schedule appointments using Cal.com integration"
 ---
 
-Ative sua assistente de IA para agendar compromissos e reuniões de forma automática com a integração [Cal.com](http://Cal.com). Essa funcionalidade permite que a IA verifique a disponibilidade e agende diretamente durante as chamadas.
+Enable your AI assistant to seamlessly schedule meetings and appointments using Cal.com integration. This powerful feature allows your AI to check availability and book meetings directly during calls.
 
 <Warning>
-  **Importante:**\
-  Não adicione campos obrigatórios personalizados no evento do [Cal.com](http://Cal.com).\
-  A integração só funciona com os campos padrão e o campo opcional de telefone. Campos personalizados obrigatórios fazem a integração falhar.
+  Do not make any new fields required in your Cal.com event settings. The
+  integration only supports default fields and the optional phone field. Adding
+  required custom fields will cause the integration to fail.
 </Warning>
 
-### Pré-requisitos
+## Prerequisites
 
-Antes de configurar a integração com o [Cal.com](http://Cal.com), você precisará de:
+Before setting up Cal.com integration, you'll need:
 
-- Uma conta [Cal.com](http://Cal.com) (hospedada ou self-hosted)
-- Um tipo de evento configurado no [Cal.com](http://Cal.com)
-- Uma chave de API do Cal.com
+- A Cal.com account (either hosted or self-hosted)
+- An event type configured in Cal.com
+- An API key from Cal.com
 
-### Etapas de Configuração
+## Setup Process
 
-#### 1. Configuração no [Cal.com](http://Cal.com)
+### 1. Cal.com Configuration
 
 1. Sign up or log in to your [Cal.com](https://cal.com/) account
-2. Crie um novo tipo de evento exclusivo para agendamentos da assistente de IA
-   - Dê um nome como: **"Reunião com Assistente de IA"**
-   - Configure duração, disponibilidade e outras opções
-3. Após criar, anote o **ID do evento** (presente na URL)
+2. Create a new event type specifically for AI assistant bookings
+   - Give it a clear name like "Meeting with AI Assistant"
+   - Configure duration, availability, and other settings
+3. Once created, note down the event ID from the URL
+   <img height="200" src="/resources/cal-event-id.png" />
+4. Generate an API key:
+   - Go to Cal.com settings
+   - Navigate to Developer Settings
+   - Create a new API key
+   - Copy and securely store the API key
 
-   <img
-     height="200"
-     src="/resources/cal-event-id.png"
-   />
-4. **Gere uma chave de API:**
-   - Vá em **Configurações do **[**Cal.com**](http://Cal.com)
-   - Acesse **Developer Settings**
-   - Crie uma nova chave de API
-   - Copie e guarde sua chave com segurança
+### 2. Customer Contact Information
 
-### 2. Informações de Contato do Cliente
+#### Email Configuration
 
-**Configuração de E-mail**\
-Para enviar convites de calendário aos clientes:
+To send calendar invites to customers:
 
-- Defina o campo de e-mail nas variáveis de entrada da assistente
-- Ao criar o lead, envie o e-mail do cliente como variável
-- O sistema usará esse e-mail automaticamente para o convite
+1. Define `email` in your assistant's input variables
+2. Pass the customer's email as the `email` variable when creating the lead
+3. The system will automatically use this email for calendar invitations
 
-**Número de Telefone no Evento**\
-Para incluir o número de telefone do cliente nos eventos:
+#### Phone Number in Calendar Events
 
-- Vá nas configurações do evento no [Cal.com](http://Cal.com)
-- Clique em **“Adicionar uma pergunta”**
+To include the caller's phone number in calendar events:
 
-  <img
-    height="200"
-    src="/resources/cal-event-settings.jpeg"
-  />
-- Configure o campo com os seguintes valores:
-  - **Identificador:** `phone` (tem que ser exatamente assim)
+1. Go to your event settings in Cal.com
+2. Click on "Add a question"
+   <img height="200" src="/resources/cal-event-settings.jpeg" />
+3. Configure the field with these exact values:
+   - Identifier: `phone` (this must be exact)
+     <img height="200" src="/resources/cal-phone-field.jpeg" />
+4. Save your changes
+   <img height="200" src="/resources/cal-save.jpeg" />
 
-    <img
-      height="200"
-      src="/resources/cal-phone-field.jpeg"
-    />
-- Salve as alterações
+### 3. Adding Cal.com to Your Assistant
 
-  <img
-    height="200"
-    src="/resources/cal-save.jpeg"
-  />
+1. In your [AI assistant settings](/ai-assistants/settings/prompt-and-tools#default-tools), locate the Tools section
+2. Add the Cal.com integration
+3. Configure the tool with:
+   - Your Cal.com API key
+   - The event type ID
+     <img height="200" src="/resources/cal-tool.png" />
 
-### 3. Adicionando o [Cal.com](http://Cal.com) na Assistente
+## Best Practices
 
-- Vá em **Configurações da Assistente de IA**
-- Acesse a seção **Ferramentas (Tools)**
-- Adicione a integração com [Cal.com](http://Cal.com)
-- Preencha com:
-  - Sua chave de API [Cal.com](http://Cal.com)
-  - O ID do tipo de evento
+- Create dedicated event types for AI bookings to track their usage
+- Set clear buffer times between meetings
+- Configure appropriate meeting durations
+- Use descriptive event names that make sense to your customers
+- Keep only default fields and the phone field optional
+- Always include customer email in lead creation for calendar invites
 
-    <img
-      height="200"
-      src="/resources/cal-tool.png"
-    />
+## Testing
 
-## Boas Práticas
+After setup, we recommend:
 
-- Crie tipos de eventos exclusivos para a IA (facilita rastreamento)
-- Configure intervalos de buffer entre reuniões
-- Defina durações apropriadas
-- Use nomes descritivos que façam sentido para o cliente
-- Mantenha apenas campos padrão e o de telefone como opcional
-- Sempre inclua o e-mail do cliente ao criar o lead
+1. Making a test call to your AI assistant
+2. Requesting to schedule a meeting
+3. Verifying the booking appears in your Cal.com dashboard
+4. Checking that the phone number appears in the calendar event
+5. Verifying the customer receives the calendar invitation email
+6. Checking the confirmation emails are received
 
-## Testes
+## Troubleshooting
 
-Depois de configurar:
+### Quick Fixes:
 
-- Faça uma chamada de teste para a assistente
-- Solicite o agendamento de uma reunião
-- Verifique se o agendamento aparece no painel do [Cal.com](http://Cal.com)
-- Veja se o número aparece no evento do calendário
-- Confirme se o cliente recebeu o e-mail do convite
-- Verifique os e-mails de confirmação
+**Missing API Key Error:**
+- **Solution:** Enter correct API key and event ID in assistant settings
+- **Steps:** Go to [assistant settings](/ai-assistants/settings/prompt-and-tools#default-tools) → Appointment Scheduling → Enter API key and event ID → Save
 
-## Solução de Problemas
+**Booking Failures:**
+- **Email Required:** Ensure assistant has email defined in [assistant settings](/ai-assistants/settings/prompt-and-tools#call-variables)
+- **Phone field setup:** Add phone field in Cal.com event settings with identifier "phone". See [Phone Number in Calendar Events](#phone-number-in-calendar-events) for detailed setup.
+- **Test with real phone calls:** Use phone call (not web call) for testing
+- **No custom fields:** Don't add required custom fields in Cal.com event settings
 
-Se houver falhas:
+**Connection Issues:**
+- **Verify API key** is active in Cal.com developer settings
+- **Check event ID** from your Cal.com event URL
+- **Confirm phone field** identifier is exactly "phone"
 
-- Verifique se a chave de API está ativa e com permissões corretas
-- Confirme se o ID do evento está correto
-- Veja se a disponibilidade no [Cal.com](http://Cal.com) está configurada corretamente
-- Verifique se não há campos obrigatórios personalizados
-- O identificador do campo de telefone deve ser exatamente `phone`
-- Confirme se a variável de e-mail está definida na assistente
-- Veja se o e-mail do cliente está sendo passado corretamente
-- Verifique as configurações de fuso horário
+<Note>
+For comprehensive Cal.com troubleshooting, including detailed solutions and additional issues, see [Cal.com Issues](/troubleshooting/cal-com).
+</Note>

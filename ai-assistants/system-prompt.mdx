@@ -1,159 +1,156 @@
 ---
-title: "Prompts de Sistema"
+title: "System Prompts"
 icon: "brain"
-description: "Aprenda a criar prompts de sistema eficazes – a inteligência central da sua assistente de IA"
+description: "Learn how to create effective system prompts - the core intelligence of your AI assistant"
 ---
 
-O prompt de sistema é o componente mais importante da sua assistente. Ele define a **personalidade**, **comportamento**, **conhecimento** e **capacidades** da IA. Pense nele como o "cérebro" e o "manual de treinamento" combinados.
+The system prompt is the most crucial component of your AI assistant. It defines your assistant's personality, behavior, knowledge, and capabilities. Think of it as the "brain" and "training manual" combined.
 
-## **Comece Rápido com Templates**
+## Quick Start with Templates
 
-Para agilizar a criação:
+To get started quickly:
 
-- Vá nas configurações da assistente
-- Encontre o campo **System Prompt**
-- Clique em **"Templates"**
-- Escolha um modelo conforme seu caso de uso
-- Personalize conforme necessário
+1. Go to your [assistant settings](/ai-assistants/settings/prompt-and-tools#system-prompt)
+2. Find the system prompt field
+3. Click the "Templates" button nearby
+4. Choose a template that matches your use case
+5. Customize it for your needs
 
-## **Suporte a Idiomas**
+## Language Support
 
-O prompt pode ser escrito em **qualquer idioma**, mesmo que a voz fale outro:
+Your system prompt can be written in any language, regardless of the spoken language setting:
 
-- Escreva o prompt no idioma que preferir
-- Defina o idioma falado separadamente nas configurações
-- A IA seguirá as instruções do prompt e falará no idioma definido
+- Write the prompt in your preferred language
+- Set the spoken language separately in [assistant settings](/ai-assistants/settings/general#language-configuration)
+- The AI will follow the prompt's instructions while speaking in the selected language
 
-**Exemplos:**
+For example:
 
-- Prompt em inglês, voz em espanhol
-- Prompt em alemão, voz em francês
-- Prompt em chinês, voz em inglês
+- System prompt in English, spoken language set to Spanish
+- System prompt in German, spoken language set to French
+- System prompt in Chinese, spoken language set to English
 
-## **Por que é Importante**
+## Why They Matter
 
-O prompt de sistema:
+Your system prompt:
 
-- Define como a IA pensa e responde
-- Delimita os limites da conversa
-- Fornece conhecimento essencial
-- Controla comportamento e tom de voz
-- Determina como agir em situações difíceis
+- Shapes how the AI thinks and responds
+- Defines conversation boundaries
+- Provides essential knowledge
+- Controls behavior and tone
+- Determines handling of edge cases
 
-## Componentes Essenciais de um Bom Prompt
+## Key Components
 
 A good system prompt should include:
 
-### 1. **Papel e Identidade**
+### 1. Role & Identity
 
 ```
-Você é um(a) representante de vendas profissional da [Empresa]. Especializa-se em [Produto/Serviço] e tem profundo conhecimento sobre nossas soluções.
+You are a professional sales representative for [Company]. You specialize in [Product/Service] and have extensive knowledge of our offerings.
 ```
 
-#### 2. **Estilo de Conversa**
+### 2. Conversation Style
 
 ```
-Mantenha um tom amigável e profissional. Use linguagem clara e objetiva. Evite jargões técnicos, a menos que o cliente peça.
+Maintain a friendly, professional tone. Use clear, concise language. Avoid technical jargon unless specifically asked.
 ```
 
-### 3. **Informações-Chave**
+### 3. Key Information
 
 ```
-Nossos principais produtos:
-– Produto A (R$X/mês): [características]
-– Produto B (R$Y/mês): [características]
-Promoção atual: 20% de desconto nos 3 primeiros meses
+Our main products are:
+- Product A ($X/month): [features]
+- Product B ($Y/month): [features]
+Current promotion: 20% off first 3 months
 ```
 
-### 4. Diretrizes de Comportamento
+### 4. Behavioral Guidelines
 
 ```
-Verifique os dados do cliente antes de falar sobre a conta
-
-Transfira para um humano se o cliente parecer frustrado
-
-Nunca prometa prazos de entrega
+- Always verify customer information before discussing account details
+- Transfer to a human agent if the customer seems frustrated
+- Don't make promises about delivery dates
 ```
 
-### 5. Padrão de Resposta
+### 5. Response Framework
 
 ```
-Quando perguntarem sobre preços:
-
-Entenda as necessidades do cliente
-
-Apresente as opções adequadas
-
-Explique o valor de cada pacote
-
-Mencione possíveis descontos
+When asked about pricing:
+1. First understand their needs
+2. Present relevant package options
+3. Explain the value proposition
+4. Share any applicable discounts
 ```
 
-## **Boas Práticas**
+## Best Practices
 
-✅ Seja **específico**\
-– Dê instruções claras\
-– Inclua exemplos bons e ruins\
-– Diga o que **não** deve fazer
+1. **Be Specific**
 
-✅ Estruture bem\
-– Use seções e tópicos\
-– Agrupe informações semelhantes
+   - Clear instructions get better results
+   - Include examples of good responses
+   - Define what NOT to do
 
-✅ Teste e melhore\
-– Faça ligações de teste\
-– Refine com base nas gravações\
-– Adicione casos de exceção
+2. **Structure Matters**
 
-## **Erros Comuns**
+   - Organize information logically
+   - Use bullet points and sections
+   - Keep related information together
 
-❌ Muito vago: “Seja útil e profissional”\
-❌ Muito rígido: Script para todas as falas\
-❌ Excesso de informação irrelevante\
-❌ Falta de instruções para situações comuns
+3. **Test and Iterate**
+   - Start with a basic prompt
+   - Test various scenarios
+   - Refine based on call recordings
+   - Add handling for edge cases
 
-## Modelo de Estrutura
+## Common Mistakes
+
+- **Too Vague**: "Be helpful and professional" (Not specific enough)
+- **Too Rigid**: Scripting every possible response (Reduces natural flow)
+- **Information Overload**: Including unnecessary details
+- **Missing Guidelines**: Not specifying how to handle common situations
+
+## Example Structure
 
 ```
-# Papel e Objetivo
-[Quem é a IA e o que ela deve fazer]
+# Role and Purpose
+[Define who the AI is and its main goals]
 
-# Conhecimento Central
-[Informações essenciais sobre os serviços/produtos]
+# Core Knowledge
+[Essential information about products/services]
 
-# Diretrizes de Conversa
-[Como falar com os clientes]
+# Conversation Guidelines
+[How to interact with customers]
 
-# Padrões de Resposta
-[Como responder a perguntas comuns]
+# Response Patterns
+[How to handle specific situations]
 
-# Limites e Restrições
-[O que a IA NÃO deve fazer]
+# Limitations and Boundaries
+[What the AI should NOT do]
 ```
 
-## **Testes**
+## Testing Your Prompt
 
-Faça chamadas cobrindo:
+1. Make test calls covering:
 
-- Situações comuns
-- Casos extremos
-- Perguntas difíceis
-- Perfis diferentes de clientes
+   - Common scenarios
+   - Edge cases
+   - Difficult situations
+   - Various customer personalities
 
-Revise:
+2. Review and adjust:
+   - Listen to call recordings
+   - Check response accuracy
+   - Verify tone consistency
+   - Test knowledge retention
 
-- Gravações das ligações
-- Precisão das respostas
-- Consistência no tom
-- Retenção de informações
+## Optimization Tips
 
-## **Dicas de Otimização**
-
-- Comece com o **Fast Engine** para testar rápido
-- Use gravações para ajustar o prompt
-- Inclua exemplos de boas e más respostas
-- Prepare a IA para perguntas inesperadas
+- Start with Fast Engine for quick iterations
+- Use call recordings to identify gaps
+- Add examples of good/bad responses
+- Include handling for unexpected questions
 
 ---
 
-💡 **Dica final:** Seu prompt de sistema é um documento **vivo** – atualize com frequência conforme as ligações reais e feedbacks dos clientes.
+**Pro Tip:** Your system prompt is a living document - regularly update it based on actual call experiences and customer interactions.
