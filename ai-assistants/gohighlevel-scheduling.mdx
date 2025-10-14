@@ -1,150 +1,185 @@
 ---
-title: "GoHighLevel Appointment Scheduling"
+title: "Agendamento de Compromissos GoHighLevel"
 icon: "calendar-plus"
 description: "Learn how to enable your AI assistant to schedule appointments using GoHighLevel integration"
 ---
 
-Enable your AI assistant to seamlessly schedule meetings and appointments using GoHighLevel integration. This powerful feature allows your AI to check availability and book meetings directly during calls with your existing GoHighLevel calendar system.
+Habilite seu assistente de IA para agendar reuniões e compromissos de forma integrada usando a integração com o GoHighLevel. Esse recurso permite que seu assistente verifique a disponibilidade e agende reuniões diretamente durante as chamadas, utilizando seu sistema de calendário GoHighLevel existente.
 
-## Prerequisites
+## **Pré-requisitos**
 
-Before setting up GoHighLevel integration, you'll need:
-* An active GoHighLevel account
-* Calendar(s) configured in your GoHighLevel location
-* Admin or appropriate permissions to authorize app connections
+Antes de configurar a integração com o GoHighLevel, você precisará de:
 
-## Setup Process
+- Uma conta ativa no GoHighLevel
+- Calendário(s) configurado(s) na sua localização do GoHighLevel
+- Permissões de administrador ou adequadas para autorizar conexões de aplicativos
 
-### 1. GoHighLevel Account Requirements
+---
 
-**Account Setup:**
-- Ensure you have an active GoHighLevel account
-- Verify that your calendars are properly set up in your account
-- Confirm you have the necessary permissions to connect external applications
+**Processo de Configuração**
 
-**Calendar Configuration:**
-- Create or verify existing calendars in your GoHighLevel location
-- Set appropriate availability times and booking settings
-- Configure any required custom fields for appointments
+### 1. Requisitos da Conta GoHighLevel
 
-### 2. Connecting GoHighLevel to Your Assistant
+**Configuração da Conta:**
 
-1. In your [AI assistant settings](/ai-assistants/settings/prompt-and-tools#default-tools), navigate to the **Tools** section
-2. Select **Appointment Scheduling** from the available tools
-3. Choose **GoHighLevel** as your calendar integration type
-4. Click **Connect to GoHighLevel**
+- Garanta que você possui uma conta ativa no GoHighLevel
+- Verifique se seus calendários estão configurados corretamente na conta
+- Confirme que você tem as permissões necessárias para conectar aplicativos externos
 
-**OAuth Authorization Process:**
-1. You'll be redirected to GoHighLevel's authorization page
-2. **Choose your account** from the available options
-3. **Authorize the application** to access your calendar data
-4. You'll be redirected back to your assistant settings
+**Configuração do Calendário:**
+
+- Crie ou verifique calendários existentes na sua localização GoHighLevel
+- Defina horários de disponibilidade e configurações de agendamento apropriados
+- Configure quaisquer campos personalizados obrigatórios para compromissos
+
+---
+
+### 2. Conectando o GoHighLevel ao Seu Assistente
+
+- Nas **configurações do assistente de IA**, vá até a seção **Ferramentas**
+- Selecione **Agendamento de Compromissos** entre as ferramentas disponíveis
+- Escolha **GoHighLevel** como tipo de integração de calendário
+- Clique em **Conectar ao GoHighLevel**
+
+**Processo de Autorização OAuth:**
+
+- Você será redirecionado para a página de autorização do GoHighLevel
+- Escolha sua conta entre as opções disponíveis
+- Autorize o aplicativo a acessar os dados do seu calendário
+- Você será redirecionado de volta para as configurações do assistente
 
 <Note>
-If you have issues connecting to GoHighLevel, try using an **Incognito/Private browsing window** as this can resolve authentication conflicts.
+  Se você tiver problemas para conectar ao GoHighLevel, tente usar uma janela de navegação **Anônima/Privada**, pois isso pode resolver conflitos de autenticação.
 </Note>
 
-### 3. Calendar Selection
+### 3. Seleção de Calendário
 
-After successful connection:
-1. Select the specific **calendar** from your GoHighLevel location
-2. Your available calendars will be automatically fetched and displayed
-3. Choose the calendar where appointments should be booked
+Após a conexão bem-sucedida:
 
-### 4. Testing the Integration
+- Selecione o calendário específico da sua localização no GoHighLevel
+- Seus calendários disponíveis serão buscados e exibidos automaticamente
+- Escolha o calendário onde os compromissos devem ser agendados
 
-**Essential testing steps:**
-1. Make a test call to your AI assistant
-2. Request to schedule an appointment during the conversation
-3. Verify the booking appears in your GoHighLevel calendar
-4. Check that confirmation details are sent appropriately
-5. Test different scenarios (available/unavailable times)
+---
 
-## Required Information from GoHighLevel
+### 4. Testando a Integração
 
-To complete the integration, the system needs access to:
+**Passos essenciais de teste:**
 
-### From Your GoHighLevel Account:
-- **Location ID:** Automatically obtained during OAuth authorization
-- **Calendar IDs:** Retrieved from your location's available calendars
-- **Access Tokens:** Managed automatically through OAuth flow
+- Faça uma chamada de teste ao seu assistente de IA
+- Solicite o agendamento de um compromisso durante a conversa
+- Verifique se o agendamento aparece no seu calendário GoHighLevel
+- Confira se os detalhes de confirmação foram enviados corretamente
+- Teste diferentes cenários (horários disponíveis e indisponíveis)
 
-### Calendar Permissions:
-- **Read calendar availability:** To check open time slots
-- **Create appointments:** To book new meetings
-- **Access calendar details:** To retrieve calendar names and settings
+---
 
-## Integration Features
+### Informações Necessárias do GoHighLevel
 
-### Automatic Appointment Booking
-- **Real-time availability checking:** AI verifies open time slots
-- **Instant booking confirmation:** Appointments created immediately in GoHighLevel
-- **Conflict prevention:** System prevents double-booking
-- **Time zone handling:** Respects calendar and customer time zones
+Para completar a integração, o sistema precisa acessar:
 
-### Email Requirement for Appointments
+**Da sua conta GoHighLevel:**
 
-**Important:** To book appointments, your AI assistant needs an email address from the customer.
+- **ID da Localização:** Obtido automaticamente durante a autorização OAuth
+- **IDs dos Calendários:** Recuperados dos calendários disponíveis na localização
+- **Tokens de Acesso:** Gerenciados automaticamente pelo fluxo OAuth
 
-**Setup options:**
-1. **Define email in input variables:** Add `email` as an input variable in your [assistant settings](/ai-assistants/settings/prompt-and-tools#call-variables)
-2. **Import leads with email:** When importing leads, ensure email addresses are included
-3. **AI collection during call:** Configure your assistant to ask for email during the conversation if not available
+**Permissões do Calendário:**
 
-**Example prompt instruction:**
-```
-"If the customer wants to book an appointment and I don't have their email address, 
-ask them to provide their email address for the booking confirmation."
-```
+- **Ler disponibilidade do calendário:** Para verificar horários abertos
+- **Criar compromissos:** Para agendar novas reuniões
+- **Acessar detalhes do calendário:** Para recuperar nomes e configurações do calendário
 
-## Best Practices
+---
 
-### Calendar Management
-- **Keep calendars updated:** Ensure availability is current in GoHighLevel
-- **Set buffer times:** Configure appropriate gaps between appointments
-- **Use clear calendar names:** Makes selection easier during setup
+### Recursos da Integração
 
-### Assistant Configuration
-- **Include calendar context in system prompt:** Help AI understand booking scenarios
-- **Define appointment variables:** Extract relevant information for GoHighLevel
-- **Configure appointment duration:** Specify how long appointments should be
+**Agendamento Automático de Compromissos**
 
-**Appointment Duration Setup:**
-Tell your AI assistant about appointment lengths in the system prompt:
+- **Verificação de disponibilidade em tempo real:** A IA verifica os horários livres
+- **Confirmação instantânea:** Compromissos criados imediatamente no GoHighLevel
+- **Prevenção de conflitos:** O sistema evita agendamentos duplicados
+- **Gerenciamento de fuso horário:** Respeita os fusos horários do calendário e do cliente
+
+---
+
+### Requisito de Email para Compromissos
+
+Importante: Para agendar compromissos, seu assistente de IA precisa do **email do cliente**.
+
+**Opções de configuração:**
+
+- **Definir email nas variáveis de entrada:** Adicione email como variável de entrada nas configurações do assistente
+- **Importar leads com email:** Ao importar leads, inclua os endereços de email
+- **Coleta pela IA durante a chamada:** Configure o assistente para solicitar o email durante a conversa, caso não esteja disponível
+
+---
+
+**Exemplo de instrução de prompt:**
 
 ```
-"When booking appointments, use 45-minute slots. If a customer says they want 
-to meet at 8:00 AM, set the end_time to 8:45 AM. Always calculate the end_time 
-based on the start time plus 45 minutes."
+"Se o cliente quiser agendar um compromisso e eu não tiver o endereço de e-mail dele, 
+peça para que forneça o e-mail para a confirmação do agendamento."
 ```
 
-**Example scenarios:**
-- Customer says: "Can we meet at 2:00 PM?"
-- AI books: 2:00 PM - 2:45 PM (45-minute slot)
+## Melhores Práticas
 
-- **Test various scenarios:** Different time requests, conflicts, rescheduling
+**Gerenciamento de Calendário**
 
-### Security & Compliance
-- **Token management:** OAuth tokens are refreshed automatically
-- **Data privacy:** Only necessary calendar data is accessed
-- **Permission scope:** Integration uses minimal required permissions
+- **Mantenha os calendários atualizados:** Garanta que a disponibilidade esteja correta no GoHighLevel
+- **Defina tempos de buffer:** Configure intervalos apropriados entre compromissos
+- **Use nomes claros para os calendários:** Facilita a seleção durante a configuração
 
-## Troubleshooting
+**Configuração do Assistente**
 
-### Quick Fixes:
+- **Inclua contexto do calendário no system prompt:** Ajuda a IA a entender os cenários de agendamento
+- **Defina variáveis de compromisso:** Extraia informações relevantes para o GoHighLevel
+- **Configure a duração do compromisso:** Especifique quanto tempo cada compromisso deve durar
 
-**Missing API Key Error:**
-- **Solution:** Disconnect and reconnect your GoHighLevel account, then select an assistant and save
-- **Steps:** Go to [assistant settings](/ai-assistants/settings/prompt-and-tools#default-tools) → Appointment Scheduling → Disconnect → Connect again → Select assistant → Save
+**Configuração da Duração do Compromisso:**\
+Informe seu assistente de IA sobre a duração dos compromissos no **system prompt**:
 
-**Connection Issues:**
-- **Try incognito mode** for OAuth authorization
-- **Verify account permissions** and calendar setup
+```
+"Ao agendar compromissos, use intervalos de 45 minutos. 
+Se um cliente disser que deseja se encontrar às 8:00, defina o **end_time** para 8:45. 
+Sempre calcule o **end_time** com base no horário de início mais 45 minutos."
+```
 
-**Calendar Problems:**
-- **Refresh connection** if calendars don't appear
-- **Check time zones** and availability settings
+**Exemplos de Cenários:**
+
+- Cliente diz: "Podemos nos encontrar às 14:00?"
+- IA agenda: 14:00 - 14:45 (intervalo de 45 minutos)
+- Teste diversos cenários: diferentes horários solicitados, conflitos, reagendamentos
+
+---
+
+### **Segurança e Conformidade**
+
+- **Gerenciamento de tokens:** Tokens OAuth são atualizados automaticamente
+- **Privacidade de dados:** Apenas os dados de calendário necessários são acessados
+- **Escopo de permissões:** A integração usa apenas as permissões mínimas necessárias
+
+---
+
+### **Solução de Problemas**
+
+**Correções Rápidas:**
+
+**Erro de API Key ausente:**
+
+- **Solução:** Desconecte e reconecte sua conta GoHighLevel, depois selecione um assistente e salve
+- **Passos:** Configurações do assistente → Agendamento de Compromissos → Desconectar → Conectar novamente → Selecionar assistente → Salvar
+
+**Problemas de Conexão:**
+
+- Tente o modo anônimo/incógnito para autorização OAuth
+- Verifique permissões da conta e configuração do calendário
+
+**Problemas com o Calendário:**
+
+- Atualize a conexão se os calendários não aparecerem
+- Verifique fusos horários e configurações de disponibilidade
 
 <Note>
-For comprehensive GoHighLevel troubleshooting, including detailed solutions and additional issues, see [GoHighLevel Issues](/troubleshooting/gohighlevel).
+  Para solução completa de problemas do GoHighLevel, incluindo soluções detalhadas e outros problemas, consulte **GoHighLevel Issues**.
 </Note>
