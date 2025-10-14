@@ -1,77 +1,64 @@
 ---
-title: "Visão Geral de Custos"
+title: "Cost Overview"
 icon: "dollar-sign"
-description: "Entenda os principais componentes da precificação do MayaHub, incluindo minutos de ligação, aluguel de número e taxas opcionais"
+description: "Understand the main components of Autocalls.ai pricing, including call minutes, number rentals, and optional fees"
 ---
 
-A [MayaHub](http://mayahub.ai) usa um sistema de **créditos/minutos** para controlar o uso, tanto do processamento de IA quanto das tarifas de operadora. Veja como funciona:
-
----
-
-## **1. Componentes Principais**
-
-**Custo de IA**
-
-- Cobrado em frações por segundo (ex: 0,5 minuto para uma chamada de 30 segundos)
-- A tarifa varia conforme o seu plano (Starter, Pro, Agency etc.)
-
-**Custo de Operadora (Carrier)**
-
-- Parte da chamada referente à rede telefônica
-- Geralmente **arredondado para o próximo minuto**, depois convertido para a tarifa do seu plano
-- **Depende da região** (ex: chamadas para EUA, Europa ou Ásia têm valores diferentes)
-
-**Aluguel de Número**
-
-- Se você alugar um número, será cobrada uma **mensalidade** (ex: **US\$ 3,99** por número padrão dos EUA)
-- Se sua região não estiver listada, é possível solicitar o provisionamento personalizado após envio de documentos
-- A cobrança é **mensal** até o número ser liberado
-
-**Taxas Extras (Opcionais)**
-
-- **SMS**: Se o número for compatível, aplicam-se tarifas por mensagem
-- **Detecção de Caixa Postal**: Cobrança de 1 minuto por chamada
-- **Alto Volume**: Descontos por volume podem ser aplicados se você ultrapassar dezenas de milhares de minutos por mês
+Autocalls.ai uses a **credit/minute system** to track usage for both AI processing and carrier network fees. Here's how it breaks down:
 
 ---
 
-## **2. Exemplo Visual**
+## 1. Main Components
 
-Suponha que seu plano inclua **200 minutos**.
+1. **AI Cost**
 
-Uma chamada típica de 1 minuto pode consumir cerca de **1,5 minuto** do seu saldo, se a tarifa da operadora representar metade da tarifa do seu plano.
+   - Billed in fractional increments by the second (e.g., 0.5 minute for a 30-sec call).
+   - Rate depends on your plan (Starter, Pro, Agency, etc.).
 
-Isso significa que, após a chamada, restariam **198,5 minutos**.
+2. **Carrier Cost**
 
-No final do ciclo de cobrança, os **minutos não utilizados não acumulam** para o mês seguinte.
+   - The telecom side of the call, generally **rounded up** to the next minute and converted to your plan’s minute rate.
+   - Region-dependent: e.g., calling US vs. Europe vs. Asia has different carrier rates.
 
----
+3. **Number Rental**
 
-## **3. Verificando os Registros de Chamadas**
+   - If you rent a phone number, there’s a monthly fee (e.g., \$3.99 for a standard US number).
+   - If your region isn’t listed, we can custom-provision a number upon verifying documents.
+   - Each number’s cost is billed monthly until released.
 
-Acesse: **Dashboard → Call History**
-
-Veja o detalhamento de custo por chamada:
-
-- **Uso da IA** (segundos convertidos em fração de minuto)
-- **Uso da operadora** (arredondado e convertido para minutos)
-- Total somado em “minutos” descontados do seu saldo incluído ou comprado
-
----
-
-## **4. Monitoramento e Alertas**
-
-Acompanhe seu consumo em tempo real pelo **painel de controle**.
+4. **Extra Fees (Optional)**
+   - **SMS**: If your number is SMS-capable, standard per-message fees apply.
+   - **Voicemail detection**: Billed as 1 minute per call.
+   - **High-Volume**: Potential bulk discounts if you exceed tens of thousands of minutes monthly.
 
 ---
 
-## **5. Resumo Geral**
+## 2. Visual Example
 
-- **Escolha um plano**: Starter, Pro ou Agency — quanto maior o plano, **menor o custo por minuto de IA**
-- **Adquira ou verifique um número**: Alugue pelo [MayaHub](http://mayahub.online) ou use seu próprio número verificado como Caller ID
-- **Comece a fazer ligações**: O uso, seja receptivo ou ativo, **consome minutos do seu saldo**
-- **SMS e recursos extras**: Cada mensagem ou função adicional será cobrada à parte ou descontada do seu saldo
+Suppose you have 200 included minutes in your plan. A typical 1-minute call might consume ~1.5 minutes from your balance if carrier cost is half your plan’s rate. This means you’d have about 198.5 left. By the end of the billing cycle, any unused minutes do no rollover.
 
-Esse é o **modelo geral de cobrança**.
+---
 
-Para ver os detalhes e conversões por região, acesse a página **Pricing Breakdown**.
+## 3. Checking Call Logs
+
+- **Dashboard → Call History**: See each call’s final cost breakdown.
+  - AI usage (seconds → fraction of a minute).
+  - Carrier usage (rounded up → fraction of a minute after conversion).
+  - Summed total in “minutes” deducted from your included or purchased balance.
+
+---
+
+## 4. Monitoring & Alerts
+
+- Watch your real-time usage in the **dashboard**.
+
+---
+
+## 5. Putting It All Together
+
+1. **Pick a Plan**: Decide on Starter, Pro, or Agency—higher plans have cheaper AI rates.
+2. **Acquire or Verify a Number**: Rent from Autocalls.ai or add your own as caller ID for outbound.
+3. **Start Making Calls**: Inbound or outbound usage deducts from your minute balance.
+4. **SMS & Extras**: If relevant, each text or advanced feature also deducts from your balance or is billed separately.
+
+That’s the overall cost structure. For a deeper look at the math behind minute conversion, check our [Pricing Breakdown](/pricing/usage-based) page.

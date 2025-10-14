@@ -1,44 +1,30 @@
 ---
-title: "Integrações com Sistemas Telefônicos"
+title: "Phone System Integrations"
 icon: "phone-office"
-description: "Saiba como integrar a MayaHub com sua infraestrutura PBX ou VOIP existente através de trunks SIP"
+description: "Learn how to integrate Autocalls.ai with your existing PBX or VOIP infrastructure through SIP trunks"
 ---
 
-Para empresas com infraestrutura PBX ou VOIP própria, a [MayaHub](http://mayahub.ai) pode ser integrado via trunks SIP ou conexões diretas:
+For businesses with existing PBX or VOIP infrastructure, Autocalls.ai can integrate through SIP trunks or direct connections:
 
-## **1. Trunk SIP**
+## 1. SIP Trunk
 
-**Como Funciona:**\
-Você fornece suas credenciais SIP (servidor, usuário e senha).
+- **How It Works**: You share your SIP credentials (server, username, password). Autocalls.ai configures a trunk internally.
+- **Inbound/Outbound**: AI can pick up inbound calls from your PBX or place outbound calls using your existing number ranges.
 
-A [MayaHub](http://mayahub.ai) configura o trunk internamente.
+## 2. Caller ID Forwarding
 
-**Chamadas de Entrada/Saída:**\
-A IA pode atender chamadas recebidas do seu PBX ou realizar chamadas usando seus próprios números.
+- If your PBX already handles call routing, pass the call to Autocalls.ai only when certain conditions are met (like after IVR selection).
 
-## **2. Encaminhamento via Caller ID**
+## 3. Hybrid Model
 
-Se o seu PBX já gerencia o roteamento de chamadas,\
-você pode encaminhar a chamada para a [MayaHub](http://mayahub.ai) apenas em condições específicas\
-(por exemplo, após uma seleção no IVR).
+- Some advanced setups keep human agents on your PBX but leverage the AI for high-volume or after-hours calls.
+- Example: _During business hours, normal agents handle calls. After hours, calls route to the AI assistant via SIP trunk._
 
-## **3. Modelo Híbrido**
+## 4. Things to Note
 
-Algumas configurações avançadas mantêm agentes humanos no PBX,\
-mas usam a IA para alto volume ou chamadas fora do horário comercial.
-
-**Exemplo:**\
-Durante o expediente, os agentes atendem.
-
-Após o horário, as chamadas são direcionadas para a IA via trunk SIP.
-
-## **4. Pontos de Atenção**
-
-- O SIP pode exigir abertura de portas no firewall ou liberação de IPs.
-- As tarifas da operadora do seu PBX continuam se aplicando,\
-  além dos custos de uso da [MayaHub](http://mayahub.ai).
+- SIP sometimes requires opening firewall ports or whitelisting IPs.
+- Carrier charges from your PBX provider still apply, plus any Autocalls.ai usage fees.
 
 ---
 
-\*\*💡 Dica: \*\*Entre em contato com o suporte caso seja novo em integração SIP ou PBX —\
-nós ajudamos em todas as etapas de configuração.
+**Tip:** Contact support for guidance if you're new to SIP or PBX integration. We can assist with the config steps.
