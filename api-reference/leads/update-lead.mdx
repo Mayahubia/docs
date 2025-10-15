@@ -1,45 +1,47 @@
 ---
-title: "Update Lead"
+title: "Atualizar lead"
 api: "PUT /user/leads/{id}"
-description: "Update an existing lead in your campaigns"
+description: "Atualizar um lead existente em suas campanhas
+"
 ---
 
-Update a lead by providing the lead ID and the fields you want to modify. Only the fields provided in the request will be updated.
+Atualize um lead fornecendo o ID do lead e os campos que deseja modificar.\
+Somente os campos fornecidos na solicitação serão atualizados.
 
-## Path Parameters
+## Parâmetros de Caminho
 
 <ParamField path="id" type="integer" required>
-  The ID of the lead to update
+  O ID do lead a ser atualizado
 </ParamField>
 
-## Body Parameters
+## Parâmetros do corpo
 
-<ParamField body="campaign_id" type="integer" optional>
-  The ID of the campaign to assign the lead to
+<ParamField body="campaign_id" type="integer">
+  O ID da campanha à qual o lead será atribuído
 </ParamField>
 
-<ParamField body="phone_number" type="string" optional>
-  The phone number of the lead (will be formatted to E164)
+<ParamField body="phone_number" type="string">
+  O número de telefone do lead (será formatado para E.164)
 </ParamField>
 
-<ParamField body="status" type="string" optional>
-  The status of the lead. Must be one of: `created`, `completed`, `reached-max-retries`
+<ParamField body="status" type="string">
+  O status do lead. Deve ser um dos seguintes: `created`, `completed`, `reached-max-retries`
 </ParamField>
 
-<ParamField body="variables" type="object" optional>
-  Custom variables to merge with existing lead variables
+<ParamField body="variables" type="object">
+  Variáveis personalizadas para mesclar com as variáveis existentes do lead
 </ParamField>
 
-## Response
+## Respostas
 
 <ResponseField name="message" type="string">
-  Success message indicating the lead was updated
+  Mensagem de sucesso indicando que o lead foi atualizado
 </ResponseField>
 
 <RequestExample>
 
 ```bash cURL
-curl -X PUT "https://app.autocalls.ai/api/user/leads/123" \
+curl -X PUT "https://app.mayahub.ai/api/user/leads/123" \
   -H "Authorization: Bearer YOUR_API_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{
@@ -62,11 +64,13 @@ curl -X PUT "https://app.autocalls.ai/api/user/leads/123" \
 }
 ```
 
+
 ```json Error Response - Lead Not Found
 {
   "message": "Lead not found"
 }
 ```
+
 
 ```json Error Response - Campaign Not Found
 {
@@ -74,11 +78,13 @@ curl -X PUT "https://app.autocalls.ai/api/user/leads/123" \
 }
 ```
 
+
 ```json Error Response - Invalid Phone Number
 {
   "message": "Invalid phone number"
 }
 ```
+
 
 ```json Error Response - Validation Failed
 {
@@ -91,6 +97,7 @@ curl -X PUT "https://app.autocalls.ai/api/user/leads/123" \
 }
 ```
 
+
 ```json Error Response - Invalid Fields
 {
   "message": "Invalid fields: invalid_field, another_invalid_field"
@@ -99,11 +106,11 @@ curl -X PUT "https://app.autocalls.ai/api/user/leads/123" \
 
 </ResponseExample>
 
-## Notes
+## **Observações**
 
-- The lead must belong to the authenticated user
-- If updating the campaign, the new campaign must also belong to the authenticated user
-- Phone numbers are automatically formatted and validated
-- Variables are merged with existing variables (not replaced)
-- Only allowed fields can be updated: `campaign_id`, `phone_number`, `status`, `variables`
-- The `status` field has restricted values for data integrity
+- O lead deve pertencer ao usuário autenticado.
+- Se estiver atualizando a campanha, a nova campanha também deve pertencer ao usuário autenticado.
+- Os números de telefone são automaticamente formatados e validados.
+- As variáveis são mescladas com as variáveis existentes (não substituídas).
+- Somente os campos permitidos podem ser atualizados: **campaign_id**, **phone_number**, **status**, **variables**.
+- O campo **status** possui valores restritos para garantir a integridade dos dados.

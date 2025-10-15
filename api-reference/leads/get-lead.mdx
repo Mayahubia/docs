@@ -1,75 +1,70 @@
 ---
-title: "List leads"
+title: "Listar leads"
 api: "GET /user/leads"
-description: "List all leads for the authenticated user"
+description: "Listar todos os leads do usuário autenticado
+"
 ---
 
-This endpoint allows you to list all leads belonging to the authenticated user.
+Este endpoint permite listar todos os leads pertencentes ao usuário autenticado.
 
-### Response fields
+### Campos de resposta
 
 <ResponseField name="leads" type="array">
-  <Expandable title="properties">
+  <Expandable title="Propriedades">
     <ResponseField name="id" type="integer">
-      The id of the lead
+      O ID do lead
     </ResponseField>
-
     <ResponseField name="campaign_id" type="integer">
-      The ID of the campaign this lead belongs to
+      O ID da campanha à qual este lead pertence
     </ResponseField>
-
     <ResponseField name="phone_number" type="string">
-      The phone number of the lead in E.164 format
+      O número de telefone do lead no formato E.164
     </ResponseField>
-
     <ResponseField name="variables" type="object">
-      The variables associated with the lead
+      As variáveis associadas ao lead
     </ResponseField>
-
     <ResponseField name="status" type="string">
-      The status of the lead
+      O status do lead
     </ResponseField>
-
     <ResponseField name="created_at" type="string">
-      The created at date of the lead
+      A data de criação do lead
     </ResponseField>
-
     <ResponseField name="updated_at" type="string">
-      The updated at date of the lead
+      A data de atualização do lead
     </ResponseField>
-
     <ResponseField name="campaign" type="object">
-      The campaign information
-      <Expandable title="campaign properties">
+      As informações da campanha
+
+      <Expandable title="Propriedades da Campanha">
         <ResponseField name="id" type="integer">
-          The id of the campaign
+          O ID da campanha
         </ResponseField>
         <ResponseField name="name" type="string">
-          The name of the campaign
+          O nome da campanha
         </ResponseField>
       </Expandable>
     </ResponseField>
-
     <ResponseField name="secondary_contacts" type="array">
-      Array of secondary contact leads associated with this lead
-      <Expandable title="secondary_contacts properties">
+      Array de contatos secundários associados a este lead
+
+      <Expandable title="Propriedades de secondary_contacts ">
         <ResponseField name="id" type="integer">
-          The id of the secondary contact lead
+          O ID do lead de contato secundário
         </ResponseField>
         <ResponseField name="phone_number" type="string">
-          The phone number of the secondary contact in E.164 format
+          O número de telefone do contato secundário no formato E.164
         </ResponseField>
         <ResponseField name="variables" type="object">
-          The variables associated with the secondary contact
+          As variáveis associadas ao contato secundário
         </ResponseField>
         <ResponseField name="status" type="string">
-          The status of the secondary contact
+          O status do contato secundário
         </ResponseField>
         <ResponseField name="created_at" type="string">
-          The created at date of the secondary contact
+          A data de criação do contato secundário
         </ResponseField>
         <ResponseField name="updated_at" type="string">
-          The updated at date of the secondary contact
+          A data de atualização do contato secundário
         </ResponseField>
       </Expandable>
     </ResponseField>

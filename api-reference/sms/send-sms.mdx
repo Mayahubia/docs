@@ -1,100 +1,91 @@
 ---
-title: "Send SMS"
+title: "Enviar SMS"
 api: "POST /user/sms"
-description: "Send an SMS message using your phone number"
+description: "Enviar uma mensagem SMS usando seu número de telefone
+"
 ---
 
-This endpoint allows you to send SMS messages using your purchased phone numbers. The SMS will be sent via Twilio and costs will be automatically deducted from your account balance.
+Este endpoint permite enviar mensagens SMS usando os números de telefone adquiridos.\
+O SMS será enviado por meio do Twilio e os custos serão automaticamente deduzidos do saldo da sua conta.
 
-### Request Body
+### Corpo da solicitação
 
 <ParamField body="from" type="integer" required>
-  The ID of your phone number to send the SMS from (must be SMS-capable)
+  O ID do seu número de telefone a partir do qual o SMS será enviado (deve ter capacidade para SMS)
 </ParamField>
 
 <ParamField body="to" type="string" required>
-  The recipient's phone number in international format (e.g., "+1234567890")
+  O número de telefone do destinatário no formato internacional (exemplo: +1234567890)
 </ParamField>
 
 <ParamField body="body" type="string" required>
-  The SMS message content (max 300 characters)
+  O conteúdo da mensagem SMS (máximo de 300 caracteres)
 </ParamField>
 
-### Response
+### Respostas
 
 <ResponseField name="message" type="string">
-  Success message confirming SMS was sent
+  Mensagem de sucesso confirmando que o SMS foi enviado
 </ResponseField>
 
 <ResponseField name="data" type="object">
-  <Expandable title="properties">
+  <Expandable title="Propriedades">
     <ResponseField name="id" type="integer">
-      The unique identifier of the SMS record
+      O identificador exclusivo do registro do SMS
     </ResponseField>
-
     <ResponseField name="phone_number_id" type="integer">
-      The ID of the phone number used to send the SMS
+      O ID do número de telefone usado para enviar o SMS
     </ResponseField>
-
     <ResponseField name="to" type="string">
-      The recipient's phone number in E.164 format
+      O número de telefone do destinatário no formato E.164
     </ResponseField>
-
     <ResponseField name="body" type="string">
-      The SMS message content
+      O conteúdo da mensagem SMS
     </ResponseField>
-
     <ResponseField name="user_id" type="integer">
-      The ID of the user who sent the SMS
+      O ID do usuário que enviou o SMS
     </ResponseField>
-
     <ResponseField name="segments" type="integer">
-      Number of SMS segments (for billing purposes)
+      Número de segmentos de SMS (para fins de cobrança)
     </ResponseField>
-
     <ResponseField name="segment_price" type="number">
-      Cost per SMS segment
+      Custo por segmento de SMS
     </ResponseField>
-
     <ResponseField name="total_cost" type="number">
-      Total cost of the SMS (segment_price * segments)
+      Custo total do SMS (segment_price \* segments)
     </ResponseField>
-
     <ResponseField name="status" type="string">
-      The current status of the SMS
+      O status atual do SMS
     </ResponseField>
-
     <ResponseField name="sms_sid" type="string">
-      Twilio SMS SID for tracking
+      SID do SMS do Twilio para rastreamento
     </ResponseField>
-
     <ResponseField name="created_at" type="string">
-      The date and time when the SMS was created
+      A data e hora em que o SMS foi criado
     </ResponseField>
-
     <ResponseField name="updated_at" type="string">
-      The date and time when the SMS was last updated
+      A data e hora da última atualização do SMS
     </ResponseField>
   </Expandable>
 </ResponseField>
 
-### Error Responses
+### Respostas de Erro
 
 <ResponseField name="400 Bad Request">
-  <Expandable title="Error Response">
+  <Expandable title="Respostas de Erro">
     <ResponseField name="message" type="string">
-      Error message describing the issue (invalid phone number, insufficient balance, etc.)
+      Mensagem de erro descrevendo o problema (número de telefone inválido, saldo insuficiente, etc.)
     </ResponseField>
   </Expandable>
 </ResponseField>
 
 <ResponseField name="500 Internal Server Error">
-  <Expandable title="Error Response">
+  <Expandable title="Resposta de Erro">
     <ResponseField name="message" type="string">
-      Error message indicating SMS sending failure
+      Mensagem de erro indicando falha no envio do SMS
     </ResponseField>
     <ResponseField name="error" type="string">
-      Detailed error information
+      Informações detalhadas do erro
     </ResponseField>
   </Expandable>
 </ResponseField>
@@ -121,11 +112,13 @@ This endpoint allows you to send SMS messages using your purchased phone numbers
 }
 ```
 
+
 ```json 400 Bad Request
 {
   "message": "From number not found"
 }
 ```
+
 
 ```json 400 Bad Request
 {
@@ -133,17 +126,20 @@ This endpoint allows you to send SMS messages using your purchased phone numbers
 }
 ```
 
+
 ```json 400 Bad Request
 {
   "message": "Insufficient balance"
 }
 ```
 
+
 ```json 400 Bad Request
 {
   "message": "From number is not SMS capable"
 }
 ```
+
 
 ```json 500 Internal Server Error
 {
@@ -154,13 +150,13 @@ This endpoint allows you to send SMS messages using your purchased phone numbers
 
 </ResponseExample>
 
-### Notes
+### **Observações**
 
-- The sender phone number must belong to the authenticated user
-- The sender phone number must be SMS-capable
-- The phone number subscription must be active (not expired)
-- Sufficient account balance is required to cover SMS costs
-- Phone numbers are automatically formatted to E.164 format
-- SMS costs vary by destination country and are charged per segment
-- Long messages may be split into multiple segments, increasing the cost
-- The recipient phone number must be valid according to international standards
+- O número de telefone do remetente deve pertencer ao usuário autenticado.
+- O número de telefone do remetente deve ter capacidade para SMS.
+- A assinatura do número de telefone deve estar ativa (não expirada).
+- É necessário saldo suficiente na conta para cobrir os custos de SMS.
+- Os números de telefone são automaticamente formatados para o formato E.164.
+- Os custos de SMS variam de acordo com o país de destino e são cobrados por segmento.
+- Mensagens longas podem ser divididas em vários segmentos, aumentando o custo.
+- O número de telefone do destinatário deve ser válido de acordo com os padrões internacionais.
