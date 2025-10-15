@@ -1,39 +1,37 @@
 ---
-title: "Make a phone call"
+title: "Realizar uma chamada telefônica"
 api: "POST /user/make_call"
-description: "Make a phone call"
 ---
 
-This endpoint allows you to make a phone call.
+Este endpoint permite realizar uma chamada telefônica.
 
-### Request body
+### Corpo da requisição
 
 <ParamField body="phone_number" type="string" required>
-  The phone number of the customer in E.164 format (e.g. +1234567890)
+  O número de telefone do cliente no formato E.164 (ex.: +1234567890)
 </ParamField>
 
 <ParamField body="assistant_id" type="integer" required>
-  The ID of the assistant to make the call with
+  O ID do assistente que realizará a chamada
 </ParamField>
 
 <ParamField body="variables" type="object">
-  The variables to pass to the lead
-  
-  <Expandable title="variables properties">
-    <ParamField body="customer_name" type="string" default="<string>">
-      The name of the customer
+  As variáveis a serem enviadas para o lead
+
+  <Expandable title="Propriedades das variáveis">
+    <ParamField body="customer_name" default="<string>" type="string">
+      O nome do cliente
     </ParamField>
-    
-    <ParamField body="email" type="string" default="<string>">
-      The email of the customer
+    <ParamField body="email" default="<string>" type="string">
+      O e-mail do cliente
     </ParamField>
   </Expandable>
 </ParamField>
 
-### Response
+### Respostas
 
 <ResponseField name="message" type="string" default="Call initiated successfully">
-  The message of the response
+  A mensagem da resposta
 </ResponseField>
 
 <ResponseExample>

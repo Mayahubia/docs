@@ -1,141 +1,125 @@
 ---
-title: "List calls"
+title: "Listar chamadas"
 api: "GET /user/calls"
-description: "List all calls for the authenticated user with filtering options"
+description: "Listar todas as chamadas do usuário autenticado com opções de filtragem
+"
 ---
 
-This endpoint allows you to list all calls belonging to the authenticated user with various filtering options.
+Este endpoint permite listar todas as chamadas pertencentes ao usuário autenticado com várias opções de filtragem.
 
-### Query Parameters
+### Parâmetros de consulta
 
-<ParamField query="status" type="string" optional>
-  Filter calls by status. Possible values: `initiated`, `ringing`, `busy`, `in-progress`, `ended`, `completed`, `ended_by_customer`, `ended_by_assistant`, `no-answer`, `failed`
+<ParamField query="status" type="string">
+  Filtrar chamadas por status. Valores possíveis:`initiated`, `ringing`, `busy`, `in-progress`, `ended`, `completed`, `ended_by_customer`, `ended_by_assistant`, `no-answer`, `failed`
 </ParamField>
 
-<ParamField query="type" type="string" optional>
-  Filter calls by type. Possible values: `inbound`, `outbound`, `web`
+<ParamField query="type" type="string">
+  Filtrar chamadas por tipo. Valores possíveis:: `inbound`, `outbound`, `web`
 </ParamField>
 
-<ParamField query="phone_number" type="string" optional>
-  Filter calls by client phone number
+<ParamField query="phone_number" type="string">
+  Filtrar chamadas pelo número de telefone do cliente
 </ParamField>
 
-<ParamField query="assistant_id" type="integer" optional>
-  Filter calls by assistant ID
+<ParamField query="assistant_id" type="integer">
+  Filtrar chamadas pelo ID do assistente
 </ParamField>
 
-<ParamField query="campaign_id" type="integer" optional>
-  Filter calls by campaign ID
+<ParamField query="campaign_id" type="integer">
+  Filtrar chamadas pelo ID da campanha
 </ParamField>
 
-<ParamField query="date_from" type="string" optional>
-  Filter calls from this date (YYYY-MM-DD format)
+<ParamField query="date_from" type="string">
+  Filtrar chamadas a partir desta data (formato YYYY-MM-DD)
 </ParamField>
 
-<ParamField query="date_to" type="string" optional>
-  Filter calls until this date (YYYY-MM-DD format)
+<ParamField query="date_to" type="string">
+  Filtrar chamadas até esta data (formato YYYY-MM-DD)
 </ParamField>
 
-<ParamField query="per_page" type="integer" optional>
-  Number of calls per page (1-100, default: 15)
+<ParamField query="per_page" type="integer">
+  Número de chamadas por página (1-100, padrão: 15)
 </ParamField>
 
-<ParamField query="page" type="integer" optional>
-  Page number (default: 1)
+<ParamField query="page" type="integer">
+  Número da página (padrão: 1)
 </ParamField>
 
-### Response fields
+### Campos da resposta
 
 <ResponseField name="data" type="array">
-  <Expandable title="properties">
+  <Expandable title="Propriedades">
     <ResponseField name="id" type="integer">
-      The unique identifier of the call
+      O identificador único da chamada
     </ResponseField>
-
     <ResponseField name="assistant_name" type="string">
-      The name of the assistant that handled the call
+      O nome do assistente que realizou a chamada
     </ResponseField>
-
     <ResponseField name="campaign_name" type="string">
-      The name of the campaign this call belongs to (if applicable)
+      O nome da campanha à qual esta chamada pertence (se aplicável)
     </ResponseField>
-
     <ResponseField name="type" type="string">
-      The type of the call (`inbound`, `outbound`, or `web`)
+      O tipo da chamada (`inbound`, `outbound`, or `web`)
     </ResponseField>
-
     <ResponseField name="duration" type="integer">
-      The duration of the call in seconds
+      A duração da chamada em segundos
     </ResponseField>
-
     <ResponseField name="assistant_phone_number" type="string">
-      The phone number used by the assistant
+      O número de telefone usado pelo assistente
     </ResponseField>
-
     <ResponseField name="client_phone_number" type="string">
-      The phone number of the client
+      O número de telefone do cliente
     </ResponseField>
-
     <ResponseField name="status" type="string">
-      The current status of the call
+      O status atual da chamada
     </ResponseField>
-
     <ResponseField name="transcript" type="string">
-      The transcript of the call conversation
+      A transcrição da conversa da chamada
     </ResponseField>
-
     <ResponseField name="variables" type="object">
-      Variables collected during the call
+      Variáveis coletadas durante a chamada
     </ResponseField>
-
     <ResponseField name="evaluation" type="object">
-      Evaluation data for the call performance
+      Dados de avaliação do desempenho da chamada
     </ResponseField>
-
     <ResponseField name="webhook_response" type="object">
-      Response from any configured webhooks
+      Resposta de quaisquer webhooks configurados
     </ResponseField>
-
     <ResponseField name="carrier_cost" type="number">
-      The cost charged by the carrier for this call
+      O custo cobrado pela operadora por esta chamada
     </ResponseField>
-
     <ResponseField name="total_cost" type="number">
-      The total cost of the call including all fees
+      O custo total da chamada, incluindo todas as taxas
     </ResponseField>
-
     <ResponseField name="answered_by" type="string">
-      Who answered the call (`human`, `machine`, or `unknown`)
+      Quem atendeu a chamada (`human`, `machine`, or `unknown`)
     </ResponseField>
-
     <ResponseField name="recording_url" type="string">
-      URL to the call recording (if available and enabled)
+      URL da gravação da chamada (se disponível e habilitada)
     </ResponseField>
-
     <ResponseField name="created_at" type="string">
-      The date and time when the call was created
+      A data e hora em que a chamada foi criada
     </ResponseField>
-
     <ResponseField name="updated_at" type="string">
-      The date and time when the call was last updated
+      A data e hora da última atualização da chamada
     </ResponseField>
   </Expandable>
 </ResponseField>
 
 <ResponseField name="current_page" type="integer">
-  The current page number
+  O número da página atual
 </ResponseField>
 
 <ResponseField name="per_page" type="integer">
-  Number of items per page
+  Número de itens por página
 </ResponseField>
 
 <ResponseField name="total" type="integer">
-  Total number of calls matching the criteria
+  Número total de chamadas que correspondem aos critérios
 </ResponseField>
 
 <ResponseField name="last_page" type="integer">
-  The last page number
+  O número da última página
 </ResponseField>
 
 <ResponseExample>
@@ -173,15 +157,15 @@ This endpoint allows you to list all calls belonging to the authenticated user w
       "carrier_cost": 0.02,
       "total_cost": 0.025,
       "answered_by": "human",
-      "recording_url": "https://recordings.autocalls.ai/calls/123.mp3",
+      "recording_url": "https://recordings.mayahub.ai/calls/123.mp3",
       "created_at": "2025-08-04 14:30:00",
       "updated_at": "2025-08-04 14:34:05"
     }
   ],
-  "first_page_url": "https://app.autocalls.ai/api/user/calls?page=1",
+  "first_page_url": "https://app.mayahub.ai/api/user/calls?page=1",
   "from": 1,
   "last_page": 10,
-  "last_page_url": "https://app.autocalls.ai/api/user/calls?page=10",
+  "last_page_url": "https://app.mayahub.ai/api/user/calls?page=10",
   "links": [
     {
       "url": null,
@@ -189,18 +173,18 @@ This endpoint allows you to list all calls belonging to the authenticated user w
       "active": false
     },
     {
-      "url": "https://app.autocalls.ai/api/user/calls?page=1",
+      "url": "https://app.mayahub.ai/api/user/calls?page=1",
       "label": "1",
       "active": true
     },
     {
-      "url": "https://app.autocalls.ai/api/user/calls?page=2",
+      "url": "https://app.mayahub.ai/api/user/calls?page=2",
       "label": "2",
       "active": false
     }
   ],
-  "next_page_url": "https://app.autocalls.ai/api/user/calls?page=2",
-  "path": "https://app.autocalls.ai/api/user/calls",
+  "next_page_url": "https://app.mayahub.ai/api/user/calls?page=2",
+  "path": "https://app.mayahub.ai/api/user/calls",
   "per_page": 15,
   "prev_page_url": null,
   "to": 15,

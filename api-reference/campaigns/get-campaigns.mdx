@@ -1,63 +1,51 @@
 ---
-title: "List campaigns"
+title: "Listar campanhas"
 api: "GET /user/campaigns"
-description: "List all campaigns"
+description: "Listar todas as Campanhas"
 ---
 
-This endpoint allows you to list all campaigns.
+Este endpoint permite listar todas as campanhas.
 
-### Response fields
+### Campos da resposta
 
 <ResponseField name="campaigns" type="array">
-  <Expandable title="properties">
+  <Expandable title="Propriedades">
     <ResponseField name="id" type="integer">
-      The id of the campaign
+      O ID da campanha
     </ResponseField>
-
     <ResponseField name="name" type="string">
-      The name of the campaign
+      O nome da campanha
     </ResponseField>
-
     <ResponseField name="status" type="string">
-      The status of the campaign
+      O status da campanha
     </ResponseField>
-
     <ResponseField name="max_calls_in_parallel" type="integer">
-      Maximum number of calls that can be made in parallel
+      Número máximo de chamadas que podem ser realizadas em paralelo
     </ResponseField>
-
     <ResponseField name="mark_complete_when_no_leads" type="boolean">
-      Whether to mark the campaign as complete when there are no leads
+      Se a campanha deve ser marcada como concluída quando não houver leads
     </ResponseField>
-
     <ResponseField name="allowed_hours_start_time" type="string">
-      The start time for allowed calling hours
+      O horário de início para as horas permitidas de chamadas
     </ResponseField>
-
     <ResponseField name="allowed_hours_end_time" type="string">
-      The end time for allowed calling hours
+      O horário de término para as horas permitidas de chamadas
     </ResponseField>
-
     <ResponseField name="allowed_days" type="array">
-      The days of the week when calls are allowed
+      Os dias da semana em que as chamadas são permitidas
     </ResponseField>
-
     <ResponseField name="max_retries" type="integer">
-      Maximum number of retry attempts for failed calls
+      Número máximo de tentativas de repetição para chamadas falhadas
     </ResponseField>
-
     <ResponseField name="retry_interval" type="integer">
-      Interval in seconds between retry attempts
+      Intervalo em segundos entre as tentativas de repetição
     </ResponseField>
-
     <ResponseField name="created_at" type="string">
-      The timestamp when the campaign was created
+      O carimbo de data/hora em que a campanha foi criada
     </ResponseField>
-
     <ResponseField name="updated_at" type="string">
-      The timestamp when the campaign was last updated
+      O carimbo de data/hora da última atualização da campanha
     </ResponseField>
-
   </Expandable>
 </ResponseField>
 

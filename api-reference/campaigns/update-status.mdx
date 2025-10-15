@@ -1,41 +1,40 @@
 ---
-title: "Update campaign status"
+title: "Atualizar status da campanha"
 api: "POST /user/campaigns/update-status"
-description: "Start or stop a campaign in the Autocalls system"
+description: "Iniciar ou parar uma campanha no sistema Autocalls "
 ---
 
-This endpoint allows you to start or stop a campaign in the Autocalls system.
+Este endpoint permite iniciar ou parar uma campanha no sistema MayaHub
 
-### Request body
+### Corpo da requisição
 
 <ParamField body="campaign_id" type="integer" required>
-  The ID of the campaign to update
+  O ID da campanha a ser atualizada
 </ParamField>
 
 <ParamField body="action" type="string" required>
-  The action to perform on the campaign. Must be either "start" or "stop"
+  A ação a ser executada na campanha. Deve ser “start” ou “stop”.
 </ParamField>
 
-### Response
+### Respostas
 
 <ResponseField name="message" type="string" default="Campaign started successfully.">
-  The message of the response
+  A mensagem da resposta
 </ResponseField>
 
 <ResponseField name="success" type="boolean" default="true">
-  Whether the operation was successful
+  Se a operação foi bem-sucedida
 </ResponseField>
 
 <ResponseField name="data" type="object">
-  The data of the response
-  
-  <Expandable title="data properties">
+  Os dados da resposta
+
+  <Expandable title="Propriedades dos dados">
     <ResponseField name="campaign_id" type="integer">
-      The ID of the updated campaign
+      O ID da campanha atualizada
     </ResponseField>
-    
     <ResponseField name="status" type="string" default="in-progress">
-      The new status of the campaign (e.g., "in-progress" for started campaigns, "stopped" for stopped campaigns)
+      O novo status da campanha (por exemplo, "em andamento" para campanhas iniciadas, "interrompida" para campanhas interrompidas)
     </ResponseField>
   </Expandable>
 </ResponseField>
