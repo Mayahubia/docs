@@ -1,25 +1,24 @@
 ---
-title: "Get available languages"
+title: "Obter idiomas disponíveis"
 api: "GET /user/assistants/languages"
-description: "Retrieve all available languages for assistant configuration"
+description: "Recuperar todos os idiomas disponíveis para configuração do assistente
+"
 ---
 
-This endpoint returns a list of all available languages that can be used when creating or updating assistants.
+Este endpoint retorna uma lista de todos os idiomas disponíveis que podem ser usados ao criar ou atualizar assistentes.
 
-### Response fields
+### Campos de resposta
 
 <ResponseField name="data" type="array">
-  <Expandable title="properties">
+  <Expandable title="Propriedades">
     <ResponseField name="id" type="integer">
-      The unique identifier of the language
+      O identificador único do idioma
     </ResponseField>
-
     <ResponseField name="name" type="string">
-      The display name of the language
+      O nome de exibição do idioma
     </ResponseField>
-
     <ResponseField name="iso_2" type="string">
-      The ISO 639-1 two-letter language code
+      O código de idioma de duas letras ISO 639-1
     </ResponseField>
   </Expandable>
 </ResponseField>
@@ -58,9 +57,12 @@ This endpoint returns a list of all available languages that can be used when cr
 
 </ResponseExample>
 
-### Notes
+### **Observações**
 
-- This endpoint does not require any parameters
-- Use the `name` field when creating or updating assistants
-- The `iso_2` code can be useful for language-specific functionality
-- All available languages are returned in a single request
+Este endpoint não requer nenhum parâmetro
+
+Use o campo **name** ao criar ou atualizar assistentes
+
+O código **iso_2** pode ser útil para funcionalidades específicas de idioma
+
+Todos os idiomas disponíveis são retornados em uma única solicitação

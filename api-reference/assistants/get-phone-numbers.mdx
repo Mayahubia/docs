@@ -1,39 +1,36 @@
 ---
-title: "Get available phone numbers"
+title: "Obter números de telefone disponíveis"
 api: "GET /user/assistants/phone-numbers"
-description: "Retrieve all available phone numbers for assistant assignment"
+description: "Recuperar todos os números de telefone disponíveis para atribuição a assistentes
+"
 ---
 
-This endpoint returns a list of phone numbers owned by the authenticated user that can be assigned to assistants, with optional filtering by assistant type.
+Este endpoint retorna uma lista de números de telefone pertencentes ao usuário autenticado que podem ser atribuídos a assistentes, com filtragem opcional por tipo de assistente.
 
-### Query Parameters
+### Parâmetros de consulta
 
-<ParamField query="type" type="string" optional>
-  Filter phone numbers by assistant type. Options: `inbound`, `outbound`
+<ParamField query="type" type="string">
+  Filtrar números de telefone pelo tipo de assistente. Opções: inbound, outbound
 </ParamField>
 
-### Response fields
+### Campos de resposta
 
 <ResponseField name="data" type="array">
-  <Expandable title="properties">
+  <Expandable title="Propriedades">
     <ResponseField name="id" type="integer">
-      The unique identifier of the phone number
+      O identificador único do número de telefone
     </ResponseField>
-
     <ResponseField name="phone_number" type="string">
-      The phone number in E.164 format
+      O número de telefone no formato E.164
     </ResponseField>
-
     <ResponseField name="country_code" type="string">
-      The country code for the phone number
+      O código do país do número de telefone
     </ResponseField>
-
     <ResponseField name="type_label" type="string">
-      The human-readable type label for the phone number
+      O rótulo de tipo legível para o número de telefone
     </ResponseField>
-
     <ResponseField name="is_available" type="boolean">
-      Whether the phone number is available for assignment (not currently assigned to an inbound assistant)
+      Se o número de telefone está disponível para atribuição (não está atualmente atribuído a um assistente inbound)
     </ResponseField>
   </Expandable>
 </ResponseField>
@@ -68,10 +65,10 @@ This endpoint returns a list of phone numbers owned by the authenticated user th
 
 </ResponseExample>
 
-### Notes
+### Observações
 
-- Only phone numbers owned by the authenticated user are returned
-- When `type=inbound` is specified, caller ID numbers and already assigned numbers are filtered out
-- The `is_available` field indicates if the number can be assigned to a new inbound assistant
-- Phone numbers are returned in the values collection format (indexed array)
-- Use the `id` field when assigning phone numbers to assistants
+- Apenas números de telefone pertencentes ao usuário autenticado são retornados.
+- Quando type=inbound é especificado, números de identificação de chamadas (caller ID) e números já atribuídos são filtrados.
+- O campo is_available indica se o número pode ser atribuído a um novo assistente inbound.
+- Números de telefone são retornados no formato de coleção values (array indexado).
+- Utilize o campo id ao atribuir números de telefone a assistentes.

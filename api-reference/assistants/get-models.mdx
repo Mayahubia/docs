@@ -1,21 +1,21 @@
 ---
-title: "Get available LLM models"
+title: "Obter modelos LLM disponíveis"
 api: "GET /user/assistants/models"
-description: "Retrieve all available LLM models for assistant configuration"
+description: "Recuperar todos os modelos LLM disponíveis para configuração do assistente
+"
 ---
 
-This endpoint returns a list of all available Large Language Models (LLMs) that can be used when creating or updating assistants.
+Este endpoint retorna uma lista de todos os Modelos de Linguagem de Grande Escala (LLMs) disponíveis que podem ser usados ao criar ou atualizar assistentes.
 
-### Response fields
+### Campos de resposta
 
 <ResponseField name="data" type="array">
-  <Expandable title="properties">
+  <Expandable title="Propriedades">
     <ResponseField name="id" type="integer">
-      The unique identifier of the LLM model
+      O identificador único do modelo LLM
     </ResponseField>
-
     <ResponseField name="name" type="string">
-      The display name of the LLM model
+      O nome de exibição do modelo LLM
     </ResponseField>
   </Expandable>
 </ResponseField>
@@ -53,9 +53,9 @@ This endpoint returns a list of all available Large Language Models (LLMs) that 
 
 </ResponseExample>
 
-### Notes
+### **Observações**
 
-- This endpoint does not require any parameters
-- Use the `name` field when creating or updating assistants
-- All available LLM models are returned in a single request
-- Different models may have varying capabilities, performance, and cost characteristics
+- Este endpoint não requer nenhum parâmetro
+- Use o campo **name** ao criar ou atualizar assistentes
+- Todos os modelos LLM disponíveis são retornados em uma única solicitação
+- Modelos diferentes podem ter capacidades, desempenho e custos variados
