@@ -1,29 +1,30 @@
 ---
-title: "Delete call"
+title: "Excluir chamada"
 api: "DELETE /user/calls/{call}"
-description: "Delete a specific call record"
+description: "Excluir um registro de chamada específico
+"
 ---
 
-This endpoint allows you to delete a specific call record that belongs to the authenticated user.
+Este endpoint permite excluir um registro de chamada específico que pertence ao usuário autenticado.
 
-### Path Parameters
+### Parâmetros de caminho
 
 <ParamField path="call" type="integer" required>
-  The unique identifier of the call to delete
+  O identificador único da chamada a ser excluída
 </ParamField>
 
-### Response
+### Respostas
 
 <ResponseField name="message" type="string">
-  Confirmation message indicating the call was deleted successfully
+  Mensagem de confirmação indicando que a chamada foi excluída com sucesso
 </ResponseField>
 
-### Error Responses
+### Respostas de Erro
 
 <ResponseField name="404 Not Found">
-  <Expandable title="Error Response">
+  <Expandable title="Respostas de Erro">
     <ResponseField name="message" type="string">
-      Error message when the call is not found or doesn't belong to the authenticated user
+      Mensagem de confirmação indicando que a chamada foi excluída com sucesso.
     </ResponseField>
   </Expandable>
 </ResponseField>
@@ -36,6 +37,7 @@ This endpoint allows you to delete a specific call record that belongs to the au
 }
 ```
 
+
 ```json 404 Not Found
 {
   "message": "Call not found"
@@ -44,9 +46,9 @@ This endpoint allows you to delete a specific call record that belongs to the au
 
 </ResponseExample>
 
-### Notes
+### Observações
 
-- Only calls that belong to assistants owned by the authenticated user can be deleted
-- Once a call is deleted, it cannot be recovered
-- This action will permanently remove the call record, including any associated transcript, recording, and metadata
-- The call recording file (if exists) will also be deleted from storage
+- Apenas chamadas que pertencem a assistentes do usuário autenticado podem ser excluídas.
+- Uma vez que uma chamada é excluída, ela não pode ser recuperada.
+- Esta ação removerá permanentemente o registro da chamada, incluindo qualquer transcrição, gravação e metadados associados.
+- O arquivo de gravação da chamada (se existir) também será excluído do armazenamento.
