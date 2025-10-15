@@ -1,92 +1,104 @@
 ---
-title: "Autocalls Tool"
+title: "Ferramentas Mayahub"
 icon: "phone"
-description: "Learn how to use Autocalls triggers and actions in your AI calling flows"
+description: "Aprenda a usar gatilhos (triggers) e ações (actions) da Mayahub nos seus fluxos de chamadas com IA "
 ---
 
-# Autocalls Tool
+## Ferramentas Mayahub
 
-The Autocalls tool is the core component that connects your AI calling system with automation flows. It enables real-time data exchange between your AI assistants and business systems, allowing for personalized conversations and automated follow-ups.
+A ferramenta **Mayahub** é o componente central que conecta seu sistema de chamadas com IA aos fluxos de automação.\
+Ela permite a **troca de dados em tempo real** entre seus assistentes de IA e os sistemas da sua empresa, possibilitando **conversas personalizadas** e **acompanhamentos automáticos**.
 
 <Note>
-  You can find the Autocalls tool prominently displayed at the top of the
-  searching sidebar when looking for either triggers or actions.
+  Você pode encontrar a ferramenta **Mayahub** em destaque na parte superior da barra lateral de pesquisa, ao procurar por **gatilhos (triggers)** ou **ações (actions)**.
 </Note>
 
-## Triggers
+## Gatilhos
 
-### Call Ended
+### Chamada Terminada
 
 ![Autocalls Call Ended Trigger](/resources/autocalls-trigger.jpg)
 
-The Call Ended trigger activates immediately after an AI call completes, providing comprehensive data about the interaction:
+### Chamada Encerrada
 
-- Complete conversation transcript with timestamps
-- AI assistant responses and decisions
-- Call duration and technical metadata
-- Customer information and phone number
-- Call outcome and sentiment analysis
-- Variables set during the conversation
+O gatilho **Chamada Encerrada** é ativado imediatamente após uma chamada de IA ser concluída, fornecendo dados completos sobre a interação:
 
-#### Configuration
+- Transcrição completa da conversa com carimbos de tempo
+- Respostas e decisões do assistente de IA
+- Duração da chamada e metadados técnicos
+- Informações do cliente e número de telefone
+- Resultado da chamada e análise de sentimento
+- Variáveis definidas durante a conversa
 
-1. Select "Call Ended" as your trigger
-2. Choose specific AI assistant to monitor
-3. Configure variable mapping
+### Configuração:
 
-### Inbound Call Variable Injection
+- Selecione "Chamada Encerrada" como seu gatilho
+- Escolha o assistente de IA específico para monitorar
+- Configure o mapeamento de variáveis
 
-This powerful trigger activates before your AI assistant picks up an inbound call, allowing you to:
+---
 
-- Fetch and inject real-time customer data
-- Customize AI behavior based on context
-- Set conversation parameters
-- Define AI personality traits
-- Provide business logic variables
+### Injeção de Variáveis em Chamadas Recebidas
 
-#### Configuration
+Esse gatilho avançado é ativado _antes_ do seu assistente de IA atender uma chamada recebida, permitindo que você:
 
-1. Select "Inbound Call" as your trigger
-2. Define required variables for AI context
+- Busque e injete dados do cliente em tempo real
+- Personalize o comportamento da IA com base no contexto
+- Defina parâmetros da conversa
+- Configure traços de personalidade da IA
+- Forneça variáveis de lógica de negócio
 
-## Actions
+### Configuração:
 
-### Add Lead to Campaign
+- Selecione "Chamada Recebida" como seu gatilho
+- Defina as variáveis necessárias para o contexto da IA
+
+## Ações
+
+### Add Lead a Campanha
 
 ![Autocalls Action](/resources/autocalls-action.jpg)
 
-This action helps manage your AI calling campaigns by:
+---
 
-- Creating new leads from extenal tools like Sheets, Hubspot, Facebook leads
-- Assigning leads to specific AI campaigns
-- Adding context for future calls
+### Criar Lead
 
-#### Configuration
+Essa ação ajuda a gerenciar suas campanhas de chamadas com IA ao:
 
-1. Select target AI campaign
-2. Map contact details from trigger data
-3. Add custom attributes for AI context
+- Criar novos leads a partir de ferramentas externas como Sheets, Hubspot, Facebook Leads
+- Atribuir leads a campanhas de IA específicas
+- Adicionar contexto para chamadas futuras
 
-### Return Variables
+**Configuração:**
 
-This action is crucial for inbound calls, returning context that gets injected into the AI's prompt:
+- Selecione a campanha de IA de destino
+- Mapeie os dados de contato a partir das informações do gatilho
+- Adicione atributos personalizados para o contexto da IA
 
-- Customer profile and preferences
-- Conversation history summary
-- Business rules and constraints
-- Custom AI behavior flags
-- Dynamic response templates
+---
 
-#### Configuration
+### Retornar Variáveis
 
-1. Structure response JSON
-2. Map customer data to variables
-3. Set AI conversation parameters
-4. Configure timeout handling
+Essa ação é essencial para chamadas recebidas, retornando o contexto que será injetado no prompt da IA:
 
-## Example Usage
+- Perfil e preferências do cliente
+- Resumo do histórico de conversas
+- Regras de negócio e restrições
+- Flags de comportamento personalizado da IA
+- Modelos dinâmicos de resposta
 
-### Post-Call Lead Management
+**Configuração:**
+
+- Estruture o JSON de resposta
+- Mapeie os dados do cliente para variáveis
+- Defina os parâmetros da conversa da IA
+- Configure o controle de tempo limite (timeout)
+
+---
+
+## Exemplo de Uso
+
+Gerenciamento de Lead Pós-Chamada
 
 ```javascript
 Trigger: AI Call Ended
@@ -98,7 +110,7 @@ Update Hubspot record
 Add to follow-up campaign if qualified
 ```
 
-### Intelligent Inbound Routing
+### Roteamento Inteligente de Chamadas Recebidas
 
 ```javascript
 Trigger: Inbound Call to AI
@@ -110,22 +122,23 @@ Get interaction history
 Return enriched context for AI prompt
 ```
 
-## Best Practices
+## Boas Práticas
 
-1. **Variable Injection Performance**
+**Desempenho da Injeção de Variáveis**
 
-   - Keep processing under 2 seconds
-   - Set sensible defaults
+- Mantenha o processamento abaixo de 2 segundos
+- Defina valores padrão adequados
 
-2. **Data Structure**
+**Estrutura de Dados**
 
-   - Follow AI prompt requirements
-   - Validate all variables
-   - Structure nested objects clearly
-   - Document custom fields
+- Siga os requisitos do prompt da IA
+- Valide todas as variáveis
+- Estruture objetos aninhados de forma clara
+- Documente campos personalizados
 
-3. **Error Handling**
-   - Provide fallback values
-   - Log injection failures
-   - Monitor response times
-   - Handle missing data gracefully
+**Tratamento de Erros**
+
+- Forneça valores de fallback
+- Registre falhas de injeção
+- Monitore os tempos de resposta
+- Trate dados ausentes de forma adequada
