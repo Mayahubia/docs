@@ -228,74 +228,76 @@ Agora vamos configurar a ação do Google Sheets para os leads qualificados (**r
 
 <video autoPlay muted loop playsinline src="/resources/tutorials/qualified-leads/21-map-phone-number.mp4" />
 
-1. **Map the phone number:**
-   - Click on the `phone_number` field
-   - **Select "Phone Call Ended"** data source
-   - **Find and select the phone number** from call data
-   - Click "Insert"
+1. **Mapear o número de telefone:**
+   - Clique no campo **phone_number**
+   - Selecione a fonte de dados **Phone Call Ended**
+   - Encontre e selecione o número de telefone nos dados da chamada
+   - Clique em **Insert**
 
 <video autoPlay muted loop playsinline src="/resources/tutorials/qualified-leads/23-map-summary.mp4" />
 
-2. **Map the call summary:**
-   - Click on the `summary` field
-   - **Navigate to "Post Call Variables"**
-   - **`Select the summary variable`**
-   - Click "Insert"
-4. **Map any additional fields:**
-   - Email from call variables
-   - Call date/time from call metadata
-   - Any custom variables you've defined
+2. **Mapear o resumo da chamada:**
+   - Clique no campo **summary**
+   - Navegue até **Post Call Variables**
+   - Selecione a variável **summary**
+   - Clique em **Insert**
+3. **Mapear campos adicionais:**
+   - **Email** a partir das variáveis da chamada
+   - **Data/Hora da chamada** a partir dos metadados da chamada
+   - Quaisquer **variáveis personalizadas** que você tenha definido
 
-## Step 11: Test and Verify
+## Etapa 11: Testar e verificar
 
 <video autoPlay muted loop playsinline src="/resources/tutorials/qualified-leads/25-test-sheets-integration.mp4" />
 
-1. **Click "Test Step"** to verify the integration
-2. **Check for successful execution**
-3. **Go to your Google Sheet** to confirm:
-   - New row was added with correct data
-   - All mapped fields populated properly
-   - Data formatting looks correct
+1. Clique em **Test Step** para verificar a integração
+2. Verifique se a execução foi bem-sucedida
+3. Vá até sua **planilha do Google Sheets** para confirmar:
+   - Uma nova linha foi adicionada com os dados corretos
+   - Todos os campos mapeados foram preenchidos corretamente
+   - A formatação dos dados está correta
 
-## Step 12: Publish and Monitor
+## Etapa 12: Publicar e monitorar
 
 <Frame>
   ![Publishing the automation](/resources/tutorials/qualified-leads/27-publish-automation.png)
 </Frame>
 
-1. **Click "Publish"** to activate your automation
-2. **Your qualified leads tracking is now live**
-3. **Monitor automation performance:**
-   - Check automation "Runs" for execution history
-   - Verify qualified leads are being added to your sheet
-   - Monitor for any failed executions
+1. Clique em **Publish** para ativar sua automação
+2. O rastreamento de **leads qualificados** agora está ativo
+3. Monitore o desempenho da automação:
+   - Verifique a seção **Runs** para o histórico de execuções
+   - Confirme se os **leads qualificados** estão sendo adicionados à sua planilha
+   - Acompanhe possíveis **falhas de execução**
 
-## Troubleshooting
+## Solução de Problemas
 
-### Common Issues
+## Problemas Comuns
 
-**Leads not appearing in spreadsheet:**
+**Leads não aparecem na planilha:**
 
-- Verify Google Sheets connection is authorized
-- Check that automation is published and active
-- Confirm calls are triggering `status` = `true`
-- Verify branch condition is configured correctly
+- Verifique se a conexão com o **Google Sheets** está autorizada
+- Confirme se a automação está **publicada e ativa**
+- Certifique-se de que as chamadas estão acionando o **status = true**
+- Verifique se a **condição de ramificação** está configurada corretamente
 
-**Incomplete data in spreadsheet:**
+**Dados incompletos na planilha:**
 
-- Check all field mappings in the automation
-- Verify post-call variables are being extracted
-- Confirm spreadsheet headers match automation fields
-- Test with various call scenarios
+- Confira todos os **mapeamentos de campos** na automação
+- Verifique se as **variáveis pós-chamada** estão sendo extraídas corretamente
+- Confirme se os **cabeçalhos da planilha** correspondem aos campos da automação
+- Faça testes com **diferentes cenários de chamada**
 
-## Next Steps
+---
 
-Once your qualified leads automation is working:
+### Próximas Etapas
 
-- **Add lead scoring** based on call quality
-- **Create follow-up automations** for hot leads
-- **Integrate with email marketing** platforms
-- **Set up analytics dashboards** for conversion tracking
-- **Expand to multiple campaigns** and lead sources
+Quando sua automação de leads qualificados estiver funcionando:
 
-Your qualified leads will now be automatically captured and organized in Google Sheets, creating a powerful foundation for your sales and follow-up processes!
+- Adicione **pontuação de leads** com base na qualidade da chamada
+- Crie **automações de acompanhamento** para leads quentes
+- **Integre** com plataformas de **email marketing**
+- Configure **painéis analíticos** para rastrear conversões
+- Expanda para **múltiplas campanhas e fontes de leads**
+
+Seus **leads qualificados** agora serão capturados e organizados automaticamente no **Google Sheets**, criando uma base poderosa para seus processos de vendas e follow-up!
