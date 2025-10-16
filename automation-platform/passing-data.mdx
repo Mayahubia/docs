@@ -1,64 +1,47 @@
 ---
-title: "Passing Data"
+title: "Passando Dados"
 icon: "wand-sparkles"
-description: "Using data from previous steps in the current one"
+description: "Usando dados de etapas anteriores na etapa atual
+"
 ---
 
-## Data flow
+## Fluxo de Dados
 
-Any flow is a vertical diagram that **starts with a trigger step** followed by **any number of action steps**.
+Todo fluxo é um diagrama vertical que começa com uma etapa de **gatilho**, seguida por qualquer número de **etapas de ação**.
 
-Steps are connected vertically. Data flows from parent steps to the children. Children steps have access to the output data of the parent steps.
+As etapas são conectadas verticalmente. Os dados fluem das etapas **pai** para as **filhas**. As etapas filhas têm acesso aos dados de saída das etapas pai.
 
-## Example Steps
+## Exemplo de Etapas
 
-<video
-  width="450"
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/passing-data-3steps.mp4"></video>
+<video width="450" autoPlay muted loop playsinline src="/resources/passing-data-3steps.mp4" />
 
-This flow has 3 steps, they can access data as follows:
+Este fluxo possui **3 etapas**, que podem acessar os dados da seguinte forma:
 
-- **Step 1** is the main data producer to be used in the next steps. Data produced by Step 1 will be accessible in Steps 2 and 3. Some triggers don't produce data though, like Schedules.
+- **Etapa 1** é a principal produtora de dados a serem usados nas próximas etapas. Os dados gerados pela Etapa 1 estarão acessíveis nas Etapas 2 e 3. Alguns gatilhos, como os de agendamento, não produzem dados.
+- **Etapa 2** pode acessar os dados produzidos pela Etapa 1. Após a execução, essa etapa também produzirá dados que poderão ser usados nas próximas etapas.
+- **Etapa 3** pode acessar os dados produzidos pelas Etapas 1 e 2, pois são suas etapas pai. Essa etapa pode gerar dados, mas como é a última do fluxo, eles não poderão ser usados por outras etapas.
 
-- **Step 2** can access data produced by Step 1. After execution, this step will also produce data to be used in the next step(s).
+## **Painel Data to Insert**
 
-- **Step 3** can access data produced by Steps 1 and 2 as they're its parent steps. This step can produce data but since it's the last step in the flow, it can't be used by other ones.
+Para usar dados de uma etapa anterior na etapa atual, posicione o cursor em qualquer campo de entrada — o painel **Data to Insert** será exibido automaticamente.
 
-## Data to Insert Panel
+<video autoPlay muted loop playsinline src="/resources/passing-data-data-to-insert-panel.mp4" />
 
-In order to use data from a previous step in your current step, place your cursor in any input, the **Data to Insert** panel will pop up.
+Este painel exibe as etapas acessíveis e seus respectivos dados. Você pode expandir os itens de dados para visualizar seu conteúdo e clicar neles para inseri-los no campo de entrada atual.
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/passing-data-data-to-insert-panel.mp4"></video>
+Se um item neste painel tiver um símbolo de seta (⌄) à direita, significa que ele pode ser expandido para mostrar suas propriedades filhas. Você pode selecionar o item principal ou qualquer uma de suas propriedades conforme necessário.
 
-This panel shows the accessible steps and their data. You can expand the data items to view their content, and you can click the items to insert them in your current settings input.
+Ao inserir dados a partir deste painel, eles são adicionados na posição do cursor dentro do campo. Isso permite combinar **texto estático** e **dados dinâmicos** em qualquer campo.
 
-If an item in this panel has a caret (⌄) to the right, it means you can click on the item to expand its child properties. You can select the parent item or its properties as you need.
+<video autoPlay muted loop playsinline src="/resources/passing-data-main-insert-data-example.mp4" />
 
-When you insert data from this panel, it gets inserted at the cursor's position in the input. This means you can combine static text and dynamic data in any field.
+Recomendamos que você **expanda os itens antes de inseri-los** para entender o tipo de dado que eles contêm e verificar se são adequados para o campo que você está preenchendo.
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/passing-data-main-insert-data-example.mp4"></video>
+## Testando Etapas para Gerar Dados
 
-We generally recommend that you expand the items before inserting them to understand the type of data they contain and whether they're the right fit to the input you're filling.
+É necessário **testar as etapas antes de acessar seus dados**. Essa abordagem evita que você selecione dados incorretos e acabe quebrando seus fluxos após publicá-los.
 
-## Testing Steps to Generate Data
-
-We require you to test steps before accessing their data. This approach protects you from selecting the wrong data and breaking your flows after publishing them.
-
-If a step is not tested and you try to access its data, you will see the following message:
+Se uma etapa não for testada e você tentar acessar seus dados, verá a seguinte mensagem:
 
 <img
   width="350"
@@ -66,43 +49,34 @@ If a step is not tested and you try to access its data, you will see the followi
   alt="Test your automation step first"
 />
 
-To fix this, go to the step and use the Generate Sample Data panel to test it. Steps use different approaches for testing. These are the common ones:
+Para corrigir isso, vá até a etapa e use o painel **Generate Sample Data** para testá-la. As etapas utilizam diferentes abordagens de teste. As mais comuns são:
 
-- **Load Data:** Some triggers will let you load data from your connected account without having to perform any action in that account.
-- **Test Trigger:** Some triggers will require you to head to your connected account and fire the trigger in order to generate sample data.
-- **Send Data:** Webhooks require you to send a sample request to the webhook URL to generate sample data.
-- **Test Action:** Action steps will let you run the action in order to generate sample data.
+- **Load Data:** alguns gatilhos permitem carregar dados da sua conta conectada sem precisar executar nenhuma ação nela.
+- **Test Trigger:** alguns gatilhos exigem que você acesse sua conta conectada e dispare o gatilho para gerar dados de amostra.
+- **Send Data:** webhooks exigem o envio de uma solicitação de exemplo para o URL do webhook a fim de gerar dados de amostra.
+- **Test Action:** etapas de ação permitem executar a ação para gerar dados de amostra.
 
-Follow the instructions in the Generate Sample Data panel to know how your step should be tested. Some triggers will also let you Use Mock Data, which will generate static sample data from the piece. We recommend that you test the step instead of using mock data.
+Siga as instruções no painel **Generate Sample Data** para saber como a etapa deve ser testada. Alguns gatilhos também permitem usar **Mock Data**, que gera dados de amostra estáticos da peça. No entanto, recomendamos testar a etapa em vez de usar dados simulados.
 
-This is an example for generating sample data for a trigger using the **Load Data** button:
+Este é um exemplo de geração de dados de amostra para um gatilho usando o botão **Load Data:**
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/passing-data-load-data.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/passing-data-load-data.mp4" />
 
-## Advanced Tips
+## Dicas Avançadas
 
-### Switching to Dynamic Values
+**Alternando para Valores Dinâmicos**
 
-Dropdowns and some other input types don't let you select data from previous steps. If you'd like to bypass this and use data from previous steps instead, switch the input into a dynamic one using this button:
+Listas suspensas (_dropdowns_) e alguns outros tipos de entrada não permitem selecionar dados de etapas anteriores.\
+Se você quiser contornar isso e usar dados de etapas anteriores, altere o campo para um **campo dinâmico** usando este botão:
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/passing-data-dynamic-value.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/passing-data-dynamic-value.mp4" />
 
-### Accessing data by path
+### **Acessando dados por caminho**
 
-If you can't find the data you're looking for in the **Data to Insert** panel but you'd like to use it, you can write a JSON path instead.
+Se você não encontrar os dados desejados no painel **Data to Insert**, mas quiser usá-los, pode escrever um **caminho JSON** manualmente.
 
-Use the following syntax to write JSON paths:
+Use a seguinte sintaxe para escrever caminhos JSON:
 
 `{{step_slug.path.to.property}}`
 
-The `step_slug` can be found by moving your cursor over any of your flow steps, it will show to the right of the step.
+O **step_slug** pode ser encontrado ao mover o cursor sobre qualquer etapa do seu fluxo — ele será exibido à direita da etapa.
