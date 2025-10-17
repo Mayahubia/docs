@@ -1,79 +1,74 @@
 ---
-title: "SMS Capabilities"
+title: "Recursos de SMS"
 icon: "message-sms"
-description: "Learn about SMS features, requirements, and pricing for your phone numbers"
+description: "Saiba mais sobre os recursos de SMS, requisitos e preços dos seus números de telefone.
+"
 ---
 
-<Card
-  title="Detailed SMS Documentation"
-  icon="book-open"
-  href="/automation-platform/calls-related/sms-capabilities">
-  This is an overview of SMS features. For detailed instructions on sending SMS
-  through automation flows, check our [Automation Platform
-  Documentation](/automation-platform/calls-related/sms-capabilities).
+<Card title="Documentação Detalhada de SMS" icon="book-open" href="/automation-platform/calls-related/sms-capabilities">
+  Esta é uma visão geral dos recursos de SMS. Para instruções detalhadas sobre o envio de SMS por meio de fluxos de automação, consulte a **Documentação da Plataforma de Automação**.
 </Card>
 
-## Requirements
+## Requisitos
 
-To send SMS messages, you need:
+Para enviar mensagens SMS, você precisa de:
 
-- An SMS-capable phone number
-- Sufficient credits in your account
-- Proper automation flow setup
+- Um número de telefone com capacidade para SMS
+- Créditos suficientes na sua conta
+- Um fluxo de automação configurado corretamente
 
-## SMS Segments
+## Segmentos de SMS
 
-SMS messages are split into segments:
+As mensagens SMS são divididas em segmentos:
 
-- Each segment is 160 characters for standard ASCII text
-- Or 70 characters for Unicode (special characters, emojis)
-- Longer messages are automatically split into multiple segments
-- You are charged per segment sent
+- Cada segmento possui **160 caracteres** para texto ASCII padrão
+- Ou **70 caracteres** para Unicode (caracteres especiais, emojis)
+- Mensagens mais longas são divididas automaticamente em vários segmentos
+- A cobrança é feita por segmento enviado
 
-For example:
+**Exemplos:**
 
-- "Hello! How are you?" (16 chars) = 1 segment
-- A message with 200 ASCII chars = 2 segments
-- A message with emojis and 100 chars = 2 segments
+- “Hello! How are you?” (16 caracteres) = **1 segmento**
+- Uma mensagem com **200 caracteres ASCII** = **2 segmentos**
+- Uma mensagem com **emojis e 100 caracteres** = **2 segmentos**
 
-## Costs
+## Custos
 
-SMS pricing varies by:
+O preço dos SMS varia conforme:
 
-- Destination country
-- Number of segments
-- Type of content (standard/unicode)
+- O país de destino
+- O número de segmentos
+- O tipo de conteúdo (padrão/unicode)
 
-## Monitoring & History
+## Monitoramento e Histórico
 
-Track your SMS activity in the dashboard:
+Acompanhe sua atividade de SMS no painel:
 
-- Delivery status
-- Timestamp
-- Number of segments
-- Cost per message
-- Recipient details
-- Content preview
+- Status de entrega
+- Data e hora do envio
+- Número de segmentos
+- Custo por mensagem
+- Detalhes do destinatário
+- Prévia do conteúdo
 
-## Best Practices
+## Boas Práticas
 
-1. **Message Length**
+**Comprimento da Mensagem**
 
-   - Keep messages concise
-   - Monitor segment count
-   - Use standard characters when possible
+- Mantenha as mensagens curtas e objetivas
+- Monitore a contagem de segmentos
+- Use caracteres padrão sempre que possível
 
-2. **Compliance**
+**Conformidade**
 
-   - Include opt-out instructions
-   - Follow local regulations
-   - Respect quiet hours
+- Inclua instruções de cancelamento de envio (opt-out)
+- Siga as regulamentações locais
+- Respeite os horários de silêncio
 
-3. **Testing**
-   - Verify number capabilities
-   - Test delivery to different carriers
-   - Monitor delivery rates
+**Testes**
 
----
+- Verifique se o número possui capacidade para SMS
+- Teste a entrega em diferentes operadoras
+- Monitore as taxas de entrega
 
-**Want to start sending SMS?** Check out our [automation platform documentation](/automation-platform/calls-related/sms-capabilities) to learn how to set up SMS workflows.
+**Dica:** Quer começar a enviar SMS? Consulte a **documentação da plataforma de automação** para aprender como configurar fluxos de SMS.
