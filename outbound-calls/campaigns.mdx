@@ -1,48 +1,54 @@
 ---
-title: "Creating & Managing Campaigns"
+title: "Criação e Gerenciamento de Campanhas"
 icon: "bullhorn"
-description: "Step-by-step guide to creating and managing outbound call campaigns, including lead imports and monitoring"
+description: "Guia passo a passo para criar e gerenciar campanhas de chamadas outbound, incluindo importação de leads e monitoramento.
+"
 ---
 
-An outbound "campaign" determines when, how, and to whom calls are made. Campaigns automate calls to multiple leads using your AI assistant with intelligent scheduling and retry logic.
+Uma **campanha outbound** determina **quando**, **como** e **para quem** as chamadas serão feitas.\
+As campanhas automatizam as chamadas para vários leads usando o **assistente de IA**, com **agendamento inteligente** e **lógica de repetição automática (retry logic)**.
 
-## Quick Setup
+## Configuração Rápida
 
-1. **Go to Outbound / Campaigns** in your dashboard
-2. **Click "Create New Campaign"**:
-   - **Name**: e.g. "January Promo," "Payment Reminder," etc.
-   - **Assistant**: which AI assistant will handle these calls?
-   - **Schedule**: choose time windows and allowed days
+1. Vá em **Outbound / Campaigns** no seu painel
+2. Clique em **"Create New Campaign"**
 
-## Lead Import Options
+**Nome:** ex.: _"Promoção de Janeiro"_, _"Lembrete de Pagamento"_, etc.\
+**Assistente:** escolha qual assistente de IA fará as chamadas\
+**Agenda:** defina janelas de horário e dias permitidos
 
-- **CSV File**: Upload phone numbers (plus any extra columns, like name or account number)
-- **Google Sheets**: Connect via the no-code platform or direct integration to pull leads
-- **CRM Integration**: HubSpot, GoHighLevel, etc. can send leads directly via API or automation
+## Opções de Importação de Leads
 
-## Key Settings
+- **Arquivo CSV:** envie números de telefone (com colunas adicionais como nome ou número de conta)
+- **Google Sheets:** conecte via plataforma _no-code_ ou integração direta para importar leads
+- **Integração com CRM:** **HubSpot**, **GoHighLevel**, etc., podem enviar leads diretamente via API ou automação
 
-**Call Retries & Scheduling:**
-- **Max Retries**: e.g., attempt each lead up to 2 times if they don't answer
-- **Retry Interval**: minutes/hours between retries
-- **Time Window**: e.g., only call between 9 AM and 6 PM local time to avoid inconveniencing leads
+## Configurações Principais
 
-**Monitoring & Control:**
-- Once live, calls happen automatically during allowed hours
-- You can **pause** or **stop** the campaign anytime to revise your script or leads list
-- **Campaign Reports** show call results, answer rates, and duration analytics
+**Repetições e Agendamento de Chamadas:**
 
-## Best Practices
+- **Max Retries:** por exemplo, tentar cada lead até **2 vezes** se não atender
+- **Retry Interval:** intervalo em minutos/horas entre as tentativas
+- **Time Window:** ex.: ligar apenas entre **9h e 18h** no horário local, evitando incômodos aos leads
 
-- **Conservative scheduling**: Business hours, respect time zones
-- **Start with 2-3 retries**: Monitor and adjust based on feedback
-- **Clean lead data**: Valid numbers, remove duplicates
-- **Monitor costs**: Large campaigns can run thousands of parallel calls
+**Monitoramento e Controle:**
+
+- Quando ativa, as chamadas acontecem automaticamente nos horários permitidos
+- Você pode **pausar ou parar** a campanha a qualquer momento para revisar o script ou a lista de leads
+- Os **relatórios da campanha** mostram resultados, taxas de resposta e análises de duração das chamadas
+
+## Boas Práticas
+
+- **Agendamento conservador:** mantenha dentro do horário comercial e respeite fusos horários
+- **Comece com 2 a 3 tentativas:** monitore e ajuste conforme o retorno
+- **Dados limpos:** use números válidos e remova duplicados
+- **Monitore custos:** campanhas grandes podem gerar milhares de chamadas em paralelo
 
 <Note>
-**Large campaigns** with thousands of leads can run concurrently, as AI can handle parallel calls. Watch your minute usage to avoid unexpected costs.
+  Campanhas grandes, com **milhares de leads**, podem ser executadas **simultaneamente**, já que a IA consegue lidar com **chamadas paralelas**.\
+  Monitore o **uso de minutos** para evitar **custos inesperados**.
 </Note>
 
 ---
 
-For comprehensive setup instructions, advanced features, lead management, status tracking, and troubleshooting, see the complete [Campaigns Documentation](/campaigns/index).
+Para instruções completas de configuração, recursos avançados, gerenciamento de leads, acompanhamento de status e solução de problemas, consulte a **documentação completa de Campaigns**.
