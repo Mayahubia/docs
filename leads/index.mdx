@@ -13,25 +13,22 @@ Leads represent the people or businesses you want to contact through your campai
 <CardGroup cols={2}>
   <Card title="Primary Contacts" icon="user">
     **Main contact** for each lead
-    
+
     The primary phone number and contact information
   </Card>
-  
   <Card title="Secondary Contacts" icon="users">
     **Additional phone numbers** for the same lead
-    
+
     Backup contacts, decision makers, or alternative numbers
   </Card>
-  
   <Card title="Custom Variables" icon="code">
     **Personalized information** for AI conversations
-    
+
     Names, preferences, history, or any data your assistant needs
   </Card>
-  
   <Card title="Status Tracking" icon="chart-line">
     **Progress monitoring** through campaign lifecycle
-    
+
     Track call attempts, completions, and retry status
   </Card>
 </CardGroup>
@@ -44,23 +41,18 @@ Every lead moves through different statuses during campaign execution:
   <Accordion title="Created" icon="plus">
     **Ready to call** - Lead is queued for first contact attempt
   </Accordion>
-  
   <Accordion title="Scheduled" icon="calendar">
     **Queued for retry** - Scheduled for next call attempt based on campaign settings
   </Accordion>
-  
   <Accordion title="Processing" icon="phone">
     **Currently being called** - Call is in progress
   </Accordion>
-  
   <Accordion title="Rescheduled" icon="clock">
     **Waiting for retry** - Will be called again after retry interval
   </Accordion>
-  
   <Accordion title="Max Retries" icon="ban">
     **Retry limit reached** - Maximum call attempts exceeded
   </Accordion>
-  
   <Accordion title="Completed" icon="check">
     **Successfully contacted** - Call completed or goal achieved
   </Accordion>
@@ -69,19 +61,21 @@ Every lead moves through different statuses during campaign execution:
 ## Primary vs Secondary Contacts
 
 ### Primary Contacts
+
 - **Main lead record** with complete information
-- **First to be called** in campaign sequence  
+- **First to be called** in campaign sequence
 - **Inherits campaign variables** from assistant settings
 - **Controls overall lead status** and completion
 
 ### Secondary Contacts
+
 - **Additional phone numbers** for the same person/business
 - **Called if primary doesn't answer** (based on campaign retry settings)
 - **Independent status tracking** from primary contact
 - **Can have unique variables** different from primary
 
 <Tip>
-**Use case example:** A business lead might have the main office number as primary contact, with the decision maker's direct line and mobile as secondary contacts.
+  **Use case example:** A business lead might have the main office number as primary contact, with the decision maker's direct line and mobile as secondary contacts.
 </Tip>
 
 ## Variables System
@@ -93,24 +87,27 @@ Variables personalize AI conversations with lead-specific information. They are 
 ## Key Features
 
 ### Lead Management
+
 - **Manual creation** or **CSV/Excel import** with validation
 - **Status tracking** through campaign lifecycle
 - **Export capabilities** with filtering options
 
 ### Campaign Integration
+
 - **Single campaign** assignment per lead
-- **Automatic status updates** based on call outcomes  
+- **Automatic status updates** based on call outcomes
 - **Manual status control** for campaign management
 
 ### Best Practices
+
 - **Phone format:** International format without spaces (+1234567890)
 - **Clean data:** Accurate, current contact information
 - **Logical organization:** Prioritize secondary contacts appropriately
 
 <Note>
-For troubleshooting lead management issues, see [Leads Troubleshooting](/troubleshooting/leads).
+  For troubleshooting lead management issues, see [Leads Troubleshooting](/troubleshooting/leads).
 </Note>
 
 <Note>
-For detailed setup instructions, see [Managing Leads](/leads/managing-leads) and [Importing Leads](/leads/importing-leads).
+  For detailed setup instructions, see [Managing Leads](/leads/managing-leads) and [Importing Leads](/leads/importing-leads).
 </Note>
