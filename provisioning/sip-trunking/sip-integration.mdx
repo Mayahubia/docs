@@ -1,287 +1,332 @@
 ---
-title: "Overview"
-description: "Connect your existing phone system and numbers to Autocalls.ai"
+title: "Visão Geral"
+description: "Conecte seu sistema telefônico e números existentes à Mayahub.ai. "
 ---
 
 <Note>
-  This guide will help you understand and set up SIP integration. If you need
-  clarification during setup, our support team is available to assist.
+  Este guia ajudará você a entender e configurar a integração SIP.\
+  Se precisar de esclarecimentos durante a configuração, nossa equipe de suporte está disponível para ajudar.
 </Note>
 
-## What is SIP Integration?
+## O que é Integração SIP?
 
-SIP (Session Initiation Protocol) integration allows you to connect your existing phone system to Autocalls.ai. Think of it as building a bridge between your current phone setup and our AI platform. This means you can:
+A integração **SIP (Session Initiation Protocol)** permite conectar seu sistema telefônico existente à [**Mayahub.ai**](http://Mayahub.ai).\
+Pense nisso como uma ponte entre sua configuração telefônica atual e nossa plataforma de IA.\
+Isso significa que você pode:
 
-- Use your existing phone numbers with our AI assistants
-- Keep your current phone system and provider
-- Make and receive calls through your existing setup
-- Maintain full control of your numbers
-- Reduce carrier costs by using local VoIP providers with better rates
+- Usar seus **números de telefone existentes** com nossos assistentes de IA
+- **Manter** seu sistema telefônico e provedor atuais
+- **Fazer e receber chamadas** através da sua infraestrutura existente
+- **Manter controle total** sobre seus números
+- **Reduzir custos de operadora** ao usar provedores VoIP locais com tarifas mais competitivas
 
-## How It Works
+---
 
-When you integrate your phone system with Autocalls.ai:
+## Como Funciona
 
-1. **Inbound Calls**: Calls to your numbers are routed through your phone system to our AI assistants
-2. **Outbound Calls**: Our AI assistants can make calls appearing from your numbers
-3. **Management**: You keep managing your numbers through your current provider
-4. **Cost Efficiency**: Leverage your VoIP provider's competitive rates for call termination
+Ao integrar seu sistema telefônico com a [**Mayahub.ai**](http://Mayahub.ai):
 
-## Integration Options
+- **Chamadas de Entrada:** As chamadas para seus números são roteadas através do seu sistema telefônico até nossos assistentes de IA.
+- **Chamadas de Saída:** Nossos assistentes de IA podem realizar chamadas exibindo o seu número.
+- **Gerenciamento:** Você continua administrando seus números através do seu provedor atual.
+- **Eficiência de Custos:** Aproveite as tarifas competitivas do seu provedor VoIP para terminação de chamadas.
 
-You can connect your phone system to Autocalls.ai in two ways:
+---
 
-### 1. PBX Extension Integration
+## Opções de Integração
 
-This is like giving our AI platform an "extension" on your phone system:
+Você pode conectar seu sistema telefônico à [**Mayahub.ai**](http://Mayahub.ai) de duas formas:
 
-- **What it is**: Connect a specific extension from your PBX/phone system
-- **Perfect for**:
-  - Testing the integration
-  - Routing specific extensions to AI
-  - Simple setup with existing phone systems
-- **You'll need**:
-  - Your extension number (e.g., 1000)
-  - Extension username and password
-  - Your PBX server address (e.g., pbx.yourcompany.com)
+---
 
-**Real-world example**:
+## 1. Integração por Extensão PBX
 
-```
-Your office uses extensions 1001-1010 for staff
-You set up extension 1011 for the AI assistant
-Calls to 1011 go to the AI
-The AI can make calls appearing as extension 1011
-```
+É como conceder à nossa plataforma de IA uma **“extensão”** dentro do seu sistema telefônico:
 
-### 2. Direct Number Integration
+**O que é:**\
+Conecta uma **extensão específica** do seu PBX/sistema telefônico.
 
-This connects specific phone numbers to our platform:
+**Ideal para:**
 
-- **What it is**: Route one or more of your phone numbers to our AI
-- **Perfect for**:
-  - Dedicated AI phone lines
-  - Customer service numbers
-  - Sales or support lines
-- **You'll need**:
-  - Your phone number (e.g., +1 555 0123)
-  - SIP credentials from your provider
-  - Provider's SIP server address
+- Testar a integração
+- Roteamento de extensões específicas para a IA
+- Configuração simples com sistemas telefônicos já existentes
 
-**Real-world example**:
+**Você vai precisar de:**
+
+- Seu **número de extensão** (exemplo: 1000)
+- **Nome de usuário e senha** da extensão
+- **Endereço do servidor PBX** (exemplo: [pbx.suaempresa.com](http://pbx.suaempresa.com))
+
+## Exemplo prático:
 
 ```
-You have a support number: +1 555 0123
-You connect this number to our AI
-All calls to +1 555 0123 are handled by the AI assistant
-The AI makes outbound calls showing +1 555 0123
+Seu escritório usa as extensões **1001–1010** para a equipe.
+Você configura a extensão **1011** para o assistente de IA.
+As chamadas para **1011** são direcionadas para a IA.
+A IA pode fazer chamadas exibindo o número da extensão **1011**.
 ```
 
-## Authentication & Call Flow
+## 2. Integração Direta de Número
 
-### Bidirectional Configuration
+Essa opção conecta **números de telefone específicos** diretamente à nossa plataforma:
 
-The SIP integration uses the same credentials for both inbound and outbound calls:
+**O que é:**\
+Roteia um ou mais dos seus números de telefone para o nosso assistente de IA.
 
-- **Inbound Calls** (VoIP → Autocalls.ai):
+**Ideal para:**
+
+- Linhas telefônicas dedicadas à IA
+- Números de atendimento ao cliente
+- Linhas de vendas ou suporte
+
+**Você vai precisar de:**
+
+- Seu **número de telefone** (exemplo: +55 11 5550-1234)
+- **Credenciais SIP** fornecidas pelo seu provedor
+- **Endereço do servidor SIP** do provedor
+
+**Exemplo prático:**
+
+```
+Você tem um número de suporte: +1 555 0123
+Você conecta esse número à nossa IA.
+Todas as chamadas para+1 555 0123 são atendidas pelo assistente de IA.
+A IA realiza chamadas de saída exibindo o número 1 3555 012.
+```
+
+## **Autenticação e Fluxo de Chamadas**
+
+**Configuração Bidirecional**
+
+A integração SIP usa as **mesmas credenciais** para chamadas de entrada e de saída:
+
+- **Chamadas de Entrada (VoIP → **[**Mayahub.ai**](http://Mayahub.ai)**):**
 
   ```
-  Your VoIP system authenticates using username/password
+  Seu sistema VoIP se autentica usando nome de usuário e senha
   ↓
-  Calls reach our platform
+  As chamadas chegam à nossa plataforma
   ↓
-  AI assistant answers
+  O assistente de IA atende
+  
+  ```
+- **Chamadas de Saída (**[**Mayahub.ai**](http://Mayahub.ai)** → VoIP):**
+
+  ```
+  A IA inicia a chamada
+  ↓
+  Nossa plataforma se autentica no seu sistema VoIP usando o mesmo nome de usuário e senha
+  ↓
+  A chamada chega ao destino
+  
   ```
 
-- **Outbound Calls** (Autocalls.ai → VoIP):
-  ```
-  AI initiates call
-  ↓
-  Our platform authenticates to your VoIP using same username/password
-  ↓
-  Call reaches destination
-  ```
+### **Sincronização de Credenciais**
 
-### Credential Synchronization
+Para que a integração funcione corretamente:
 
-For the integration to work properly:
-
-1. The credentials you set in Autocalls.ai dashboard must match exactly with your VoIP configuration
-2. The same username/password combination is used for both directions
-3. Any changes to credentials must be updated in both systems
+1. As credenciais configuradas no **painel da **[**Mayahub.ai**](http://Mayahub.ai) devem corresponder **exatamente** à configuração do seu sistema VoIP.
+2. A **mesma combinação de nome de usuário e senha** é usada para ambas as direções (entrada e saída).
+3. Quaisquer **alterações nas credenciais** devem ser atualizadas em **ambos os sistemas**.
 
 <Warning>
-  If you change credentials in your VoIP system, remember to update them in
-  Autocalls.ai dashboard (and vice versa) to maintain the connection.
+  Se você alterar as credenciais no seu sistema VoIP, lembre-se de atualizá-las também no **painel da **[**Mayahub.ai**](http://Mayahub.ai) (e vice-versa) para manter a conexão.
 </Warning>
 
-## Setting Up Your Integration
+## Configurando Sua Integração
 
-### Step 1: Gather Your Information
+### Etapa 1: Reúna Suas Informações
 
-For PBX Extension:
-
-```
-Extension number: e.g., 1000
-Server address: e.g., pbx.company.com
-Username: Your extension username
-Password: Your extension password
-```
-
-For Direct Number:
+**Para Extensão PBX:**
 
 ```
-Phone number: e.g., +1 555 0123
-SIP server: e.g., sip.provider.com
-Username: Provided by your phone company
-Password: Provided by your phone company
+Número da Extensão: exemplo: 1000
+Endereço do Servidor: exemplo: pbx.empresa.com
+Nome de Usuário: nome de usuário da sua extensão
+Senha: senha da sua extensão
 ```
 
-### Step 2: Configure in Dashboard
-
-1. Go to your Autocalls.ai dashboard
-2. Navigate to **Your Phone Numbers**
-3. Click "Integrate SIP trunk"
-
-### Step 3: Select SIP Trunk Type 
-
-At the top of the form, select one of these trunk types:
-
-- **SIP Extension** - Use this if you already have an existing SIP credential (an extension) provided by your VoIP provider.
-- **Phone Number (DID)** - Use this if you want to integrate a dedicated Direct Inward Dial (DID) number instead of a generic SIP extension.
-
-For PBX Extension:
-```
-Extension number: e.g., 1000
-Username: Your extension username
-Password: Your extension password
-```
-<img height="200" src="/resources/sip-integration-sip-type.png" />
-
-For Direct Number:
+Para  Número Direto:
 
 ```
-Phone number: e.g., +1 555 0123
-Username: Provided by your phone company
-Password: Provided by your phone company
+Número de telefone: exemplo: +1 555 0123
+Servidor SIP: exemplo: sip.provedor.com
+Nome de usuário: fornecido pela sua operadora
+Senha: fornecida pela sua operadora
 ```
-<img height="200" src="/resources/sip-integration-did.png" />
 
-### Step 4: Outbound Settings
+### **Etapa 2: Configure no Painel**
 
-These settings control how Autocalls.ai sends outbound calls through your SIP provider.
+1. Acesse o painel da [**Mayahub.ai**](http://Mayahub.ai)
+2. Vá até **Seus Números de Telefone**
+3. Clique em **“Integrar tronco SIP”**
 
-- **SIP Address** - Enter the address/server of the SIP trunk without the port.
-- **Outbound Proxy (Fixed IP)** - Some SIP providers require calls to originate from a single, whitelisted IP address. Configure this as follows:
-  - **Toggle ON** - If your SIP provider requires a fixed source IP, enable Outbound proxy will come from a fixed IP address. Autocalls.ai will then send all outbound requests through a known static IP.
-  Use this option only if your provider explicitly requires a single source IP.
-  - **Toggle OFF:** - If your provider accepts calls from any IP, leave this option off. In that case, Autocalls.ai will send calls from dynamic IPs.
+---
+
+**Etapa 3: Selecione o Tipo de Tronco SIP**
+
+Na parte superior do formulário, selecione um dos seguintes tipos de tronco:
+
+- **Extensão SIP:** use esta opção se você já possui uma credencial SIP existente (uma extensão) fornecida pelo seu provedor VoIP.
+- **Número de Telefone (DID):** use esta opção se desejar integrar um número **DID (Discagem Direta)** dedicado em vez de uma extensão SIP genérica.
+
+---
+
+**Para Extensão PBX:**
 
 ```
-SIP address: (e.g., pbx.company.com/sip.provider.com)
+Número da extensão: exemplo: 1000
+Nome de usuário: nome de usuário da sua extensão
+Senha: senha da sua extensão
 ```
-<img height="200" src="/resources/sip-integration-outbound.png" />
 
-### Step 5: Number Format Configuration
+<img
+  height="200"
+  src="/resources/sip-integration-sip-type.png"
+/>
 
-This tells our system how to format phone numbers when making calls. Choose based on your provider's requirements:
+Para Número Direto:
 
-1. **International with +**
+```
+Número de telefone: exemplo: +1 555 0123
+Nome de usuário: fornecido pela sua operadora
+Senha: fornecida pela sua operadora
+```
+
+<img
+  height="200"
+  src="/resources/sip-integration-did.png"
+/>
+
+### **Etapa 4: Configurações de Saída**
+
+Essas configurações controlam como a [**Mayahub.ai**](http://Mayahub.ai) envia chamadas de saída através do seu provedor SIP.
+
+- **Endereço SIP:** insira o endereço/servidor do tronco SIP **sem a porta**.
+- **Proxy de Saída (IP Fixo):** alguns provedores SIP exigem que as chamadas se originem de um único endereço IP permitido (whitelist). Configure da seguinte forma:
+  - **Ativar (Toggle ON):** se o seu provedor SIP exigir um **IP de origem fixo**, ative esta opção — o proxy de saída virá de um **endereço IP estático conhecido**. A [**Mayahub.ai**](http://Mayahub.ai) enviará todas as solicitações de saída através desse IP fixo. Use essa opção **apenas se o seu provedor exigir explicitamente um IP de origem único**.
+  - **Desativar (Toggle OFF):** se o seu provedor aceitar chamadas de **qualquer IP**, deixe esta opção desativada. Nesse caso, a [**Mayahub.ai**](http://Mayahub.ai) enviará chamadas a partir de **IPs dinâmicos**.
+
+```
+Endereço SIP: (exemplo: pbx.empresa.com / sip.provedor.com)
+```
+
+<img
+  height="200"
+  src="/resources/sip-integration-outbound.png"
+/>
+
+### **Etapa 5: Configuração do Formato de Número**
+
+Esta etapa informa ao nosso sistema como formatar os números de telefone ao realizar chamadas.\
+Escolha a opção de acordo com os requisitos do seu provedor:
+
+1. **Internacional com +**
 
    ```
-   Format: +[country][number]
-   Example: +1 202 555 0123
-   SIP Request: sip:+12025550123@your.pbx.com
+   Formato: +[código do país][número]
+   Exemplo: +1 202 555 0123
+   Requisição SIP: sip:[+12025550123@seu.pbx.com](mailto:+12025550123@seu.pbx.com)
+   
+   ```
+2. **Internacional sem +**
+
+   ```
+   Formato: [código do país][número]
+   Exemplo: 1 202 555 0123
+   Requisição SIP: sip:[12025550123@seu.pbx.com](mailto:12025550123@seu.pbx.com)
+   
+   ```
+3. **Formato Nacional**
+
+   ```
+   Formato: [número local]
+   Exemplo: 0741926265
+   Requisição SIP: sip:[0741926265@seu.pbx.com](mailto:0741926265@seu.pbx.com)
+   
    ```
 
-2. **International without +**
+### Etapa 6: Configurações de Entrada
 
-   ```
-   Format: [country][number]
-   Example: 1 202 555 0123
-   SIP Request: sip:12025550123@your.pbx.com
-   ```
+Essas configurações determinam como a **Mayahub.ai** recebe e autentica chamadas de entrada do seu provedor SIP.
 
-3. **National format**
-   ```
-   Format: [local number]
-   Example: 0741926265
-   SIP Request: sip:0741926265@your.pbx.com
-   ```
+1. **Nosso Endereço SIP:**\
+   A **Mayahub.ai** atribui um URI SIP exclusivo para entrada: `5wed79aeavr.sip.livekit.cloud`.\
+   Seu provedor SIP deve ser configurado para enviar as chamadas de entrada para esse endereço, direcionando o tronco de saída ou a regra de roteamento para esse URI.
+2. **Endereço IP (Lista de IPs Permitidos):**\
+   Se o seu provedor SIP puder enviar chamadas a partir de um conjunto conhecido de endereços IP públicos, escolha **Endereço IP**.\
+   Em seguida, adicione cada IP do provedor à **lista de permissões (whitelist)** em **Autenticação de Entrada**.
+3. **Nome de Usuário e Senha:**\
+   Se o seu provedor oferecer suporte à autenticação SIP, escolha **Nome de usuário e senha**.\
+   As mesmas credenciais inseridas nas **Configurações de Saída (username/password)** serão usadas para autenticar as chamadas de entrada.\
+   Certifique-se de que o PBX do seu provedor esteja configurado para incluir essas credenciais.
 
-### Step 6: Inbound Settings
+<img
+  height="200"
+  src="/resources/sip-integration-inbound.png"
+/>
 
-These settings determine how Autocalls.ai receives and authenticates inbound calls from your SIP provider.
+### **Etapa 7: Seleção de País**
 
-1. **Our SIP Address** - Autocalls.ai assigns a unique inbound SIP URI ```5wed79aeavr.sip.livekit.cloud```. Your SIP provider must be configured to send inbound calls to this address by pointing their outbound trunk or routing rule to this URI.
-2. **IP Address (Whitelist IPs)** - If your SIP provider can send calls from a known set of public IP addresses, choose IP Address. Then add each provider IP to the whitelist under Inbound Authentication.
-3. **Username and Password** - If your provider supports SIP auth, choose Username and password. The same credentials you entered under Outbound Settings (username/password) will be used to authenticate inbound calls. Make sure your provider’s PBX is configured to include those credentials.
+Selecione o país onde o seu tronco SIP está provisionado.
 
-<img height="200" src="/resources/sip-integration-inbound.png" />
+<img
+  height="200"
+  src="/resources/sip-integration-country.png"
+/>
 
-### Step 7: Country Selection 
-Select the country where your SIP trunk is provisioned.
+### **Etapa 8: Verificação da Configuração**
 
-<img height="200" src="/resources/sip-integration-country.png" />
+Após concluir a configuração:
 
-### Step 8: Verify Setup
+1. Faça uma **chamada de teste** para o seu número ou extensão.
+2. Verifique se o **assistente de IA atende** corretamente.
+3. Use o **recurso de teste de chamada** para confirmar se as chamadas de saída estão funcionando.
 
-After configuration:
+---
 
-1. Make a test call to your number/extension
-2. Check that the AI assistant answers
-3. Use the test call feature to verify outbound calling
+**Requisitos de Segurança**
 
-## Security Requirements
+Suas credenciais SIP precisam estar seguras:
 
-Your SIP credentials need to be secure:
+- **Nome de usuário:** seu número de extensão ou o nome de usuário fornecido pelo provedor.
+- **Senha** deve conter:
+  - 12 ou mais caracteres
+  - Números
+  - Letras maiúsculas e minúsculas
+  - Caracteres especiais (recomendado)
 
-- **Username**: Your extension number or provider-supplied username
-- **Password must have**:
-  - 12 or more characters
-  - Numbers
-  - Upper and lowercase letters
-  - Special characters recommended
+---
 
-## Common Questions
+### Perguntas Comuns
 
 <AccordionGroup>
   <Accordion title="Can I use multiple numbers?">
-    Yes! You can integrate multiple extensions or direct numbers with our platform.
+    Sim! Você pode integrar **várias extensões ou números diretos** à nossa plataforma.
   </Accordion>
+  {" "}
 
-{" "}
+  <Accordion title="Will I lose control of my numbers?">
+    No, you maintain full control through your current provider. The integration only establishes a connection between your system and our platform.
+  </Accordion>
+  {" "}
 
-<Accordion title="Will I lose control of my numbers?">
-  No, you maintain full control through your current provider. The integration
-  only establishes a connection between your system and our platform.
-</Accordion>
+  <Accordion title="Can I still use my numbers for regular calls?">
+    Yes, you can set up routing rules in your phone system to decide which calls go to the AI and which go to your regular phone system.
+  </Accordion>
+  {" "}
 
-{" "}
-
-<Accordion title="Can I still use my numbers for regular calls?">
-  Yes, you can set up routing rules in your phone system to decide which calls
-  go to the AI and which go to your regular phone system.
-</Accordion>
-
-{" "}
-
-<Accordion title="What if I need to change settings later?">
-  You can update your integration settings anytime through the dashboard. All
-  configuration options remain accessible after initial setup.
-</Accordion>
-
+  <Accordion title="What if I need to change settings later?">
+    You can update your integration settings anytime through the dashboard. All configuration options remain accessible after initial setup.
+  </Accordion>
   <Accordion title="How does this help with call costs?">
-    By using your own VoIP provider, you can take advantage of their local rates
-    and existing agreements, which are often more competitive than standard carrier
-    rates. This is especially beneficial for international calls.
+    By using your own VoIP provider, you can take advantage of their local rates and existing agreements, which are often more competitive than standard carrier rates. This is especially beneficial for international calls.
   </Accordion>
 </AccordionGroup>
 
 ---
 
 <Note>
-  Need help setting up? Our support team specializes in helping customers
-  integrate their phone systems. We'll guide you through the entire process,
-  ensuring a smooth setup with your specific phone system configuration.
+  Need help setting up? Our support team specializes in helping customers integrate their phone systems. We'll guide you through the entire process, ensuring a smooth setup with your specific phone system configuration.
 </Note>
