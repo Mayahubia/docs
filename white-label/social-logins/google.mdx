@@ -1,204 +1,172 @@
 ---
-title: "Google App Setup"
+title: "Configuração do Google App"
 icon: "google"
-description: "This document provides instructions on setting up a Google application so users can login/register via Google on your site."
+description: "Este documento fornece instruções sobre como configurar um aplicativo do Google para que os usuários possam fazer login ou se registrar usando o Google em seu site.
+"
 ---
 
-## Enabling API & App Registration
+### Ativando a API e Registrando o Aplicativo
 
-To allow users to log in to your site with their Google account, you need to create a Google Cloud project and configure the OAuth. Follow steps below to create a configure your Google Cloud project.
+Para permitir que os usuários façam login no seu site usando a conta do Google, é necessário **criar um projeto no Google Cloud** e configurar o **OAuth**.\
+Siga as etapas abaixo para criar e configurar seu projeto no Google Cloud.
 
-## 1. Sing in to continue to Google Cloud Platform 
+## 1. Fazer login no Google Cloud Platform
 
-Go to https://console.cloud.google.com/ and sing in to enter the Google Cloud console.
-   <Frame>
-     <img
-       src="/resources/white-label-google-login-page.png"
-       alt="Google Cloud Console Login"
-     />
-   </Frame>
+Acesse https://console.cloud.google.com/ e faça login para entrar no **console do Google Cloud**.
 
-## 2. Create a project
+<Frame>
+  ![Google Cloud Console Login](/resources/white-label-google-login-page.png)
+</Frame>
 
-Click the project button in the top menu and you'll see the **Select a project** pop-up. Click the **NEW PROJECT** button create a project.
+## 2. Criar um Projeto
 
-   <Frame>
-     <img
-       src="/resources/google-create-project.png"
-       alt="Google Create Project"
-     />
-   </Frame>
+Clique no botão de **projeto** no menu superior e será exibido o pop-up **“Selecionar um projeto”**.\
+Clique em **NOVO PROJETO** para criar um novo projeto.
 
-Enter the **Project name** and click the **CREATE** button. 
+<Frame>
+  ![Google Create Project](/resources/google-create-project.png)
+</Frame>
 
-   <Frame>
-     <img
-       src="/resources/google-project-name.png"
-       alt="Google Project Name"
-     />
-   </Frame>
+Insira o **nome do projeto** e clique no botão **CRIAR**.
 
-## 3. Start to configure the OAuth consent screen 
+<Frame>
+  ![Google Project Name](/resources/google-project-name.png)
+</Frame>
 
-Once a project is created, go to **APIs & Services**. Select **Credentials** from the left-side menu then click the **CONFIGURE CONSENT SCREEN** button.
+## 3. Iniciar a Configuração da Tela de Consentimento do OAuth
 
-   <Frame>
-     <img
-       src="/resources/google-credentials.png"
-       alt="Google Credentials"
-     />
-   </Frame>
+Após criar o projeto, acesse **APIs e Serviços**.\
+Selecione **Credenciais** no menu lateral esquerdo e clique no botão **CONFIGURAR TELA DE CONSENTIMENTO**.
 
-   <Frame>
-     <img
-       src="/resources/google-credentials2.png"
-       alt="Google Credentials"
-     />
-   </Frame>
+<Frame>
+  ![Google Credentials](/resources/google-credentials.png)
+</Frame>
 
-Choose the External in the User Type options, then click the CREATE button.
+<Frame>
+  ![Google Credentials](/resources/google-credentials2.png)
+</Frame>
 
-   <Frame>
-     <img
-       src="/resources/google-create-button.png"
-       alt="Google Create Button"
-     />
-   </Frame>
+Escolha a opção **Externo** em **Tipo de Usuário** e clique no botão **CRIAR**.
 
-## 4. Edit app registration
+<Frame>
+  ![Google Create Button](/resources/google-create-button.png)
+</Frame>
 
-### 4.1 OAuth consent screen 
-Enter the **App name**, **User support email**, upload **App logo**.
+## 4. Editar o Registro do Aplicativo
 
-Enter the **Application home page**, **Application privacy policy link**, **Application terms and service link**.
+**4.1 Tela de Consentimento do OAuth**
 
-Enter your website **domain**.
+- Insira o **nome do aplicativo** e o **e-mail de suporte ao usuário**.
+- Envie o **logotipo do aplicativo**.
+- Insira o **link da página inicial do aplicativo**, o **link da política de privacidade** e o **link dos termos de serviço**.
+- Informe o **domínio do seu site**.
+- Adicione seus **endereços de e-mail de contato**.
 
-Enter your contact **Email addresses**.
+Prossiga para a próxima etapa clicando em **SALVAR E CONTINUAR**.
 
-Continue to the next step by clicking the **SAVE AND CONTINUE** button.
- 
-   <Frame>
-     <img
-       src="/resources/google-edit-registration.png"
-       alt="Google Edit Registration"
-     />
-   </Frame>
+<Frame>
+  ![Google Edit Registration](/resources/google-edit-registration.png)
+</Frame>
 
-### 4.2. Scopes 
-You'll be on the step **Scopes**. Click the **ADD OR REMOVE SCOPES** button to select the scopes.
-    <Frame>
-      <img
-         src="/resources/google-add-remove-scopes.png"
-         alt="Google Scopes"
-      />
-    </Frame>
+### **4.2 Escopos**
 
-Select three required API Scopes:
+Na etapa **Escopos**, clique no botão **ADICIONAR OU REMOVER ESCOPO** para selecionar os escopos desejados.
 
-- **.../auth/userinfo.email** 
-- **.../auth/userinfo.profile** 
-- **openid** 
+<Frame>
+  ![Google Scopes](/resources/google-add-remove-scopes.png)
+</Frame>
 
-Once selected click on the **UPDATE** button.
+Selecione os três escopos de API obrigatórios:
 
-    <Frame>
-      <img
-         src="/resources/google-required-api-scopes.png"
-         alt="Google Required API Scopes"
-      />
-    </Frame>
-The selected scopes will now appear on the **Your non-sensitive scopes** section.
+- `.../auth/userinfo.email`
+- `.../auth/userinfo.profile`
+- `openid`
 
-Continue to the next step by clicking on the **SAVE AND CONTINUE** button. 
+Após selecionar, clique no botão **ATUALIZAR**.
 
-    <Frame>
-      <img
-         src="/resources/google-sensitive-scopes-section.png"
-         alt="Google Sensitive Scopes"
-      />
-    </Frame>
+<Frame>
+  ![Google Required API Scopes](/resources/google-required-api-scopes.png)
+</Frame>
 
-### 4.3 Test users 
-You'll be on the step **Test users**. On this step you can add Test users to test the social login, or just continue to the next step by clicking the **SAVE AND CONTINUE** button.
+Os escopos selecionados agora aparecerão na seção **Seus escopos não confidenciais**.
 
-    <Frame>
-      <img
-         src="/resources/google-test-users.png"
-         alt="Google Test Users"
-      />
-    </Frame>
-### 4.4 Summary 
-You'll be on the step **Summary** that shows you the outline of your app registration. Click the **BACK TO DASHBOARD** button.
+Prossiga para a próxima etapa clicando em **SALVAR E CONTINUAR**.
 
-    <Frame>
-      <img
-         src="/resources/google-summary.png"
-         alt="Google Summary"
-      />
-    </Frame>
-## 5. Create credentials 
-Select **Credentials** from the left-side menu. Click the **CREATE CREDENTIALS** button and select the **OAuth client ID** item.
+<Frame>
+  ![Google Sensitive Scopes](/resources/google-sensitive-scopes-section.png)
+</Frame>
 
-   <Frame>
-     <img
-       src="/resources/google-create-credentials.png"
-       alt="Google Create Credentials"
-     />
-   </Frame>
-Once clicked, it'll take you to the **Create OAuth client ID** page.
+### **4.3 Usuários de Teste**
 
-Select the **Web application** option in the **Application type**. Enter a name of your OAuth 2.0 client in the Name field.
+Na etapa **Usuários de Teste**, você pode adicionar **usuários de teste** para validar o login social ou simplesmente prosseguir para a próxima etapa clicando em **SALVAR E CONTINUAR**.
 
-Enter allowed redirect URLs in the **Authorized redirect URIs** section.
+<Frame>
+  ![Google Test Users](/resources/google-test-users.png)
+</Frame>
 
-See example:
+### **4.4 Resumo**
 
-- **https://sss.com/login/google/callback** 
+Na etapa **Resumo**, será exibido um panorama geral do registro do seu aplicativo.\
+Clique no botão **VOLTAR AO PAINEL**.
 
-<Note>By default, URLs have the "/" symbol at the end of the path. Remove "/" before "?" if your site uses URLs without "/" at the end of the path.</Note>
+<Frame>
+  ![Google Summary](/resources/google-summary.png)
+</Frame>
 
-Click the **CREATE** button. 
+## 5. Criar Credenciais
 
-   <Frame>
-     <img
-       src="/resources/google-create-oauth-client.png"
-       alt="Google Create OAuth Client"
-     />
-   </Frame>
+No menu lateral esquerdo, selecione **Credenciais**.\
+Clique no botão **CRIAR CREDENCIAIS** e escolha a opção **ID do cliente OAuth**.
 
-## 6. Enter your keys
+<Frame>
+  ![Google Create Credentials](/resources/google-create-credentials.png)
+</Frame>
 
-Once you click the button, the **OAuth client created** pop-up will appear and you'll see your application keys. 
+Ao clicar, você será direcionado para a página **Criar ID do cliente OAuth**.
 
-   <Frame>
-     <img
-       src="/resources/google-oauth-client-created.png"
-       alt="Google OAuth Client Created"
-     />
-   </Frame>
+- Selecione a opção **Aplicativo da Web** em **Tipo de aplicativo**.
+- Insira um **nome** para o seu cliente OAuth 2.0 no campo **Nome**.
+- Na seção **URIs de redirecionamento autorizados**, insira as URLs de redirecionamento permitidas.
 
-Copy your **Client ID** and **Client Secret** keys and paste them to the **Client ID** and **Client secret** fields under the **Google Login Configuration** on the white-label > Settings > Social Logins.
+**Exemplo:**
 
+- [**https://sss.com/login/google/callback**](https://sss.com/login/google/callback)
 
-   <Frame>
-     <img
-       src="/resources/white-label-google-configuration.png"
-       alt="White Label Google Configuration"
-     />
-   </Frame>
+<Note>
+  Por padrão, as URLs possuem o símbolo **“/”** no final do caminho.\
+  Remova o **“/” antes do “?”** se o seu site utilizar URLs **sem “/” no final do caminho**.
+</Note>
 
-## Test 
+Clique no botão **CRIAR**.
 
-Test the Social Login feature at the Login and Registration pages. If you're encountering issues, please contact our support team for assistance with any step of the setup process.
+<Frame>
+  ![Google Create OAuth Client](/resources/google-create-oauth-client.png)
+</Frame>
 
-   <Frame>
-     <img
-       src="/resources/google-test.png"
-       alt="Google login test"
-     />
-   </Frame>
+## 6. Inserir Suas Chaves
+
+Ao clicar no botão, aparecerá o pop-up **Cliente OAuth criado**, exibindo as **chaves do seu aplicativo**.
+
+<Frame>
+  ![Google OAuth Client Created](/resources/google-oauth-client-created.png)
+</Frame>
+
+Copie suas chaves **Client ID** e **Client Secret** e cole-as nos campos **Client ID** e **Client Secret** em\
+**White-label \> Configurações \> Logins Sociais \> Configuração de Login com Google**.
+
+<Frame>
+  ![White Label Google Configuration](/resources/white-label-google-configuration.png)
+</Frame>
+
+## **Teste**
+
+Teste o recurso de **Login Social** nas páginas de **Login** e **Registro**.\
+Se encontrar algum problema, entre em contato com nossa **equipe de suporte** para obter assistência em qualquer etapa do processo de configuração.
+
+<Frame>
+  ![Google login test](/resources/google-test.png)
+</Frame>
 
 ---
 
-**Need help?** Contact our support team for assistance with any step of the setup process.
+Precisa de ajuda? Entre em contato com nossa **equipe de suporte** para obter assistência em qualquer etapa do processo de configuração.

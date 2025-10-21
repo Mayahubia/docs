@@ -1,152 +1,191 @@
 ---
-title: "Plans & Pricing Setup"
+title: "Configuração de Planos e Preços"
 icon: "money-bill"
-description: "Learn how to configure your own pricing plans and limitations for your white labeled platform"
+description: "Aprenda a configurar seus próprios planos de preços e limitações para a sua plataforma White Label.
+"
 ---
 
-Configure custom pricing plans for your platform users through the Administration Panel.
+Configure **planos de preços personalizados** para os usuários da sua plataforma por meio do **Painel de Administração**.
 
-## Accessing Plan Settings
+## **Acessando as Configurações de Planos**
 
-1. Open your Administration Panel
-2. Navigate to "Plans" section
-   <Frame>
-     <img src="/resources/plans.png" alt="Plans & Pricing Section" />
-   </Frame>
+- Abra o **Painel de Administração**
+- Acesse a seção **“Planos”**
 
-## Creating Plans
+  <Frame>
+    ![Plans & Pricing Section](/resources/plans.png)
+  </Frame>
 
-Create comprehensive pricing plans with detailed configuration options, limits, and pricing structures.
+## **Criação de Planos**
 
-### Plan Configuration Form
+Crie **planos de preços completos**, com opções detalhadas de configuração, **limites personalizados** e **estruturas de cobrança** específicas.
 
-<Frame>
-  <img src="/resources/white-label-plan-form.png" alt="Plan Creation Form" />
-</Frame>
-
-### General Information Section
-
-**Basic Plan Settings:**
-- **Name:** Plan display name shown to customers
-- **Description:** Detailed plan description and benefits (required)
-- **Order:** Display order in pricing page (numeric value)
-- **Is Active:** Enable/disable plan availability
-- **Is Featured:** Display featured badge on plan
-- **Color:** Plan theme color (Info, Success, Purple, Danger)
-
-**Pricing Configuration:**
-- **Included Minutes:** Base minutes included in plan (cannot be changed after creation)
-- **Extra Minutes Cost:** Price per additional minute (minimum: your platform cost)
-
-### Plan Limits Section
+### **Formulário de Configuração de Plano**
 
 <Frame>
-  <img src="/resources/white-label-plan-limits.png" alt="Plan Limits Configuration" />
+  ![Plan Creation Form](/resources/white-label-plan-form.png)
 </Frame>
 
-**Count-Based Limits** (Value -1 for unlimited, 0 to disable):
+### **Seção de Informações Gerais**
 
-- **Max Assistants:** Number of AI assistants (default: 1)
-- **Max Campaigns:** Outbound calling campaigns (default: 1)
-- **Max Cloned Voices:** Voice cloning limit (default: 1, max: 200)
-- **Max Knowledgebases:** Knowledge base documents (default: 1)
-- **Max Mid Call Tools:** Custom API integrations (default: 1)
-- **Max Parallel Calls:** Simultaneous calls (default: 3)
-- **Max Automation Runs:** Monthly automation executions (default: 500)
-- **Max Own Numbers:** Phone numbers owned (default: 1)
+**Configurações Básicas do Plano:**
 
-**Feature Toggles:**
-- **Web Widget:** Embeddable web calling widget (default: enabled)
-- **Secondary Languages:** Multi-language support for assistants (default: enabled)
-- **Automation Platform:** Access to workflow automation tools (default: enabled)
-- **Calendar Integrations:** Cal.com and GoHighLevel scheduling (default: enabled)
+- **Nome:** Nome do plano exibido para os clientes
+- **Descrição:** Descrição detalhada do plano e seus benefícios (**obrigatória**)
+- **Ordem:** Ordem de exibição na página de preços (valor numérico)
+- **Está Ativo:** Habilita ou desabilita a disponibilidade do plano
+- **Em Destaque:** Exibe um selo de destaque no plano
+- **Cor:** Cor do tema do plano (**Info**, **Success**, **Purple**, **Danger**)
 
-### Features Display Section
+---
+
+**Configuração de Preços:**
+
+- **Minutos Incluídos:** Quantidade base de minutos incluídos no plano (não pode ser alterada após a criação)
+- **Custo por Minuto Extra:** Preço por minuto adicional (mínimo: **seu custo de plataforma**)
+
+---
+
+### **Seção de Limites do Plano**
 
 <Frame>
-  <img src="/resources/white-label-plan-features.png" alt="Plan Features List" />
+  ![Plan Limits Configuration](/resources/white-label-plan-limits.png)
 </Frame>
 
-**Plan Features List:**
-- Add up to 15 custom features per plan
-- Each feature limited to 80 characters
-- Features appear as bullet points on pricing page
-- Use descriptive benefits and capabilities
+### **Limites Baseados em Quantidade**
 
-**Common Feature Examples:**
-- "120 included minutes, then $0.20 / extra minute"
-- "1 assistant"  
-- "1 outbound campaign"
-- "3 calls in parallel"
-- "1 cloned voice"
-- "24/7 Customer Support"
+_(Use o valor _**_-1_**_ para ilimitado ou _**_0_**_ para desativar)_
 
+- **Assistentes Máximos:** Quantidade de assistentes de IA (padrão: **1**)
+- **Campanhas Máximas:** Campanhas de chamadas ativas (padrão: **1**)
+- **Vozes Clonadas Máximas:** Limite de vozes clonadas (padrão: **1**, máximo: **200**)
+- **Bases de Conhecimento Máximas:** Documentos de base de conhecimento (padrão: **1**)
+- **Ferramentas em Chamada Máximas:** Integrações de API personalizadas (padrão: **1**)
+- **Chamadas Paralelas Máximas:** Número de chamadas simultâneas (padrão: **3**)
+- **Execuções de Automação Máximas:** Execuções mensais de automações (padrão: **500**)
+- **Números Próprios Máximos:** Números de telefone que o usuário pode possuir (padrão: **1**)
 
-### Adding Prices to Plans
+---
 
-After creating a plan, scroll down to the **Prices** table:
+### **Alternância de Recursos (Feature Toggles)**
+
+- **Web Widget:** Widget de chamadas incorporável no site (padrão: **ativado**)
+- **Idiomas Secundários:** Suporte multilíngue para assistentes (padrão: **ativado**)
+- **Plataforma de Automação:** Acesso às ferramentas de automação de fluxos (padrão: **ativado**)
+- **Integrações de Calendário:** Compatibilidade com [**Cal.com**](http://Cal.com) e **GoHighLevel** (padrão: **ativado**)
+
+---
+
+### **Seção de Exibição de Recursos (Features Display Section)**
 
 <Frame>
-  <img src="/resources/wl-price.jpg" alt="Plan Creation Interface" />
+  ![Plan Features List](/resources/white-label-plan-features.png)
 </Frame>
 
-**Price Configuration Interface:**
-- **Billing Type:** Monthly or Yearly (can have both options)
-- **Set Your Price:** Customer price with automatic cost validation
-- **Cost & Profit Breakdown:** Real-time calculation showing platform costs and your profit
+### **Lista de Recursos do Plano**
 
-## Default Plan Limits
+- Adicione até **15 recursos personalizados** por plano
+- Cada recurso é limitado a **80 caracteres**
+- Os recursos aparecem como **tópicos (bullet points)** na página de preços
+- Use descrições claras que comuniquem **benefícios e funcionalidades**
 
-Navigate to **Default plan limits** in the sidebar to configure global settings:
+---
+
+### **Exemplos Comuns de Recursos**
+
+- “120 minutos incluídos, depois R\$ 0,20 por minuto extra”
+- “1 assistente”
+- “1 campanha de saída”
+- “3 chamadas em paralelo”
+- “1 voz clonada”
+- “Suporte ao cliente 24/7”
+
+---
+
+### **Adicionando Preços aos Planos**
+
+Após criar um plano, role até a **tabela de preços (Prices Table):**
 
 <Frame>
-  <img src="/resources/white-label-default-plan-limits.png" alt="Default Plan Limits Configuration" />
+  ![Plan Creation Interface](/resources/wl-price.jpg)
 </Frame>
 
-### Billing Configuration
+### **Interface de Configuração de Preço**
 
-**Free Account Settings:**
-- **Allow Free Accounts:** Enable users to register without payment
-- **Free Account Extra Minutes Cost:** Price per additional minute for free users
+- **Tipo de Cobrança:** Escolha entre **Mensal** ou **Anual** (ambas as opções podem coexistir)
+- **Definir Preço:** Valor cobrado do cliente, com **validação automática de custo mínimo**
+- **Cálculo de Custo e Lucro:** Exibição em tempo real mostrando o **custo da plataforma** e o **lucro estimado**
 
-### Default Limits
+---
+
+### **Limites Padrão de Plano**
+
+Navegue até **“Limites Padrão de Plano”** na barra lateral para configurar as **definições globais** da sua plataforma:
 
 <Frame>
-  <img src="/resources/white-label-default-plan-limits1.png" alt="Default Plan Limits Configuration" />
+  ![Default Plan Limits Configuration](/resources/white-label-default-plan-limits.png)
 </Frame>
 
-Configure baseline limits applied to all new plans:
-- **Max Assistants, Campaigns, Cloned Voices**
-- **Max Parallel Calls, Knowledge Bases, Own Numbers**
-- **Max Mid Call Tools, Automation Runs**
-- **Feature toggles:** Web Widget, Secondary Languages, Automation Platform, Calendar Integrations
+### **Configuração de Faturamento**
 
-### Plan Structure
-- Start with 2-3 clear tiers
-- Offer monthly and annual options
-- Include reasonable usage limits
-- Provide clear upgrade paths
+**Configurações de Conta Gratuita:**
 
-### Pricing Strategy
-- Research market rates
-- Consider your costs
-- Plan for scalability
-- Include profit margins
+- **Permitir Contas Gratuitas:** Ative para permitir que os usuários se registrem sem pagamento inicial
+- **Custo por Minuto Extra (Conta Gratuita):** Defina o valor cobrado por minuto adicional para usuários gratuitos
 
-### Feature Distribution
-- Clearly differentiate tiers
-- Reserve premium features
-- Balance value proposition
-- Consider upsell opportunities
+---
 
-## Testing Plans
+### **Limites Padrão**
 
-Before launching:
-- Create test accounts
-- Try different plan combinations
-- Test upgrade/downgrade flows
-- Verify billing accuracy
+<Frame>
+  ![Default Plan Limits Configuration](/resources/white-label-default-plan-limits1.png)
+</Frame>
+
+### **Configurar Limites Padrão**
+
+Defina os limites base aplicados a todos os novos planos:
+
+- **Assistentes Máximos, Campanhas, Vozes Clonadas**
+- **Chamadas Paralelas, Bases de Conhecimento, Números Próprios**
+- **Ferramentas em Chamada, Execuções de Automação**
+- **Alternância de Recursos:** _Web Widget_, _Idiomas Secundários_, _Plataforma de Automação_, _Integrações de Calendário_
+
+---
+
+### **Estrutura de Planos**
+
+- Comece com **2 a 3 níveis bem definidos**
+- Ofereça opções **mensais e anuais**
+- Inclua **limites de uso razoáveis**
+- Forneça **caminhos de upgrade claros**
+
+---
+
+### **Estratégia de Preços**
+
+- **Pesquise as tarifas de mercado**
+- Considere seus **custos operacionais**
+- Planeje para **escalabilidade e margem de lucro**
+- Inclua **margens sustentáveis** para cada plano
+
+---
+
+### **Distribuição de Recursos**
+
+- **Diferencie claramente os níveis** de plano
+- **Reserve recursos premium** para planos superiores
+- **Equilibre o valor percebido** entre as opções
+- **Planeje oportunidades de upsell** de forma estratégica
+
+---
+
+### **Testes de Planos (Antes do Lançamento)**
+
+- Crie **contas de teste**
+- Experimente **diferentes combinações de planos**
+- Teste os **fluxos de upgrade e downgrade**
+- Verifique a **precisão do faturamento** e dos limites de uso
 
 <Tip>
-Start with competitive pricing and adjust based on market response and usage patterns.
+  Comece com **preços competitivos** e **ajuste conforme a resposta do mercado** e os **padrões de uso dos clientes**.
 </Tip>
