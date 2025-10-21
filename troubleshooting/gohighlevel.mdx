@@ -1,65 +1,82 @@
 ---
-title: "GoHighLevel Issues"
+title: "Problemas com o GoHighLevel"
 icon: "calendar-days"
-description: "Common GoHighLevel integration problems and solutions"
+description: "Problemas comuns de integração com o GoHighLevel e suas soluções
+"
 ---
 
-This page covers common issues when using GoHighLevel integrations with Autocalls.ai.
+Esta página aborda problemas comuns ao usar integrações do **GoHighLevel** com a [**Mayahub.ai**](http://Mayahub.ai).
 
-## Appointment Scheduling Issues
+## Problemas de Agendamento de Compromissos
 
-### Missing API Key Error
+**Erro de Chave de API Ausente**
 
-**Problem:** Getting error "missing api_key location_id or calendar_id for GoHighLevel"
+**Problema:** Erro “missing api_key location_id or calendar_id for GoHighLevel”
 
-**Solution:**
-1. Go to [assistant settings](/ai-assistants/settings/prompt-and-tools#default-tools)
-2. Navigate to **Appointment Scheduling** section
-3. Click **Disconnect** to remove current GoHighLevel connection
-4. Click **Connect** again to re-authorize
-5. **Select an calendar** from the dropdown
-6. **Click Save** to apply the configuration
-7. **Verify** the connection shows as active after reconnecting
+**Solução:**
 
-### Connection Problems
+- Vá até as **Configurações do Assistente**
+- Acesse a seção **Agendamento de Compromissos**
+- Clique em **Desconectar** para remover a conexão atual com o **GoHighLevel**
+- Clique em **Conectar** novamente para reautorizar
+- Selecione um **calendário** no menu suspenso
+- Clique em **Salvar** para aplicar a configuração
+- Verifique se a conexão aparece como **ativa** após reconectar
 
-**OAuth Authorization Fails:**
-- **Try incognito mode** to resolve authentication conflicts
-- **Verify account selection** - ensure you selected the correct GoHighLevel account
-- **Check permissions** - confirm you have admin access to the GoHighLevel account
+---
 
-### Calendar Not Appearing
+### Problemas de Conexão
 
-**Calendars don't show in assistant settings:**
-- **Refresh connection** by disconnecting and reconnecting
-- **Verify calendar setup** in your GoHighLevel account
-- **Check account permissions** for calendar access
+**Falha na Autorização OAuth:**
 
-### Booking Failures
+- Tente o **modo anônimo** do navegador para resolver conflitos de autenticação
+- Verifique a **seleção de conta** — certifique-se de ter escolhido a conta correta do **GoHighLevel**
+- Confira se você possui **acesso de administrador** à conta do GoHighLevel
 
-**Appointments not being scheduled:**
-- **Email Required:** Ensure the assistant has an email defined in [assistant settings](/ai-assistants/settings/prompt-and-tools#default-tools) and the lead has an email in inbound variables or from conversation. See [Email Requirement for Appointments](/ai-assistants/gohighlevel-scheduling#email-requirement-for-appointments) for detailed setup.
-- **Test calendar availability** - verify the calendar has open slots
-- **Check time zones** - ensure correct time zone configuration in both systems
-- **Review assistant logs** - check call transcripts for booking attempts
-- **Verify calendar settings** in GoHighLevel for booking restrictions
+---
 
-### Data Mapping Problems
+### Calendário Não Aparece
 
-**Lead data not syncing correctly:**
-- **Verify field mapping** in automation platform
-- **Check required fields** in GoHighLevel
-- **Test with sample data** before live campaigns
+**Os calendários não aparecem nas configurações do assistente:**
 
-## Getting Help
+- Atualize a conexão desconectando e reconectando
+- Verifique a configuração do calendário na sua conta do **GoHighLevel**
+- Confirme as permissões de acesso ao calendário
 
-If these solutions don't resolve your issue:
+---
 
-1. **Check call transcripts** to see exactly what the AI attempted
-2. **Test the integration** with a simple appointment booking
-3. **Contact support** with specific error messages and screenshots
+### Falhas no Agendamento
 
-**Common Support Information Needed:**
-- Screenshot of the error message
-- Calendar configuration details
-- Assistant settings configuration
+**Compromissos não estão sendo criados:**
+
+- **E-mail obrigatório:** Verifique se o assistente possui um e-mail definido nas configurações e se o lead possui um e-mail nas variáveis de entrada ou coletado na conversa. Consulte **Email Requirement for Appointments** para configuração detalhada.
+- **Disponibilidade do calendário:** Verifique se o calendário possui horários disponíveis
+- **Fusos horários:** Certifique-se de que o fuso horário está configurado corretamente em ambos os sistemas
+- **Registros do assistente:** Revise os logs e as transcrições das chamadas para verificar tentativas de agendamento
+- **Configurações do calendário:** Verifique no **GoHighLevel** se há restrições de agendamento ativas
+
+---
+
+### Problemas de Mapeamento de Dados
+
+**Os dados dos leads não estão sincronizando corretamente:**
+
+- Verifique o **mapeamento de campos** na plataforma de automação
+- Confira os **campos obrigatórios** no **GoHighLevel**
+- Faça testes com dados de amostra antes de iniciar campanhas reais
+
+---
+
+### Obtendo Ajuda
+
+Se essas soluções não resolverem o problema:
+
+- Verifique as **transcrições das chamadas** para ver exatamente o que a IA tentou executar
+- Teste a integração com um **agendamento simples de compromisso**
+- Entre em contato com o **suporte**, enviando mensagens de erro e capturas de tela
+
+**Informações Comuns Solicitadas pelo Suporte:**
+
+- Captura de tela da mensagem de erro
+- Detalhes da configuração do calendário
+- Configuração das definições do assistente

@@ -1,70 +1,88 @@
 ---
-title: "Cal.com Issues"
+title: "Problemas com o Cal.com"
 icon: "calendar-days"
-description: "Troubleshoot common problems with Cal.com integration for appointment scheduling"
+description: "Solucione problemas comuns com a integração do Cal.com para agendamento de compromissos
+"
 ---
 
-This guide provides solutions for common issues encountered when integrating Cal.com with your AI assistant.
+Este guia fornece soluções para problemas comuns encontrados ao integrar o [**Cal.com**](http://Cal.com) com seu assistente de IA
 
-## Appointment Scheduling Issues
+## Problemas de Agendamento de Compromissos
 
-### Missing API Key Error
+**Erro de Chave de API Ausente**
 
-**Problem:** Getting error "missing api_key or event_id for Cal.com"
+**Problema:** Erro “missing api_key or event_id for [Cal.com](http://Cal.com)”
 
-**Solution:**
-1. Go to [assistant settings](/ai-assistants/settings/prompt-and-tools#default-tools)
-2. Navigate to **Appointment Scheduling** section
-3. **Enter correct API key** from your Cal.com developer settings
-4. **Enter correct event ID** from your Cal.com event URL
-5. **Click Save** to apply the configuration
-6. **Verify** the connection shows as active
+**Solução:**
 
-### Connection Problems
+- Vá até as configurações do assistente
+- Acesse a seção **Agendamento de Compromissos**
+- Insira a chave de API correta obtida nas configurações de desenvolvedor do [**Cal.com**](http://Cal.com)
+- Insira o **ID do evento** correto a partir da URL do evento no [**Cal.com**](http://Cal.com)
+- Clique em **Salvar** para aplicar a configuração
+- Verifique se a conexão aparece como **ativa**
 
-**API Configuration Issues:**
-- **Verify API key** is active and has correct permissions in Cal.com
-- **Check event ID** is correct from your Cal.com event URL
-- **Confirm account access** to the Cal.com account
+---
 
-### Event Configuration Issues
+**Problemas de Conexão**
 
-**Events not being scheduled:**
-- **No required custom fields:** Ensure you haven't added any required custom fields in Cal.com event settings. Only default fields and optional phone field are supported
-- **Phone field identifier:** Verify the phone field identifier is exactly "phone" (case-sensitive)
-- **Event availability:** Check that your Cal.com event has proper availability configured
+**Problemas de Configuração da API:**
 
-### Booking Failures
+- Verifique se a **chave de API** está ativa e possui as permissões corretas no [**Cal.com**](http://Cal.com)
+- Confirme se o **ID do evento** está correto na URL do evento
+- Certifique-se de que sua conta tenha acesso à conta do [**Cal.com**](http://Cal.com)
 
-**Appointments not being scheduled:**
-- **Email Required:** Ensure the assistant has an email defined in [assistant settings](/ai-assistants/settings/prompt-and-tools#call-variables) and the lead has an email in inbound variables or from conversation
-- **Phone field setup:** Add phone field in Cal.com event settings with identifier "phone". See [Phone Number in Calendar Events](/ai-assistants/cal-com-scheduling#phone-number-in-calendar-events) for detailed setup.
-- **Test with real phone calls:** Make test calls using **phone call** (not web call) to ensure proper variable transmission
-- **Check time zones** - ensure correct time zone configuration in both systems
-- **Review assistant logs** - check call transcripts for booking attempts
-- **Verify event settings** in Cal.com for booking restrictions
+---
 
-### Customer Contact Issues
+**Problemas de Configuração de Evento**
 
-**Calendar invites not sent:**
-- **Email variable:** Confirm `email` variable is properly set in [assistant settings](/ai-assistants/settings/prompt-and-tools#call-variables)
-- **Lead email:** Verify customer email is being passed correctly when creating leads
-- **Email format:** Ensure email addresses are in valid format
+**Eventos não sendo agendados:**
 
-**Phone number not appearing in events:**
-- **Phone field setup:** Verify phone field is configured in Cal.com event settings with identifier "phone". See [Phone Number in Calendar Events](/ai-assistants/cal-com-scheduling#phone-number-in-calendar-events) for setup details.
-- **Test call method:** Use phone call (not web call) for testing to ensure phone variable transmission
+- **Campos personalizados obrigatórios:** Certifique-se de não ter adicionado campos obrigatórios nas configurações do evento no [**Cal.com**](http://Cal.com). Apenas campos padrão e o campo opcional de telefone são compatíveis.
+- **Identificador do campo de telefone:** Verifique se o identificador do campo de telefone é exatamente **“phone”** (diferencia maiúsculas e minúsculas).
+- **Disponibilidade do evento:** Confira se o evento no [**Cal.com**](http://Cal.com) possui disponibilidade configurada corretamente.
 
-## Getting Help
+---
 
-If these solutions don't resolve your issue:
+**Falhas no Agendamento**
 
-1. **Check call transcripts** to see exactly what the AI attempted
-2. **Test the integration** with a simple appointment booking using phone calls
-3. **Contact support** with specific error messages and screenshots
+**Compromissos não sendo criados:**
 
-**Common Support Information Needed:**
-- Screenshot of the error message
-- Cal.com event configuration details
-- Assistant settings configuration
-- Call transcript showing booking attempt
+- **E-mail obrigatório:** Verifique se o assistente possui um e-mail definido nas configurações e se o lead possui um e-mail nas variáveis de entrada ou coletado na conversa.
+- **Campo de telefone:** Adicione o campo de telefone nas configurações do evento no [**Cal.com**](http://Cal.com) com o identificador **“phone”**. Consulte **Phone Number in Calendar Events** para detalhes da configuração.
+- **Teste com chamadas reais:** Faça chamadas de teste usando ligação telefônica (não chamada web) para garantir o envio correto das variáveis.
+- **Fusos horários:** Verifique se o fuso horário está configurado corretamente em ambos os sistemas.
+- **Registros do assistente:** Revise os logs e transcrições de chamadas para identificar tentativas de agendamento.
+- **Configurações do evento:** Confirme no [**Cal.com**](http://Cal.com) se há restrições de agendamento ativas.
+
+---
+
+**Problemas de Contato com o Cliente**
+
+**Convites de calendário não enviados:**
+
+- **Variável de e-mail:** Confirme se a variável de e-mail está corretamente configurada nas configurações do assistente.
+- **E-mail do lead:** Verifique se o e-mail do cliente está sendo transmitido corretamente ao criar o lead.
+- **Formato de e-mail:** Certifique-se de que os endereços de e-mail estão em formato válido.
+
+**Número de telefone não aparece nos eventos:**
+
+- **Campo de telefone:** Verifique se o campo de telefone está configurado nas configurações do evento no [**Cal.com**](http://Cal.com) com o identificador **“phone”**. Consulte **Phone Number in Calendar Events** para detalhes.
+- **Método de teste:** Use chamadas telefônicas (não chamadas web) para garantir o envio correto da variável de telefone.
+
+---
+
+**Obtendo Ajuda**
+
+Se essas soluções não resolverem o problema:
+
+- Verifique as **transcrições de chamadas** para ver exatamente o que a IA tentou executar.
+- Teste a integração com um agendamento simples via **chamada telefônica**.
+- Entre em contato com o **suporte** enviando as mensagens de erro e capturas de tela.
+
+**Informações Comuns Solicitadas pelo Suporte:**
+
+- Captura de tela da mensagem de erro
+- Detalhes da configuração do evento no [**Cal.com**](http://Cal.com)
+- Configuração das definições do assistente
+- Transcrição da chamada mostrando a tentativa de agendamento
