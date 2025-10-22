@@ -1,6 +1,8 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Maya Hub",
+  "name": "Mayahub",
+  "title": "Guia da plataforma - Mayahub",
+  "description": "Aprenda a usar o Mayahub.ai para automatizar suas chamadas telefônicas com inteligência artificial.",
   "logo": {
     "dark": "/resources/logo/dark.png",
     "light": "/resources/logo/light.png"
@@ -22,42 +24,51 @@
   "sidebar": {
     "items": "card"
   },
-  "topbarLinks": [{
-    "name": "Home",
-    "url": "https://autocalls.ai"
-  }, {
-    "name": "Support",
-    "url": "https://autocalls.ai/contact"
-  }],
+  "topbarLinks": [
+    {
+      "name": "Home",
+      "url": "https://mayahub.ai"
+    },
+    {
+      "name": "Support",
+      "url": "https://mayahub.ai/contact"
+    }
+  ],
   "topbarCtaButton": {
     "name": "Dashboard",
-    "url": "https://app.autocalls.ai"
+    "url": "https://app.mayahub.ai"
   },
-  "anchors": [{
-    "name": "No-Code Automation",
-    "icon": "wand-magic-sparkles",
-    "color": "#6c63ff",
-    "url": "automation-platform"
-  }, {
-    "name": "White Label",
-    "icon": "tag",
-    "color": "#ff0142",
-    "url": "white-label"
-  }, {
-    "name": "API Reference",
-    "icon": "code",
-    "color": "#1c51fc",
-    "url": "api-reference"
-  }, {
-    "name": "Platform updates",
-    "icon": "scroll",
-    "color": "#ffbb00",
-    "url": "releases"
-  }],
-  "navigation": [{
+  "anchors": [
+    {
+      "name": "No-Code Automation",
+      "icon": "wand-magic-sparkles",
+      "color": "#6c63ff",
+      "url": "automation-platform"
+    },
+    {
+      "name": "White Label",
+      "icon": "tag",
+      "color": "#ff0142",
+      "url": "white-label"
+    },
+    {
+      "name": "API Reference",
+      "icon": "code",
+      "color": "#1c51fc",
+      "url": "api-reference"
+    },
+    {
+      "name": "Platform updates",
+      "icon": "scroll",
+      "color": "#ffbb00",
+      "url": "releases"
+    }
+  ],
+  "navigation": [
+    {
       "group": "Introduction",
       "pages": [
-        "introduction/what-is-autocalls",
+        "introduction/what-is-mayahub",
         "introduction/how-it-works",
         "introduction/key-terminology"
       ]
@@ -289,7 +300,7 @@
     {
       "group": "Calls Related",
       "pages": [
-        "automation-platform/calls-related/autocalls-tool",
+        "automation-platform/calls-related/mayahub-tool",
         "automation-platform/calls-related/common-integrations",
         "automation-platform/calls-related/sms-capabilities"
       ]
@@ -314,10 +325,10 @@
     }
   ],
   "footerSocials": {
-    "linkedin": "https://www.linkedin.com/company/autocalls-ai"
+    "linkedin": "https://www.linkedin.com/company/mayahub-ai"
   },
   "api": {
-    "baseUrl": "https://app.autocalls.ai/api/",
+    "baseUrl": "https://app.mayahub.ai/api/",
     "auth": {
       "method": "bearer"
     }
