@@ -18,7 +18,7 @@
     }
   },
   "topAnchor": {
-    "name": "Platform Guide",
+    "name": "Guia da Plataforma",
     "icon": "book"
   },
   "sidebar": {
@@ -40,7 +40,7 @@
   },
   "anchors": [
     {
-      "name": "No-Code Automation",
+      "name": "Automação sem Código",
       "icon": "wand-magic-sparkles",
       "color": "#6c63ff",
       "url": "automation-platform"
@@ -52,13 +52,13 @@
       "url": "white-label"
     },
     {
-      "name": "API Reference",
+      "name": "Referências de API",
       "icon": "code",
       "color": "#1c51fc",
       "url": "api-reference"
     },
     {
-      "name": "Platform updates",
+      "name": "Atualizações da Plataforma",
       "icon": "scroll",
       "color": "#ffbb00",
       "url": "releases"
