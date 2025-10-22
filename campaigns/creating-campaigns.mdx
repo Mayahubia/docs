@@ -1,143 +1,180 @@
 ---
-title: "Creating a Campaign"
+title: "Criando uma Campanha"
 icon: "plus"
-description: "Step-by-step guide to setting up your first automated calling campaign"
+description: "Guia passo a passo para configurar sua primeira campanha de chamadas automatizadas "
 ---
 
-Create and configure automated calling campaigns to efficiently reach multiple leads with your AI assistant.
+Crie e configure **campanhas de chamadas automatizadas** para alcançar diversos leads de forma eficiente com o seu **assistente de IA**.
 
-## Prerequisites
+## Pré-requisitos
 
-Before creating a campaign, ensure you have:
-- **AI assistant** configured for outbound calls
-- **Phone number** assigned to your assistant  
-- **Account balance** sufficient for call costs
-- **Leads ready** to import or add manually
+Antes de criar uma campanha, verifique se você possui:
 
-## Campaign Setup
+- Um **assistente de IA** configurado para chamadas de saída
+- Um **número de telefone** atribuído ao seu assistente
+- **Saldo suficiente** na conta para cobrir os custos das chamadas
+- **Leads prontos** para importar ou adicionar manualmente
 
-### 1. Basic Information
+---
 
-**Campaign Name:** Choose a descriptive name for easy identification
-**Assistant Selection:** Select which AI assistant will make the calls
+### Configuração da Campanha
+
+#### 1. Informações Básicas
+
+- **Nome da Campanha:** Escolha um nome descritivo para facilitar a identificação
+- **Seleção do Assistente:** Selecione qual **assistente de IA** fará as chamadas
 
 <Note>
-The assistant's configuration (voice, prompt, tools) will be used for all campaign calls.
+  A configuração do assistente (**voz, prompt, ferramentas**) será usada em todas as chamadas da campanha.
 </Note>
 
-### 2. Scheduling Configuration
+### 2. Configuração de Agendamento
 
-#### Allowed Calling Hours
-Set when your campaign can make calls:
-- **Start time:** Earliest time to begin calling (default: 00:00)
-- **End time:** Latest time to stop calling (default: 23:59)
-- **Timezone:** Uses assistant's configured timezone
+#### Horários Permitidos para Chamadas
 
-#### Allowed Days
-Select which days of the week to make calls:
-- **Default:** Monday through Sunday
-- **Business only:** Monday through Friday
-- **Custom:** Choose specific days
+Defina quando sua campanha poderá realizar chamadas:
+
+- **Hora de início:** horário mais cedo para começar as chamadas (padrão: 00:00)
+- **Hora de término:** horário limite para encerrar as chamadas (padrão: 23:59)
+- **Fuso horário:** utiliza o fuso horário configurado do assistente
+
+#### Dias Permitidos
+
+Selecione em quais dias da semana as chamadas serão realizadas:
+
+- **Padrão:** segunda-feira a domingo
+- **Apenas dias úteis:** segunda a sexta-feira
+- **Personalizado:** escolha dias específicos
 
 <Tip>
-**Recommendation:** For business calls, use Monday-Friday 9:00 AM - 6:00 PM in the prospect's timezone.
+  💡 **Recomendação:** Para chamadas comerciais, utilize o intervalo de **segunda a sexta-feira, das 9h00 às 18h00**, no **fuso horário do prospect**.
 </Tip>
 
-### 3. Retry Settings
+### 3. Configurações de Retentativas
 
-#### Basic Retry Options
-- **Max retries:** 1-5 attempts for unanswered calls (default: 3)
-- **Retry interval:** 10-4320 minutes between attempts (default: 60 minutes)
+#### Opções Básicas de Retentativa
 
-#### Advanced Retry Conditions
+- **Número máximo de tentativas:** 1 a 5 tentativas para chamadas não atendidas (padrão: 3)
+- **Intervalo entre tentativas:** 10 a 4320 minutos entre as tentativas (padrão: 60 minutos)
 
-**Retry on Voicemail:**
-- **Enabled:** Continue calling until human answers
-- **Disabled:** Count voicemail as attempted contact
+---
 
-**Retry Until Goal Completed:**
-- **Enabled:** Keep calling until objective is achieved
-- **Goal variable:** Select boolean variable from assistant's post-call schema
-- **Use case:** Sales calls, appointment booking, lead qualification
+#### Condições Avançadas de Retentativa
+
+**Retentar ao Cair na Caixa Postal:**
+
+- **Ativado:** continuar ligando até que uma pessoa atenda
+- **Desativado:** contar a caixa postal como um contato tentado
+
+**Retentar Até que o Objetivo Seja Alcançado:**
+
+- **Ativado:** continuar ligando até que o objetivo da chamada seja atingido
+- **Variável de objetivo:** selecione a variável booleana do esquema pós-chamada do assistente
+- **Casos de uso:** chamadas de vendas, agendamento de compromissos, qualificação de leads
 
 <Warning>
-**Goal-based retry** requires your assistant to have post-call variables configured with boolean fields (true/false).
+  A retentativa baseada em objetivo requer que o seu assistente tenha **variáveis pós-chamada configuradas com campos booleanos** (verdadeiro/falso).
 </Warning>
 
-### 4. Lead Management
+### 4. Gerenciamento de Leads
 
-#### Adding Leads
+#### Adicionando Leads
 
-**Manual Entry:**
-- Add individual leads with phone numbers
-- Include names and additional contact information
+**Entrada Manual:**
 
-**CSV Import:**
-- Upload spreadsheet with lead information
-- Required: Phone number column
-- Optional: Name, email, additional fields
+- Adicione leads individualmente com números de telefone
+- Inclua nomes e informações de contato adicionais
 
-**Integration Import:**
-- Import from GoHighLevel, Google Sheets, or other connected platforms
-- Automatic sync with external lead sources
+**Importação via CSV:**
 
-#### Secondary Contacts
-Add additional phone numbers for the same lead:
-- **Use case:** Multiple decision-makers, backup contacts
-- **Logic:** Campaign will try all numbers for each lead
-- **Status:** Independent tracking for each contact
+- Envie uma planilha com as informações dos leads
+- **Obrigatório:** coluna com o número de telefone
+- **Opcional:** nome, e-mail e outros campos adicionais
 
-## Starting Your Campaign
+**Importação via Integração:**
 
-### Pre-launch Checklist
-- [ ] Assistant has phone number configured
-- [ ] Sufficient account balance
-- [ ] Leads added with valid phone numbers
-- [ ] Schedule configured appropriately
-- [ ] Retry logic matches campaign goals
+- Importe leads do **GoHighLevel**, **Google Sheets** ou outras plataformas conectadas
+- Sincronização automática com fontes externas de leads
 
-### Launch Process
-1. **Review settings** one final time
-2. **Click "Start Campaign"** to begin
-3. **Monitor progress** in campaign dashboard
-4. **Adjust settings** if needed (pause campaign first)
+---
 
-## Campaign Monitoring
+#### Contatos Secundários
 
-### Real-time Status
-- **Calls in progress:** Currently active calls
-- **Calls completed:** Finished calls with outcomes
-- **Leads remaining:** Contacts still to be called
-- **Next call time:** When next call will be made
+Adicione números de telefone adicionais para o mesmo lead:
 
-### Monitoring Progress
-Track lead status and call results in the campaign dashboard. See [Campaign Overview](/campaigns/index#campaign-monitoring) for detailed status explanations.
+- **Caso de uso:** múltiplos tomadores de decisão ou contatos de backup
+- **Lógica:** a campanha tentará todos os números de cada lead
+- **Status:** cada contato é acompanhado de forma independente
 
-## Managing Active Campaigns
+---
 
-### Pausing a Campaign
-- **Immediate stop:** Current call completes, no new calls start
-- **Resume capability:** Can restart without losing progress
-- **Use cases:** Adjust settings, review results, temporary pause
+### Iniciando Sua Campanha
 
-### Modifying Settings
-1. **Pause the campaign** first
-2. **Edit configuration** as needed
-3. **Save changes**
-4. **Resume campaign** to continue with new settings
+#### Lista de Verificação Pré-Lançamento
 
-### Adding More Leads
-- **Add to active campaign:** New leads join existing retry queue
-- **Import additional contacts:** CSV or integration import
-- **Secondary contacts:** Add backup numbers for existing leads
+- O assistente possui um **número de telefone configurado**
+- Há **saldo suficiente** na conta
+- Os **leads foram adicionados** com números válidos
+- O **agendamento** foi configurado corretamente
+- A **lógica de retentativa** está alinhada com os objetivos da campanha
 
-## Best Practices
+---
 
-- **Conservative scheduling:** Business hours, respect time zones
-- **Start with 2-3 retries:** Monitor and adjust based on feedback
-- **Clean lead data:** Valid numbers, remove duplicates
-- **Compliance:** Follow local regulations and opt-out requests
+#### Processo de Lançamento
+
+- Revise todas as configurações uma última vez
+- Clique em **“Iniciar Campanha”** para começar
+- Acompanhe o progresso no **painel da campanha**
+- Ajuste as configurações, se necessário (**pause a campanha primeiro**)
+
+---
+
+### Monitoramento da Campanha
+
+#### Status em Tempo Real
+
+- **Chamadas em andamento:** chamadas atualmente ativas
+- **Chamadas concluídas:** chamadas finalizadas com resultados
+- **Leads restantes:** contatos que ainda serão chamados
+- **Próximo horário de chamada:** quando a próxima ligação será feita
+
+#### Acompanhamento do Progresso
+
+Acompanhe o status dos leads e os resultados das chamadas no painel da campanha.\
+Consulte **Visão Geral da Campanha** para explicações detalhadas dos status.
+
+---
+
+### Gerenciando Campanhas Ativas
+
+#### Pausando uma Campanha
+
+- **Parada imediata:** a chamada atual é concluída, e nenhuma nova é iniciada
+- **Retomada:** é possível reiniciar sem perder o progresso
+- **Casos de uso:** ajustar configurações, revisar resultados ou fazer pausas temporárias
+
+#### Modificando Configurações
+
+- Pause a campanha primeiro
+- Edite a configuração conforme necessário
+- Salve as alterações
+- Retome a campanha para continuar com as novas configurações
+
+#### Adicionando Mais Leads
+
+- **Adicionar à campanha ativa:** novos leads entram na fila de retentativa existente
+- **Importar novos contatos:** via CSV ou integração
+- **Contatos secundários:** adicione números de backup para leads já existentes
+
+---
+
+### Boas Práticas
+
+- **Agendamento conservador:** mantenha as chamadas dentro do horário comercial e respeite os fusos horários
+- **Comece com 2–3 retentativas:** monitore e ajuste com base no feedback
+- **Dados limpos:** use números válidos e remova duplicados
+- **Conformidade:** siga as regulamentações locais e respeite pedidos de opt-out
 
 <Note>
-For troubleshooting common issues, see [Campaign Troubleshooting](/troubleshooting/campaigns).
+  Para solucionar problemas comuns, consulte a seção **Resolução de Problemas de Campanhas**.
 </Note>
