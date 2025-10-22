@@ -1,130 +1,139 @@
 ---
-title: "Ferramenta MayaHub"
-description: "Saiba como usar os gatilhos e ações da MayaHubnos fluxos de chamadas da sua IA"
+title: "Ferramentas Mayahub"
+icon: "phone"
+description: "Aprenda a usar gatilhos (triggers) e ações (actions) da Mayahub nos seus fluxos de chamadas com IA "
 ---
 
-### **O que é a Ferramenta MayaHub?**
+## Ferramentas Mayahub
 
-É o componente central que conecta seu sistema de chamadas por IA aos fluxos de automação.\
-Ela permite **troca de dados em tempo real** entre os assistentes de IA e os sistemas da sua empresa — possibilitando conversas personalizadas e ações automáticas após as chamadas.
+A ferramenta **Mayahub** é o componente central que conecta seu sistema de chamadas com IA aos fluxos de automação.\
+Ela permite a **troca de dados em tempo real** entre seus assistentes de IA e os sistemas da sua empresa, possibilitando **conversas personalizadas** e **acompanhamentos automáticos**.
 
-Você encontra a ferramenta **MayaHub** no topo da barra lateral de busca ao procurar por **gatilhos** ou **ações**..
+<Note>
+  Você pode encontrar a ferramenta **Mayahub** em destaque na parte superior da barra lateral de pesquisa, ao procurar por **gatilhos (triggers)** ou **ações (actions)**.
+</Note>
 
----
+## Gatilhos
 
-### ⚡ **Gatilhos (Triggers)**
+### Chamada Terminada
 
-#### 1. **Call Ended – Chamada Encerrada**
+![Autocalls Call Ended Trigger](/resources/autocalls-trigger.jpg)
 
-Ativado **imediatamente após o término** de uma chamada feita pela IA, ele fornece dados completos da interação:
+### Chamada Encerrada
 
-- Transcrição completa com timestamps
-- Respostas e decisões da IA
-- Duração da chamada e dados técnicos
-- Informações do cliente e telefone
-- Resultado e análise de sentimento
+O gatilho **Chamada Encerrada** é ativado imediatamente após uma chamada de IA ser concluída, fornecendo dados completos sobre a interação:
+
+- Transcrição completa da conversa com carimbos de tempo
+- Respostas e decisões do assistente de IA
+- Duração da chamada e metadados técnicos
+- Informações do cliente e número de telefone
+- Resultado da chamada e análise de sentimento
 - Variáveis definidas durante a conversa
 
-**Como configurar:**
+### Configuração:
 
-- Selecione "Call Ended" como gatilho
-- Escolha o assistente de IA desejado
-- Configure o mapeamento das variáveis
+- Selecione "Chamada Encerrada" como seu gatilho
+- Escolha o assistente de IA específico para monitorar
+- Configure o mapeamento de variáveis
 
 ---
 
-#### 2. **Inbound Call Variable Injection – Injeção de Variáveis na Chamada Receptiva**
+### Injeção de Variáveis em Chamadas Recebidas
 
-Esse gatilho é ativado **antes da IA atender uma ligação**.
+Esse gatilho avançado é ativado _antes_ do seu assistente de IA atender uma chamada recebida, permitindo que você:
 
-Permite:
+- Busque e injete dados do cliente em tempo real
+- Personalize o comportamento da IA com base no contexto
+- Defina parâmetros da conversa
+- Configure traços de personalidade da IA
+- Forneça variáveis de lógica de negócio
 
-- Buscar dados do cliente em tempo real
-- Adaptar o comportamento da IA com base no contexto
-- Definir parâmetros da conversa
-- Aplicar lógica de negócios
-- Inserir traços de personalidade na IA
+### Configuração:
 
-**Como configurar:**
-
-- Selecione "Inbound Call" como gatilho
+- Selecione "Chamada Recebida" como seu gatilho
 - Defina as variáveis necessárias para o contexto da IA
 
----
+## Ações
 
-### 🧩 **Ações (Actions)**
+### Add Lead a Campanha
 
-#### 1. **Add Lead to Campaign – Adicionar Lead à Campanha**
-
-Permite:
-
-- Criar novos leads a partir de ferramentas externas (ex: Google Sheets, Hubspot, Facebook Leads)
-- Atribuir leads a campanhas específicas de IA
-- Inserir contexto para futuras chamadas
-
-**Como configurar:**
-
-- Selecione a campanha da IA
-- Mapeie os dados de contato vindos do gatilho
-- Adicione atributos personalizados
+![Autocalls Action](/resources/autocalls-action.jpg)
 
 ---
 
-#### 2. **Return Variables – Retornar Variáveis**
+### Criar Lead
 
-Muito usada em chamadas receptivas, essa ação injeta dados diretamente no prompt da IA, como:
+Essa ação ajuda a gerenciar suas campanhas de chamadas com IA ao:
 
-- Perfil do cliente e preferências
-- Resumo do histórico de interações
+- Criar novos leads a partir de ferramentas externas como Sheets, Hubspot, Facebook Leads
+- Atribuir leads a campanhas de IA específicas
+- Adicionar contexto para chamadas futuras
+
+**Configuração:**
+
+- Selecione a campanha de IA de destino
+- Mapeie os dados de contato a partir das informações do gatilho
+- Adicione atributos personalizados para o contexto da IA
+
+---
+
+### Retornar Variáveis
+
+Essa ação é essencial para chamadas recebidas, retornando o contexto que será injetado no prompt da IA:
+
+- Perfil e preferências do cliente
+- Resumo do histórico de conversas
 - Regras de negócio e restrições
-- Sinais de comportamento personalizados
-- Modelos de resposta dinâmicos
+- Flags de comportamento personalizado da IA
+- Modelos dinâmicos de resposta
 
-**Como configurar:**
+**Configuração:**
 
 - Estruture o JSON de resposta
-- Mapeie os dados do cliente nas variáveis
-- Configure os parâmetros da conversa da IA
-- Ajuste o tempo limite da resposta
+- Mapeie os dados do cliente para variáveis
+- Defina os parâmetros da conversa da IA
+- Configure o controle de tempo limite (timeout)
 
 ---
 
-### ✅ **Exemplos de Uso**
+## Exemplo de Uso
 
-**Pós-Chamada: Gestão de Leads**\
-Gatilho: Call Ended\
-⬇\
-Extrair insights da conversa\
-⬇\
-Atualizar registro no Hubspot\
-⬇\
-Adicionar à campanha de follow-up
+Gerenciamento de Lead Pós-Chamada
 
----
+```javascript
+Trigger: AI Call Ended
+↓
+Extract conversation insights
+↓
+Update Hubspot record
+↓
+Add to follow-up campaign if qualified
+```
 
-**Roteamento Inteligente de Chamadas Receptivas**\
-Gatilho: Inbound Call\
-⬇\
-Buscar perfil do cliente no CRM\
-⬇\
-Coletar histórico de interações\
-⬇\
-Retornar contexto enriquecido para a IA
+### Roteamento Inteligente de Chamadas Recebidas
 
----
+```javascript
+Trigger: Inbound Call to AI
+↓
+Fetch customer profile from CRM
+↓
+Get interaction history
+↓
+Return enriched context for AI prompt
+```
 
-### 🧠 **Boas Práticas**
+## Boas Práticas
 
-**Performance de Injeção de Variáveis**
+**Desempenho da Injeção de Variáveis**
 
-- Mantenha o tempo de resposta abaixo de 2 segundos
-- Defina valores padrão
+- Mantenha o processamento abaixo de 2 segundos
+- Defina valores padrão adequados
 
 **Estrutura de Dados**
 
-- Siga os padrões do prompt da IA
+- Siga os requisitos do prompt da IA
 - Valide todas as variáveis
-- Estruture objetos aninhados corretamente
+- Estruture objetos aninhados de forma clara
 - Documente campos personalizados
 
 **Tratamento de Erros**
@@ -132,4 +141,4 @@ Retornar contexto enriquecido para a IA
 - Forneça valores de fallback
 - Registre falhas de injeção
 - Monitore os tempos de resposta
-- Trate dados ausentes com elegância
+- Trate dados ausentes de forma adequada
