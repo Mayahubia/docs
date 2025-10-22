@@ -1,43 +1,48 @@
-# White‑Label the Documentation (Mintlify)
+# White-Label a Documentação (Mintlify)
 
-Autocalls is a voice AI platform for automated outbound/inbound calls, SMS, and workflow automation. You can fully white‑label the product and these docs to your own brand. To learn more about white‑labeling the platform beyond documentation, see our [White‑Label program](https://autocalls.ai/white-label).
+A Mayahub é uma plataforma de IA de voz para chamadas automáticas de entrada e saída, SMS e automação de fluxos de trabalho.\
+Você pode aplicar white-label completo ao produto e a esta documentação com a sua própria marca.
 
-This guide walks you through creating your own white‑labeled copy of our documentation using Mintlify, updating the branding (colors, logos, name), deploying it to your Mintlify subdomain or custom domain, and finally linking the live docs in your admin panel.
+Para saber mais sobre o white-label da plataforma além da documentação, consulte o nosso **programa White-Label**.
 
-## What you'll set up
+Este guia mostra passo a passo como criar sua própria cópia white-label da nossa documentação usando o **Mintlify**, atualizando a identidade visual (cores, logotipos, nome), publicando-a no seu subdomínio Mintlify ou domínio personalizado e, por fim, vinculando a documentação publicada ao seu painel de administração.
 
-- A new GitHub repository under your organization, containing these docs
-- Your brand applied via `mint.json` (name, colors, logos, favicon)
-- Deployed documentation on your Mintlify subdomain (or custom domain)
-- The final docs URL referenced in your app's admin panel
+## O que você configurará
 
-## Prerequisites
-
-- A GitHub organization or account with permission to create repos
-- A Mintlify account with access to create a site and connect a GitHub repo
-- Basic familiarity with Git
+- Um novo repositório GitHub na sua organização, contendo esta documentação
+- Sua marca aplicada via **mint.json** (nome, cores, logotipos, favicon)
+- A documentação publicada no seu subdomínio Mintlify (ou domínio personalizado)
+- A URL final da documentação referenciada no painel de administração do seu aplicativo
 
 ---
 
-## 1) Create your GitHub repository
+### Pré-requisitos
 
-Pick one of the options below to get this code into a new repo under your org.
-
-### Option A — Use this repo as a template (recommended)
-
-1. On GitHub, click "Use this template" (or "Create a new repository" from template) for this repository.
-2. Name the new repository under your organization.
-
-### Option B — Import the repository (keeps only the latest state)
-
-1. In GitHub, go to "Import repository".
-2. Paste this repository's URL and import it into your org.
+- Uma organização ou conta GitHub com permissão para criar repositórios
+- Uma conta Mintlify com acesso para criar um site e conectar um repositório GitHub
+- Conhecimento básico de Git
 
 ---
 
-## 2) Run the docs locally (optional but recommended)
+### 1) Crie seu repositório no GitHub
 
-Install the Mintlify CLI, then start a local preview from the repo root where `mint.json` lives.
+Escolha uma das opções abaixo para colocar este código em um novo repositório na sua organização.
+
+**Opção A — Usar este repositório como modelo (recomendado)**
+
+- No GitHub, clique em **"Use this template"** (ou **"Create a new repository from template"**) neste repositório.
+- Dê um nome ao novo repositório dentro da sua organização.
+
+**Opção B — Importar o repositório (mantém apenas o estado mais recente)**
+
+- No GitHub, vá até **"Import repository"**.
+- Cole a URL deste repositório e importe-o para a sua organização.
+
+---
+
+### 2) Execute a documentação localmente (opcional, mas recomendado)
+
+Instale o **Mintlify CLI**, depois inicie uma pré-visualização local a partir da raiz do repositório onde o arquivo **mint.json** está localizado.
 
 ```
 npm i -g mintlify
@@ -45,13 +50,14 @@ mintlify install
 mintlify dev
 ```
 
-Local preview will be available at the URL shown in your terminal.
+A pré-visualização local estará disponível na URL exibida no seu terminal.
 
 ---
 
-## 3) Apply your branding in `mint.json`
+### 3) Aplique sua identidade visual no arquivo _mint.json_
 
-Open `mint.json` at the repository root and update the brand fields. Common fields you may want to adjust:
+Abra o arquivo **mint.json** na raiz do repositório e atualize os campos de marca.\
+Campos comuns que você pode querer ajustar incluem:
 
 ```
 {
@@ -67,70 +73,73 @@ Open `mint.json` at the repository root and update the brand fields. Common fiel
 }
 ```
 
-Notes:
+### Notas
 
-- `name`: Shown in the UI and metadata.
-- `logo` / `logoDark`: Paths to your light/dark logos (SVG or PNG). Keep paths relative to repo root.
-- `favicon`: Path to a square icon (`.png` recommended).
-- `colors.primary`: Your brand primary color. If your config includes light/dark variants, adjust those too.
+- **name**: Exibido na interface e nos metadados.
+- **logo / logoDark**: Caminhos para seus logotipos claro/escuro (SVG ou PNG). Mantenha os caminhos relativos à raiz do repositório.
+- **favicon**: Caminho para um ícone quadrado (recomenda-se .png).
+- **colors.primary**: Cor primária da sua marca. Se sua configuração incluir variantes claras/escura, ajuste-as também.
 
-Your `mint.json` may include additional fields such as navigation, footer, social links, analytics, etc. Update as needed for your brand.
-
----
-
-## 4) Replace logos and assets
-
-Place your assets in the repo and point `mint.json` to them:
-
-- Replace the root `favicon.png` with your brand's favicon (512×512 PNG recommended).
-- Add your logos under `resources/` (for example `resources/logo-light.svg` and `resources/logo-dark.svg`).
-- Update the `logo`, `logoDark`, and `favicon` paths in `mint.json` to match your files.
-
-Tip: SVG logos typically look best for crisp rendering. Provide a version that works on light backgrounds (`logo`) and one for dark backgrounds (`logoDark`).
+Seu arquivo **mint.json** pode incluir campos adicionais, como navegação, rodapé, links sociais, análises, etc. Atualize conforme necessário para a sua marca.
 
 ---
 
-## 5) (Optional) Update navigation and metadata
+### 4) Substitua logotipos e recursos
 
-Depending on how your `mint.json` is structured, you may see fields like `navigation`, `topbarLinks`, `footerLinks`, `github`, or `ogImage`. Customize these to reflect your brand and information architecture. Keep existing paths consistent with your folder structure.
+Coloque seus arquivos de identidade visual no repositório e direcione o **mint.json** para eles:
 
----
+- Substitua o **favicon.png** da raiz pelo favicon da sua marca (recomendado: PNG 512×512).
+- Adicione seus logotipos na pasta **resources/** (por exemplo: `resources/logo-light.svg` e `resources/logo-dark.svg`).
+- Atualize os caminhos **logo**, **logoDark** e **favicon** no arquivo **mint.json** para corresponderem aos seus arquivos.
 
-## 6) Connect your repo to Mintlify and deploy
-
-1. In the Mintlify dashboard, create a new site.
-2. Connect GitHub and select the repository you created above.
-3. Choose the default branch (usually `main`) and docs root (repo root where `mint.json` is).
-4. Set your site subdomain (e.g., `yourbrand.mintlify.site`).
-5. Click Deploy. Mintlify will build and host your docs.
-
-Optional: If you prefer a custom domain (e.g., `docs.yourbrand.com`), add it in the Mintlify dashboard and follow the DNS instructions (typically a CNAME to the Mintlify target). Wait for DNS to propagate and the certificate to issue.
+💡 **Dica:** Logotipos em **SVG** geralmente oferecem o melhor resultado visual. Forneça uma versão adequada para fundos claros (**logo**) e outra para fundos escuros (**logoDark**).
 
 ---
 
-## 7) Reference the live docs URL in your admin panel
+### 5) (Opcional) Atualize navegação e metadados
 
-Once deployment is live, copy the final docs URL. In your app's admin panel:
-
-1. Go to Settings → White Label (or Branding).
-2. Locate the "Documentation URL" (or equivalent) field.
-3. Paste your live Mintlify URL (subdomain or custom domain) and save.
-
-This makes the white‑labeled documentation available directly from your product for your users.
+Dependendo de como o seu **mint.json** está estruturado, você pode ver campos como **navigation**, **topbarLinks**, **footerLinks**, **github** ou **ogImage**.\
+Personalize esses campos para refletir sua marca e a estrutura da sua documentação, mantendo os caminhos consistentes com a estrutura de pastas.
 
 ---
 
-## 8) Ongoing updates
+### 6) Conecte seu repositório ao Mintlify e publique
 
-- Edit content (`.mdx` files) and configuration (`mint.json`) in your repo.
-- Preview locally with `mintlify dev`.
-- Commit and push to your default branch. If the Mintlify GitHub app is installed and connected, your site will auto‑deploy on push.
+- No **Painel do Mintlify**, crie um novo site.
+- Conecte o **GitHub** e selecione o repositório que você criou.
+- Escolha a **branch** padrão (geralmente `main`) e o diretório raiz da documentação (onde está o **mint.json**).
+- Defina seu **subdomínio** Mintlify (exemplo: `suamarca.mintlify.site`).
+- Clique em **Deploy**. O Mintlify irá compilar e hospedar sua documentação.
+
+**Opcional:** Se preferir usar um **domínio personalizado** (exemplo: `docs.suamarca.com`), adicione-o no painel do Mintlify e siga as instruções de DNS (geralmente um registro **CNAME** apontando para o destino do Mintlify).\
+Aguarde a propagação do DNS e a emissão do certificado SSL.
 
 ---
 
-## Troubleshooting
+### 7) Referencie a URL da documentação publicada no seu painel de administração
 
-- `mintlify dev` isn't running: run `mintlify install` to re‑install dependencies.
-- 404 locally: ensure you are in the repository root where `mint.json` lives.
-- Branding not updating: confirm asset paths in `mint.json` are correct and that files exist in the repo.
-- Deploy didn’t update: verify Mintlify is connected to the correct repo/branch and that the latest commit finished building in the Mintlify dashboard.
+Quando a publicação estiver ativa, copie a **URL final da documentação**.\
+No painel de administração do seu aplicativo:
+
+- Vá em **Configurações → White Label (ou Marca)**.
+- Localize o campo **"URL da Documentação"** (ou equivalente).
+- Cole a sua URL Mintlify (subdomínio ou domínio personalizado) e salve.
+
+Isso tornará a documentação white-label acessível diretamente dentro do seu produto para os seus usuários.
+
+---
+
+### 8) Atualizações contínuas
+
+- Edite o conteúdo (**arquivos .mdx**) e as configurações (**mint.json**) no seu repositório.
+- Visualize localmente com `mintlify dev`.
+- Faça commit e push para a branch padrão. Se o aplicativo GitHub do Mintlify estiver instalado e conectado, seu site será publicado automaticamente após cada push.
+
+---
+
+### Solução de problemas
+
+- `mintlify dev`**não está rodando:**  execute `mintlify install` para reinstalar as dependências.
+- **Erro 404 localmente:** verifique se você está na raiz do repositório onde o **mint.json** está localizado.
+- **Marca não atualizando:** confirme se os caminhos dos arquivos no **mint.json** estão corretos e se os arquivos existem no repositório.
+- **Publicação não atualizou:** verifique se o Mintlify está conectado ao repositório/branch corretos e se o último commit foi compilado com sucesso no painel do Mintlify.
