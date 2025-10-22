@@ -66,7 +66,7 @@
   ],
   "navigation": [
     {
-      "group": "Introduction",
+      "group": "Introdução",
       "pages": [
         "introduction/what-is-mayahub",
         "introduction/how-it-works",
@@ -74,14 +74,14 @@
       ]
     },
     {
-      "group": "Getting Started",
+      "group": "Primeiros Passos",
       "pages": [
         "getting-started/core-concepts",
         "getting-started/understanding-billing"
       ]
     },
     {
-      "group": "AI Assistants Overview",
+      "group": "Visão Geral dos Assistentes de IA",
       "pages": [
         "ai-assistants/what-is-ai-assistant",
         {
@@ -107,7 +107,7 @@
       ]
     },
     {
-      "group": "Campaigns",
+      "group": "Campanhas",
       "icon": "bullhorn",
       "pages": [
         "campaigns/index",
@@ -124,7 +124,7 @@
       ]
     },
     {
-      "group": "Phone Numbers",
+      "group": "Números de Telefone",
       "pages": [
         "phone-numbers/types",
         "phone-numbers/purchasing-and-managing",
@@ -134,7 +134,7 @@
       ]
     },
     {
-      "group": "Inbound Calls",
+      "group": "Chamada de Entrada",
       "pages": [
         "inbound-calls/overview",
         "inbound-calls/provisioning",
@@ -143,7 +143,7 @@
       ]
     },
     {
-      "group": "Outbound Calls",
+      "group": "Chamada de Saída",
       "pages": [
         "outbound-calls/overview",
         "outbound-calls/campaigns",
@@ -154,7 +154,7 @@
       ]
     },
     {
-      "group": "AI Prompting & Conversation Design",
+      "group": "Prompting de IA e Design de Conversa",
       "pages": [
         "conversation-design/prompt-basics",
         "conversation-design/knowledge-bases",
@@ -163,7 +163,7 @@
       ]
     },
     {
-      "group": "Automation & Integrations",
+      "group": "Automações e Integrações",
       "pages": [
         "automation/overview",
         "automation/webhook-api",
@@ -171,7 +171,7 @@
       ]
     },
     {
-      "group": "Costs & Pricing",
+      "group": "Custos e Preços",
       "pages": [
         "pricing/overview",
         "pricing/usage-based",
@@ -179,7 +179,7 @@
       ]
     },
     {
-      "group": "Number Provisioning",
+      "group": "Provisionamento de Números",
       "pages": [
         "provisioning/supported-countries",
         "provisioning/managing-numbers",
@@ -195,7 +195,7 @@
       ]
     },
     {
-      "group": "White Label Program",
+      "group": "White Label",
       "pages": [
         "white-label/overview",
         "white-label/onboarding",
@@ -212,7 +212,7 @@
       ]
     },
     {
-      "group": "Troubleshooting & FAQs",
+      "group": "Solução de Problemas e Perguntas Frequentes",
       "pages": [
         "troubleshooting/ai-behavior",
         "troubleshooting/billing",
@@ -226,14 +226,14 @@
       ]
     },
     {
-      "group": "API Reference",
+      "group": "Referências de API",
       "pages": [
         "api-reference/introduction",
         "api-reference/authentication"
       ]
     },
     {
-      "group": "Assistants",
+      "group": "Assistentes",
       "pages": [
         "api-reference/assistants/get-assistants",
         "api-reference/assistants/get-outbound-assistants",
@@ -250,7 +250,7 @@
       ]
     },
     {
-      "group": "Calls",
+      "group": "Chamadas",
       "pages": [
         "api-reference/calls/get-calls",
         "api-reference/calls/make-phone-call",
@@ -267,7 +267,7 @@
       ]
     },
     {
-      "group": "Campaigns",
+      "group": "Campanhas",
       "pages": [
         "api-reference/campaigns/get-campaigns",
         "api-reference/campaigns/update-status"
@@ -286,7 +286,7 @@
       ]
     },
     {
-      "group": "No-Code Automation platform",
+      "group": "Plataforma de Automação",
       "pages": [
         "automation-platform/introduction",
         "automation-platform/building-flows",
@@ -298,7 +298,7 @@
       ]
     },
     {
-      "group": "Calls Related",
+      "group": "Relacionado a Chamadas",
       "pages": [
         "automation-platform/calls-related/mayahub-tool",
         "automation-platform/calls-related/common-integrations",
@@ -306,7 +306,7 @@
       ]
     },
     {
-      "group": "Tutorials",
+      "group": "Tutoriais",
       "pages": [
         "automation-platform/tutorials/outbound-form-call",
         "automation-platform/tutorials/inbound-context-injection",
@@ -318,7 +318,7 @@
       ]
     },
     {
-      "group": "Platform updates",
+      "group": "Atualizações da Plataforma",
       "pages": [
         "releases/index"
       ]
