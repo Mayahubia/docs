@@ -26,17 +26,13 @@ Este tutorial mostra como configurar uma automação que liga automaticamente pa
 
 Primeiro, precisamos criar um assistente de IA que realizará as chamadas para seus leads do GoHighLevel.
 
-<Frame>
-  ![Creating new AI assistant](/resources/tutorials/gohighlevel/01-create-assistant.png)
-</Frame>
+![01-create-assistant.avif](/images/01-create-assistant.avif)
 
 1. Acesse a página **Assistants** e clique em **"Assistants"** na barra lateral
 2. Clique no botão **"New Assistant"** para iniciar o processo de criação
 3. Dê um nome ao assistente — para este tutorial, usaremos **"Test ghl"**
 
-<Frame>
-  ![Assistant basic settings configuration](/resources/tutorials/gohighlevel/02-assistant-basic-settings.png)
-</Frame>
+![02-assistant-basic-settings.avif](/images/02-assistant-basic-settings.avif)
 
 1. Selecione um **número de telefone** para **chamadas ativas**
 2. **Escolha uma voz** que represente sua marca
@@ -46,14 +42,12 @@ Primeiro, precisamos criar um assistente de IA que realizará as chamadas para s
 
 As variáveis de chamada permitem personalizar cada ligação com informações específicas do lead vindas do GoHighLevel.
 
-<Frame>
-  ![Navigating to Prompts and Tools tab](/resources/tutorials/gohighlevel/03-call-variables-tab.png)
-</Frame>
+![03-call-variables-tab.avif](/images/03-call-variables-tab.avif)
 
 1. Vá para a segunda aba **"Prompts and Tools"**
 2. Localize a seção **"Call Variables"**
 
-<video autoPlay muted loop playsinline src="/resources/tutorials/gohighlevel/04-add-email-variable.mp4" />
+<video controls className="w-full aspect-video rounded-xl" src="https://mayahub-docs.mintlify.app/resources/tutorials/04-add-email-variable.mp4" />
 
 1. Adicione variáveis personalizadas para seus leads do GoHighLevel:
    - Você verá **customer_name** com valor padrão "John"
@@ -69,18 +63,14 @@ As variáveis de chamada permitem personalizar cada ligação com informações 
 
 As variáveis pós-chamada ajudam a rastrear o sucesso das suas ligações e automatizar ações de acompanhamento.
 
-<Frame>
-  ![Post-call variables configuration](/resources/tutorials/gohighlevel/05-post-call-variables.png)
-</Frame>
+![05-post-call-variables.avif](/images/05-post-call-variables.avif)
 
 1. Acesse a etapa 3 **"Post-call Variables"**
 2. Revise as variáveis padrão:
    - **status** – Booleano (true/false) indicando se o objetivo da chamada foi alcançado
    - **summary** – Resumo em texto da conversa durante a chamada
 
-<Frame>
-  ![Understanding the status variable](/resources/tutorials/gohighlevel/06-status-variable-explanation.png)
-</Frame>
+![06-status-variable-explanation.avif](/images/06-status-variable-explanation.avif)
 
 A variável **status** é essencial para a automação de campanhas:
 
@@ -92,9 +82,7 @@ A variável **status** é essencial para a automação de campanhas:
 
 Agora vamos criar uma campanha que retenta os leads de forma inteligente até que o objetivo da chamada seja alcançado.
 
-<Frame>
-  ![Creating new campaign](/resources/tutorials/gohighlevel/07-create-campaign.png)
-</Frame>
+![07-create-campaign.avif](/images/07-create-campaign.avif)
 
 1. Acesse a página **Campaigns** na barra lateral
 2. Clique no botão **"New Campaign"**
@@ -120,9 +108,7 @@ Agora vamos criar a automação que importa leads do GoHighLevel para sua campan
 3. Pesquise por **"LeadConnector"** na barra de busca de gatilhos
 4. Clique em **LeadConnector** quando ele aparecer
 
-<Frame>
-  ![Selecting new contact trigger](/resources/tutorials/gohighlevel/12-select-new-contact-trigger.png)
-</Frame>
+![12-select-new-contact-trigger.avif](/images/12-select-new-contact-trigger.avif)
 
 5. Selecione o gatilho **"New Contact"**
    - Isso será acionado para cada novo lead criado no GoHighLevel
@@ -180,7 +166,7 @@ Agora vamos configurar a ação que adiciona leads à sua campanha de chamadas.
 É aqui que conectamos os dados do lead do GoHighLevel às variáveis de chamada do seu assistente.
 
 <Frame>
-  ![Mapping phone number from trigger data](/resources/tutorials/gohighlevel/19-map-phone-number.png)
+  ![21-variable-mapping-complete.avif](/images/21-variable-mapping-complete.avif)
 </Frame>
 
 1. Clique no campo de entrada **"Phone Number"**
@@ -194,7 +180,7 @@ Agora vamos configurar a ação que adiciona leads à sua campanha de chamadas.
    - **email:** Mapeie para o campo de e-mail do GoHighLevel
 
 <Frame>
-  ![Completed variable mapping](/resources/tutorials/gohighlevel/21-variable-mapping-complete.png)
+  ![23-verify-lead-added.avif](/images/23-verify-lead-added.avif)
 </Frame>
 
 5. Adicione variáveis adicionais usando **"Add Item"** se você tiver mais campos personalizados
@@ -212,7 +198,7 @@ Agora vamos configurar a ação que adiciona leads à sua campanha de chamadas.
 2. Verifique a confirmação de que o cliente foi adicionado
 
 <Frame>
-  ![Verifying lead in platform](/resources/tutorials/gohighlevel/23-verify-lead-added.png)
+  ![23-verify-lead-added (1).avif](/images/23-verify-lead-added\(1\).avif)
 </Frame>
 
 3. Acesse a página **Leads** para verificar:
@@ -221,7 +207,7 @@ Agora vamos configurar a ação que adiciona leads à sua campanha de chamadas.
    - Os dados coincidem com o contato do GoHighLevel
 
 <Frame>
-  ![Publishing the automation](/resources/tutorials/gohighlevel/24-publish-automation.png)
+  ![24-publish-automation (1).avif](/images/24-publish-automation\(1\).avif)
 </Frame>
 
 4. Volte para a automação e clique em **"Publish"**
