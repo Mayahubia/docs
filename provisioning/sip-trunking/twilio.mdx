@@ -1,7 +1,6 @@
 ---
 title: "Integração com a Twilio"
-description: "Um guia passo a passo para conectar sua conta da Twilio via tronco SIP
-"
+description: "Um guia passo a passo para conectar sua conta da Twilio via tronco SIP "
 ---
 
 ## Etapa 1: Criar o Elastic SIP Trunking
@@ -30,8 +29,6 @@ description: "Um guia passo a passo para conectar sua conta da Twilio via tronco
    <Frame>
      ![Twilio New Access Control](/resources/twillio-new-access-control2.jpeg)
    </Frame>
-
-
 3. Configure a **originação** (essa etapa é para chamadas de entrada)
 
    Aqui você deve especificar o **endereço do servidor SIP da Mayahub** como o URI SIP de originação:\
@@ -53,7 +50,7 @@ Após criar o tronco SIP elástico, você precisará **adquirir novos números**
 
 Agora que o número está configurado com o seu **Elastic SIP Trunking**, é necessário **importar o número para a Mayahub** para que o sistema saiba como rotear as chamadas.
 
-1. Acesse o **painel da **[**Mayahub.ai**](http://Mayahub.ai)
+1. Acesse o \*\*painel da \*\*[**Mayahub.ai**](http://Mayahub.ai)
 2. Vá até **Seus Números de Telefone**
 3. Clique em **“Integrar tronco SIP”**
 
@@ -131,9 +128,21 @@ Suas credenciais SIP precisam estar seguras:
 
 **Problemas Comuns**
 
+**Após a conexão, a entrada funciona, mas a saída não?**
+
+Verifique seu URI de Terminação SIP. Se houver algum espaço, remova-o. Você também deve usar um URI de terminação localizado próximo à sua região. Consulte este documento para selecionar um.
+
+Verifique seu nome de usuário e credenciais. Certifique-se de ter inserido o nome de usuário e as credenciais corretos, conforme exibido nesta caixa de diálogo. Observe que o nome de usuário não é o nome amigável exibido na lista de credenciais. O nome amigável é diferente do nome de usuário; você precisa verificar novamente se fornecer um nome diferente.
+
+**Como configuro a discagem para países internacionais?**
+
+Pesquise “geo” para encontrar a configuração “Permissões geográficas de voz”.
+
+Selecione “Elastic Sip Trunking” no seletor e selecione os países para os quais deseja discar.
+
 <AccordionGroup>
   <Accordion title="After connecting, inbound works but outbound does not work?">
-    - Check your Termination SIP URI If there’s a space in it, please remove. Also you should use a localized termination uri that’s near your region. Check out this [doc](https://www.twilio.com/docs/global-infrastructure/localized-uris/termination) to select one.
+    - Check your Termination SIP URI If there’s a space in it, please remove. Also you should use a localized termination uri that’s near your region. Check out this doc to select one.
     - Check your user name and credentials Please make sure you entered the right user name and credentials which shows in this dialog. Please note the user name is not the friendly name that shows in the credential list. The friendly is different to user name, you need to double check if you happen to give a different name.
 
     <Frame>
