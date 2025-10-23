@@ -141,9 +141,11 @@ Pesquise “geo” para encontrar a configuração “Permissões geográficas d
 Selecione “Elastic Sip Trunking” no seletor e selecione os países para os quais deseja discar.
 
 <AccordionGroup>
-  <Accordion title="After connecting, inbound works but outbound does not work?">
-    - Check your Termination SIP URI If there’s a space in it, please remove. Also you should use a localized termination uri that’s near your region. Check out this doc to select one.
-    - Check your user name and credentials Please make sure you entered the right user name and credentials which shows in this dialog. Please note the user name is not the friendly name that shows in the credential list. The friendly is different to user name, you need to double check if you happen to give a different name.
+  <Accordion title="Após a conexão, a entrada funciona, mas a saída não?">
+   Verifique seu URI de Terminação SIP. Se houver algum espaço, remova-o. Você também deve usar um URI de terminação localizado próximo à sua região. Consulte este documento para selecionar um.
+
+Verifique seu nome de usuário e credenciais. Certifique-se de ter inserido o nome de usuário e as credenciais corretos, conforme exibido nesta caixa de diálogo. Observe que o nome de usuário não é o nome amigável exibido na lista de credenciais. O nome amigável é diferente do nome de usuário; você precisa verificar novamente se fornecer um nome diferente.
+
 
     <Frame>
       ![Twillio outbound not work](/resources/twillio-outbound-not-work.png)
@@ -151,17 +153,19 @@ Selecione “Elastic Sip Trunking” no seletor e selecione os países para os q
   </Accordion>
   {" "}
 
-  <Accordion title="How do I set up dialing to international countries?">
+  <Accordion title="Como configuro a discagem para países internacionais?">
     - Search “geo” to find the “Voice Geographic Permissions” setting.
 
       <Frame>
         ![Twillio setup dialing international](/resources/twillio-setup-dialing-international.png)
       </Frame>
-    - Choose “Elastic Sip Trunking” in selector, and select the countries you would like to dial.
+   Pesquise “geo” para encontrar a configuração “Permissões geográficas de voz”.
+
 
       <Frame>
         ![Twillio setup dialing international](/resources/twillio-choose-elastic-sip-trunking.png)
       </Frame>
+      Selecione “Elastic Sip Trunking” no seletor e selecione os países para os quais deseja discar.
   </Accordion>
   {" "}
 </AccordionGroup>
