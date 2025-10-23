@@ -1,135 +1,61 @@
 ---
-title: "Cal.com Appointment Scheduling"
+title: "Agendamento de consultas Cal.com"
 icon: "calendar-days"
-description: "Aprenda como habilitar seu assistente de IA para agendar compromissos usando a integração com o Cal.com"
+description: "Permita que seu assistente de IA agende compromissos usando o Cal.com
+"
 ---
 
-Habilite seu assistente de IA para agendar reuniões e compromissos de forma integrada usando o [Cal.com](http://Cal.com). Esse recurso poderoso permite que sua IA verifique disponibilidade e agende reuniões diretamente durante as chamadas.
+Habilite seu assistente de IA para agendar reuniões usando a integração com o [Cal.com](http://Cal.com). O sistema configura automaticamente os campos de reserva para você.
 
-<Warning>
-  Não torne nenhum campo novo obrigatório nas configurações de evento do [Cal.com](http://Cal.com). A integração suporta apenas os campos padrão e o campo de telefone opcional. Adicionar campos personalizados obrigatórios fará com que a integração falhe.
-</Warning>
+## **Configurar**
 
-## Pré-requisitos
+## **1. Obtenha a chave da API**
 
-Antes de configurar a integração com o [Cal.com](http://Cal.com), você precisará de:
+### Faça login no [Cal.com](http://Cal.com)
 
-- Uma conta [Cal.com](http://Cal.com) (hospedada ou self-hosted)
-- Um tipo de evento configurado no [Cal.com](http://Cal.com)
-- Uma chave de API do [Cal.com](http://Cal.com)
+1. Vá para **Configurações** → **Desenvolvedor** → **Chaves de API**
+2. Crie uma nova chave de API e copie-a
 
-### Processo de Configuração
+![calcom-api-key.avif](/images/calcom-api-key.avif)
 
-### 1. Configuração no [Cal.com](http://Cal.com)
+### **2. Conecte **[**Cal.com**](http://Cal.com)
 
-- Cadastre-se ou faça login na sua conta [Cal.com](http://Cal.com)
-- Crie um novo tipo de evento especificamente para agendamentos pelo assistente de IA
-- Dê um nome claro, como "Reunião com Assistente de IA"
-- Configure duração, disponibilidade e outras definições
-- Após criar, anote o ID do evento presente na URL
+1. Nas configurações do seu assistente → guia **Ferramentas** → **Agendamento de Compromissos**
+2. Selecione [**Cal.com**](http://Cal.com) no tipo de calendário
+3. Cole sua chave de API
+4. Selecione um evento no menu suspenso
 
-  <img
-    height="200"
-    src="/resources/cal-event-id.png"
-  />
-- **Gerar uma chave de API:**
-  - Acesse as configurações do [Cal.com](http://Cal.com)
-  - Navegue até **Configurações de Desenvolvedor**
-  - Crie uma nova chave de API
-  - Copie e armazene a chave de API com segurança
+![calcom-connect.avif](/images/calcom-connect.avif)
 
-  ---
+### **3. Sincronizar evento**
 
-### 2. Informações de Contato do Cliente
+Clique no botão**“Sincronizar evento”**para configurar automaticamente os campos de reserva.
 
-- **Configuração de Email**\
-  Para enviar convites de calendário aos clientes:
-  - Defina o email nas variáveis de entrada do seu assistente
-  - Passe o email do cliente como a variável `email` ao criar o lead
-  - O sistema usará automaticamente esse email para os convites de calendário
+![calcom-sync.avif](/images/calcom-sync.avif)
 
-  **Número de Telefone em Eventos de Calendário**\
-  Para incluir o número de telefone do cliente nos eventos de calendário:
-  - Acesse as configurações do seu evento no [Cal.com](http://Cal.com)
-  - Clique em **Adicionar uma pergunta**
+**A sincronização configura: nome, e-mail, telefone (obrigatório) + notas (opcional). Todos os outros campos se tornam opcionais.**
 
-  <img
-    height="200"
-    src="/resources/cal-event-settings.jpeg"
-  />
-- Configure o campo com estes valores exatos:
-  - **Identificador:** phone (isso deve ser exato)
+## **Vários calendários**
 
-    <img
-      height="200"
-      src="/resources/cal-phone-field.jpeg"
-    />
-- Salve suas mudanças
+Clique em**“+”**ao lado de Agendamento de Compromissos para adicionar mais calendários (por exemplo, reuniões de 15 minutos, 30 minutos).
 
-  <img
-    height="200"
-    src="/resources/cal-save.jpeg"
-  />
+## **Configuração de e-mail**
 
-### **3. Adicionando o **[**Cal.com**](http://Cal.com)** ao seu Assistente**
+Para convites de calendário para trabalhar:
 
-- Nas configurações do seu assistente de IA, localize a seção **Ferramentas**
-- Adicione a integração do [Cal.com](http://Cal.com)
-- Configure a ferramenta com:
-  - Sua chave de API do [Cal.com](http://Cal.com)
-  - O ID do tipo de evento
+1. Definir [**variáveis ​​de entrada**](https://docs.autocalls.ai/ai-assistants/settings/prompt-and-tools#call-variables)`email` no assistente
+2. Passe o e-mail do cliente ao criar leads
 
-    <img
-      height="200"
-      src="/resources/cal-tool.png"
-    />
+O número de telefone é incluído automaticamente após a sincronização.
 
-## Melhores Práticas
+## **Solução de problemas**
 
-- Crie tipos de evento dedicados para agendamentos pelo assistente de IA para rastrear seu uso
-- Defina tempos de buffer claros entre as reuniões
-- Configure durações apropriadas para as reuniões
-- Use nomes de evento descritivos que façam sentido para seus clientes
-- Mantenha apenas os campos padrão e o campo de telefone como opcional
-- Sempre inclua o email do cliente na criação do lead para convites de calendário
+**Chave de API inválida:**verifique se ela está ativa nas configurações do [Cal.com](http://Cal.com) e inclui`cal_live_`prefixo**Falha na sincronização:**clique no botão**“Solucionar problemas”**para redefinir os campos**Nenhum convite enviado:**certifique-se de que`email`a variável esteja definida e passada com os leads**Erros de campo:**Use "Solucionar problemas" para redefinir. Somente nome, e-mail e telefone devem ser solicitados.
 
----
+**Para solução de problemas detalhada, consulte **[**Problemas do **](https://docs.autocalls.ai/troubleshooting/cal-com)[**Cal.com**](http://Cal.com)** .**
 
-### **Testes**
+## **Teste**
 
-Após a configuração, recomendamos:
-
-- Realizar uma chamada de teste ao seu assistente de IA
-- Solicitar o agendamento de uma reunião
-- Verificar se o agendamento aparece no painel do [Cal.com](http://Cal.com)
-- Conferir se o número de telefone aparece no evento do calendário
-- Verificar se o cliente recebeu o email de convite do calendário
-- Conferir se os emails de confirmação foram recebidos
-
----
-
-### **Solução de Problemas**
-
-### **Correções Rápidas:**
-
-### **Erro de Chave de API Ausente:**
-
-- **Solução:** Insira a chave de API e o ID do evento corretos nas configurações do assistente
-- **Passos:** Vá em **Configurações do assistente → Agendamento de Compromissos → Insira a chave de API e o ID do evento → Salvar**
-
-### **Falhas no Agendamento:**
-
-- **Email Obrigatório:** Certifique-se de que o assistente tem o email definido nas configurações
-- **Configuração do campo de telefone:** Adicione o campo de telefone nas configurações do evento no [Cal.com](http://Cal.com) com o identificador "phone". Veja **Número de Telefone em Eventos de Calendário** para configuração detalhada
-- **Teste com chamadas reais:** Use chamadas telefônicas (não chamadas web) para testar
-- **Sem campos personalizados obrigatórios:** Não adicione campos personalizados obrigatórios nas configurações do evento do [Cal.com](http://Cal.com)
-
-### **Problemas de Conexão:**
-
-- Verifique se a chave de API está ativa nas configurações de desenvolvedor do [Cal.com](http://Cal.com)
-- Confira o ID do evento na URL do evento do [Cal.com](http://Cal.com)
-- Confirme que o identificador do campo de telefone é exatamente "phone"
-
-<Note>
-  Para solução de problemas completa do [Cal.com](http://Cal.com), incluindo soluções detalhadas e questões adicionais, consulte **Problemas do **[**Cal.com**](http://Cal.com).
-</Note>
+1. Faça uma chamada de teste e solicite uma reunião
+2. Verifique se a reserva aparece no [Cal.com](http://Cal.com)
+3. Verifique se o e-mail de convite do calendário foi recebido
