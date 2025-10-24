@@ -6,22 +6,26 @@ description: "Um guia passo a passo para conectar sua conta da Twilio via tronco
 ## Etapa 1: Criar o Elastic SIP Trunking
 
 1. Crie o tronco, dê um nome e ative/ajuste algumas configurações gerais.
-<img
-  src="/resources/twilio-create-elastic-sip1.avif"
-  alt="Integração Twilio - Elastic SIP Configuration"
-  style={{
-    display: "block",
-    width: "100%",
-    maxWidth: "880px",
-    borderRadius: "12px",
-    margin: "24px auto",
-    boxShadow: "0 0 1px rgba(0,0,0,0.1)",
-  }}
-/>
-   <Frame>
-     ![Create Elastic SIP Trunking](/resources/twillio-create-elastic-sip1.jpeg)
-   </Frame>
+
+   <img
+     src="/resources/twilio-create-elastic-sip1.avif"
+     alt="Integração Twilio - Elastic SIP Configuration"
+     style={{
+       display: "block",
+       width: "100%",
+       maxWidth: "880px",
+       borderRadius: "12px",
+       margin: "24px auto",
+       boxShadow: "0 0 1px rgba(0,0,0,0.1)",
+     }}
+   />
+
 2. Configure a **terminação** (essa etapa é para chamadas de saída)
+
+   O **URI SIP de terminação** aqui é importante — ele será usado nas próximas etapas.  
+   Você pode optar por um **URI de terminação localizado** mais próximo da sua região.  
+   É possível expandir e visualizar seus URIs localizados diretamente no **console da Twilio**.
+
 
    O **URI SIP de terminação** aqui é importante — ele será usado nas próximas etapas.\
    Você pode optar por um **URI de terminação localizado** mais próximo da sua região.\
