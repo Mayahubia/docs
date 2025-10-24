@@ -27,16 +27,16 @@
   "topbarLinks": [
     {
       "name": "Home",
-      "url": "https://mayahub.ai"
+      "url": "https://mayahub.mintlify.app/"
     },
     {
       "name": "Support",
-      "url": "https://mayahub.ai/contact"
+      "url": "https://mayahub.ai/contato/"
     }
   ],
   "topbarCtaButton": {
     "name": "Dashboard",
-    "url": "https://app.mayahub.ai"
+    "url": "https://app.mayahub.online"
   },
   "anchors": [
     {
