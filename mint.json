@@ -13,12 +13,12 @@
     "isHidden": true
   },
   "colors": {
-    "primary": "#833AB4",
+    "primary": "#BE66FF",
     "light": "#9C45C6",
     "dark": "#5E2489",
     "background": {
-      "light": "#00536B",
-      "dark": "#00536B"
+      "light": "#003847",
+      "dark": "#003847"
     },
     "anchors": {
       "from": "#833AB4",
@@ -35,7 +35,7 @@
   "topbarLinks": [
     {
       "name": "Home",
-      "url": "https://mayahub.ai"
+      "url": "https://mayahub.mintlify.app/"
     },
     {
       "name": "Contato",
@@ -50,7 +50,7 @@
     {
       "name": "Automação sem Código",
       "icon": "wand-magic-sparkles",
-      "color": "#6c63ff",
+      "color": "#C9C9C9",
       "url": "automation-platform"
     },
     {
