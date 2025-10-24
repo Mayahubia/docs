@@ -8,11 +8,18 @@
     "light": "/resources/logo/light.png"
   },
   "favicon": "/favicon.png",
-  "tocTitle": "Nesta página",
+  "modeToggle": {
+    "default": "dark",
+    "isHidden": true
+  },
   "colors": {
     "primary": "#833AB4",
     "light": "#9C45C6",
     "dark": "#5E2489",
+    "background": {
+      "light": "#00536B",
+      "dark": "#00536B"
+    },
     "anchors": {
       "from": "#833AB4",
       "to": "#5E2489"
