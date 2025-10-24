@@ -8,10 +8,12 @@
     "light": "/resources/logo/light.png"
   },
   "favicon": "/favicon.png",
+
   "modeToggle": {
     "default": "dark",
     "isHidden": true
   },
+
   "colors": {
     "primary": "#BE66FF",
     "light": "#9C45C6",
@@ -25,53 +27,33 @@
       "to": "#5E2489"
     }
   },
+
   "topAnchor": {
     "name": "Guia da Plataforma",
     "icon": "book"
   },
+
   "sidebar": {
     "items": "card"
   },
+
   "topbarLinks": [
-    {
-      "name": "Home",
-      "url": "https://mayahub.mintlify.app/"
-    },
-    {
-      "name": "Contato",
-      "url": "https://mayahub.ai/contato"
-    }
+    { "name": "Home", "url": "https://mayahub.ai" },
+    { "name": "Contato", "url": "https://mayahub.ai/contato" }
   ],
+
   "topbarCtaButton": {
     "name": "Dashboard",
     "url": "https://app.mayahub.online"
   },
+
   "anchors": [
-    {
-      "name": "Automação sem Código",
-      "icon": "wand-magic-sparkles",
-      "color": "#C9C9C9",
-      "url": "automation-platform"
-    },
-    {
-      "name": "White Label",
-      "icon": "tag",
-      "color": "#ff0142",
-      "url": "white-label"
-    },
-    {
-      "name": "Referências de API",
-      "icon": "code",
-      "color": "#1c51fc",
-      "url": "api-reference"
-    },
-    {
-      "name": "Atualizações da Plataforma",
-      "icon": "scroll",
-      "color": "#ffbb00",
-      "url": "releases"
-    }
+    { "name": "Automação sem Código", "icon": "wand-magic-sparkles", "color": "#C9C9C9", "url": "automation-platform" },
+    { "name": "White Label", "icon": "tag", "color": "#ff0142", "url": "white-label" },
+    { "name": "Referências de API", "icon": "code", "color": "#1c51fc", "url": "api-reference" },
+    { "name": "Atualizações da Plataforma", "icon": "scroll", "color": "#ffbb00", "url": "releases" }
   ],
+
   "navigation": [
     {
       "group": "Introdução",
@@ -332,13 +314,13 @@
       ]
     }
   ],
+
   "footerSocials": {
     "linkedin": "https://www.linkedin.com/company/mayahub-ai"
   },
+
   "api": {
     "baseUrl": "https://app.mayahub.ai/api/",
-    "auth": {
-      "method": "bearer"
-    }
+    "auth": { "method": "bearer" }
   }
 }
