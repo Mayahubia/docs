@@ -10,9 +10,18 @@ description: "Um guia passo a passo para conectar sua conta da Zadarma via tronc
 
 Acesse **Meu PABX (My Switchboard)** → **Extensões (Extensions)** na página principal.
 
-<Frame>
-  ![Zadarma My Switchboard Extensions](/resources/zadarma-mypbx-extensions.png)
-</Frame>
+<img
+  src="/resources/zadarma-mypbx-extensions.avif"
+  alt="Zadarma - MyPBX Extensions Configuration"
+  style={{
+    display: "block",
+    width: "100%",
+    maxWidth: "880px",
+    borderRadius: "12px",
+    margin: "24px auto",
+    boxShadow: "0 0 1px rgba(0,0,0,0.1)",
+  }}
+/>
 
 - Encontre as seguintes informações:
 
@@ -23,9 +32,18 @@ Senha SIP
 Endereço do servidor SIP (exemplo: sip.zadarma.com)
 ```
 
-<Frame>
-  ![Zadarma My Switchboard Extensions Settings](/resources/zadarma-switch-extension-settings.PNG)
-</Frame>
+<img
+  src="/resources/zadarma-switch-extension-settings.avif"
+  alt="Zadarma - Switch Extension Settings"
+  style={{
+    display: "block",
+    width: "100%",
+    maxWidth: "880px",
+    borderRadius: "12px",
+    margin: "24px auto",
+    boxShadow: "0 0 1px rgba(0,0,0,0.1)",
+  }}
+/>
 
 - Conexão SIP:
 
@@ -38,41 +56,95 @@ Senha: fornecida pela sua operadora
 
 Vá para **Configurações (Configuration)** → **Configurações SIP (SIP Settings)** na página principal.
 
-<Frame>
-  ![Zadarma SIP Settings](/resources/zadarma-sip-settings.png)
-</Frame>
+<img
+  src="/resources/zadarma-sip-settings.avif"
+  alt="Zadarma - SIP Settings Configuration"
+  style={{
+    display: "block",
+    width: "100%",
+    maxWidth: "880px",
+    borderRadius: "12px",
+    margin: "24px auto",
+    boxShadow: "0 0 1px rgba(0,0,0,0.1)",
+  }}
+/>
 
 Encontre as seguintes informações:
 
-<Frame>
-  ![Zadarma SIP Connection Settings](/resources/zadarma-sip-connection-settings.png)
-</Frame>
+<img
+  src="/resources/zadarma-sip-connection-settings.avif"
+  alt="Zadarma - SIP Connection Settings"
+  style={{
+    display: "block",
+    width: "100%",
+    maxWidth: "880px",
+    borderRadius: "12px",
+    margin: "24px auto",
+    boxShadow: "0 0 1px rgba(0,0,0,0.1)",
+  }}
+/>
 
 - Para o tipo de **autorização por IP**:
 
   Acesse **Serviços (Services)** → **Conectar número (Connect number)** na página principal.
 
-  <Frame>
-    ![Zadarma Services](/resources/zadarma-services.png)
-  </Frame>
+<img
+  src="/resources/zadarma-services.avif"
+  alt="Zadarma - Services Configuration"
+  style={{
+    display: "block",
+    width: "100%",
+    maxWidth: "880px",
+    borderRadius: "12px",
+    margin: "24px auto",
+    boxShadow: "0 0 1px rgba(0,0,0,0.1)",
+  }}
+/>
 - Vá para **Números Ativos (Active Numbers)**.
 
-  <Frame>
-    ![Zadarma Active Numbers](/resources/zadarma-active-numbers.png)
-  </Frame>
+<img
+  src="/resources/zadarma-active-numbers.avif"
+  alt="Zadarma - Active Numbers Configuration"
+  style={{
+    display: "block",
+    width: "100%",
+    maxWidth: "880px",
+    borderRadius: "12px",
+    margin: "24px auto",
+    boxShadow: "0 0 1px rgba(0,0,0,0.1)",
+  }}
+/>
 - Clique no número que deseja conectar e pressione o botão **Configurações (Settings)**.
 
-  <Frame>
-    ![Zadarma Settings Button](/resources/zadarma-settings-button.png)
-  </Frame>
+<img
+  src="/resources/zadarma-settings-button.avif"
+  alt="Zadarma - Settings Button"
+  style={{
+    display: "block",
+    width: "100%",
+    maxWidth: "880px",
+    borderRadius: "12px",
+    margin: "24px auto",
+    boxShadow: "0 0 1px rgba(0,0,0,0.1)",
+  }}
+/>
 - Clique em **Serviços Externos (External Services)** e marque a opção **SIP URI**.
 
   Adicione o seguinte endereço:\
   `sip:extension@5wed79aeavr.sip.livekit.cloud`(este é o endereço do servidor SIP da **Mayahub**)
 
-<Frame>
-  ![Zadarma External Services](/resources/zadarma-external-services.png)
-</Frame>
+<img
+  src="/resources/zadarma-external-services.avif"
+  alt="Zadarma - External Services Configuration"
+  style={{
+    display: "block",
+    width: "100%",
+    maxWidth: "880px",
+    borderRadius: "12px",
+    margin: "24px auto",
+    boxShadow: "0 0 1px rgba(0,0,0,0.1)",
+  }}
+/>
 
 <Note>
   Você precisará desses **IPs**, que deverão ser inseridos na **Etapa 2** para o tipo de **autorização de entrada (inbound)**.
@@ -86,22 +158,49 @@ Agora é necessário **importar o número para a Mayahub**.
 2. Vá até **Seus Números de Telefone**
 5. Clique em **“Integrar tronco SIP”**
 
-   <Frame>
-     ![Import numbers to Autocalls](/resources/twillio-import-autocalls-sip1.png)
-   </Frame>
+<img
+  src="/resources/twillio-import-autocalls-sip1.avif"
+  alt="Twilio - Import Autocalls SIP Configuration"
+  style={{
+    display: "block",
+    width: "100%",
+    maxWidth: "880px",
+    borderRadius: "12px",
+    margin: "24px auto",
+    boxShadow: "0 0 1px rgba(0,0,0,0.1)",
+  }}
+/>
 4. Preencha suas informações com base no tipo de integração escolhido.
 
 Para Extensão PBX:
 
-<Frame>
-  ![Fill in your details based on your integration type](/resources/zadarma-autocalls-type.png)
-</Frame>
+<img
+  src="/resources/zadarma-autocalls-type.avif"
+  alt="Zadarma - Autocalls Integration Type"
+  style={{
+    display: "block",
+    width: "100%",
+    maxWidth: "880px",
+    borderRadius: "12px",
+    margin: "24px auto",
+    boxShadow: "0 0 1px rgba(0,0,0,0.1)",
+  }}
+/>
 
 Para Conexão SIP:
 
-<Frame>
-  ![Fill in your details based on your integration type](/resources/twillio-autocalls-auth-integration.png)
-</Frame>
+<img
+  src="/resources/twillio-autocalls-auth-integration.avif"
+  alt="Twilio - Autocalls Authentication Integration"
+  style={{
+    display: "block",
+    width: "100%",
+    maxWidth: "880px",
+    borderRadius: "12px",
+    margin: "24px auto",
+    boxShadow: "0 0 1px rgba(0,0,0,0.1)",
+  }}
+/>
 
 5. Aqui você deve inserir o **URI SIP de terminação** configurado na **Etapa 1**.
 
@@ -109,32 +208,65 @@ Para Conexão SIP:
 Endereço do servidor: exemplo: pbx.zadarma.com / sip.zadarma.com, conforme o tipo de integração que você estiver utilizando.
 ```
 
-<Frame>
-  ![Zadarma Outbound Settings](/resources/zadarma-outbound-settings.png)
-</Frame>
+<img
+  src="/resources/zadarma-outbound-settings.avif"
+  alt="Zadarma - Outbound Settings Configuration"
+  style={{
+    display: "block",
+    width: "100%",
+    maxWidth: "880px",
+    borderRadius: "12px",
+    margin: "24px auto",
+    boxShadow: "0 0 1px rgba(0,0,0,0.1)",
+  }}
+/>
 
 6. Aqui, selecione o **tipo de autenticação (Authorization type)**.
 
 {/* - If you opted for auth route select Username and password.
 
- <Frame>
-   <img
-     src="/resources/twillio-autocalls-credentials-auth-type.png"
-     alt="Twillio Autocalls Credentials Auth Type"
-   />
- </Frame> */}
+<img
+  src="/resources/zadarma-autocalls-credentials-auth-type.avif"
+  alt="Zadarma - Autocalls Credentials Auth Type"
+  style={{
+    display: "block",
+    width: "100%",
+    maxWidth: "880px",
+    borderRadius: "12px",
+    margin: "24px auto",
+    boxShadow: "0 0 1px rgba(0,0,0,0.1)",
+  }}
+/> */}
 
 - Adicione os **IPs obtidos na Zadarma** na **Etapa 1**.
 
-  <Frame>
-    ![Twillio Autocalls Credentials IP Type](/resources/zadarma-ip-inbound.png)
-  </Frame>
+<img
+  src="/resources/zadarma-ip-inbound.avif"
+  alt="Zadarma - IP Inbound Configuration"
+  style={{
+    display: "block",
+    width: "100%",
+    maxWidth: "880px",
+    borderRadius: "12px",
+    margin: "24px auto",
+    boxShadow: "0 0 1px rgba(0,0,0,0.1)",
+  }}
+/>
 
 7. Selecione o país onde o seu tronco SIP está localizado.
 
-   <Frame>
-     ![Twillio Autocalls SIP Country](/resources/twillio-autocalls-sip-country.png)
-   </Frame>
+<img
+  src="/resources/twillio-autocalls-sip-country.avif"
+  alt="Twilio - Autocalls SIP Country Configuration"
+  style={{
+    display: "block",
+    width: "100%",
+    maxWidth: "880px",
+    borderRadius: "12px",
+    margin: "24px auto",
+    boxShadow: "0 0 1px rgba(0,0,0,0.1)",
+  }}
+/>
 
 ### Etapa 3: Verificação da Configuração
 
