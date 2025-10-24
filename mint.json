@@ -38,7 +38,7 @@
   },
 
   "topbarLinks": [
-    { "name": "Home", "url": "https://mayahub.mintlify.app/" },
+    { "name": "Home", "url": "https://mayahub.ai" },
     { "name": "Contato", "url": "https://mayahub.ai/contato" }
   ],
 
