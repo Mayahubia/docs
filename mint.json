@@ -1,61 +1,62 @@
 {
   "$schema": "https://mintlify.com/schema.json",
   "name": "Mayahub",
+  "title": "Guia da plataforma - Mayahub",
+  "description": "Aprenda a usar o Mayahub.ai para automatizar suas chamadas telefônicas com inteligência artificial.",
   "logo": {
     "dark": "/resources/logo/dark.png",
     "light": "/resources/logo/light.png"
   },
   "favicon": "/favicon.png",
+
+  "modeToggle": {
+    "default": "dark",
+    "isHidden": true
+  },
+
   "colors": {
-    "primary": "#06df4b",
-    "light": "#06df4b",
-    "dark": "#65fe50",
+    "primary": "#002C38",
+    "light": "#68B50D",
+    "dark": "#72CF00",
+    "background": {
+      "light": "#002C38",
+      "dark": "#002C38"
+    },
     "anchors": {
-      "from": "#01df4a",
-      "to": "#65fe50"
+      "from": "#833AB4",
+      "to": "#5E2489"
     }
   },
+
   "topAnchor": {
-    "name": "Platform Guide",
+    "name": "Guia da Plataforma",
     "icon": "book"
   },
+
   "sidebar": {
     "items": "card"
   },
-  "topbarLinks": [{
-    "name": "Home",
-    "url": "https://mayahub.ai"
-  }, {
-    "name": "Support",
-    "url": "https://mayahub.ai/contact"
-  }],
+
+  "topbarLinks": [
+    { "name": "Home", "url": "https://mayahub.ai" },
+    { "name": "Contato", "url": "https://mayahub.ai/contato" }
+  ],
+
   "topbarCtaButton": {
     "name": "Dashboard",
-    "url": "https://app.mayahub.ai"
+    "url": "https://app.mayahub.online"
   },
-  "anchors": [{
-    "name": "No-Code Automation",
-    "icon": "wand-magic-sparkles",
-    "color": "#6c63ff",
-    "url": "automation-platform"
-  }, {
-    "name": "White Label",
-    "icon": "tag",
-    "color": "#ff0142",
-    "url": "white-label"
-  }, {
-    "name": "API Reference",
-    "icon": "code",
-    "color": "#1c51fc",
-    "url": "api-reference"
-  }, {
-    "name": "Platform updates",
-    "icon": "scroll",
-    "color": "#ffbb00",
-    "url": "releases"
-  }],
-  "navigation": [{
-      "group": "Introduction",
+
+  "anchors": [
+    { "name": "Automação sem Código", "icon": "wand-magic-sparkles", "color": "#C9C9C9", "url": "automation-platform" },
+    { "name": "White Label", "icon": "tag", "color": "#ff0142", "url": "white-label" },
+    { "name": "Referências de API", "icon": "code", "color": "#1c51fc", "url": "api-reference" },
+    { "name": "Atualizações da Plataforma", "icon": "scroll", "color": "#ffbb00", "url": "releases" }
+  ],
+
+  "navigation": [
+    {
+      "group": "Introdução",
       "pages": [
         "introduction/what-is-mayahub",
         "introduction/how-it-works",
@@ -63,14 +64,14 @@
       ]
     },
     {
-      "group": "Getting Started",
+      "group": "Primeiros Passos",
       "pages": [
         "getting-started/core-concepts",
         "getting-started/understanding-billing"
       ]
     },
     {
-      "group": "AI Assistants Overview",
+      "group": "Visão Geral dos Assistentes de IA",
       "pages": [
         "ai-assistants/what-is-ai-assistant",
         {
@@ -96,7 +97,7 @@
       ]
     },
     {
-      "group": "Campaigns",
+      "group": "Campanhas",
       "icon": "bullhorn",
       "pages": [
         "campaigns/index",
@@ -113,15 +114,7 @@
       ]
     },
     {
-      "group": "Custom Dashboards",
-      "icon": "chart-line",
-      "pages": [
-        "custom-dashboards/overview",
-        "custom-dashboards/widget-types"
-      ]
-    },
-    {
-      "group": "Phone Numbers",
+      "group": "Números de Telefone",
       "pages": [
         "phone-numbers/types",
         "phone-numbers/purchasing-and-managing",
@@ -131,7 +124,7 @@
       ]
     },
     {
-      "group": "Inbound Calls",
+      "group": "Chamada de Entrada",
       "pages": [
         "inbound-calls/overview",
         "inbound-calls/provisioning",
@@ -140,7 +133,7 @@
       ]
     },
     {
-      "group": "Outbound Calls",
+      "group": "Chamada de Saída",
       "pages": [
         "outbound-calls/overview",
         "outbound-calls/campaigns",
@@ -151,7 +144,7 @@
       ]
     },
     {
-      "group": "AI Prompting & Conversation Design",
+      "group": "Prompting de IA e Design de Conversa",
       "pages": [
         "conversation-design/prompt-basics",
         "conversation-design/knowledge-bases",
@@ -160,7 +153,7 @@
       ]
     },
     {
-      "group": "Automation & Integrations",
+      "group": "Automações e Integrações",
       "pages": [
         "automation/overview",
         "automation/webhook-api",
@@ -168,7 +161,7 @@
       ]
     },
     {
-      "group": "Costs & Pricing",
+      "group": "Custos e Preços",
       "pages": [
         "pricing/overview",
         "pricing/usage-based",
@@ -176,7 +169,7 @@
       ]
     },
     {
-      "group": "Number Provisioning",
+      "group": "Provisionamento de Números",
       "pages": [
         "provisioning/supported-countries",
         "provisioning/managing-numbers",
@@ -192,7 +185,7 @@
       ]
     },
     {
-      "group": "White Label Program",
+      "group": "White Label",
       "pages": [
         "white-label/overview",
         "white-label/onboarding",
@@ -209,7 +202,7 @@
       ]
     },
     {
-      "group": "Troubleshooting & FAQs",
+      "group": "Solução de Problemas e Perguntas Frequentes",
       "pages": [
         "troubleshooting/ai-behavior",
         "troubleshooting/billing",
@@ -223,14 +216,14 @@
       ]
     },
     {
-      "group": "API Reference",
+      "group": "Referências de API",
       "pages": [
         "api-reference/introduction",
         "api-reference/authentication"
       ]
     },
     {
-      "group": "Assistants",
+      "group": "Assistentes",
       "pages": [
         "api-reference/assistants/get-assistants",
         "api-reference/assistants/get-outbound-assistants",
@@ -247,21 +240,11 @@
       ]
     },
     {
-      "group": "Calls",
+      "group": "Chamadas",
       "pages": [
         "api-reference/calls/get-calls",
         "api-reference/calls/make-phone-call",
         "api-reference/calls/delete-call"
-      ]
-    },
-    {
-      "group": "Mid Call Tools",
-      "pages": [
-        "api-reference/mid-call-tools/get-tools",
-        "api-reference/mid-call-tools/get-tool",
-        "api-reference/mid-call-tools/create-tool",
-        "api-reference/mid-call-tools/update-tool",
-        "api-reference/mid-call-tools/delete-tool"
       ]
     },
     {
@@ -274,7 +257,7 @@
       ]
     },
     {
-      "group": "Campaigns",
+      "group": "Campanhas",
       "pages": [
         "api-reference/campaigns/get-campaigns",
         "api-reference/campaigns/update-status"
@@ -293,7 +276,7 @@
       ]
     },
     {
-      "group": "No-Code Automation platform",
+      "group": "Plataforma de Automação",
       "pages": [
         "automation-platform/introduction",
         "automation-platform/building-flows",
@@ -305,7 +288,7 @@
       ]
     },
     {
-      "group": "Calls Related",
+      "group": "Relacionado a Chamadas",
       "pages": [
         "automation-platform/calls-related/mayahub-tool",
         "automation-platform/calls-related/common-integrations",
@@ -313,7 +296,7 @@
       ]
     },
     {
-      "group": "Tutorials",
+      "group": "Tutoriais",
       "pages": [
         "automation-platform/tutorials/outbound-form-call",
         "automation-platform/tutorials/inbound-context-injection",
@@ -325,19 +308,19 @@
       ]
     },
     {
-      "group": "Platform updates",
+      "group": "Atualizações da Plataforma",
       "pages": [
         "releases/index"
       ]
     }
   ],
+
   "footerSocials": {
     "linkedin": "https://www.linkedin.com/company/mayahub-ai"
   },
+
   "api": {
     "baseUrl": "https://app.mayahub.ai/api/",
-    "auth": {
-      "method": "bearer"
-    }
+    "auth": { "method": "bearer" }
   }
 }
