@@ -15,9 +15,9 @@ Os assistentes de IA na [MayaHub.ai](http://mayahub.ai) podem falar em três mod
 |                         |                                                                        | |
 | ----------------------- | ---------------------------------------------------------------------- | --- |
 | **Rótulo na interface** | `Pipeline`                                                             | |
-| **Como funciona **      | Speech-to-Text → LLM → Text-to-Speech                                  | |
+| Como funciona           | Speech-to-Text → LLM → Text-to-Speech                                  | |
 | **Latência**            | ~800 – 1500 ms (depende do idoma e modelo)                             | |
-| **Mais Indicado para ** | Raciocínio complexo, prompts dinâmicos, respostas com múltiplas frases | |
+| Mais Indicado para      | Raciocínio complexo, prompts dinâmicos, respostas com múltiplas frases | |
 
 O modo Pipeline primeiro transcreve as palavras do cliente em texto, processa esse texto no modelo de linguagem e depois converte a resposta de volta em áudio. É uma abordagem consolidada que oferece máxima flexibilidade:
 
@@ -36,9 +36,9 @@ O modo Pipeline primeiro transcreve as palavras do cliente em texto, processa es
 |                         |                                                            |
 | ----------------------- | ---------------------------------------------------------- |
 | **Rótulo na interface** | `Speech-to-speech`                                         |
-| **Como funciona **      | Geração direta de fala para fala (sem texto intermediário) |
+| Como funciona           | Geração direta de fala para fala (sem texto intermediário) |
 | **Latência**            | ~300 – 600 ms (ultra baixa)                                |
-| **Mais Indicado para ** | Conversas naturais, respostas curtas e reativas            |
+| Mais Indicado para      | Conversas naturais, respostas curtas e reativas            |
 
 O modo Speech-to-Speech ignora a transcrição separada e o TTS. Em vez disso, usa um modelo multimodal que ouve e fala diretamente, proporcionando um fluxo mais conversacional:
 
@@ -61,9 +61,9 @@ O modo Speech-to-Speech ignora a transcrição separada e o TTS. Em vez disso, u
 |                         |                                                                           |
 | ----------------------- | ------------------------------------------------------------------------- |
 | **Rótulo na interface** | `Dualplex`                                                                |
-| **Como funciona **      | Multimodal STT + LLM (speech-to-speech) com saida ElevenLabs TTS          |
+| Como funciona           | Multimodal STT + LLM (speech-to-speech) com saida ElevenLabs TTS          |
 | **Latência**            | Baixa (varia conforme voz e modelo)                                       |
-| **Mais Indicado para ** | Respostas rápidas e naturais com vozes de alta qualidade/marca (clonadas) |
+| Mais Indicado para      | Respostas rápidas e naturais com vozes de alta qualidade/marca (clonadas) |
 
 O Dualplex combina a rapidez do modo Speech-to-Speech com as vozes premium e clonagem da ElevenLabs usadas no Pipeline. O assistente utiliza o modelo multimodal para entender o cliente e planejar a resposta, e depois renderiza a fala final pelo ElevenLabs, garantindo saída consistente e de alta fidelidade.
 
