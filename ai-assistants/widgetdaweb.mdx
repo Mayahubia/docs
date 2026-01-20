@@ -99,3 +99,97 @@ Personalize todo o texto visível para que corresponda à voz e à linguagem da 
 ## Formulário de pré-bate-papo
 
 ![Pré-formulário do Widget](/widget-pre-chat-form.avif)
+
+Reúna informações antes de iniciar conversas:**Configuração do formulário:**
+
+- Título do pré-formulário
+- Descrição do pré-formulário
+- Texto do botão Enviar
+
+**Campos do formulário:** Adicione campos personalizados para coletar dados:
+
+- **Nome da variável:** Nome interno da variável (mapeia para variáveis ​​auxiliares)
+- **Rótulo do campo:** Rótulo exibido aos usuários
+- **Tipo de campo:** Texto, E-mail, Telefone ou Área de texto
+- **Obrigatório:** Tornar este campo obrigatório
+- **Texto de exemplo:** Texto de exemplo exibido no campo
+- **Texto auxiliar:** Descrição opcional abaixo do campo
+
+**Mapeamento de variáveis:** os nomes dos campos do formulário são mapeados automaticamente para as variáveis ​​do seu assistente, disponibilizando os dados coletados durante as conversas.
+
+**Exemplos de campos de formulário:**
+
+Name: Full Name (required, text) 
+
+Email: Email Address (required, email) 
+
+Company: Company Name (optional, text) 
+
+Message: How can we help? (optional, textarea)
+
+## **Pré-visualização ao vivo**
+
+O painel de configuração inclui uma pré-visualização em tempo real que mostra exatamente como o seu widget ficará:
+
+- **Atualizações automáticas:** visualize as atualizações conforme você altera as configurações.
+- **Interação real:** teste a funcionalidade do widget na pré-visualização.
+- **Redefinir dados:** Limpe os dados armazenados para testar a experiência do visitante iniciante.
+
+  Use o botão “Redefinir dados” para testar como seu widget aparece para novos visitantes. Isso apaga todas as preferências e dados de formulário armazenados na pré-visualização.
+
+## **Instalação**
+
+### **1. Salvar configuração**
+
+Após personalizar seu widget:
+
+1. Clique em **“Salvar configurações do widget”** no painel de configuração.
+2. Aguarde a notificação de confirmação.
+
+### **2. Obtenha o código de incorporação**
+
+Copie o código de incorporação gerado na seção “Código de Incorporação”.
+
+### **3. Adicionar ao site**
+
+Cole a tag de script antes da`</body>`tag de fechamento no seu site:
+
+\<script src="https://app.mayahub.ai/embed.js"         data-assistant-id="your-assistant-id"         data-mode="voice_chat"         data-position="bottom-right"         data-color="#3B82F6"\> \</script\>
+
+### **4. Verifique a instalação**
+
+1. Visite o seu site
+2. O botão do widget deve aparecer na posição configurada.
+3. Clique para testar a funcionalidade de voz/bate-papo.
+4. Verifique se o formulário de pré-atendimento aparece (se estiver configurado).
+
+## **Comportamento do widget**
+
+### [**​**](https://docs.autocalls.ai/ai-assistants/web-widget#first-visit)**Primeira visita**
+
+- O botão do widget aparece na posição configurada.
+- Clicar abre a interface modal/de bate-papo.
+- O formulário de pré-atendimento é exibido (se configurado).
+- Após o envio do formulário, inicia-se uma conversa.
+
+### **Retorno às consultas**
+
+- O estado da conversa anterior pode ser restaurado.
+- Os dados do formulário são memorizados (caso o visitante não tenha apagado os cookies).
+- Continuidade perfeita da experiência de suporte
+
+### **Rastreamento de conversas**
+
+Todas as conversas do widget aparecem na sua página[**de Conversas**](https://docs.autocalls.ai/conversations/overview)para revisão e análise.
+
+O HTTPS (certificado SSL) é necessário para a funcionalidade de voz. Sites HTTP só podem usar o modo de bate-papo devido a restrições de segurança do navegador.
+
+## Solução de problemas
+
+Para problemas de configuração e instalação, consulte **a seção Solução de problemas de widgets da Web**.
+
+## Próximos passos
+
+- Widget de teste usando a pré-visualização ao vivo
+- Incorpore o código no seu site.
+- Acompanhe as conversas na página **Conversas.**
