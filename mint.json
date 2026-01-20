@@ -71,7 +71,7 @@
         "ai-assistants/what-is-ai-assistant",
         {
           "group": "Creating and Editing an AI Assistant",
-          "icon": "sliders",
+          "icon": "robot",
           "pages": [
             "ai-assistants/settings/general",
             "ai-assistants/settings/prompt-and-tools",
@@ -154,7 +154,7 @@
     },
     {
       "group": "Prompting de IA e Design de Conversa",
-      "icon": "message",
+      "icon": "messages",
       "pages": [
         "conversation-design/prompt-basics",
         "conversation-design/knowledge-bases",
@@ -236,6 +236,100 @@
       "pages": [
         "api-reference/introduction",
         "api-reference/authentication"
+      ]
+    },
+    {
+      "group": "Assistentes",
+      "icon": "robot",
+      "pages": [
+        "api-reference/assistants/get-assistants",
+        "api-reference/assistants/get-outbound-assistants",
+        "api-reference/assistants/create-assistant",
+        "api-reference/assistants/update-assistant",
+        "api-reference/assistants/delete-assistant",
+        "api-reference/assistants/enable-inbound-webhook",
+        "api-reference/assistants/disable-inbound-webhook",
+        "api-reference/assistants/disable-webhook",
+        "api-reference/assistants/get-languages",
+        "api-reference/assistants/get-voices",
+        "api-reference/assistants/get-models",
+        "api-reference/assistants/get-phone-numbers"
+      ]
+    },
+    {
+      "group": "Chamadas",
+      "icon": "phone",
+      "pages": [
+        "api-reference/calls/get-calls",
+        "api-reference/calls/make-phone-call",
+        "api-reference/calls/delete-call"
+      ]
+    },
+    {
+      "group": "Leads",
+      "icon": "users",
+      "pages": [
+        "api-reference/leads/get-lead",
+        "api-reference/leads/create",
+        "api-reference/leads/update-lead",
+        "api-reference/leads/delete"
+      ]
+    },
+    {
+      "group": "Campanhas",
+      "icon": "bullhorn",
+      "pages": [
+        "api-reference/campaigns/get-campaigns",
+        "api-reference/campaigns/update-status"
+      ]
+    },
+    {
+      "group": "SMS",
+      "icon": "message-sms",
+      "pages": [
+        "api-reference/sms/send-sms"
+      ]
+    },
+    {
+      "group": "Webhooks",
+      "icon": "link",
+      "pages": [
+        "api-reference/webhooks/post-call-webhook"
+      ]
+    },
+    {
+      "group": "Plataforma de Automação",
+      "icon": "wand-magic-sparkles",
+      "pages": [
+        "automation-platform/introduction",
+        "automation-platform/building-flows",
+        "automation-platform/passing-data",
+        "automation-platform/publishing-flows",
+        "automation-platform/debugging-runs",
+        "automation-platform/versioning",
+        "automation-platform/known-limits"
+      ]
+    },
+    {
+      "group": "Relacionado a Chamadas",
+      "icon": "phone-volume",
+      "pages": [
+        "automation-platform/calls-related/mayahub-tool",
+        "automation-platform/calls-related/common-integrations",
+        "automation-platform/calls-related/sms-capabilities"
+      ]
+    },
+    {
+      "group": "Tutoriais",
+      "icon": "book-open",
+      "pages": [
+        "automation-platform/tutorials/outbound-form-call",
+        "automation-platform/tutorials/inbound-context-injection",
+        "automation-platform/tutorials/gohighlevel-leads-automation",
+        "automation-platform/tutorials/google-sheets-sync",
+        "automation-platform/tutorials/post-call-sms-automation",
+        "automation-platform/tutorials/google-sheets-qualified-leads",
+        "automation-platform/tutorials/post-call-email-automation"
       ]
     },
     {
