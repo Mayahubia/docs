@@ -84,3 +84,190 @@ Esta etapa conecta seu número verificado ao WhatsApp por meio do fluxo de cadas
 Quando a janela pop-up Meta aparecer, procure a opção “Adicionar novo número”. NÃO insira um número de telefone manualmente.
 
 ![Selecionar número verificado](/step-select-number.avif)
+
+**Etapa B: Selecione seu número pré-verificado.**
+
+Na lista suspensa, selecione o número de telefone que você acabou de verificar. Ele aparecerá na lista porque a Meta já o conhece desde a etapa de verificação
+
+.Após selecionar seu número, conclua as etapas restantes no fluxo do Facebook (verificação da empresa, permissões etc.) e você será redirecionado automaticamente.
+
+## Configuração de número externo
+
+Se você selecionou **Número Externo**, siga estes passos para conectar seu próprio número de celular.
+
+### **Requisitos antes de começar**
+
+Certifique-se de ter o seguinte pronto:
+
+- **Acesso pelo celular** — Você precisa ter seu celular por perto para receber o código de verificação.
+- **SMS ou chamadas ativadas** — Seu número deve poder receber mensagens SMS ou chamadas de voz.
+- **Ainda não está no WhatsApp** — Este número não deve estar registrado no WhatsApp ou no aplicativo WhatsApp Business.
+- **Conta do Facebook** — Você precisará de uma conta do Facebook para concluir a configuração. 
+
+  ### Passo 2: Insira seu número de telefone
+  1. Digite seu número de telefone no formato internacional (ex.: +1 555 123 4567)
+  2. Insira um **nome de exibição** para sua empresa.
+  3. Clique em **Continuar**
+
+**Formato do número de telefone** — Digite seu número começando com + e o código do seu país:
+
+- EUA: +1 555 123 4567
+- Reino Unido: +44 7911 123456
+- Alemanha: +49 151 12345678
+- Brasil +55 11 12346789
+
+### Passo 3: Conecte-se ao WhatsApp Business
+
+Clique em**"Entrar com o Facebook"**para abrir o fluxo de cadastro integrado do Meta. Siga estes passos:
+
+1. **Entrar com o Facebook**
+
+Uma janela pop-up será aberta. Certifique-se de que pop-ups estejam permitidos neste site.
+
+2. **Crie uma conta comercial do WhatsApp**
+
+Siga as instruções para criar uma **nova** conta do WhatsApp Business. Não selecione uma conta existente.
+
+3. **Digite seu número de telefone**
+
+Quando solicitado, digite o mesmo número de telefone que você forneceu na Etapa 2.
+
+4. **Confirme por SMS ou chamada de voz.**
+
+Você receberá um código de 6 dígitos por SMS ou chamada de voz. Digite-o para verificar seu número.
+
+**Se você não receber um SMS em 60 segundos, escolha a opção de chamada de voz.**
+
+5. **Conclua a configuração**
+
+Conceda as permissões necessárias e feche a janela pop-up quando terminar. Você será redirecionado automaticamente.
+
+### Solução de problemas com números externos
+
+**Pop-up bloqueado?**
+
+Permita a exibição de pop-ups para este site nas configurações do seu navegador e tente novamente.
+
+**Não recebeu o código de verificação?**
+
+Aguarde 60 segundos e tente a opção de chamada de voz. Certifique-se de que seu telefone tenha sinal.
+
+**Número já cadastrado?**
+
+Se esse número já estiver cadastrado no WhatsApp, você precisará excluir essa conta do WhatsApp antes de poder usá-lo com a API do WhatsApp Business.
+
+**Problemas com o login do Facebook?**
+
+Certifique-se de estar conectado à conta correta do Facebook ou tente usar um navegador diferente.
+
+## Status do remetente
+
+Seu remetente pode apresentar diferentes status durante a operação:
+
+| **Status**     | **Descrição**                                                          |
+| :------------- | :--------------------------------------------------------------------- |
+| **On-line**    | Totalmente operacional. Você pode enviar e receber mensagens.          |
+| **Conectando** | Inicializando. Geralmente leva alguns segundos.                        |
+| **Pendente**   | Aguardando verificação ou aprovação.                                   |
+| **Offline**    | Desativado manualmente. Não é possível enviar nem receber mensagens.   |
+| **Suspenso**   | Suspenso pela Meta devido a violações das políticas.                   |
+| **Fracassado** | A instalação falhou. Verifique a mensagem de erro para obter detalhes. |
+
+## Configuração do remetente
+
+**Conecte um assistente de IA Assim que o remetente estiver online, conecte um assistente de IA para gerenciar as mensagens recebidas automaticamente:**
+
+1. Edite o remetente do seu WhatsApp
+2. Selecione um assistente no menu suspenso.
+3. Ativar **IA (Alternar entre as opções** )
+4. Salvar alterações
+
+Todas as mensagens recebidas serão agora encaminhadas para seu assistente de IA para que ele responda.
+
+### Perfil da Empresa
+
+Personalize a forma como sua empresa é vista pelos clientes:
+
+- **Nome de exibição** — O nome da sua empresa que será exibido no WhatsApp.
+- **Sobre** — Breve descrição (máximo de 139 caracteres)
+- **Descrição** — Descrição detalhada do seu negócio
+- **Endereço** — Endereço comercial
+- **Categoria de negócio** — Categoria da indústria (Automotiva, Médica, Varejo, etc.)
+- **Logotipo** — Imagem de logotipo comercial
+- **Banner** — Imagem de banner para o seu perfil
+- **Sites da Web** — Links para seus sites
+- **Informações de contato** — Contatos adicionais por e-mail e telefone
+
+## **Classificação de qualidade e limites de mensagens**
+
+A Meta monitora a qualidade das suas mensagens e ajusta seus limites de acordo.
+
+### Entendendo a Avaliação de Qualidade
+
+Sua avaliação de qualidade é baseada em:
+
+- Tarifas de bloqueio (clientes que bloqueiam seu número)
+- Relatórios de spam
+- Taxas de resposta
+- Feedback do cliente
+
+### **Limites de mensagens**
+
+Os novos remetentes começam com capacidade limitada, que aumenta com a qualidade:
+
+| **Nível** | **Limite diário**         | **Como chegar**                |
+| :-------- | :------------------------ | :----------------------------- |
+| Nível 1   | ~250 mensagens            | Novo remetente                 |
+| Nível 2   | 1.000 mensagens           | Manter a qualidade por 7 dias  |
+| Nível 3   | 10.000 mensagens          | Qualidade elevada consistente  |
+| Nível 4   | Mais de 100.000 mensagens | Qualidade de nível empresarial |
+
+**Priorize a qualidade** — concentre-se em conversas de qualidade antes de expandir. Envie conteúdo relevante e solicitado para manter uma alta classificação de qualidade.
+
+## Melhores práticas
+
+### [**​**](https://docs.autocalls.ai/whatsapp/senders#1-choose-the-right-number)
+
+**1. Escolha o número correto**Selecione um número de telefone de um país que corresponda ao seu público-alvo. Os clientes são mais propensos a interagir com códigos de área locais ou familiares.
+
+**2. Configure seu nome de exibição com cuidado.**Seu nome de exibição aparece nos chats com os clientes. Use o nome da sua empresa ou um identificador claro que os clientes reconheçam e em que confiem.
+
+**3. Conecte um assistente de IA**Conecte um assistente de IA para gerenciar mensagens recebidas automaticamente. Isso garante que os clientes recebam respostas instantâneas 24 horas por dia, 7 dias por semana.
+
+**4. Crie modelos antecipadamente**Os modelos de mensagens exigem aprovação da Meta, que pode levar até 24 horas. Crie e envie seus modelos antes de precisar deles.
+
+**5. Comece com conversas de qualidade**Remetentes novos têm limites de mensagens que aumentam com o tempo. Concentre-se em conversas de qualidade para construir sua reputação como remetente antes de expandir.
+
+## Solução de problemas
+
+### [**​**](https://docs.autocalls.ai/whatsapp/senders#verification-failed)
+
+**Verificação falhou**
+
+Se a verificação falhar, a Meta pode ter bloqueado temporariamente as solicitações. Aguarde alguns minutos antes de tentar novamente ou tente um número de telefone diferente.
+
+**Remetente preso em Pendente**
+
+Se o remetente permanecer com o status "Pendente" por mais de alguns minutos:
+
+1. Verifique se você concluiu o fluxo de inscrição da Meta.
+2. Certifique-se de ter selecionado o número pré-verificado correto.
+3. Se o problema persistir, entre em contato com o suporte.
+
+### [**​**](https://docs.autocalls.ai/whatsapp/senders#sender-suspended)
+
+**Remetente suspenso **
+
+Se a Meta suspender seu remetente:
+
+1. Verifique o motivo da suspensão nos detalhes do remetente.
+2. Corrija quaisquer violações de política.
+3. Entre em contato com o suporte da Meta para apresentar recursos.
+
+## [**​**](https://docs.autocalls.ai/whatsapp/senders#next-steps)
+
+### Próximos passos
+
+- Saiba mais sobre **modelos de mensagens** e o processo de aprovação.
+- Configure **gatilhos de automação** para conversas do WhatsApp
+- Revise **a configuração do assistente de IA** para obter respostas otimizadas.
