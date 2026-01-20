@@ -41,10 +41,20 @@
     "url": "https://app.mayahub.ai"
   },
   "anchors": [
-    { "name": "Automação sem Código", "icon": "wand-magic-sparkles", "color": "#C9C9C9", "url": "automation-platform" },
+    {
+      "name": "Automação sem Código",
+      "icon": "wand-magic-sparkles",
+      "color": "#C9C9C9",
+      "url": "automation-platform"
+    },
     { "name": "White Label", "icon": "tag", "color": "#ff0142", "url": "white-label" },
     { "name": "Referências de API", "icon": "code", "color": "#1c51fc", "url": "api-reference" },
-    { "name": "Atualizações da Plataforma", "icon": "scroll", "color": "#ffbb00", "url": "releases" }
+    {
+      "name": "Atualizações da Plataforma",
+      "icon": "scroll",
+      "color": "#ffbb00",
+      "url": "releases"
+    }
   ],
   "navigation": [
     {
@@ -59,18 +69,17 @@
     {
       "group": "Primeiros Passos",
       "icon": "rocket",
-      "pages": [
-        "getting-started/core-concepts",
-        "getting-started/understanding-billing"
-      ]
+      "pages": ["getting-started/core-concepts", "getting-started/understanding-billing"]
     },
     {
       "group": "Visão Geral dos Assistentes de IA",
       "icon": "robot",
       "pages": [
         "ai-assistants/what-is-ai-assistant",
+        "ai-assistants/interface-chat-teste",
+        "ai-assistants/widget-web",
         {
-          "group": "Creating and Editing an AI Assistant",
+          "group": "Criando e Editando um Assistente de IA",
           "icon": "robot",
           "pages": [
             "ai-assistants/settings/general",
@@ -94,20 +103,9 @@
     {
       "group": "Campanhas",
       "icon": "bullhorn",
-      "pages": [
-        "campaigns/index",
-        "campaigns/creating-campaigns"
-      ]
+      "pages": ["campaigns/index", "campaigns/creating-campaigns"]
     },
-    {
-      "group": "Leads",
-      "icon": "users",
-      "pages": [
-        "leads/index",
-        "leads/managing-leads",
-        "leads/importing-leads"
-      ]
-    },
+    { "group": "Leads", "icon": "users", "pages": ["leads/index", "leads/managing-leads", "leads/importing-leads"] },
     {
       "group": "Números de Telefone",
       "icon": "phone",
@@ -122,12 +120,7 @@
     {
       "group": "Chamada de Entrada",
       "icon": "phone-incoming",
-      "pages": [
-        "inbound-calls/overview",
-        "inbound-calls/provisioning",
-        "inbound-calls/configuring",
-        "inbound-calls/insights"
-      ]
+      "pages": ["inbound-calls/overview", "inbound-calls/provisioning", "inbound-calls/configuring", "inbound-calls/insights"]
     },
     {
       "group": "Chamada de Saída",
@@ -165,20 +158,12 @@
     {
       "group": "Automações e Integrações",
       "icon": "bolt",
-      "pages": [
-        "automation/overview",
-        "automation/webhook-api",
-        "provisioning/phone-system-integrations"
-      ]
+      "pages": ["automation/overview", "automation/webhook-api", "provisioning/phone-system-integrations"]
     },
     {
       "group": "Custos e Preços",
       "icon": "dollar-sign",
-      "pages": [
-        "pricing/overview",
-        "pricing/usage-based",
-        "pricing/number-rentals"
-      ]
+      "pages": ["pricing/overview", "pricing/usage-based", "pricing/number-rentals"]
     },
     {
       "group": "Provisionamento de Números",
@@ -189,11 +174,7 @@
         {
           "group": "SIP trunking",
           "icon": "phone-volume",
-          "pages": [
-            "provisioning/sip-trunking/sip-integration",
-            "provisioning/sip-trunking/twilio",
-            "provisioning/sip-trunking/zadarma"
-          ]
+          "pages": ["provisioning/sip-trunking/sip-integration", "provisioning/sip-trunking/twilio", "provisioning/sip-trunking/zadarma"]
         }
       ]
     },
@@ -208,10 +189,7 @@
         {
           "group": "Social Logins",
           "icon": "share-nodes",
-          "pages": [
-            "white-label/social-logins/google",
-            "white-label/social-logins/linkedin"
-          ]
+          "pages": ["white-label/social-logins/google", "white-label/social-logins/linkedin"]
         }
       ]
     },
@@ -233,10 +211,7 @@
     {
       "group": "Referências de API",
       "icon": "code",
-      "pages": [
-        "api-reference/introduction",
-        "api-reference/authentication"
-      ]
+      "pages": ["api-reference/introduction", "api-reference/authentication"]
     },
     {
       "group": "Assistentes",
@@ -259,11 +234,7 @@
     {
       "group": "Chamadas",
       "icon": "phone",
-      "pages": [
-        "api-reference/calls/get-calls",
-        "api-reference/calls/make-phone-call",
-        "api-reference/calls/delete-call"
-      ]
+      "pages": ["api-reference/calls/get-calls", "api-reference/calls/make-phone-call", "api-reference/calls/delete-call"]
     },
     {
       "group": "Leads",
@@ -278,25 +249,10 @@
     {
       "group": "Campanhas",
       "icon": "bullhorn",
-      "pages": [
-        "api-reference/campaigns/get-campaigns",
-        "api-reference/campaigns/update-status"
-      ]
+      "pages": ["api-reference/campaigns/get-campaigns", "api-reference/campaigns/update-status"]
     },
-    {
-      "group": "SMS",
-      "icon": "message-sms",
-      "pages": [
-        "api-reference/sms/send-sms"
-      ]
-    },
-    {
-      "group": "Webhooks",
-      "icon": "link",
-      "pages": [
-        "api-reference/webhooks/post-call-webhook"
-      ]
-    },
+    { "group": "SMS", "icon": "message-sms", "pages": ["api-reference/sms/send-sms"] },
+    { "group": "Webhooks", "icon": "link", "pages": ["api-reference/webhooks/post-call-webhook"] },
     {
       "group": "Plataforma de Automação",
       "icon": "wand-magic-sparkles",
@@ -332,19 +288,8 @@
         "automation-platform/tutorials/post-call-email-automation"
       ]
     },
-    {
-      "group": "Atualizações da Plataforma",
-      "icon": "scroll",
-      "pages": [
-        "releases/index"
-      ]
-    }
+    { "group": "Atualizações da Plataforma", "icon": "scroll", "pages": ["releases/index"] }
   ],
-  "footerSocials": {
-    "linkedin": "https://www.linkedin.com/company/mayahub-ai"
-  },
-  "api": {
-    "baseUrl": "https://app.mayahub.ai/api/",
-    "auth": { "method": "bearer" }
-  }
+  "footerSocials": { "linkedin": "https://www.linkedin.com/company/mayahub-ai" },
+  "api": { "baseUrl": "https://app.mayahub.ai/api/", "auth": { "method": "bearer" } }
 }
