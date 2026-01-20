@@ -138,7 +138,7 @@
 {
   "group": "WhatsApp Business",
   "pages": [
-    "whatsapp-overview",
+    "integração do WhatsApp Business",
     "whatsapp-senders",
     "whatsapp-templates",
     "whatsapp-conversations",
