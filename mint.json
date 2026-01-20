@@ -8,12 +8,10 @@
     "light": "/resources/logo/light.png"
   },
   "favicon": "/favicon.png",
-
   "modeToggle": {
     "default": "dark",
     "isHidden": true
   },
-
   "colors": {
     "primary": "#002C38",
     "light": "#68B50D",
@@ -27,33 +25,27 @@
       "to": "#5E2489"
     }
   },
-
   "topAnchor": {
     "name": "Guia da Plataforma",
     "icon": "book"
   },
-
   "sidebar": {
     "items": "card"
   },
-
   "topbarLinks": [
     { "name": "Home", "url": "https://mayahub.ai" },
     { "name": "Contato", "url": "https://mayahub.ai/contato" }
   ],
-
   "topbarCtaButton": {
     "name": "Dashboard",
     "url": "https://app.mayahub.ai"
   },
-
   "anchors": [
     { "name": "Automação sem Código", "icon": "wand-magic-sparkles", "color": "#C9C9C9", "url": "automation-platform" },
     { "name": "White Label", "icon": "tag", "color": "#ff0142", "url": "white-label" },
     { "name": "Referências de API", "icon": "code", "color": "#1c51fc", "url": "api-reference" },
     { "name": "Atualizações da Plataforma", "icon": "scroll", "color": "#ffbb00", "url": "releases" }
   ],
-
   "navigation": [
     {
       "group": "Introdução",
@@ -141,6 +133,16 @@
         "outbound-calls/voicemail-handling",
         "outbound-calls/scripts-and-prompts",
         "outbound-calls/mass-dialing"
+      ]
+    },
+    {
+      "group": "WhatsApp Business",
+      "pages": [
+        "whatsapp/overview",
+        "whatsapp/senders",
+        "whatsapp/templates",
+        "whatsapp/conversations",
+        "whatsapp/automation"
       ]
     },
     {
@@ -314,11 +316,9 @@
       ]
     }
   ],
-
   "footerSocials": {
     "linkedin": "https://www.linkedin.com/company/mayahub-ai"
   },
-
   "api": {
     "baseUrl": "https://app.mayahub.ai/api/",
     "auth": { "method": "bearer" }
