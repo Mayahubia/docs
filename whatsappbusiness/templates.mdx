@@ -1,1 +1,296 @@
+---
+title: "Modelos de Mensagens"
+description: "Crie e gerencie modelos de mensagens do WhatsApp para conversas iniciadas por empresas."
+---
 
+Os modelos de mensagem são formatos de mensagem pré-aprovados exigidos pela Meta para conversas iniciadas por empresas no WhatsApp. Você precisa ter modelos aprovados antes de poder enviar mensagens para seus clientes.
+
+## O que são modelos de mensagens?
+
+Os modelos de mensagens são mensagens estruturadas que:
+
+- Deve ser submetido à Meta para aprovação antes do uso.
+- Permite iniciar conversas com os clientes.
+- Pode incluir variáveis ​​para personalização.
+- São necessários para o envio de mensagens fora do período de 24 horas.
+
+**Por que usar modelos?** — O WhatsApp exige modelos para evitar spam e garantir que as empresas enviem mensagens valiosas e relevantes aos clientes. Todas as mensagens iniciadas por empresas devem usar modelos aprovados.
+
+## Quando você precisa de modelos?
+
+| **Cenário**                             | **É necessário um modelo?**                     |
+| :-------------------------------------- | :---------------------------------------------- |
+| Mensagens do cliente para você primeiro | Não — resposta livre permitida em até 24 horas. |
+| Responderei em até 24 horas.            | Não — envie qualquer mensagem                   |
+| Iniciando uma nova conversa             | **Sim**                                         |
+| Reengajando-se após 24 horas            | **Sim**                                         |
+| Envio de notificações/atualizações      | **Sim**                                         |
+| Mensagens de marketing                  | **Sim**                                         |
+
+## Categorias de modelos
+
+Os modelos são organizados em categorias que determinam seus requisitos de aprovação e casos de uso:
+
+### Modelos de utilitários
+
+Mensagens transacionais e relacionadas a serviços.
+
+**Utilizar para:**
+
+- Confirmações de pedidos
+- Atualizações de envio
+- Lembretes de consultas
+- Notificações da conta
+- Recibos de pagamento
+
+**Aprovação: **Geralmente aprovado em minutos
+
+### Modelos de marketing
+
+Mensagens promocionais e relacionadas a vendas.
+
+**Utilizar para:**
+
+- Ofertas promocionais
+- Anúncios de produtos
+- Boletins informativos
+- Campanhas de vendas
+- Mensagens de reengajamento
+
+**Aprovação: **Pode levar mais tempo e exigir uma análise mais rigorosa.
+
+**Conteúdo de categorias diferentes não é permitido** — Não inclua conteúdo promocional em modelos de utilitários. O Meta rejeitará modelos com categoria e conteúdo incompatíveis.
+
+### Modelos de autenticação
+
+Mensagens de verificação e segurança.
+
+**Utilizar para:**
+
+- Senhas de uso único (OTP)
+- Códigos de verificação
+- Confirmações de login
+- Alertas de segurança
+
+**Aprovação: **Revisão padrão
+
+### Modelos de solicitação de chamada de voz
+
+Modelos especiais para solicitar permissão para chamadas de voz do WhatsApp.
+
+**Utilizar para:**
+
+- Solicitar permissão para ligar para clientes via WhatsApp (voz)
+- Deve incluir um botão de solicitação de chamada de voz.
+
+**Aprovação: **Automática (ao usar o formato padrão)
+
+## Criando um modelo
+
+### [**​**](https://docs.autocalls.ai/whatsapp/templates#step-1:-navigate-to-templates)
+
+**Passo 1: Navegue até Modelos**
+
+1. Acesse **Remetentes do WhatsApp** → Selecione seu remetente → guia **Modelos**
+2. Ou acesse diretamente **os Modelos do WhatsApp .**
+3. Clique em **Criar modelo**
+
+### Passo 2: Configurar as definições básicas
+
+| **Campo**     | **Descrição**                                                                                 |
+| :------------ | :-------------------------------------------------------------------------------------------- |
+| **Nome**      | Identificador único (apenas letras minúsculas e sublinhados). Exemplo:`order_confirmation_v1` |
+| **Categoria** | Selecione a opção de solicitação: Utilitário, Marketing, Autenticação ou Chamada de Voz       |
+| **Linguagem** | Idioma do modelo (deve corresponder ao conteúdo)                                              |
+
+**Melhores práticas de nomenclatura:**
+
+- Use nomes descritivos: `appointment_reminder`,`order_shipped`
+- Incluir números de versão:`welcome_message_v2`
+- Evite nomes genéricos:`template1`,`test`
+
+### Etapa 3: Escreva o conteúdo do modelo
+
+Os modelos podem incluir vários componentes:
+
+**Cabeçalho (Opcional)**
+
+- **Cabeçalho do texto** : Título curto (até 60 caracteres)
+- **Cabeçalho de mídia** : Imagem, vídeo ou documento (em breve)
+
+#### Corpo (Obrigatório)
+
+Conteúdo principal da mensagem. É aqui que você escreve sua mensagem.**Utilizando variáveis:**Use`{{1}}`,`{{2}}`, etc. para conteúdo dinâmico:
+
+Hi {{1}}, your order {{2}} has been shipped!
+
+Expected delivery: {{3}}
+
+Track your package: {{4}}
+
+**Valores de exemplo** — Ao criar modelos, você deve fornecer valores de exemplo para cada variável. Isso ajuda a Meta a entender a finalidade do seu modelo e é necessário para aprovação.
+
+### Rodapé (Opcional)
+
+Uma linha curta na parte inferior (até 60 caracteres). Geralmente usada para informações sobre como cancelar a inscrição ou avisos legais.
+
+### Botões (opcional)
+
+Adicione botões interativos ao seu modelo:
+
+- **Resposta rápida** : Botões de resposta predefinidos (por exemplo, "Sim", "Não", "Saiba mais")
+- **Chamada para ação** : Link para o site ou número de telefone
+- **Solicitação de chamada de voz** : Botão para solicitar permissão para chamada de voz.
+
+### Etapa 4: Enviar para aprovação
+
+1. Analise o conteúdo do seu modelo.
+2. Clique em **Enviar para aprovação.**
+3. O status do modelo foi alterado para "Aguardando aprovação".
+4. Aguarde a análise da Meta (de minutos a 24 horas)
+
+### Tempos de aprovação
+
+| **Categoria**                 | **Tempo típico**                  |
+| :---------------------------- | :-------------------------------- |
+| Utilidade                     | De alguns minutos a algumas horas |
+| Marketing                     | De 24 horas a 24 horas            |
+| Autenticação                  | De alguns minutos a algumas horas |
+| Solicitação de chamada de voz | Geralmente instantâneo            |
+
+### Status dos modelos
+
+| **Status**       | **Descrição**                                  |
+| :--------------- | :--------------------------------------------- |
+| **Rascunho**     | Ainda não foi enviado                          |
+| **Pendente**     | Enviado, aguardando revisão da Meta.           |
+| **Aprovado**     | Pronto para usar                               |
+| **Rejeitado**    | A revisão falhou. Veja o motivo da rejeição.   |
+| **Desabilitado** | Desativado pelo Meta devido à baixa qualidade. |
+
+## Motivos comuns para rejeição
+
+Evite estes erros comuns para melhorar sua taxa de aprovação:
+
+**❌ Conteúdo promocional em modelos de utilitáriosProblema:**Incluir descontos, ofertas ou linguagem de marketing em modelos de utilitários.**Solução:**Utilize a categoria Marketing para conteúdo promocional.
+
+**❌ Amostras de variáveis ​​ausentes ou pouco claras**
+
+**Problema: **Variáveis ​​desse tipo`{{1}}`sem valores de exemplo claros.**Solução:**Forneça valores de exemplo realistas que demonstrem a finalidade da variável:
+
+✅ `{{1}}`= “John Smith”
+
+✅ `{{2}}`= “#12345”
+
+❌ `{{1}}`= “teste”
+
+**❌ Linguagem agressiva ou ameaçadora**
+
+**Problema: **Conteúdo que pode ser interpretado como assédio, ameaças ou spam.**Solução:**Use uma linguagem profissional e amigável. Concentre-se no valor que o cliente agrega.
+
+**❌ Encurtadores de URL**
+
+**Problema: **Uso de serviços como [bit.ly](http://bit.ly), tinyurl ou outros encurtadores de URL.
+
+**Solução: **Utilize URLs completas e personalizadas do seu domínio.
+
+**❌ Seleção de categoria incorretaProblema:**Escolher a categoria errada para o seu tipo de conteúdo.
+
+**Solução: **Associe a categoria estritamente à finalidade do conteúdo.
+
+**❌ Conteúdo RestritoProblema:**Modelos relacionados a álcool, jogos de azar, conteúdo adulto, mensagens políticas ou atividades ilegais.
+
+**Solução: **Isso não é permitido. Consulte as políticas comerciais da Meta.
+
+## Utilizando modelos
+
+### **Envio de mensagens padronizadas**
+
+Após a aprovação, você poderá enviar mensagens padronizadas:
+
+1. **Através da plataforma de automação** : utilize a ação “Enviar modelo do WhatsApp”.
+2. **Via API** : Chame o endpoint de envio com o ID do modelo e as variáveis.
+
+### **Substituição de variáveis**
+
+Ao enviar, substitua as variáveis ​​pelos valores reais:**Modelo:**
+
+```text
+Hi {{1}}, your appointment is confirmed for {{2}} at {{3}}.
+```
+
+**Mensagem enviada:**
+
+```text
+Hi John, your appointment is confirmed for January 15th at 2:00 PM.
+```
+
+## **Melhores práticas**
+
+### [**​**](https://docs.autocalls.ai/whatsapp/templates#1-use-descriptive-names)
+
+**1. Use nomes descritivos**
+
+```text
+✅ order_confirmation_v1
+✅ appointment_reminder
+✅ shipping_update_with_tracking
+❌ template1
+❌ test
+❌ message
+```
+
+### 2. Mantenha as mensagens concisas
+
+Os usuários do WhatsApp esperam mensagens rápidas e claras. Seja direto e inclua uma chamada para ação clara.
+
+### 3. Use botões interativos
+
+Adicione botões de Resposta Rápida ou Chamada para Ação para facilitar a resposta dos clientes:
+
+- “Rastrear Pedido”
+- “Contacte o Suporte”
+- “Ver detalhes”
+- “Confirmar agendamento”
+
+### 4. Teste antes do envio em massa.
+
+Sempre teste seu modelo com um único destinatário antes de enviá-lo para um grande público. Isso ajuda a identificar problemas de formatação.
+
+### 5. Crie modelos antecipadamente
+
+A aprovação pode levar até 24 horas. Crie e envie modelos antes de precisar deles.
+
+### 6. Tenha modelos de backup
+
+Crie várias versões de modelos importantes. Se uma for rejeitada ou desativada, você terá alternativas prontas.
+
+## Modelos de edição
+
+**Edição limitada** — Depois que um modelo é aprovado, você não pode editá-lo. Para fazer alterações, você deve criar um novo modelo com um nome diferente.
+
+**É possível editar:**
+
+- Modelos de rascunho (ainda não enviados)
+- Modelos rejeitados (corrija os problemas e envie novamente)
+
+**Não é possível editar:**
+
+- Modelos aprovados
+- Modelos pendentes (devem aguardar revisão)
+
+## Limites de modelo
+
+O Meta impõe limites à criação de modelos:
+
+- Número máximo de modelos por conta do WhatsApp Business: varia conforme o nível da conta.
+- Os nomes dos modelos devem ser exclusivos para cada remetente.
+- Os modelos rejeitados contam para o seu limite.
+
+## Próximos passos
+
+- Configure **gatilhos de automação** para enviar modelos automaticamente.
+- Saiba mais sobre **remetentes do WhatsApp** e gerenciamento de remetentes .
+- Analise **a configuração do assistente de IA** para respostas de conversação.
+
+  
