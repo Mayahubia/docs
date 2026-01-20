@@ -138,11 +138,11 @@
 {
   "group": "WhatsApp Business",
   "pages": [
-    "whatsapp-overview",
-    "whatsapp-senders",
-    "whatsapp-templates",
-    "whatsapp-conversations",
-    "whatsapp-automation"
+    "whatsappbusiness-overview",
+    "whatsappbusiness-senders",
+    "whatsappbusiness-templates",
+    "whatsappbusiness-conversations",
+    "whatsappbusiness-automation"
   ]
 },
 
