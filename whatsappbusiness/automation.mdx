@@ -1,3 +1,184 @@
 ---
-title: "olá"
+title: "Automação do WhatsApp"
+description: "Automatize o envio de mensagens do WhatsApp com gatilhos e ações na plataforma de automação."
 ---
+
+A plataforma de automação integra-se ao WhatsApp para permitir o envio automático de mensagens, o acionamento de fluxos a partir de eventos do WhatsApp e a geração programática de respostas de IA.
+
+## Ações disponíveis
+
+### [**​**](https://docs.autocalls.ai/whatsapp/automation#send-whatsapp-template-message)Enviar mensagem modelo do WhatsApp
+
+Enviar uma mensagem modelo pré-aprovada para um cliente.**Casos de uso:**
+
+- Enviar confirmações de pedido após a compra.
+- Acione lembretes de consultas conforme agendado.
+- Enviar mensagens de acompanhamento após as chamadas.
+- Reengajar clientes que não responderam
+
+**Configuração:**
+
+| **Campo**                    | **Descrição**                                                 |
+| :--------------------------- | :------------------------------------------------------------ |
+| **Remetente**                | Selecione o remetente do WhatsApp (ele precisa estar online). |
+| **Modelo**                   | Escolha entre os modelos aprovados.                           |
+| **Telefone do destinatário** | Número de telefone do cliente (formato E.164: +1234567890)    |
+| **Nome do destinatário**     | Nome do cliente opcional para personalização.                 |
+| **Variáveis**                | Valores dinâmicos para espaços reservados de modelos          |
+
+**Formato E.164** — Os números de telefone devem estar no formato internacional com o código do país. Exemplos:
+
+- ✅`+14155551234`
+- ✅`+442071234567`
+- ❌`(415) 555-1234`
+- ❌`07123456789`
+
+### Enviar mensagem pelo WhatsApp (Formato livre)
+
+Envie uma mensagem de texto livre para um cliente dentro do prazo de 24 horas para troca de mensagens.
+
+**É necessário um intervalo de 24 horas** — Mensagens em formato livre só podem ser enviadas para clientes que entraram em contato com você nas últimas 24 horas. Para clientes fora desse período, use uma mensagem modelo.
+
+**Casos de uso:**
+
+- Envie um retorno imediato às conversas recentes.
+- Entregar informações urgentes
+- Responda automaticamente às perguntas dos clientes.
+
+**Configuração:**
+
+| **Campo**                    | **Descrição**                                    |
+| :--------------------------- | :----------------------------------------------- |
+| **Remetente**                | Selecione o remetente do seu WhatsApp            |
+| **Telefone do destinatário** | Número de telefone do cliente (formato E.164)    |
+| **Mensagem**                 | Conteúdo da mensagem (máximo de 4096 caracteres) |
+
+### Gerar resposta de IA
+
+Gere uma resposta de IA usando seu assistente, identificado por um identificador de cliente externo.
+
+**Casos de uso:**
+
+- Crie interfaces de bate-papo personalizadas
+- Integre o WhatsApp com sistemas CRM externos.
+- Criar respostas de IA multicanal
+- Processar mensagens de plataformas externas
+
+**Configuração:**
+
+| **Campo**                    | **Descrição**                                                               |
+| :--------------------------- | :-------------------------------------------------------------------------- |
+| **Assistente**               | Selecione o assistente de IA que deseja usar.                               |
+| **Identificador do cliente** | Identificação única do cliente (ex.: número de telefone, e-mail, ID do CRM) |
+| **Mensagem**                 | A mensagem à qual se deve responder                                         |
+| **Variáveis**                | Variáveis ​​de contexto opcionais para o assistente                         |
+
+**Como funciona:**
+
+1. A ação encontra ou cria uma conversa para o identificador do cliente.
+2. Envia a mensagem para seu assistente de IA.
+3. Retorna a resposta gerada pela IA.
+4. Você pode então enviar essa resposta via WhatsApp ou outros canais.
+
+## Gatilhos
+
+### [​](https://docs.autocalls.ai/whatsapp/automation#whatsapp-message-received)Mensagem do WhatsApp recebida
+
+Acione um fluxo quando um cliente enviar uma mensagem pelo WhatsApp.
+
+**Dados disponíveis:**
+
+- Número de telefone do cliente
+- Conteúdo da mensagem
+- ID do remetente
+- Carimbo de data/hora
+- ID da conversa
+
+**Exemplos de casos de uso:**
+
+- Registrar mensagens em um CRM ou banco de dados
+- Envie notificações para sua equipe
+- Acionar sequências de acompanhamento
+- Coletar e processar dados do cliente
+
+### Conversa iniciada no WhatsApp
+
+Acione um fluxo quando uma nova conversa do WhatsApp começar.
+
+**Dados disponíveis:**
+
+- Número de telefone do cliente
+- Conteúdo da primeira mensagem
+- Informações do remetente
+- ID da conversa
+
+## **Mapeamento de variáveis**
+
+Ao enviar mensagens de modelo, mapeie os dados do seu fluxo para variáveis ​​de modelo:**Modelo:**
+
+```text
+Hi {{1}}, your appointment with {{2}} is confirmed for {{3}}.
+
+Location: {{4}}
+```
+
+**Mapeamento de variáveis:**
+
+| **Variável de modelo** | **Dados de fluxo**             |
+| :--------------------- | :----------------------------- |
+| `{{1}}`                | `{{trigger.customer_name}}`    |
+| `{{2}}`                | `{{trigger.agent_name}}`       |
+| `{{3}}`                | `{{trigger.appointment_date}}` |
+| `{{4}}`                | `{{trigger.location}}`         |
+
+## Tratamento de erros
+
+### [**​**](https://docs.autocalls.ai/whatsapp/automation#common-errors)Erros comuns
+
+| **Erro**                        | **Causa**                                    | **Solução**                                                            |
+| :------------------------------ | :------------------------------------------- | :--------------------------------------------------------------------- |
+| **Modelo não encontrado**       | ID do modelo inválido ou não aprovado        | Verifique se o modelo foi aprovado e se a identidade está correta.     |
+| **Remetente offline**           | O remetente do WhatsApp não está online.     | Verifique o status do remetente e certifique-se de que está conectado. |
+| **Número de telefone inválido** | Número de telefone não está no formato E.164 | Formate como +[código do país][número]                                 |
+| **Fora do período de 24 horas** | Tentando enviar texto livre pela janela      | Use uma mensagem modelo em vez disso.                                  |
+| **Taxa limitada**               | Muitas mensagens enviadas                    | Implementar atrasos entre as mensagens                                 |
+
+### **Estratégia de Repetição**
+
+Para mensagens com falha, implemente uma estratégia de nova tentativa:
+
+1. Aguarde 1 minuto
+2. Tente novamente a ação
+3. Se o problema persistir, registre o erro e notifique sua equipe.
+
+## **Melhores práticas**
+
+### [**​**](https://docs.autocalls.ai/whatsapp/automation#1-always-use-templates-for-outbound)**1. Sempre utilize modelos para comunicações de saída.**
+
+Ao iniciar o contato com os clientes, utilize sempre modelos aprovados. Mensagens em formato livre só funcionam dentro do período de 24 horas.
+
+### **2. Incluir opções de cancelamento de inscrição**
+
+Para mensagens de marketing, inclua instruções de cancelamento de inscrição para cumprir as regulamentações e manter a classificação de qualidade.
+
+### **3. Respeite os limites de taxa**
+
+Não envie muitas mensagens muito rapidamente. Implemente intervalos razoáveis ​​entre os envios em lote.
+
+### **4. Lide com os erros de forma elegante**
+
+Sempre adicione tratamento de erros aos seus fluxos. Registre as falhas e notifique sua equipe sobre os problemas.
+
+### **5. Teste primeiro com destinatários individuais**
+
+Antes de executar campanhas em massa, teste seu fluxo com um único destinatário para verificar se tudo funciona corretamente.
+
+### **6. Classificação da qualidade do monitor**
+
+Fique de olho na classificação de qualidade do seu remetente. Pause as campanhas se notar uma queda na qualidade.
+
+## Próximos passos
+
+- Aprenda sobre **modelos de mensagens** e como criá-los.
+- Configure **remetentes do WhatsApp** para seus números de telefone.
+- Explore a **plataforma de automação** para mais opções de fluxo de trabalho.
