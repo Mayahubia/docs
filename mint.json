@@ -135,17 +135,16 @@
         "outbound-calls/mass-dialing"
       ]
     },
-{
-  "group": "WhatsApp Business",
-  "pages": [
-    "whatsappbusiness-overview",
-    "whatsappbusiness-senders",
-    "whatsappbusiness-templates",
-    "whatsappbusiness-conversations",
-    "whatsappbusiness-automation"
-  ]
-},
-
+    {
+      "group": "WhatsApp Business",
+      "pages": [
+        "whatsappbusiness/overview",
+        "whatsappbusiness/senders",
+        "whatsappbusiness/templates",
+        "whatsappbusiness/conversation",
+        "whatsappbusiness/automation"
+      ]
+    },
     {
       "group": "Prompting de IA e Design de Conversa",
       "pages": [
