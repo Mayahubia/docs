@@ -49,6 +49,7 @@
   "navigation": [
     {
       "group": "Introdução",
+      "icon": "circle-info",
       "pages": [
         "introduction/what-is-mayahub",
         "introduction/how-it-works",
@@ -57,6 +58,7 @@
     },
     {
       "group": "Primeiros Passos",
+      "icon": "rocket",
       "pages": [
         "getting-started/core-concepts",
         "getting-started/understanding-billing"
@@ -64,11 +66,12 @@
     },
     {
       "group": "Visão Geral dos Assistentes de IA",
+      "icon": "robot",
       "pages": [
         "ai-assistants/what-is-ai-assistant",
         {
           "group": "Creating and Editing an AI Assistant",
-          "icon": "robot",
+          "icon": "sliders",
           "pages": [
             "ai-assistants/settings/general",
             "ai-assistants/settings/prompt-and-tools",
@@ -107,6 +110,7 @@
     },
     {
       "group": "Números de Telefone",
+      "icon": "phone",
       "pages": [
         "phone-numbers/types",
         "phone-numbers/purchasing-and-managing",
@@ -117,6 +121,7 @@
     },
     {
       "group": "Chamada de Entrada",
+      "icon": "phone-incoming",
       "pages": [
         "inbound-calls/overview",
         "inbound-calls/provisioning",
@@ -126,6 +131,7 @@
     },
     {
       "group": "Chamada de Saída",
+      "icon": "phone-outgoing",
       "pages": [
         "outbound-calls/overview",
         "outbound-calls/campaigns",
@@ -137,6 +143,7 @@
     },
     {
       "group": "WhatsApp Business",
+      "icon": "whatsapp",
       "pages": [
         "whatsappbusiness/overview",
         "whatsappbusiness/senders",
@@ -147,6 +154,7 @@
     },
     {
       "group": "Prompting de IA e Design de Conversa",
+      "icon": "message",
       "pages": [
         "conversation-design/prompt-basics",
         "conversation-design/knowledge-bases",
@@ -156,6 +164,7 @@
     },
     {
       "group": "Automações e Integrações",
+      "icon": "bolt",
       "pages": [
         "automation/overview",
         "automation/webhook-api",
@@ -164,6 +173,7 @@
     },
     {
       "group": "Custos e Preços",
+      "icon": "dollar-sign",
       "pages": [
         "pricing/overview",
         "pricing/usage-based",
@@ -172,6 +182,7 @@
     },
     {
       "group": "Provisionamento de Números",
+      "icon": "server",
       "pages": [
         "provisioning/supported-countries",
         "provisioning/managing-numbers",
@@ -188,6 +199,7 @@
     },
     {
       "group": "White Label",
+      "icon": "tag",
       "pages": [
         "white-label/overview",
         "white-label/onboarding",
@@ -205,6 +217,7 @@
     },
     {
       "group": "Solução de Problemas e Perguntas Frequentes",
+      "icon": "circle-question",
       "pages": [
         "troubleshooting/ai-behavior",
         "troubleshooting/billing",
@@ -219,98 +232,15 @@
     },
     {
       "group": "Referências de API",
+      "icon": "code",
       "pages": [
         "api-reference/introduction",
         "api-reference/authentication"
       ]
     },
     {
-      "group": "Assistentes",
-      "pages": [
-        "api-reference/assistants/get-assistants",
-        "api-reference/assistants/get-outbound-assistants",
-        "api-reference/assistants/create-assistant",
-        "api-reference/assistants/update-assistant",
-        "api-reference/assistants/delete-assistant",
-        "api-reference/assistants/enable-inbound-webhook",
-        "api-reference/assistants/disable-inbound-webhook",
-        "api-reference/assistants/disable-webhook",
-        "api-reference/assistants/get-languages",
-        "api-reference/assistants/get-voices",
-        "api-reference/assistants/get-models",
-        "api-reference/assistants/get-phone-numbers"
-      ]
-    },
-    {
-      "group": "Chamadas",
-      "pages": [
-        "api-reference/calls/get-calls",
-        "api-reference/calls/make-phone-call",
-        "api-reference/calls/delete-call"
-      ]
-    },
-    {
-      "group": "Leads",
-      "pages": [
-        "api-reference/leads/get-lead",
-        "api-reference/leads/create",
-        "api-reference/leads/update-lead",
-        "api-reference/leads/delete"
-      ]
-    },
-    {
-      "group": "Campanhas",
-      "pages": [
-        "api-reference/campaigns/get-campaigns",
-        "api-reference/campaigns/update-status"
-      ]
-    },
-    {
-      "group": "SMS",
-      "pages": [
-        "api-reference/sms/send-sms"
-      ]
-    },
-    {
-      "group": "Webhooks",
-      "pages": [
-        "api-reference/webhooks/post-call-webhook"
-      ]
-    },
-    {
-      "group": "Plataforma de Automação",
-      "pages": [
-        "automation-platform/introduction",
-        "automation-platform/building-flows",
-        "automation-platform/passing-data",
-        "automation-platform/publishing-flows",
-        "automation-platform/debugging-runs",
-        "automation-platform/versioning",
-        "automation-platform/known-limits"
-      ]
-    },
-    {
-      "group": "Relacionado a Chamadas",
-      "pages": [
-        "automation-platform/calls-related/mayahub-tool",
-        "automation-platform/calls-related/common-integrations",
-        "automation-platform/calls-related/sms-capabilities"
-      ]
-    },
-    {
-      "group": "Tutoriais",
-      "pages": [
-        "automation-platform/tutorials/outbound-form-call",
-        "automation-platform/tutorials/inbound-context-injection",
-        "automation-platform/tutorials/gohighlevel-leads-automation",
-        "automation-platform/tutorials/google-sheets-sync",
-        "automation-platform/tutorials/post-call-sms-automation",
-        "automation-platform/tutorials/google-sheets-qualified-leads",
-        "automation-platform/tutorials/post-call-email-automation"
-      ]
-    },
-    {
       "group": "Atualizações da Plataforma",
+      "icon": "scroll",
       "pages": [
         "releases/index"
       ]
