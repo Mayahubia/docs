@@ -76,8 +76,8 @@
       "icon": "robot",
       "pages": [
         "ai-assistants/what-is-ai-assistant",
-        "ai-assistants/interface-chat-teste",
-        "ai-assistants/widget-web",
+        "ai-assistants/interfacechat",
+        "ai-assistants/widgetdaweb",
         {
           "group": "Criando e Editando um Assistente de IA",
           "icon": "robot",
