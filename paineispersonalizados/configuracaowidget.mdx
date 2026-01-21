@@ -1,6 +1,6 @@
 ---
 title: "Configuração do Widget"
-icon: sliders
+icon: "sliders"
 description: "Guia completo para configurar widgets de Estatística, Gráfico e Tabela com todas as opções disponíveis."
 ---
 
@@ -47,7 +47,7 @@ Exibição de métrica única com comparação opcional e gráfico de tendência
 
 ### **Etapa 2: Exibir e Filtros**
 
-**Rótulo **(obrigatório)
+**Rótulo** (obrigatório)
 
 - Título principal exibido no widget
 - Exemplo: “Total de chamadas”
@@ -80,7 +80,7 @@ Exibição de métrica única com comparação opcional e gráfico de tendência
 - Filtrar por data de criação
 - Opções: Hoje, 1, 7, 14, 30, 60, 90, 180, 365 dias
 
-**Condições **(opcional)
+**Condições** (opcional)
 
 - Adicione filtros para refinar os dados.
 - Múltiplas condições combinadas com E
@@ -144,7 +144,7 @@ Semelhante aos widgets de estatísticas, mais:
 - `radar`- Comparação multieixos
 - `radialBar`- Indicador de progresso único
 
-### **Etapa 2: Exibir e FiltrosRótulo **(obrigatório)
+### Etapa 2: Exibir e FiltrosRótulo (obrigatório)
 
 - Título do gráfico
 
@@ -162,7 +162,7 @@ Semelhante aos widgets de estatísticas, mais:
 
 - O mesmo que estatísticas
 
-**Agrupar por **OU **Agrupar por Período**(mutuamente exclusivos)
+**Agrupar por** OU **Agrupar por Período** (mutuamente exclusivos)
 
 **Agrupar por**- Agrupamento categórico
 
@@ -185,7 +185,7 @@ Semelhante aos widgets de estatísticas, mais:
 
 ### **Etapa 3: Avançado (Somente gráficos)**
 
-**Exibir linhas de grade  **(somente linhas/barras/áreas)
+**Exibir linhas de grade** (somente linhas/barras/áreas)
 
 - Linhas horizontais/verticais de fundo
 - Ajuda a ler valores exatos
@@ -208,18 +208,18 @@ Semelhante aos widgets de estatísticas, mais:
 - Padrão: Sim para pie/donut/polarArea, Não para os demais.
 - Pode sobrecarregar gráficos de linhas/barras
 
-**Exibir barra de ferramentas **(somente linha/barra/área)
+**Exibir barra de ferramentas** (somente linha/barra/área)
 
 - Controles de zoom e download
 - Padrão: Não
 
-**Curva de linha **(somente linha/área)
+**Curva de linha** (somente linha/área)
 
 - `smooth`- Curvas arredondadas (padrão, visualmente atraente)
 - `straight`- Linhas diretas (precisas)
 - `stepline`- Passo a passo (bom para eventos discretos)
 
-**Largura da linha **(somente linha/barra/área)
+**Largura da linha** (somente linha/barra/área)
 
 - Espessura em pixels (1-10)
 - Padrão: 2px
@@ -235,46 +235,44 @@ Semelhante aos widgets de estatísticas, mais:
 - efeito de gradiente de cor
 - Padrão: Não
 
-**Cor gradiente **(se o gradiente estiver ativado)
+**Cor gradiente** (se o gradiente estiver ativado)
 
 - Cor final do gradiente
 - Padrão: Verde (#10b981)
 
-**Calcular em porcentagem **(somente para radialBar)
+**Calcular em porcentagem** (somente para radialBar)
 
 - Calcula automaticamente a porcentagem a partir das condições.
 - Fórmula: (condições atendidas / total) × 100
 - **Requisitos:** Pelo menos uma condição deve ser adicionada primeiro.
 - Exemplo: A condição “status = concluído” calcula leads concluídos / total de leads × 100
 - Aparece após a adição de condições na Etapa 2.
-
-**Exibir rodapé com números **(somente radialBar)
-
+-  (somente radialBar)
 - Exibe “X alcançado / Y total” abaixo do gráfico de barras radial.
 - Visível apenas quando a opção “Calcular como porcentagem” estiver ativada.
 - Mostra os números exatos juntamente com a porcentagem.
 - Exemplo de rodapé: “150 alcançados / 1.000 no total”
 
-**Ângulo inicial **(somente barra radial)
+**Ângulo inicial** (somente barra radial)
 
 - Onde o arco começa em graus (-360° a 360°)
 - Valor padrão: -140°
 - Valores comuns: -140° (padrão), -90° (semicírculo esquerdo), 0° (parte inferior)
 
-**Ângulo final **(somente barra radial)
+**Ângulo final** (somente barra radial)
 
 - Onde o arco termina em graus (-360° a 360°)
 - Padrão: 130°
 - **Validação:** O arco total (fim - início) não pode exceder 360°.
 - Valores comuns: 130° (padrão), 90° (semicírculo reto), 180° (meio círculo), 270° (três quartos)
 
-**Tamanho do vão **(somente para barra radial)
+**Tamanho do vão** (somente para barra radial)
 
 - Tamanho do círculo interno em porcentagem (0-100%)
 - Padrão: 60%
 - Valor mais alto = anel mais fino, valor mais baixo = anel mais grosso
 
-**Matriz de traços **(somente radialBar)
+**Matriz de traços** (somente radialBar)
 
 - Espaçamento para padrão de anel tracejado (0-50)
 - Padrão: 10
@@ -522,14 +520,14 @@ Exibir registros detalhados com colunas personalizadas.
 
 - Selecione a origem: chamadas, leads, campanhas, assistentes, números de telefone, SMS
 
-**Filtro de campanha **(somente tabela de leads)
+**Filtro de campanha** (somente tabela de leads)
 
 - Selecione a campanha para:
   - Filtre a tabela para essa campanha.
   - Ativar colunas de variáveis ​​personalizadas
 - Opcional
 
-**Filtro assistente **(somente para tabelas de chamadas)
+**Filtro assistente** (somente para tabelas de chamadas)
 
 - Selecione o assistente para:
   - Filtrar tabela para esse assistente
@@ -544,9 +542,9 @@ Exibir registros detalhados com colunas personalizadas.
 - Variáveis ​​principais: variáveis. (se a campanha for selecionada)
 - Por padrão, caso nenhuma opção seja selecionada: ID, Status, Criado em
 
-### **Etapa 2: Exibir e Filtros **
+### Etapa 2: Exibir e Filtros 
 
-### **Rótulo **(obrigatório)
+### Rótulo (obrigatório)
 
 - Cabeçalho da tabela
 
@@ -622,7 +620,7 @@ Exibir registros detalhados com colunas personalizadas.
 - Ao passar o cursor, é exibida a data e hora completas.
 - Exemplos: created_at, updated_at
 
-**Colunas de avaliação **(tabela de chamadas com assistente)
+**Colunas de avaliação** (tabela de chamadas com assistente)
 
 - Campos booleanos: marca de seleção ou X com indicador verde/vermelho
 - Campos não booleanos: valor com indicador cinza
