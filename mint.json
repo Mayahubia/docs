@@ -120,7 +120,7 @@
     },
     {
       "group": "Conversas",
-      "icon": "messages-square",
+      "icon": "list",
       "pages": ["conversas/visaogeraldasconversas", "conversas/gerenciarconversas"]
     },
     {
