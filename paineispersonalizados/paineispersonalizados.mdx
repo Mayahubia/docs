@@ -52,7 +52,7 @@ Registros detalhados com colunas e filtros personalizados.
 
 ## Tipos de widgets
 
-### Widget de Estatísticas 
+### Widget de Estatísticas
 
 **📊**Número único com comparação opcional e mini-gráfico.
 
@@ -73,7 +73,7 @@ Registros detalhados com colunas e filtros personalizados.
 - Período: Hoje, Ontem, Últimos 7/14/30/60/90 dias, Últimos 6 meses, Último ano
 - Condições (filtros)
 
-### Widget de gráfico 
+### Widget de gráfico
 
 **📈**Visualize tendências e distribuições.
 
@@ -87,3 +87,131 @@ Registros detalhados com colunas e filtros personalizados.
 - **Área polar** - Circular com raio variável (requer Agrupar por)
 - **Radar** - Comparação multieixos
 - **Barra radial** - Indicador único de progresso/percentagem
+
+**Opções principais:**
+
+- Fonte de dados: chamadas, leads, campanhas, assistentes, números de telefone, SMS
+- Agregação: CONTAGEM, SOMA, MÉDIA, MÁXIMO, MÍNIMO
+- Tipo de gráfico: Gráfico de linhas, Gráfico de barras, Gráfico de área, Gráfico de pizza, Gráfico de rosca, Gráfico de área polar, Gráfico de radar, Gráfico de barras radial
+- Cores: Primária (Azul), Sucesso (Verde), Aviso (Laranja), Perigo (Vermelho), Informação (Ciano), Cinza
+- Agrupar por período: Horário, Diário, Semanal, Mensal (para séries temporais)
+- Agrupar por campo: status, campanha, assistente, qualquer coluna (para categorias)
+- Altura do gráfico: 200-800px
+- Exibir linhas de grade, legenda, dicas de ferramentas, rótulos de dados e barra de ferramentas.
+- Curva de linha: suave, reta, em degraus
+- Largura da linha: 1-10px
+- Gradiente (somente para barra radial)
+- Período: Hoje, Ontem, Últimos 7/14/30/60/90 dias, Últimos 6 meses, Último ano
+- Condições (filtros)
+
+### **Widget de tabela 📋**
+
+Registros detalhados com colunas classificáveis.
+
+**Exemplos de uso:**
+
+- Chamadas recentes com detalhes
+- Pedidos de revisão não atendidos
+- Histórico de contato do lead
+
+**Opções principais:**
+
+- Fonte de dados: chamadas, leads, campanhas, assistentes, números de telefone, SMS
+- Filtro de campanha (para leads - ativa colunas variáveis)
+- Filtro auxiliar (para chamadas - ativa colunas de campo de avaliação)
+- Seleção de colunas: básicas, relações, campos de avaliação, variáveis ​​principais
+- Ordenar por: qualquer coluna básica
+- Direção de ordenação: desc (do mais recente para o mais antigo), asc (do mais antigo para o mais recente)
+- Linhas por página: 1-100
+- Período: Hoje, Ontem, Últimos 7/14/30/60/90 dias, Últimos 6 meses, Último ano
+- Condições (filtros)
+
+## [**​**](https://docs.autocalls.ai/custom-dashboards/overview#filtering-data)
+
+**Filtragem de dados**
+
+Todos os widgets suportam filtros avançados:
+
+**Intervalos de datas:** Hoje, Ontem, Últimos 7/14/30/60/90 dias, Últimos 6 meses, Ano passado
+
+**Condições:** Vários filtros AND
+
+- O status é "concluído".
+- Duração superior a 60 segundos
+- O nome do assistente é "Robô de Vendas".
+
+**Campos de avaliação:** Filtrar por valores de avaliação pós-chamada
+
+- Coluna: Variáveis ​​extraídas
+- Nome da variável extraída: Variável personalizada
+- Nome da variável personalizada: appointment_booked
+- Operador: =
+- Valor da variável: verdadeiro
+
+## **Gerenciamento de layout**
+
+### [**​**](https://docs.autocalls.ai/custom-dashboards/overview#edit-mode)**Modo de edição**
+
+1. Clique em **“Desbloquear para personalizar”**
+2. Arraste os widgets para reordená-los.
+3. Redimensionar widgets (1 a 12 colunas de largura)
+4. Remova os widgets com o botão X
+5. Clique em **“Salvar”** para persistir.
+6. Clique em **“Bloquear”** para sair do modo de edição.
+
+### **Melhores práticas**
+
+**Dimensionamento do widget:**
+
+- Estatísticas: 3-4 colunas (cabem 3-4 por linha)
+- Gráficos: 6 a 12 colunas
+- Tabelas: 12 colunas (largura total)
+
+**Dicas de layout:**
+
+- Coloque os KPIs no topo.
+- Métricas relacionadas ao grupo
+- Coloque as mesas na parte inferior.
+
+## **Casos de uso comuns**
+
+### [**​**](https://docs.autocalls.ai/custom-dashboards/overview#sales-dashboard)**Painel de Vendas**
+
+- Estatística: Chamadas bem-sucedidas (filtrar pelo campo de avaliação “appointment_booked”)
+- Gráfico: Tendência diária de chamadas bem-sucedidas
+- Tabela: Chamadas recentes bem-sucedidas com detalhes do agendamento
+
+### [**​**](https://docs.autocalls.ai/custom-dashboards/overview#support-quality)**Suporte à Qualidade**
+
+- Estatística: Duração média da chamada
+- Gráfico: Detalhamento do status das chamadas (gráfico de pizza)
+- Tabela: Chamadas recentes com pontuações de avaliação
+
+### **Desempenho da campanha**
+
+- Estatística: Total de ligações de campanha
+- Gráfico: Chamadas por campanha (gráfico de barras)
+- Tabela: Campanhas com melhor desempenho
+
+## **Solução de problemas**
+
+**O widget exibe "Sem dados":**
+
+- Ampliar intervalo de datas
+- Verifique se os filtros não são muito restritivos.
+- Verifique se você possui registros.
+
+**Carregamento lento:**
+
+- Reduza a quantidade de widgets (mantenha abaixo de 20)
+- Use filtros de intervalo de datas
+- Limpar cache do navegador
+
+**Painel de controle não está na barra lateral:**
+
+- Atualizar página
+- Verifique se o plano inclui esse recurso.
+
+**Para obter informações detalhadas sobre a configuração, consulte os guias de cada tipo de widget.**
+
+  
