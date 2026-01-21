@@ -110,7 +110,6 @@
       "icon": "users",
       "pages": ["leads/index", "leads/managing-leads", "leads/importing-leads"]
     },
-
     {
       "group": "Painéis personalizados",
       "icon": "line-chart",
@@ -119,7 +118,11 @@
         "paineispersonalizados/configuracaowidget"
       ]
     },
-
+    {
+      "group": "Conversas",
+      "icon": "messages-square",
+      "pages": ["conversas/visaogeraldasconversas", "conversas/gerenciarconversas"]
+    },
     {
       "group": "Números de Telefone",
       "icon": "phone",
