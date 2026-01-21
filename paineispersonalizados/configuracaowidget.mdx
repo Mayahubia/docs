@@ -1,1 +1,867 @@
+---
+title: "Configuração do Widget"
+description: "Guia completo para configurar widgets de Estatística, Gráfico e Tabela com todas as opções disponíveis."
+---
 
+Aprenda a configurar cada tipo de widget com explicações detalhadas de cada opção.
+
+## Criando widgets
+
+1. Acesse o painel personalizado.
+2. Clique em **“Gerenciar widgets”** e depois em **“Criar novo widget”.**
+3. Selecione o tipo de widget
+4. Siga o assistente de 2 a 3 etapas
+5. Salvar e adicionar ao painel
+
+## **Widgets de Estatísticas**
+
+Exibição de métrica única com comparação opcional e gráfico de tendência.
+
+### **Passo 1: Noções básicas**
+
+**Nome do widget**
+
+- Identificador interno para lista de widgets
+- Não exibido no painel de controle
+- Exemplo: “Total de chamadas neste mês”
+
+**Tabela de dados**
+
+- Selecione a fonte de dados: chamadas, leads, campanhas, assistentes, números de telefone, SMS
+- Determina as colunas disponíveis
+
+**Agregação**
+
+- `COUNT`- Número total de registros (não é necessário inserir uma coluna)
+- `SUM`- Soma dos valores (requer seleção de coluna)
+- `AVG`- Média dos valores (requer seleção de coluna)
+- `MAX`- Valor máximo (requer seleção de coluna)
+- `MIN`- Valor mínimo (requer seleção de coluna)
+
+**Coluna**(se SOMA/MÉDIA/MÁXIMO/MÍNIMO selecionado)
+
+- Selecione a coluna numérica a ser agregada.
+- Exemplo: `duration`para duração média de uma chamada
+- Não é necessário para COUNT
+
+### **Etapa 2: Exibir e Filtros**
+
+**Rótulo **(obrigatório)
+
+- Título principal exibido no widget
+- Exemplo: “Total de chamadas”
+
+**Descrição**
+
+- Texto opcional abaixo do valor
+- Oculto se a comparação estiver ativada.
+- Exemplo: “Chamadas feitas neste mês”
+
+**Cor**
+
+- primário (azul), sucesso (verde), aviso (amarelo), perigo (vermelho), informação (ciano), cinza
+- Escolha com base no tipo de métrica (verde para positiva, vermelho para negativa).
+
+**Mostrar mini gráfico**
+
+- Exibe um pequeno gráfico de linhas mostrando a tendência diária.
+- Usa o mesmo intervalo de datas que a estatística.
+
+**Comparar com o período anterior**
+
+- Mostra a variação percentual em relação ao período anterior.
+- Exemplo: Últimos 7 dias vs. 7 dias anteriores
+- Exibe “+15%” ou “-8%” com seta para cima/para baixo.
+- Substitui o campo de descrição
+
+**Intervalo de datas**
+
+- Filtrar por data de criação
+- Opções: Hoje, 1, 7, 14, 30, 60, 90, 180, 365 dias
+
+**Condições **(opcional)
+
+- Adicione filtros para refinar os dados.
+- Múltiplas condições combinadas com E
+- Consulte a seção **Filtragem de Dados**
+
+### **Exemplos**
+
+**Total de chamadas**
+
+```text
+Aggregation: COUNT
+Table: calls
+Label: "Total Calls"
+Description: "Last 30 days"
+Color: primary
+Date Range: 30 days
+```
+
+**Duração média da chamada**
+
+```text
+Aggregation: AVG
+Table: calls
+Column: duration
+Label: "Avg Duration"
+Color: info
+Show Mini Chart: Yes
+Date Range: 30 days
+```
+
+**Nomeações bem-sucedidas**
+
+```text
+Aggregation: COUNT
+Table: calls
+Label: "Appointments Booked"
+Color: success
+Compare: Yes
+Date Range: 7 days
+Conditions:
+  - status = completed
+  - evaluation.appointment_booked = true
+```
+
+## **Widgets de gráfico**
+
+Visualize tendências com 8 tipos de gráficos.
+
+### **Passo 1: Noções básicas**
+
+Semelhante aos widgets de estatísticas, mais:
+
+**Tipo de gráfico**
+
+- `line`- Tendências ao longo do tempo
+- `bar`- Comparar categorias ou períodos de tempo
+- `area`- Gráfico de tendência preenchido
+- `pie`- Proporções (requer Agrupar por)
+- `donut`- Torta com buraco no centro (requer Agrupar por)
+- `polarArea`- Circular com raio variável (requer Agrupar por)
+- `radar`- Comparação multieixos
+- `radialBar`- Indicador de progresso único
+
+### **Etapa 2: Exibir e FiltrosRótulo **(obrigatório)
+
+- Título do gráfico
+
+**Descrição**
+
+- Texto opcional do subtítulo abaixo do gráfico
+- Exemplo: “Desempenho dos últimos 30 dias”
+
+**Cor**
+
+- Gráfico de cores primárias
+- Para tortas/rosquinhas, utiliza-se uma paleta multicolorida (azul, verde, laranja, vermelho, roxo, rosa).
+
+**Intervalo de datas**
+
+- O mesmo que estatísticas
+
+**Agrupar por **OU **Agrupar por Período**(mutuamente exclusivos)
+
+**Agrupar por**- Agrupamento categórico
+
+- Agrupe os dados pelos valores da coluna.
+- Exemplos: Status, ID da campanha, Nome do assistente
+- **Necessário** para gráficos de pizza/rosca/área polar.
+- Opcional para gráficos de barras/radar
+- **Não é possível usar** com o agrupamento por período.
+
+**Agrupar por período**- Agrupamento baseado em tempo
+
+- Agrupar por intervalos de tempo
+- Opções: hora, dia, semana, mês
+- Utilizado para gráficos de linhas/barras/áreas
+- **Não é possível usar** com o recurso Agrupar por
+
+**Condições**
+
+- O mesmo que estatísticas
+
+### **Etapa 3: Avançado (Somente gráficos)**
+
+**Exibir linhas de grade  **(somente linhas/barras/áreas)
+
+- Linhas horizontais/verticais de fundo
+- Ajuda a ler valores exatos
+- Padrão: Sim
+
+**Mostrar Legenda**
+
+- Etiquetas com código de cores
+- Padrão: Sim para pie/donut/polarArea, Não para os demais.
+- Posição: Parte inferior do gráfico
+
+**Mostrar dicas de ferramentas**
+
+- Janelas pop-up com valores exatos
+- Padrão: Sim (recomendado)
+
+**Exibir rótulos de dados**
+
+- Valores exibidos diretamente nos elementos do gráfico
+- Padrão: Sim para pie/donut/polarArea, Não para os demais.
+- Pode sobrecarregar gráficos de linhas/barras
+
+**Exibir barra de ferramentas **(somente linha/barra/área)
+
+- Controles de zoom e download
+- Padrão: Não
+
+**Curva de linha **(somente linha/área)
+
+- `smooth`- Curvas arredondadas (padrão, visualmente atraente)
+- `straight`- Linhas diretas (precisas)
+- `stepline`- Passo a passo (bom para eventos discretos)
+
+**Largura da linha **(somente linha/barra/área)
+
+- Espessura em pixels (1-10)
+- Padrão: 2px
+
+**Altura do gráfico**
+
+- Espaço vertical em pixels (200-800)
+- Padrão: 300px
+- Gráficos mais altos são melhores para exibir mais pontos de dados.
+
+**Ativar gradiente**(somente na barra radial)
+
+- efeito de gradiente de cor
+- Padrão: Não
+
+**Cor gradiente **(se o gradiente estiver ativado)
+
+- Cor final do gradiente
+- Padrão: Verde (#10b981)
+
+**Calcular em porcentagem **(somente para radialBar)
+
+- Calcula automaticamente a porcentagem a partir das condições.
+- Fórmula: (condições atendidas / total) × 100
+- **Requisitos:** Pelo menos uma condição deve ser adicionada primeiro.
+- Exemplo: A condição “status = concluído” calcula leads concluídos / total de leads × 100
+- Aparece após a adição de condições na Etapa 2.
+
+**Exibir rodapé com números **(somente radialBar)
+
+- Exibe “X alcançado / Y total” abaixo do gráfico de barras radial.
+- Visível apenas quando a opção “Calcular como porcentagem” estiver ativada.
+- Mostra os números exatos juntamente com a porcentagem.
+- Exemplo de rodapé: “150 alcançados / 1.000 no total”
+
+**Ângulo inicial **(somente barra radial)
+
+- Onde o arco começa em graus (-360° a 360°)
+- Valor padrão: -140°
+- Valores comuns: -140° (padrão), -90° (semicírculo esquerdo), 0° (parte inferior)
+
+**Ângulo final **(somente barra radial)
+
+- Onde o arco termina em graus (-360° a 360°)
+- Padrão: 130°
+- **Validação:** O arco total (fim - início) não pode exceder 360°.
+- Valores comuns: 130° (padrão), 90° (semicírculo reto), 180° (meio círculo), 270° (três quartos)
+
+**Tamanho do vão **(somente para barra radial)
+
+- Tamanho do círculo interno em porcentagem (0-100%)
+- Padrão: 60%
+- Valor mais alto = anel mais fino, valor mais baixo = anel mais grosso
+
+**Matriz de traços **(somente radialBar)
+
+- Espaçamento para padrão de anel tracejado (0-50)
+- Padrão: 10
+- 0 = linha contínua, números maiores = maior espaçamento entre os traços
+
+### **Guia de Tipos de Gráficos**
+
+**Gráfico de linhas**
+
+- **Utilização:** Tendências diárias/semanais, dados contínuos
+- **Requisitos:** Agrupar por período
+- **Exemplo:** Número de chamadas por dia nos últimos 30 dias
+
+**Gráfico de barras**
+
+- **Utilização:** Comparação de categorias, períodos de tempo
+- **Pode-se usar:** Agrupar por (categorias) OU Agrupar por período (tempo)
+- **Exemplo:** Chamadas por campanha, distribuição por hora
+
+**Gráfico de Área**
+
+- **Uso:** O mesmo que linha, enfatiza o volume
+- **Requisitos:** Agrupar por período
+- **Exemplo:** Tendência do volume de chamadas
+
+**Gráfico de pizza/rosquinha**
+
+- **Utilização:** Proporções, porcentagens
+- **Requer:** Agrupar por (NÃO Agrupar por período)
+- **Exemplo:** Detalhamento do status da chamada
+
+**Área Polar**
+
+- **Uso:** Semelhante a um gráfico de pizza, mas mostra a magnitude através do raio.
+- **Requisitos:** Agrupar por
+- **Exemplo:** Contribuição para a campanha
+
+**Gráfico de radar**
+
+- **Utilização:** Comparação de múltiplas variáveis
+- **Requisitos:** Agrupar por
+- **Exemplo:** Desempenho em todas as métricas
+
+**Barra radial**
+
+- **Utilização:** Indicadores de progresso circulares que mostram percentagens (0-100%)
+- **Não utiliza:** Agrupar por ou Agrupar por Período
+- **Cálculo de porcentagem:** Adicione as condições e, em seguida, ative a opção “Calcular como porcentagem” para calcular automaticamente (condições atendidas / total) × 100.
+- **Exemplo:** Taxa de conversão de leads (15%), sucesso na entrega de SMS (82,8%), conclusão de metas
+
+### **Exemplos**
+
+**Volume diário de chamadas (linha)**
+
+```text
+Table: calls
+Aggregation: COUNT
+Chart Type: line
+Label: "Daily Calls"
+Group By Period: day
+Show Grid: Yes
+Stroke Curve: smooth
+Date Range: 30 days
+```
+
+**Detalhamento do status (em forma de pizza)**
+
+```text
+Table: calls
+Aggregation: COUNT
+Chart Type: pie
+Label: "Call Status"
+Group By: status
+Show Legend: Yes
+Show Data Labels: Yes
+Date Range: 7 days
+```
+
+**Padrão Horário (Barra)**
+
+```text
+Table: calls
+Aggregation: COUNT
+Chart Type: bar
+Label: "Calls By Hour"
+Group By Period: hour
+Date Range: 7 days
+```
+
+**Comparação de campanhas (Barra)**
+
+```text
+Table: calls
+Aggregation: COUNT
+Chart Type: bar
+Label: "Calls Per Campaign"
+Group By: campaign.name
+Date Range: 30 days
+```
+
+**Taxa de Conversão de Leads (Gráfico de Barras Radial com Porcentagem)**
+
+```text
+Table: leads
+Aggregation: COUNT
+Chart Type: radialBar
+Label: "Conversion Rate"
+Description: "Completed leads"
+Color: success
+Date Range: 30 days
+
+Step 2 - Conditions:
+  Field: status
+  Operator: =
+  Value: completed
+
+Step 2 - Percentage (appears after adding condition):
+  Calculate as Percentage: Yes
+  Show Footer with Numbers: Yes
+
+Step 3 - Advanced (optional):
+  Start Angle: -140°
+  End Angle: 130°
+  Hollow Size: 60%
+  Dash Array: 10
+
+How it works:
+  - Counts leads where status = completed (e.g., 150)
+  - Counts total leads (e.g., 1,000)
+  - Calculates: 150 / 1,000 × 100 = 15%
+  - Displays: "15%" with footer "150 achieved / 1,000 total"
+```
+
+**Entrega de SMS concluída com sucesso (Barra radial com gradiente)**
+
+```text
+Table: sms
+Aggregation: COUNT
+Chart Type: radialBar
+Label: "SMS Delivered"
+Description: "Delivery success rate"
+Color: info
+Date Range: 7 days
+
+Step 2 - Conditions:
+  Field: status
+  Operator: =
+  Value: delivered
+
+Step 2 - Percentage:
+  Calculate as Percentage: Yes
+  Show Footer with Numbers: Yes
+
+Step 3 - Advanced:
+  Enable Gradient: Yes
+  Gradient To Color: #10b981 (green)
+  Start Angle: -90°
+  End Angle: 270° (creates three-quarter circle)
+  Hollow Size: 55%
+  Dash Array: 12
+
+Result: "82.8%" with footer "120 achieved / 145 total"
+Visual: Blue to green gradient, three-quarter circle
+```
+
+**Chamadas de Qualidade (Múltiplas Condições)**
+
+```text
+Table: calls
+Aggregation: COUNT
+Chart Type: radialBar
+Label: "Quality Calls"
+Description: "Long completed outbound calls"
+Color: success
+Date Range: 30 days
+
+Step 2 - Conditions (all must be true):
+  Condition 1:
+    Field: status
+    Operator: =
+    Value: completed
+
+  Condition 2:
+    Field: duration
+    Operator: >
+    Value: 180
+
+  Condition 3:
+    Field: type
+    Operator: =
+    Value: outbound
+
+Step 2 - Percentage:
+  Calculate as Percentage: Yes
+  Show Footer with Numbers: Yes
+
+Step 3 - Advanced:
+  Enable Gradient: Yes
+  Gradient To Color: #3b82f6
+  Dash Array: 8
+
+How it works:
+  - Counts calls meeting ALL three conditions (e.g., 45)
+  - Counts total calls (e.g., 100)
+  - Calculates: 45 / 100 × 100 = 45%
+  - Displays: "45%" with footer "45 achieved / 100 total"
+```
+
+**Leads Qualificados (Estilo Semicírculo)**
+
+```text
+Table: leads
+Aggregation: COUNT
+Chart Type: radialBar
+Label: "Qualified Leads"
+Color: info
+Date Range: 30 days
+
+Step 2 - Conditions:
+  Field: status
+  Operator: =
+  Value: scheduled
+
+Step 2 - Percentage:
+  Calculate as Percentage: Yes
+  Show Footer with Numbers: Yes
+
+Step 3 - Advanced (semicircle design):
+  Enable Gradient: Yes
+  Gradient To Color: #10b981
+  Start Angle: -90°
+  End Angle: 90° (creates perfect semicircle)
+  Hollow Size: 70% (thinner ring)
+  Dash Array: 0 (solid line)
+
+Result: "2.2%" with footer "4,841 achieved / 220,073 total"
+Visual: Clean semicircle from left to right, blue to green gradient
+```
+
+## Widgets de tabela
+
+Exibir registros detalhados com colunas personalizadas.
+
+### **Passo 1: Noções básicasTabela de dados**
+
+- Selecione a origem: chamadas, leads, campanhas, assistentes, números de telefone, SMS
+
+**Filtro de campanha **(somente tabela de leads)
+
+- Selecione a campanha para:
+  - Filtre a tabela para essa campanha.
+  - Ativar colunas de variáveis ​​personalizadas
+- Opcional
+
+**Filtro assistente **(somente para tabelas de chamadas)
+
+- Selecione o assistente para:
+  - Filtrar tabela para esse assistente
+  - Ativar colunas de campos de avaliação
+- Opcional
+
+**Seleção de coluna**
+
+- Colunas básicas: ID, Status, Data de criação, etc.
+- Colunas de relacionamento: Nome do assistente, Nome da campanha
+- Campos de avaliação: avaliação. (se assistente selecionado)
+- Variáveis ​​principais: variáveis. (se a campanha for selecionada)
+- Por padrão, caso nenhuma opção seja selecionada: ID, Status, Criado em
+
+### **Etapa 2: Exibir e Filtros **
+
+### **Rótulo **(obrigatório)
+
+- Cabeçalho da tabela
+
+**Descrição**
+
+- Subtítulo opcional
+
+**Intervalo de datas**
+
+- O mesmo que estatísticas/gráficos
+
+**Ordenar por**
+
+- Coluna de classificação padrão
+- Apenas colunas simples (não relacionamentos)
+- Padrão: criado_em
+
+**Direção de classificação**
+
+- desc (mais recente primeiro) - padrão
+- asc (do mais antigo para o mais recente)
+
+**Linhas por página**
+
+- Número de linhas a exibir (1-100)
+- Padrão: 10
+
+**Condições**
+
+- O mesmo que estatísticas/gráficos
+
+### **Recursos interativos**
+
+**Linhas clicáveis**
+
+- As linhas da tabela são clicáveis.
+- Cria automaticamente um link para a página de detalhes/edição do registro.
+- Funciona para: Chamadas, Leads, Campanhas, Assistentes
+
+**Filtro de data ao vivo**
+
+- Altere o intervalo de datas diretamente no widget.
+- Substitui o intervalo de datas padrão configurado.
+- Útil para explorar diferentes períodos de tempo.
+
+**Filtro de status**
+
+- Menu suspenso de seleção múltipla para filtrar por status
+- Disponível para: Chamadas, Leads, Campanhas, Assistentes, SMS
+- Selecione vários status simultaneamente.
+
+**Exibição de texto**
+
+- Textos longos são truncados automaticamente após 50 caracteres.
+- Ao passar o cursor sobre o texto truncado, o conteúdo completo é exibido na dica de ferramenta.
+
+### **Tipos de coluna**
+
+**Colunas de número de telefone**
+
+- Formato internacional (+1 555 123 4567)
+- prefixo da bandeira do país
+- Exemplos: número_de_telefone_do_cliente, número_de_telefone
+
+**Colunas de status**
+
+- Distintivos coloridos
+- Exemplos: campo de status em qualquer tabela
+
+**Colunas de data**
+
+- Formato "há 3 horas"
+- Ao passar o cursor, é exibida a data e hora completas.
+- Exemplos: created_at, updated_at
+
+**Colunas de avaliação **(tabela de chamadas com assistente)
+
+- Campos booleanos: marca de seleção ou X com indicador verde/vermelho
+- Campos não booleanos: valor com indicador cinza
+- Ao passar o cursor, é exibida a descrição do campo.
+- Formato: avaliação.
+
+**Colunas variáveis**​​ (tabela de leads com campanha)
+
+- Dados de leads personalizados
+- Formato: variáveis.
+- Exemplos: nome_do_cliente, empresa
+
+**Colunas de relacionamento**
+
+- Acesse os dados relacionados.
+- Exemplos: Nome do Assistente, Nome da Campanha
+- Não é possível classificar por estes.
+
+### **Exemplos**
+
+**Chamadas recentes**
+
+```text
+Table: calls
+Columns:
+  - Client Phone Number
+  - Assistant Name
+  - Duration
+  - Status
+  - Created At
+Sort: Created At desc
+Rows: 25
+Date Range: 7 days
+```
+
+**Nomeações bem-sucedidas**
+
+```text
+Table: calls
+Assistant: [Select to load fields]
+Columns:
+  - Client Phone Number
+  - Assistant Name
+  - evaluation.appointment_booked
+  - Created At
+Sort: Created At desc
+Rows: 50
+Date Range: 30 days
+Conditions:
+  - Status = completed
+  - Column: Extracted Variables
+    Extracted Variable Name: Custom variable
+    Custom Variable Name: appointment_booked
+    Operator: =
+    Variable Value: true
+```
+
+## **Filtragem de dados**
+
+Todos os widgets suportam condições para filtrar dados.
+
+### **Operadores**
+
+- `=`- Igual a
+- `!=`- Não é igual a
+- `>`- Maior que
+- `>=`- Maior ou igual
+- `<`- Menor que
+- `<=`- Menor ou igual
+- `like`- Contém texto
+- `in`- Um dos seguintes (separados por vírgula)
+- `not in`- Nenhum dos
+- `is null`- Sem valor
+- `is not null`- Tem valor
+
+### **Filtragem básica**
+
+**Filtro de status**
+
+```text
+Column: Status
+Operator: =
+Value: completed
+```
+
+**Filtro de duração**
+
+```text
+Column: Duration
+Operator: >
+Value: 60
+```
+
+**Valores múltiplos**
+
+```text
+Column: Status
+Operator: in
+Value: completed,in-progress
+```
+
+### **Filtragem de Campo de Avaliação**
+
+Filtrar por valores de avaliação pós-chamada.
+
+**Configurar:**
+
+1. Coluna: Variáveis ​​extraídas
+2. Nome da variável extraída: Status ou variável personalizada
+3. Se for uma variável personalizada: Insira o nome do campo em Nome da Variável Personalizada
+4. Valor da variável: verdadeiro/falso para valores booleanos ou qualquer valor personalizado.
+
+**Exemplo booleano - Consulta agendada**
+
+```text
+Column: Extracted Variables
+Extracted Variable Name: Custom variable
+Custom Variable Name: appointment_booked
+Operator: =
+Variable Value: true
+```
+
+**Exemplo não booleano - Sentimento**
+
+```text
+Column: Extracted Variables
+Extracted Variable Name: Custom variable
+Custom Variable Name: sentiment
+Operator: =
+Variable Value: any
+Custom Value: positive
+```
+
+**Verifique se o campo existe**
+
+```text
+Column: Extracted Variables
+Extracted Variable Name: Custom variable
+Custom Variable Name: interested
+Operator: =
+Variable Value: any
+```
+
+### **Condições Múltiplas**
+
+Condições combinadas com E:
+
+```text
+Filter for successful long calls:
+Condition 1:
+  - Column: Status
+  - Operator: =
+  - Value: completed
+
+Condition 2:
+  - Column: Duration
+  - Operator: >
+  - Value: 120
+
+Condition 3:
+  - Column: Extracted Variables
+  - Extracted Variable Name: Custom variable
+  - Custom Variable Name: appointment_booked
+  - Operator: =
+  - Variable Value: true
+```
+
+## **Melhores práticas**
+
+### **Nomeação de Widgets**
+
+Utilize nomes internos descritivos:
+
+- ✅ “Ligações de Vendas - Últimos 30 Dias”
+- ✅ “Duração média do suporte”
+- ❌ “Widget 1”
+
+### **Intervalos de datas**
+
+Adequar o intervalo ao caso de uso:
+
+- **Hoje:** Monitoramento em tempo real
+- **7 dias:** Desempenho semanal
+- **30 dias:** Tendências mensais
+- **Mais de 90 dias:** Análise de longo prazo
+
+### **Cores**
+
+Uso estratégico de cores:
+
+- **Verde (sucesso):** Métricas positivas
+- **Vermelho (perigo):** Métricas de alerta
+- **Azul (primário):** Métricas neutras
+- **Amarelo (aviso):** Atenção necessária
+- **Cinza (info):** Informações secundárias
+
+### **Desempenho**
+
+Mantenha os dashboards rápidos:
+
+- Use filtros de intervalo de datas
+- Limite o número de widgets por painel a menos de 20.
+- Use COUNT quando possível (mais rápido)
+- Evite intervalos de datas muito longos.
+
+## **Solução de problemas**
+
+**O widget exibe "Sem dados".**
+
+- Ampliar intervalo de datas
+- Remover/ajustar filtros
+- Verifique se a tabela contém registros.
+
+**Os campos de avaliação não estão sendo exibidos.**
+
+- Selecione o assistente na configuração do widget.
+- Certifique-se de que o assistente tenha um esquema pós-chamada.
+- Verifique se os nomes dos campos correspondem.
+
+**O gráfico mostra vazio.**
+
+- Torta/rosquinha: Deve-se usar o agrupamento (e não o ponto).
+- Linha/área: Deve-se usar Agrupar por Período (não por Categoria)
+- Verifique se o intervalo de datas inclui dados.
+
+**Tabela com colunas ausentes**
+
+- As colunas de relacionamento precisam de registros relacionados.
+- As colunas de avaliação precisam de seleção assistida.
+- As colunas variáveis ​​precisam de seleção de campanha.
+
+**Erro "Agrupar por obrigatório"**
+
+- Gráficos de pizza/rosca/área polar DEVEM ter a opção Agrupar por
+- Não é possível usar a opção Agrupar por Período com esses tipos de gráfico.
+
+**Não é possível classificar por coluna.**
+
+- Colunas de relacionamento (com ponto) não podem ser classificadas.
+- Campos de avaliação não podem ser classificados
+- Use colunas básicas para classificação.
+
+Para criação de dashboards e gerenciamento de layout, consulte **Visão geral de dashboards personalizados** .
