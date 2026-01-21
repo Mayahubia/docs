@@ -105,7 +105,21 @@
       "icon": "bullhorn",
       "pages": ["campaigns/index", "campaigns/creating-campaigns"]
     },
-    { "group": "Leads", "icon": "users", "pages": ["leads/index", "leads/managing-leads", "leads/importing-leads"] },
+    {
+      "group": "Leads",
+      "icon": "users",
+      "pages": ["leads/index", "leads/managing-leads", "leads/importing-leads"]
+    },
+
+    {
+      "group": "Painéis personalizados",
+      "icon": "line-chart",
+      "pages": [
+        "paineispersonalizados/paineispersonalizados",
+        "paineispersonalizados/configuracaowidget"
+      ]
+    },
+
     {
       "group": "Números de Telefone",
       "icon": "phone",
